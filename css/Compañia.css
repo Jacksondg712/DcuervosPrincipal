@@ -1,0 +1,414 @@
+html {
+	box-sizing: border-box;
+    font-style: normal;
+    font-family: 'Roboto';
+
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+/* Estilos para poner a cero la sangría superior de los elementos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+    margin-bottom: 0; 
+}
+/* Clase para restablecer las propiedades básicas de las listas (ul) */
+ul{
+    list-style: none;
+    display: flex;
+}
+ 
+.li{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	width: auto;
+	height: auto;
+}
+/* Clase para restablecer las propiedades básicas de los enlaces */
+.link {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Propiedades para la correcta visualización de las imágenes */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/* Propiedad para anular la cursiva en address */
+address {
+	font-style: normal;
+}
+
+a{
+    color: #E7F0F8;
+}
+
+a:link{
+    text-decoration: none;
+
+}
+a:hover{
+    color: #7DCDE3;
+}
+a:active{
+    color: #7DCDE3;
+}
+a:focus{
+    color: #7DCDE3;
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-colum{
+	display: flex;
+	flex-direction: column;
+}
+
+.container{
+	width: 1200px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	/* border: 1px solid black; */
+	justify-content: space-around;
+	align-items: center;
+}
+
+.container_Color{
+	background-color: #227598;
+	margin-top: 70px;
+	width: 100%;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.header{
+	background-color: #227598;
+	height: auto;
+   	/* border-bottom: 1px solid #21f391; */
+   	position: fixed; /* Fija el encabezado en la parte superior */
+   	top: 0;
+   	width: 100%;
+   	z-index: 100;
+   	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+   	left: 0%;
+   	padding: 0%;
+   	height: 70px;
+}
+
+.head_Cont{
+	justify-content: space-around;
+}
+
+
+.head_Ref{
+	margin-left: 30px;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 500;
+  	font-style: normal;
+}
+
+.head_Acceso{
+	border: 1px solid #E7F0F8;
+	padding: 10px;
+	border-radius: 15px;
+	margin-right: 0px;
+	
+}
+
+.head_Cont_list_acceso{
+
+	width: 100%;
+	margin-right: 0px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.dcuervo{
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	background-image: url("../images-videos/Flota.jpg");
+	background-repeat: no-repeat;
+	margin:70px 0% 0px 0%;
+	border: 1px solid black;
+	width: 100%;
+	height: 600px;
+	background-size: cover;
+	background-position: center;
+}
+
+.Dcuer_container{
+	align-items: center;
+}
+
+.Dcuer_Cont_Button{
+	margin: 100px;
+	width: 500px;
+	height: 70px;
+	justify-content: space-between;
+}
+
+.Dcuer_button{
+	background-color: #7DCDE3;
+	width: 200px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	
+}
+
+.Dcuervo_Text_Button{
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+  	font-style: italic;
+	font-size: 20px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.Qsomos{
+	width: auto;
+	height: auto;
+}
+
+.Qsomos_Cont_En{
+	width: 600px;
+	align-items: center;
+}
+
+.Qsomos_Cont_Sec1{
+	width: 100%;
+	margin: 0px;
+	height: 480px;
+}
+
+.Qsomos_tittle{
+	width: 480px;
+	margin-top: 50px;
+	display: flex;
+	justify-content: flex-end;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+  	font-style: italic;
+	font-size: 20px;
+
+}
+
+.Qsomos_Subtittle{
+	margin-top: 30px;
+	color: #7DCDE3;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+  	font-style: italic;
+	font-size: 40px;
+	width: 480px;
+	text-align: end;
+}
+
+.Qsomos_Text_Sec1{
+	margin-top: 80px;
+	width: 480px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	font-size: 24px;
+	text-align: end;
+}
+
+.Qsomos_Cont_Sec2{
+	width: 100%;
+	margin: 0px;
+	background-color: #227598;
+	height: 480px;
+}
+
+.Qsomos_Cont_Nu{
+	width: 600px;
+	align-items: center;
+}
+
+.Qsomos_Text_Sec2{
+	margin-top: 40px;
+	width: 480px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	font-size: 24px;
+	color: #E7F0F8;
+}
+
+.Qsomos_Subtittle_Sec{
+	margin-top: 30px;
+	color: #7DCDE3;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+  	font-style: italic;
+	font-size: 40px;
+	width: 480px;
+	text-align: center;
+	width: 100%;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.Corp_list{
+	margin-top: 120px;
+	display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+.Corp_title{
+	margin-top: 50px;
+	color: #7DCDE3;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+  	font-style: italic;
+	font-size: 32px;
+}
+
+.Corp_Subtittle{
+	margin-top: 10px;
+	color: #227598;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+  	font-style: italic;
+	font-size: 48px;
+}
+
+
+.Corp_Card_Fondo{
+	background-color: #7DCDE3;
+	height: 250px;
+	width: 100%;
+	z-index: 0;
+	margin-left: 5px;
+	margin-right: 5px;
+	position: absolute;
+	margin-top: 350px;
+	border-radius: 500px 0px;
+}
+
+
+
+.Corp_Card{
+	width: 260px;
+	height: 320px;
+	background-color: #227598;
+	border-radius: 20px 0px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	z-index: 0;
+}
+
+.Corp_Card_Prop{
+	width: 100%;
+	padding: 0px 20px 0 20px;
+	height: auto;
+	justify-content: space-between;
+	/* border: 1px solid black; */
+	margin-top: 10px;
+}
+
+.Corp_Card_Text{
+	width: 200px;
+}
+
+.Corp_Card_Num{
+	color: #7DCDE3;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+	font-size: 35px;
+  	font-style: italic;
+}
+
+.Corp_Card_tittle{
+	color: white;
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+  	font-size: 20px;
+	font-style: italic;
+	width: 125px;
+}
+
+.Corp_Card_Text{
+	margin-top: 10px;
+	color: white;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 300;
+  	font-style: italic;
+	width: 100%;
+}
+
+.Corp_Card:hover{
+	background-color: #7DCDE3;
+	.Corp_Card_tittle{
+		color: #227598;
+	}
+	.Corp_Card_Num{
+		color: #227598;
+	}
+	.svg{
+		stroke: #227598;	
+	}
+	.svgfill{
+		fill: #227598;
+	}
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.Nos_Container{
+	margin-top: 50px;
+	border: 1px solid black;
+}
+
+.Nos_Cont{
+	width: 350px;
+	height: 140px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #7DCDE3;
+	border-radius: 20px;
+	margin-top: 50px;
+}
+
+.Nos_Text_Cont{
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+  	font-style: italic;
+	font-size: 36px;
+	color: white;
+}
+
