@@ -100,10 +100,10 @@ a:focus{
 	align-items: center;
 }
 
-.container_Color{
-	background-color: #227598;
-	margin-top: 70px;
-	width: 100%;
+.Text_Black{
+	font-family: "Roboto", sans-serif;
+  	font-weight: 900;
+  	font-style: italic;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
@@ -155,7 +155,6 @@ a:focus{
 	background-image: url("../images-videos/Flota.jpg");
 	background-repeat: no-repeat;
 	margin:70px 0% 0px 0%;
-	border: 1px solid black;
 	width: 100%;
 	height: 600px;
 	background-size: cover;
@@ -185,9 +184,6 @@ a:focus{
 }
 
 .Dcuervo_Text_Button{
-	font-family: "Roboto", sans-serif;
-  	font-weight: 900;
-  	font-style: italic;
 	font-size: 20px;
 }
 
@@ -214,9 +210,6 @@ a:focus{
 	margin-top: 50px;
 	display: flex;
 	justify-content: flex-end;
-	font-family: "Roboto", sans-serif;
-  	font-weight: 900;
-  	font-style: italic;
 	font-size: 20px;
 
 }
@@ -224,9 +217,6 @@ a:focus{
 .Qsomos_Subtittle{
 	margin-top: 30px;
 	color: #7DCDE3;
-	font-family: "Roboto", sans-serif;
-  	font-weight: 900;
-  	font-style: italic;
 	font-size: 40px;
 	width: 480px;
 	text-align: end;
@@ -267,9 +257,6 @@ a:focus{
 .Qsomos_Subtittle_Sec{
 	margin-top: 30px;
 	color: #7DCDE3;
-	font-family: "Roboto", sans-serif;
-  	font-weight: 900;
-  	font-style: italic;
 	font-size: 40px;
 	width: 480px;
 	text-align: center;
@@ -291,18 +278,12 @@ a:focus{
 .Corp_title{
 	margin-top: 50px;
 	color: #7DCDE3;
-	font-family: "Roboto", sans-serif;
-  	font-weight: 900;
-  	font-style: italic;
 	font-size: 32px;
 }
 
 .Corp_Subtittle{
 	margin-top: 10px;
 	color: #227598;
-	font-family: "Roboto", sans-serif;
-  	font-weight: 900;
-  	font-style: italic;
 	font-size: 48px;
 }
 
@@ -345,18 +326,12 @@ a:focus{
 
 .Corp_Card_Num{
 	color: #7DCDE3;
-	font-family: "Roboto", sans-serif;
-  	font-weight: 900;
 	font-size: 35px;
-  	font-style: italic;
 }
 
 .Corp_Card_tittle{
 	color: white;
-	font-family: "Roboto", sans-serif;
-	font-weight: 900;
   	font-size: 20px;
-	font-style: italic;
 	width: 125px;
 }
 
@@ -389,11 +364,19 @@ a:focus{
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .Nos_Container{
-	margin-top: 50px;
-	border: 1px solid black;
+	align-items: center;
+	height: 100%;
+	margin-left: 30px;
 }
 
-.Nos_Cont{
+.Nos_Cont_Color{
+	background-color: #227598;
+	margin-top: 70px;
+	width: 100%;
+	height: 630px;
+}
+
+.Nos_Cont_info{
 	width: 350px;
 	height: 140px;
 	display: flex;
@@ -401,14 +384,164 @@ a:focus{
 	align-items: center;
 	background-color: #7DCDE3;
 	border-radius: 20px;
-	margin-top: 50px;
+	
 }
 
 .Nos_Text_Cont{
-	font-family: "Roboto", sans-serif;
-  	font-weight: 900;
-  	font-style: italic;
 	font-size: 36px;
 	color: white;
 }
 
+.Nos_Cont_Ref{
+	width: 250px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #7DCDE3;
+	margin-top: 80px;
+	border-radius: 20px;
+}
+
+.Nos_Ref{
+	font-size: 24px;
+}
+
+.Nos_Cont_video{
+	background-image: url("../images-videos/image\ 1.png");
+	width: 534px;
+	height: 485px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.Flo_Cont_Info{
+	width: 331PX;
+	align-items: center;
+	margin-top: 0px;
+}
+
+.Flo_info_Tittle{
+	font-size: 64px;
+	color: #7DCDE3;
+}
+
+.Flo_info_Subtittle{
+	font-size: 32px;
+	color: #227598;
+}
+
+.Flo_info_Text{
+	font-size: 24px;
+	color: #227598;
+	margin-top: 60px;
+	text-align: center;
+}
+
+.Flo_Line{
+	height: 500px;
+	width: 7px;
+	background-color: #227598;
+	margin-top: 90px;
+}
+
+.Flo_Item{
+	margin-top: 20px;
+	width: 500px;
+	justify-content: space-around;
+}
+
+.Flo_list{
+	margin-top: 60px;
+}
+
+.Flo_Veh_Tittle{
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	color: #7DCDE3;
+	font-size: 20px;
+}
+
+.Flo_Veh_Subtittle{
+	color: #227598;
+	font-size: 20px;
+}
+
+.Flo_Cont_Text{
+	align-items: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+footer{
+	width: 100%;
+	height: 260px;
+	background-color: #227598;
+	padding: 0%;
+	margin: 0%;
+}
+
+.Foo_Cont_Info1{
+	align-items: center;
+	height: 100%;
+}
+
+.Foo_Cont_Call{
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.Foo_Text_Line{
+	color: white;
+	font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+.Foo_Text_Call{
+	color: white;
+	font-size: 14px;
+}
+
+.Foo_Cont_Info2{
+	align-items: start;
+	height: 100%;
+}
+
+.Foo_Info2_Tittle{
+	color: white;
+	font-size: 20px;
+	margin-top: 30px;
+}
+
+.Foo_Info2_Item{
+	margin-top: 20px;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+.Foo_Cont_contac{
+	align-items: end;
+	width: 100px;
+}
+
+.Foo_Cont_sgv_contac{
+	align-items: center;
+	width: 100%;
+	justify-content: space-around;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.Final{
+	width: 100%;
+	background-color: #7DCDE3;
+	height: 115px;
+}
