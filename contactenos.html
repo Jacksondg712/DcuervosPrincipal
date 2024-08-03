@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/Contactenos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container flex-row head_Cont">
+            <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="Logo" width="137">
+            <ul class="list">
+                <div class="flex-row">
+                    <li class="head_Ref"><a href="./index.html" ><p>COMPAÑIA</p></a></li>
+                    <li class="head_Ref"><a href="./servicios.html" ><p>SERVICIOS</p></a></li>
+                    <li class="head_Ref"><a href="./contactenos.html" ><p>CONTACTENOS</p></a></li>
+                    <li class="head_Ref"><a href="#" ><p>TRABAJA CON NOSOTROS</p></a></li>
+                </div>
+            </ul>
+            <ul class="list">
+                <div class="flex-row">
+                    <li class="head_Acceso"><a href="#"><p>ACCESO CLIENTES</p></a></li>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="Contact">
+            <div class="container flex-colum">
+                <div class="Cont_Tittle flex-row">
+                    <h1 class="Cont_Tittle_Text Text_Black">Contáctenos</h1>
+                    <img src="./images-videos/Logo-Dcuervo-PNG-negro-azul.png" alt="" width="435px">
+                </div>
+                <div class="Cont_Formulario flex-row">
+                    <div class="cont_Formu flex-colum">
+                        <div class="Cont_Formu_Tittle">
+                            <p class="Formu_Text Text_Black">informacion personal</p>
+                        </div>
+                        <form action="" class="flex-colum">
+                            <ul class=" list flex-colum">
+                                <li class="Cont_Item flex-row">
+                                    <div class="Cont_Select flex-colum">
+                                        <label class="Cont_Label" for="">Tipo de documento</label>                                
+                                        <div>
+                                            <select id="documento" name="documeto" class="Cont_select">
+                                                <option value="Antioquia">Cedula Ciudadana</option>
+                                                <option value="Cundinamarca">Pasaporte</option>
+                                                                            
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <input class="Cont_Input" type="text" placeholder="Documento de identidad">
+                                    </div>
+                                </li>
+                                <li class="Cont_Item flex-row">
+                                    <input class="Cont_Input" type="text" placeholder="Nombres">
+                                    <input class="Cont_Input" type="text" placeholder="Apellidos">
+                                </li>
+                                <li class="Cont_Item flex-row">
+                                    <input class="Cont_Input" type="text" placeholder="Numero Telefonico">
+                                    <input class="Cont_Input" type="text" placeholder="E-mail">
+                                </li>
+                                <li class="Cont_Item flex-row">
+                                    <div class="flex-colum">
+                                        <label class="Cont_Label" for="">Departamento</label>                                
+                                        <div class="content">
+                                            <select id="departments" name="departments" class="Cont_select">
+                                                <option value="Valle del Cauca">Valle del Cauca</option>
+                                                <option value="Amazonas">Amazonas</option>
+                                                <option value="Antioquía">Antioquía</option>
+                                                <option value="Arauca">Arauca</option>
+                                                <option value="Atlántico">Atlántico</option>
+                                                <option value="Bolívar">Bolívar</option>
+                                                <option value="Boyacá">Boyacá</option>
+                                                <option value="Caldas">Caldas</option>
+                                                <option value="Caquetá">Caquetá</option>
+                                                <option value="Casanare">Casanare</option>
+                                                <option value="Cauca">Cauca</option>
+                                                <option value="Cesar">Cesar</option>
+                                                <option value="Chocó">Chocó</option>
+                                                <option value="Córdoba">Córdoba</option>
+                                                <option value="Cundinamarca">Cundinamarca</option>
+                                                <option value="Guainía">Guainía</option>
+                                                <option value="Guaviare">Guaviare</option>
+                                                <option value="Huila">Huila</option>
+                                                <option value="La Guajira">La Guajira</option>
+                                                <option value="Magdalena">Magdalena</option>
+                                                <option value="Meta">Meta</option>
+                                                <option value="Nariño">Nariño</option>
+                                                <option value="Norte de Santander">Norte de Santander</option>
+                                                <option value="Putumayo">Putumayo</option>
+                                                <option value="Quindío">Quindío</option>
+                                                <option value="Risaralda">Risaralda</option>
+                                                <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                                <option value="Santander">Santander</option>
+                                                <option value="Sucre">Sucre</option>
+                                                <option value="Tolima">Tolima</option>
+                                                <option value="Valle del Cauca">Valle del Cauca</option>
+                                                <option value="Vaupés">Vaupés</option>
+                                                <option value="Vichada">Vichada</option>                                        
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex-colum">
+                                        <label class="Cont_Label" for="">Tipo de documento</label>                                
+                                        <div class="content">
+                                            <select id="ciudad" name="ciudad" class="Cont_select">
+                                                <option value="Leticia">Leticia</option>
+                                                <option value="Medellín">Medellín</option>
+                                                <option value="Arauca">Arauca</option>
+                                                <option value="Barranquilla">Barranquilla</option>
+                                                <option value="Cartagena de Indias">Cartagena de Indias</option>
+                                                <option value="Tunja">Tunja</option>
+                                                <option value="Manizales">Manizales</option>
+                                                <option value="Florencia">Florencia</option>
+                                                <option value="Yopal">Yopal</option>
+                                                <option value="Popayán">Popayán</option>
+                                                <option value="Valledupar">Valledupar</option>
+                                                <option value="Quibdó">Quibdó</option>
+                                                <option value="Montería">Montería</option>
+                                                <option value="Bogotá">Bogotá</option>
+                                                <option value="Inírida">Inírida</option>
+                                                <option value="San José del Guaviare">San José del Guaviare</option>
+                                                <option value="Neiva">Neiva</option>
+                                                <option value="Riohacha">Riohacha</option>
+                                                <option value="Santa Marta">Santa Marta</option>
+                                                <option value="Villavicencio">Villavicencio</option>
+                                                <option value="San Juan de Pasto">San Juan de Pasto</option>
+                                                <option value="San José de Cúcuta">San José de Cúcuta</option>
+                                                <option value="Mocoa">Mocoa</option>
+                                                <option value="Armenia">Armenia</option>
+                                                <option value="Pereira">Pereira</option>
+                                                <option value="San Andrés">San Andrés</option>
+                                                <option value="Bucaramanga">Bucaramanga</option>
+                                                <option value="Sincelejo">Sincelejo</option>
+                                                <option value="Cali">Cali</option>
+                                                <option value="Mitú">Mitú</option>
+                                                <option value="Puerto Carreño">Puerto Carreño</option>                            
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="Cont_Item flex-row">
+                                    <input class="Cont_Input" type="text" placeholder="Barrio">
+                                    <input class="Cont_Input" type="text" placeholder="Direccion">
+                                </li>
+                            </ul>
+                            <button type="submit" class="Cont_Button">Enviar</button>
+                        </form>
+                        <button class="Cont_Button_PQR">Descripcion de la PQR</button>
+                    </div>
+                    <img src="./images-videos/trabajador.jpg" alt="trabajador" width="321px">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container flex-row">
+            <div class="Foo_Cont_Info1 flex-colum">
+                <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="" width="250px">
+                <p class="Foo_Text_Line Text_Black">Linea Nacional</p>
+                <div class="Foo_Cont_Call flex-row">
+                    <svg height="50px" width="50px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M337.168,289.578c-5.129-5.133-13.457-5.133-18.598,0l-16.031,16.038c-4.68,4.68-12.122,5.149-17.352,1.102 c0,0-15.332-10.109-40.402-35.179c-25.07-25.07-35.175-40.414-35.175-40.414c-4.055-5.226-3.578-12.656,1.102-17.343l16.031-16.031 c5.141-5.134,5.141-13.462,0-18.594l-35.34-35.343c-5.133-5.133-13.453-5.133-18.594,0c-0.122,0.125-1.906,1.906-21.309,21.32 c-22.602,22.594,7.293,91.82,57.574,142.118c50.289,50.281,119.527,80.164,142.121,57.578 c19.394-19.406,21.184-21.203,21.305-21.32c5.141-5.133,5.141-13.461,0-18.586L337.168,289.578z"></path> <path class="st0" d="M256,0C114.614,0,0,114.617,0,256s114.614,256,256,256s256-114.617,256-256S397.386,0,256,0z M256,472 c-119.102,0-216-96.898-216-216S136.898,40,256,40s216,96.898,216,216S375.102,472,256,472z"></path> </g> </g></svg>
+                    <div class="flex-colum">
+                        <p class="Foo_Text_Call Text_Black">3108082165</p>
+                        <p class="Foo_Text_Call Text_Black">3213977488</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Foo_Cont_Info2 flex-colum">
+                <p class="Foo_Info2_Tittle Text_Black">Sobre Dcuervo</p>
+                <ul class="list flex-colum">
+                    <li class="Foo_Info2_Item"><a href="#">En Dcuervo somos</a></li>
+                    <li class="Foo_Info2_Item"><a href="#">Nuestro Propósito</a></li>
+                    <li class="Foo_Info2_Item"><a href="#">Misión</a></li>
+                    <li class="Foo_Info2_Item"><a href="#">Visión</a></li>
+                </ul>
+            </div>
+            <div class="Foo_Cont_Info2 flex-colum">
+                <p class="Foo_Info2_Tittle Text_Black">Centro de atención</p>
+                <ul class="list flex-colum">
+                    <li class="Foo_Info2_Item"><a href="#">Líneas de Atención</a></li>
+                    <li class="Foo_Info2_Item"><a href="#">PQRs</a></li>
+                </ul>
+            </div>
+            <div class="Foo_Cont_Info2 flex-colum">
+                <p class="Foo_Info2_Tittle Text_Black">Enlaces Rapidos</p>
+                <ul class=" list flex-colum">
+                    <li class="Foo_Info2_Item"><a href="#">TMS</a></li>
+                    <li class="Foo_Info2_Item"><a href="#">Contáctanos</a></li>
+                    <li class="Foo_Info2_Item"><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="Foo_Cont_contac Foo_Cont_Info2 flex-row">
+                <div class="Foo_Cont_sgv_contac flex-row">
+                    <a href="#"><svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M256.001,0C148.342,0,60.755,87.586,60.755,195.245c0,56.66,16.898,115.289,50.225,174.26 c28.99,51.297,65.23,93.242,90.526,119.398C215.912,503.798,235.265,512,256,512c20.735,0,40.088-8.202,54.494-23.098 c25.296-26.155,61.536-68.101,90.526-119.398c33.327-58.971,50.225-117.6,50.225-174.26C451.246,87.586,363.659,0,256.001,0z M256.001,270.381c-41.43,0-75.136-33.706-75.136-75.136c0-41.43,33.705-75.136,75.136-75.136 c41.43,0,75.136,33.706,75.136,75.136C331.137,236.675,297.431,270.381,256.001,270.381z"></path> </g> </g> </g></svg></a>
+                    <a href="#"><svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13 c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3 c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13 c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z"></path> </g></svg></a>
+                    <a href="#"><svg height="35px" width="35px"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Communication / Mail"> <path id="Vector" d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="Final">
+        <div class="container flex-colum">
+            <a href="#"><p class="Text_Black Final_Text">Bogotá D.C Fontibón Carrera 97 # 24c 23 Muelle Empresarial 1 BOG 14</p></a>
+            <a href="#"><p class="Text_Black Final_Text">Términos y Condiciones - Política de Privacidad - Condiciones de Uso</p></a>
+        </div>
+    </section>
+    <script src="./js/Contactenos.js"></script>
+</body>
+</html>
