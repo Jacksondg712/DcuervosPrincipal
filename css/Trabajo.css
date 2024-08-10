@@ -106,7 +106,14 @@ a:focus{
   	font-style: italic;
 }
 
+.Text_Medium{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////// */
+
 
 .header{
 	background-color: #227598;
@@ -150,125 +157,37 @@ a:focus{
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
-.Cont_Tittle{
+.Portada{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-image: url('../images-videos/Flota.jpg');
     width: 100%;
-    margin-top: 65px;
-    justify-content: space-around;
+    height: 360px;
+    background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    margin:70px 0% 0px 0%;
+}
+
+.Cont_Port{
+    border: 1px solid black;
     align-items: center;
 }
 
-.Cont_Tittle_Text{
-    font-size: 48px;
-}
-
-.form{
-	width: 100%;
-}
-
-.Cont_Formulario{
-    width: 100%;
-    justify-content: space-around;
-	
-}
-
-.Cont_Form_Item{
-	width: 100%;
-	justify-content: space-around;
-	align-items: end;
-	margin-top: 30px;
-}
-
-.cont_Formu{
-    width: 627px;
-    /* height: 440px; */
-    margin-top: 45px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-radius: 20px;
-    align-items: start;
-
-}
-
-.Cont_Formu_Tittle{
-    width: 100%;
-    height: 60px;
-    background-color: #227598;
-    display: flex;
-    align-items: center;
-    border-radius: 20px 20px 0px 0px;
-}
-
-.Formu_Text{
-    color: white;
+.Port_Text_Medium{
     font-size: 20px;
-    margin-left: 30px;
-}
-
-.Cont_Item{
-    width: 627px;
-    justify-content: space-around;
-    align-items: end;
-    margin-top: 40px;
-}
-
-.Cont_Input{
-    width: 270px;
-    border: none;
-    border-bottom: 1px solid black;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 12px;
-}
-
-.Cont_Label{
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 12px;
-    color: #767676;
-}
-
-.Cont_select{
-    margin-top: 10px;
-    border: none;
-    border-bottom: 1px solid black;
-    width: 270px;
-    color: #767676;
-
-}
-
-.Cont_Button{
-    width: 200px;
-    height: 30px;
-    background-color: #227598;
     color: white;
-    margin-top: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    border: none;
-    border-radius: 10px;
 }
 
-
-.Cont_Button_PQR{
-    background-color: transparent;
-    border: none;
-    width: auto;
-    height: auto;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 12px;
+.Port_Text_Black{
+    
+    font-size: 64px;
+    color: white;
     margin-top: 20px;
-    margin-left: 20px;
-
+    margin-bottom: 20px;
 }
-
-
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
+
 
 footer{
 	width: 100%;

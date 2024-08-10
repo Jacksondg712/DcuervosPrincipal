@@ -18,7 +18,7 @@
                     <li class="head_Ref"><a href="./index.html" ><p>COMPAÑIA</p></a></li>
                     <li class="head_Ref"><a href="./servicios.html" ><p>SERVICIOS</p></a></li>
                     <li class="head_Ref"><a href="./contactenos.html" ><p>CONTACTENOS</p></a></li>
-                    <li class="head_Ref"><a href="#" ><p>TRABAJA CON NOSOTROS</p></a></li>
+                    <li class="head_Ref"><a href="./trabajo.html" ><p>TRABAJA CON NOSOTROS</p></a></li>
                 </div>
             </ul>
             <ul class="list">
@@ -41,116 +41,114 @@
                         <div class="Cont_Formu_Tittle">
                             <p class="Formu_Text Text_Black">informacion personal</p>
                         </div>
-                        <form id="form" class="flex-colum">
-                            <ul class=" list flex-colum">
-                                <li class="Cont_Item flex-row">
-                                    <div class="Cont_Select flex-colum">
-                                        <label class="Cont_Label" for="">Tipo de documento</label>                                
-                                        <div>
-                                            <select id="Document" name="Document" class="Cont_select">
-                                                <option value="Antioquia">Cedula Ciudadana</option>
-                                                <option value="Cundinamarca">Pasaporte</option>
-                                                                            
-                                            </select>
-                                        </div>
-                                    </div>
+                        <form id="form" class=" form flex-colum">
+                            <div class="Cont_Form_Item flex-row" style="margin-top: 10px;">
+                                <div class="Cont_Select flex-colum">
+                                    <label class="Cont_Label" for="">Tipo de documento</label>                                
                                     <div>
-                                        <input class="Cont_Input" type="text" placeholder="Documento de identidad" id="numbers" name="numbers">
-                                    </div> 
-                                </li>
-                                <li class="Cont_Item flex-row">
-                                    <input class="Cont_Input" type="text" placeholder="Nombres" name="name" id="name">
-                                    <input class="Cont_Input" type="text" placeholder="Apellidos" name="last" id="last">
-                                </li>
-                                <li class="Cont_Item flex-row">
-                                    <input class="Cont_Input" type="text" placeholder="Numero Telefonico" name="phone" id="phone">
-                                    <input class="Cont_Input" type="text" placeholder="E-mail" name="e-mail" id="e-mail">
-                                </li>
-                                <li class="Cont_Item flex-row">
-                                    <div class="flex-colum">
-                                        <label class="Cont_Label" for="">Departamento</label>                                
-                                        <div class="content">
-                                            <select id="departments" name="departments" class="Cont_select">
-                                                <option value="Valle del Cauca">Valle del Cauca</option>
-                                                <option value="Amazonas">Amazonas</option>
-                                                <option value="Antioquía">Antioquía</option>
-                                                <option value="Arauca">Arauca</option>
-                                                <option value="Atlántico">Atlántico</option>
-                                                <option value="Bolívar">Bolívar</option>
-                                                <option value="Boyacá">Boyacá</option>
-                                                <option value="Caldas">Caldas</option>
-                                                <option value="Caquetá">Caquetá</option>
-                                                <option value="Casanare">Casanare</option>
-                                                <option value="Cauca">Cauca</option>
-                                                <option value="Cesar">Cesar</option>
-                                                <option value="Chocó">Chocó</option>
-                                                <option value="Córdoba">Córdoba</option>
-                                                <option value="Cundinamarca">Cundinamarca</option>
-                                                <option value="Guainía">Guainía</option>
-                                                <option value="Guaviare">Guaviare</option>
-                                                <option value="Huila">Huila</option>
-                                                <option value="La Guajira">La Guajira</option>
-                                                <option value="Magdalena">Magdalena</option>
-                                                <option value="Meta">Meta</option>
-                                                <option value="Nariño">Nariño</option>
-                                                <option value="Norte de Santander">Norte de Santander</option>
-                                                <option value="Putumayo">Putumayo</option>
-                                                <option value="Quindío">Quindío</option>
-                                                <option value="Risaralda">Risaralda</option>
-                                                <option value="San Andrés y Providencia">San Andrés y Providencia</option>
-                                                <option value="Santander">Santander</option>
-                                                <option value="Sucre">Sucre</option>
-                                                <option value="Tolima">Tolima</option>
-                                                <option value="Valle del Cauca">Valle del Cauca</option>
-                                                <option value="Vaupés">Vaupés</option>
-                                                <option value="Vichada">Vichada</option>                                        
-                                            </select>
-                                        </div>
+                                        <select id="Document" name="Document" class="Cont_select">
+                                            <option value="Antioquia">Cedula Ciudadana</option>
+                                            <option value="Cundinamarca">Pasaporte</option>
+                                            
+                                        </select>
                                     </div>
-                                    <div class="flex-colum">
-                                        <label class="Cont_Label" for="">Tipo de documento</label>                                
-                                        <div class="content">
-                                            <select id="city" name="city" class="Cont_select">
-                                                <option value="Leticia">Leticia</option>
-                                                <option value="Medellín">Medellín</option>
-                                                <option value="Arauca">Arauca</option>
-                                                <option value="Barranquilla">Barranquilla</option>
-                                                <option value="Cartagena de Indias">Cartagena de Indias</option>
-                                                <option value="Tunja">Tunja</option>
-                                                <option value="Manizales">Manizales</option>
-                                                <option value="Florencia">Florencia</option>
-                                                <option value="Yopal">Yopal</option>
-                                                <option value="Popayán">Popayán</option>
-                                                <option value="Valledupar">Valledupar</option>
-                                                <option value="Quibdó">Quibdó</option>
-                                                <option value="Montería">Montería</option>
-                                                <option value="Bogotá">Bogotá</option>
-                                                <option value="Inírida">Inírida</option>
-                                                <option value="San José del Guaviare">San José del Guaviare</option>
-                                                <option value="Neiva">Neiva</option>
-                                                <option value="Riohacha">Riohacha</option>
-                                                <option value="Santa Marta">Santa Marta</option>
-                                                <option value="Villavicencio">Villavicencio</option>
-                                                <option value="San Juan de Pasto">San Juan de Pasto</option>
-                                                <option value="San José de Cúcuta">San José de Cúcuta</option>
-                                                <option value="Mocoa">Mocoa</option>
-                                                <option value="Armenia">Armenia</option>
-                                                <option value="Pereira">Pereira</option>
-                                                <option value="San Andrés">San Andrés</option>
-                                                <option value="Bucaramanga">Bucaramanga</option>
-                                                <option value="Sincelejo">Sincelejo</option>
-                                                <option value="Cali">Cali</option>
-                                                <option value="Mitú">Mitú</option>
-                                                <option value="Puerto Carreño">Puerto Carreño</option>                            
-                                            </select>
-                                        </div>
+                                </div>
+                                <div>
+                                    <input class="Cont_Input" type="text" placeholder="Documento de identidad" id="numbers" name="numbers">
+                                </div>
+                            </div>
+                            <div class="Cont_Form_Item flex-row">
+                                <input class="Cont_Input" type="text" placeholder="Nombres" name="name" id="name">
+                                <input class="Cont_Input" type="text" placeholder="Apellidos" name="last" id="last">
+                            </div>
+                            <div class="Cont_Form_Item flex-row">
+                                <input class="Cont_Input" type="text" placeholder="Numero Telefonico" name="phone" id="phone">
+                                <input class="Cont_Input" type="text" placeholder="E-mail" name="e-mail" id="e-mail">
+                            </div>
+                            <div class="Cont_Form_Item flex-row">
+                                <div class="flex-colum">
+                                    <label class="Cont_Label" for="">Departamento</label>                                
+                                    <div class="content">
+                                        <select id="departments" name="departments" class="Cont_select">
+                                            <option value="Valle del Cauca">Valle del Cauca</option>
+                                            <option value="Amazonas">Amazonas</option>
+                                            <option value="Antioquía">Antioquía</option>
+                                            <option value="Arauca">Arauca</option>
+                                            <option value="Atlántico">Atlántico</option>
+                                            <option value="Bolívar">Bolívar</option>
+                                            <option value="Boyacá">Boyacá</option>
+                                            <option value="Caldas">Caldas</option>
+                                            <option value="Caquetá">Caquetá</option>
+                                            <option value="Casanare">Casanare</option>
+                                            <option value="Cauca">Cauca</option>
+                                            <option value="Cesar">Cesar</option>
+                                            <option value="Chocó">Chocó</option>
+                                            <option value="Córdoba">Córdoba</option>
+                                            <option value="Cundinamarca">Cundinamarca</option>
+                                            <option value="Guainía">Guainía</option>
+                                            <option value="Guaviare">Guaviare</option>
+                                            <option value="Huila">Huila</option>
+                                            <option value="La Guajira">La Guajira</option>
+                                            <option value="Magdalena">Magdalena</option>
+                                            <option value="Meta">Meta</option>
+                                            <option value="Nariño">Nariño</option>
+                                            <option value="Norte de Santander">Norte de Santander</option>
+                                            <option value="Putumayo">Putumayo</option>
+                                            <option value="Quindío">Quindío</option>
+                                            <option value="Risaralda">Risaralda</option>
+                                            <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                            <option value="Santander">Santander</option>
+                                            <option value="Sucre">Sucre</option>
+                                            <option value="Tolima">Tolima</option>
+                                            <option value="Valle del Cauca">Valle del Cauca</option>
+                                            <option value="Vaupés">Vaupés</option>
+                                            <option value="Vichada">Vichada</option>                                        
+                                        </select>
                                     </div>
-                                </li>
-                                <li class="Cont_Item flex-row">
-                                    <input class="Cont_Input" type="text" placeholder="Barrio" name="neighborhood" id="neighborhood">
-                                    <input class="Cont_Input" type="text" placeholder="Direccion" name="address" id="address">
-                                </li>
-                            </ul>
+                                </div>
+                                <div class="flex-colum">
+                                    <label class="Cont_Label" for="">Tipo de documento</label>                                
+                                    <div class="content">
+                                        <select id="city" name="city" class="Cont_select">
+                                            <option value="Leticia">Leticia</option>
+                                            <option value="Medellín">Medellín</option>
+                                            <option value="Arauca">Arauca</option>
+                                            <option value="Barranquilla">Barranquilla</option>
+                                            <option value="Cartagena de Indias">Cartagena de Indias</option>
+                                            <option value="Tunja">Tunja</option>
+                                            <option value="Manizales">Manizales</option>
+                                            <option value="Florencia">Florencia</option>
+                                            <option value="Yopal">Yopal</option>
+                                            <option value="Popayán">Popayán</option>
+                                            <option value="Valledupar">Valledupar</option>
+                                            <option value="Quibdó">Quibdó</option>
+                                            <option value="Montería">Montería</option>
+                                            <option value="Bogotá">Bogotá</option>
+                                            <option value="Inírida">Inírida</option>
+                                            <option value="San José del Guaviare">San José del Guaviare</option>
+                                            <option value="Neiva">Neiva</option>
+                                            <option value="Riohacha">Riohacha</option>
+                                            <option value="Santa Marta">Santa Marta</option>
+                                            <option value="Villavicencio">Villavicencio</option>
+                                            <option value="San Juan de Pasto">San Juan de Pasto</option>
+                                            <option value="San José de Cúcuta">San José de Cúcuta</option>
+                                            <option value="Mocoa">Mocoa</option>
+                                            <option value="Armenia">Armenia</option>
+                                            <option value="Pereira">Pereira</option>
+                                            <option value="San Andrés">San Andrés</option>
+                                            <option value="Bucaramanga">Bucaramanga</option>
+                                            <option value="Sincelejo">Sincelejo</option>
+                                            <option value="Cali">Cali</option>
+                                            <option value="Mitú">Mitú</option>
+                                            <option value="Puerto Carreño">Puerto Carreño</option>                            
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Cont_Form_Item flex-row">
+                                <input class="Cont_Input" type="text" placeholder="Barrio" name="neighborhood" id="neighborhood">
+                                <input class="Cont_Input" type="text" placeholder="Direccion" name="address" id="address">
+                            </div>
                             <input type="submit" class="Cont_Button" id="button" value="Send Email" >
                         </form>
                         <button class="Cont_Button_PQR">Descripcion de la PQR</button>
@@ -214,7 +212,8 @@
         </div>
     </section>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">emailjs.init('TU0MjAoqpu6NbMb5U')
+    <script type="text/javascript">
+    emailjs.init('TU0MjAoqpu6NbMb5U')
     </script>
     <script src="./js/Contactenos.js"></script>
 </body>
