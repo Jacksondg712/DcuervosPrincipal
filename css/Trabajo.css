@@ -169,7 +169,6 @@ a:focus{
 }
 
 .Cont_Port{
-    border: 1px solid black;
     align-items: center;
 }
 
@@ -184,6 +183,15 @@ a:focus{
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.Trab_Tiitle{
+	color: #7DCDE3;
+	font-size: 32px;
+	width: 450px;
+	margin-top: 50px;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
