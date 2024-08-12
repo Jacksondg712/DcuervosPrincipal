@@ -266,7 +266,33 @@ a:focus{
 
 }
 
+.Cont_TextTarea{
+	height: 100px;
+	width: 80%;
+    resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+    overflow: auto;
+	margin-top:15px 	;
+}
 
+.Cont_Form_Text{
+	margin-top: 40px;
+	width: 100%;
+	align-items: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.Cont_Botelin{
+	width: 460px;
+	height: 130px;
+	background-color: #7DCDE3;
+	border-radius: 40px;
+	margin-top: 40px;
+}
+
+.Cont_Bot_text{
+	
+}
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
