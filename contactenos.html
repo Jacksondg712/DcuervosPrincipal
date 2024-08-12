@@ -237,10 +237,16 @@
               width="321px"
             />
           </div>
-          <div class="Cont_Botelin">
+          <div class="Cont_Botelin flex-colum">
             <p class="Cont_Bot_text Text_Black">Suscríbete a nuestro boletines con toda la actualidad de nuestro trabajo logístico.</p>
-            <button>Suscribete aqui ></button>
+            <button id="openModalBtn" class="Cont_Bot_Button Text_Black">Suscribete aqui ></button>
           </div>
+          <div id="myModal" class="Cont_Modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>This is a simple modal!</p>
+            </div>
+        </div>
         </div>
       </section>
     </main>
@@ -350,8 +356,8 @@
                       ></path>
                     </g>
                   </g>
-                </g></svg
-            ></a>
+                </g></svg>
+              </a>
             <a href="#"
               ><svg
                 fill="#ffffff"
