@@ -155,6 +155,7 @@ a:focus{
 	margin-right: 0px;
 }
 
+
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .Portada{
@@ -191,9 +192,102 @@ a:focus{
 	color: #7DCDE3;
 	font-size: 32px;
 	width: 450px;
+}
+.Trab_Cont{
+	width: 100%;
+	justify-content: space-between;
+	margin-top: 100px;
+	align-items: center;
+}
+
+.Trb_input_name{
+	width: 600px;
+	border: none;
+	border-bottom: 1px solid black;
+	color: #787878;
+
+}
+
+.Trb_input_number{
+	width: 270px;
+	border: none;
+	border-bottom: 1px solid black;
+	color: #787878;
+}
+
+.Trb_cont_input{
+	width: 100%;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.Trb_Arc_text{
+	font-size: 20px;
+	color: #787878;
+}
+
+.Trb_Arc_Button{
+	width: 180px;
+	height: 50px;
+	background-color: #7DCDE3;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.Trb_Arc_text_Sec{
+	color: #787878;
+	font-size: 16px;
+	width: 230px;
+}
+
+.Trb_Cont_veri{
+	width: 270px;
+}
+
+.Trb_Ver_Text{
+	font-size: 20px;
+	color: #787878;
+}
+
+.Trb_Ver_Casi{
+	margin-top: 10px;
+	color: #787878;
+	font-size: 16px;
+}
+
+.Trb_Button_Send{
+	width: 300px;
+	height: 80px;
+	background-color: #7DCDE3;
+	color: white;
+	transition: background-color 0.5s ease;
+	border: none;
+	border-radius: 20px;
+	font-size: 30px;
 	margin-top: 50px;
 }
 
+.Trb_Button_Send:hover{
+	background-color: #227598;
+
+}
+
+.Cont_Form{
+	align-items: center;
+	font-size: 40px;
+	margin-top: 80px;
+}
+
+.Trb_Cont_Fomr{
+	align-items: center;
+	justify-content: start;
+	height: 100%;
+	border: 1px solid black;
+}
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 

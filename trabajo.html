@@ -41,9 +41,31 @@
         </section>
         <section>
             <div class="container flex-colum">
-                <h1 class="Trab_Tiitle Text_Black">Envianos tu hoja de vida y nos pondremos en contacto contigo</h1>
-                <div class="Trab_Cont">
+                <div class="Trab_Cont flex-row">
                     <img src="./images-videos/trabajador.jpg" alt="Trabajador" width="400px">
+                    <div class="Trb_Cont_Fomr flex-colum">
+                        <h1 class="Trab_Tiitle Text_Black">Envianos tu hoja de vida y nos pondremos en contacto contigo</h1>
+                        <form action="" class="Cont_Form flex-colum">
+                            <input type="text" placeholder="Nombre" class="Trb_input_name" required>
+                        <div class=" Trb_cont_input flex-row">
+                            <input type="text" placeholder="Correo electronico" class="Trb_input_number" required>
+                            <input type="text" name="" id="" placeholder="Numero celular" class="Trb_input_number" required>
+                        </div>
+                        <div class="Trb_cont_input flex-row">
+                            <div class="flex-colum">
+                                <p class="Trb_Arc_text Text_Black">Adjunta tu hoja de vida</p>
+                                <button class="Trb_Arc_Button Text_Medium">seleccionar archivo</button>
+                                <p class="Trb_Arc_text_Sec Text_Medium">Adjunta tu hoja de vida en PDF y que no exceda los 20MB</p>
+                            </div>
+                            <div class=" Trb_Cont_veri flex-colum">
+                                <p class="Trb_Ver_Text Text_Black">Casilla de verificación</p>
+                                <p class="Trb_Ver_Casi Text_Black"><input type="checkbox" required>Soy mayor de 18 años</p>
+                                <p class="Trb_Ver_Casi Text_Black"><input type="checkbox" required>no soy un robot</p>
+                            </div>
+                        </div>
+                        <input type="submit" value="Enviar mensaje" class="Trb_Button_Send Text_Black">
+                    </form>
+                </div>
                 </div>
             </div>
         </section>
