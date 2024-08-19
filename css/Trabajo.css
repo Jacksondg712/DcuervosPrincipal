@@ -218,7 +218,7 @@ a:focus{
 .Trb_cont_input{
 	width: 100%;
 	justify-content: space-between;
-	margin-top: 20px;
+	margin-top: 25px;
 }
 
 .Trb_Arc_text{
@@ -276,6 +276,7 @@ a:focus{
 
 }
 
+
 .Cont_Form{
 	align-items: center;
 	font-size: 40px;
@@ -286,8 +287,14 @@ a:focus{
 	align-items: center;
 	justify-content: start;
 	height: 100%;
-	border: 1px solid black;
 }
+
+.Trb_cont_archi{
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 
