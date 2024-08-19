@@ -70,15 +70,7 @@ a:link{
     text-decoration: none;
 
 }
-a:hover{
-    color: #7DCDE3;
-}
-a:active{
-    color: #7DCDE3;
-}
-a:focus{
-    color: #7DCDE3;
-}
+
 
 .flex-row{
 	display: flex;
@@ -95,7 +87,6 @@ a:focus{
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	/* border: 1px solid black; */
 	justify-content: space-around;
 	align-items: center;
 }
@@ -105,6 +96,7 @@ a:focus{
   	font-weight: 900;
   	font-style: italic;
 }
+
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
@@ -129,17 +121,42 @@ a:focus{
 
 .head_Ref{
 	margin-left: 30px;
+}
+
+.head_Ref_Text{
 	font-family: "Roboto", sans-serif;
-  	font-weight: 500;
-  	font-style: normal;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.head_Ref_Link{
+	transition: color 0.5s ease;
+
+}
+
+.head_Ref:hover{
+	.head_Ref_Link{
+		color: #7dcde3;
+	}
+}
+
+.head_Acceso_link{
+	transition: color 0.5s ease;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
 }
 
 .head_Acceso{
-	border: 1px solid #E7F0F8;
 	padding: 10px;
 	border-radius: 15px;
 	margin-right: 0px;
-	
+}
+
+.head_Acceso:hover{
+	.head_Acceso_link{
+		color: #57bfd9;
+	}
 }
 
 .head_Cont_list_acceso{
@@ -151,18 +168,52 @@ a:focus{
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .dcuervo{
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	background-image: url("../images-videos/Flota.jpg");
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
 	background-repeat: no-repeat;
 	margin:70px 0% 0px 0%;
 	width: 100%;
 	height: 600px;
 	background-size: cover;
 	background-position: center;
+	position: relative;
+}
+
+.Dcuervo_slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+	height: 600px;
+	padding: 0px;
+
+}
+
+.Dcuervo_img_carrusel{
+	width: 1200px;
+	height: 600px;
+	top: 0%;
+}
+
+.Dcuervo_slide {
+	top: 0%;
+    flex: 0 0 100%;
+    width: 100%;
+	height: 600px;
+    transition: transform 0.5s ease;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin:0px 0% 0px 0%;
+  }
+
+.Dcuervo_Img{
+	position: absolute;
+    top:35%;
+    transform: translateY(-50%);
 }
 
 .Dcuer_container{
 	align-items: center;
+	width: 100%;
 }
 
 .Dcuer_Cont_Button{
@@ -170,17 +221,30 @@ a:focus{
 	width: 500px;
 	height: 70px;
 	justify-content: space-between;
+	
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .Dcuer_button{
-	background-color: #7DCDE3;
+	background-color: #57bfd9;
 	width: 200px;
 	height: 70px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 15px;
-	
+	transition: background-color 0.5s ease;
+	transition: transform 0.5s ease;
+
+}
+
+.Dcuer_button:hover{
+	transform: scale(1.1);
+	background-color: #227598;
+	color: white;
 }
 
 .Dcuervo_Text_Button{
@@ -287,6 +351,40 @@ a:focus{
 	font-size: 48px;
 }
 
+.Corp_cont_animation{
+	width: 100%;
+	justify-content: space-around;
+	position: relative;
+	z-index: 1;
+	margin-top: 50px;
+	align-items: end;
+}
+
+
+.cont_Car{
+	transition:  transform 5s;
+	position: absolute;
+	z-index: 2;
+	left: 7%;
+	top: 18%;
+}
+
+.Corp_cont_animation:hover{
+	.cont_Car{
+		transform: translatex(1000px);
+	}
+}
+
+.car{
+	transform: scaleX(-1);
+}
+
+.line{
+	width: 60px;
+	height: 3px;
+	background-color: black;
+}
+
 
 .Corp_Card_Fondo{
 	background-color: #7DCDE3;
@@ -298,7 +396,10 @@ a:focus{
 	position: absolute;
 	margin-top: 350px;
 	border-radius: 500px 0px;
+	
 }
+
+
 
 
 
@@ -309,6 +410,9 @@ a:focus{
 	border-radius: 20px 0px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 	z-index: 0;
+	transition: background-color transform 0.5s ease;
+	transition: transform 0.5s ease;
+
 }
 
 .Corp_Card_Prop{
@@ -327,25 +431,37 @@ a:focus{
 .Corp_Card_Num{
 	color: #7DCDE3;
 	font-size: 35px;
+	transition: color 0.5s ease;
+
 }
 
 .Corp_Card_tittle{
 	color: white;
   	font-size: 20px;
 	width: 125px;
+	transition: color 0.5s ease;
 }
 
 .Corp_Card_Text{
 	margin-top: 10px;
 	color: white;
 	font-family: "Roboto", sans-serif;
-  	font-weight: 300;
+  	font-weight: 500;
   	font-style: italic;
 	width: 100%;
 }
 
+.svg{
+	transition: stroke 0.5s ease;
+}
+
+.svgfill{
+	transition: fill 0.5s ease;
+}
+
 .Corp_Card:hover{
-	background-color: #7DCDE3;
+	background-color: #57bfd9;
+	transform: scale(1.1);
 	.Corp_Card_tittle{
 		color: #227598;
 	}
@@ -366,55 +482,96 @@ a:focus{
 .Nos_Container{
 	align-items: center;
 	height: 100%;
-	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .Nos_Cont_Color{
 	background-color: #227598;
 	margin-top: 70px;
 	width: 100%;
-	height: 630px;
+	height: 700px;
 }
 
 .Nos_Cont_info{
-	width: 350px;
-	height: 140px;
+	width: 400px;
+	height: 200px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #7DCDE3;
+	background-color: #57bfd9;
 	border-radius: 20px;
-	
+	position: relative;
+	z-index: 1;
+	transition: background-color 0.5s ease;
+	transition: transform 0.5s ease;
+
 }
+
+
 
 .Nos_Text_Cont{
 	font-size: 36px;
 	color: white;
+	position: absolute;
+	z-index: 2;
+	opacity: 1;
+	transition: opacity 0.5s ease;
 }
 
+.Nos_Text_Vision{
+	width: 350px;
+	text-align: center;
+	color: white;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	font-size: 20px;
+}
+
+.Nos_Cont_info:hover{
+	transform: scale(1.05);	.Nos_Text_Vision{
+		opacity: 1;
+
+	}
+
+	.Nos_Text_Cont{
+		opacity: 0;
+	}
+}
+
+
 .Nos_Cont_Ref{
-	width: 250px;
-	height: 50px;
+	width: 300px;
+	height: 70px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #7DCDE3;
-	margin-top: 80px;
+	background-color: #57bfd9;
+	margin-bottom: 50px;
+	margin-left: 450px;
 	border-radius: 20px;
+	transition: transform 0.5s ease;
 }
 
 .Nos_Ref{
-	font-size: 24px;
+	font-size: 28px;
+	transition: color 0.5s ease;
 }
 
-.Nos_Cont_video{
-	background-image: url("../images-videos/image\ 1.png");
-	width: 534px;
-	height: 485px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.Nos_video{
+	width: 700px;
+	height: 400px;
+	margin-top: 110px;
+	margin-left: 20px;
 }
+
+.Nos_Cont_Ref:hover{
+	transform: scale(1.1);
+	.Nos_Ref{
+		color: #227598;
+	}
+}
+
+
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
@@ -473,6 +630,50 @@ a:focus{
 
 .Flo_Cont_Text{
 	align-items: center;
+}
+
+.Flo_Button{
+	border: none;
+	background-color: transparent;
+	transition: transform 0.5s ease;
+}
+
+.Flo_Button:hover{
+	transform: scale(1.2);
+}
+
+.Flo_Modal{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 60px;
+}
+
+.Flo_modal_content{
+	margin: 5% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
