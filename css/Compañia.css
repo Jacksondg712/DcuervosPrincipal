@@ -97,6 +97,12 @@ a:link{
   	font-style: italic;
 }
 
+.Text_Medium{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
@@ -256,6 +262,7 @@ a:link{
 .Qsomos{
 	width: auto;
 	height: auto;
+	margin-top: 10px;
 }
 
 .Qsomos_Cont_En{
@@ -299,13 +306,15 @@ a:link{
 .Qsomos_Cont_Sec2{
 	width: 100%;
 	margin: 0px;
-	background-color: #227598;
 	height: 480px;
+	margin-top: 5px;
 }
 
 .Qsomos_Cont_Nu{
-	width: 600px;
+	width: 100%;
 	align-items: center;
+	margin-right: 5px;
+	background-color: #227598;
 }
 
 .Qsomos_Text_Sec2{
@@ -368,16 +377,19 @@ a:link{
 	left: 7%;
 	top: 18%;
 }
+.car{
+	transform: scalex(-1);
+}
 
 .Corp_cont_animation:hover{
 	.cont_Car{
 		transform: translatex(1000px);
 	}
+	.car{
+		transform: scaleX(1);
+	}
 }
 
-.car{
-	transform: scaleX(-1);
-}
 
 .line{
 	width: 60px;
@@ -596,6 +608,9 @@ a:link{
 	color: #227598;
 	margin-top: 60px;
 	text-align: center;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 300;
+  	font-style: italic;
 }
 
 .Flo_Line{
@@ -658,15 +673,21 @@ a:link{
 
 .Flo_modal_content{
 	margin: 5% auto;
-	padding: 20px;
+	padding: 0 30px 0 50px;
 	border: 1px solid #888;
-	width: 80%;
+	width: 610px;
+	height: 700px;
+	background-color: white;
+	justify-content: space-around;
+	position: absolute;
+	z-index: 4;
+	right: 50%;
 }
 
 .close {
 	color: #aaa;
 	float: right;
-	font-size: 28px;
+	font-size: 35px;
 	font-weight: bold;
 }
 
@@ -674,6 +695,46 @@ a:link{
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.Flo_modal_tittle{
+	font-size: 64px;
+	color: black;
+	margin-top: -100px;
+}
+
+.Flo_modal_sub{
+	color: #839DD1;
+	font-size: 32px;
+}
+
+.Flo_modal_text{
+	color: black;
+	font-size: 24px;
+}
+
+.Flo_modal_Cont{
+	width: 400px;
+	justify-content: start;
+	position: relative;
+	z-index: 2;
+}
+
+.Flo_modal_content_x{
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	margin-top: -30px;
+}
+
+.Flo_modal_Image{
+	width: 670px;
+	height: 760px;
+  	margin-bottom: 15px;
+	position: absolute;
+	z-index: 3;
+	top: 13.2%;
+	left: 48%;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */

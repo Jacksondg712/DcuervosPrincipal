@@ -70,15 +70,7 @@ a:link{
     text-decoration: none;
 
 }
-a:hover{
-    color: #7DCDE3;
-}
-a:active{
-    color: #7DCDE3;
-}
-a:focus{
-    color: #7DCDE3;
-}
+
 
 .flex-row{
 	display: flex;
@@ -105,8 +97,13 @@ a:focus{
   	font-style: italic;
 }
 
-/* ////////////////////////////////////////////////////////////////////////////////// */
+.Text_Medium{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
 
+/* ////////////////////////////////////////////////////////////////////////////////// */
 .header{
 	background-color: #227598;
 	height: auto;
@@ -128,17 +125,42 @@ a:focus{
 
 .head_Ref{
 	margin-left: 30px;
+}
+
+.head_Ref_Text{
 	font-family: "Roboto", sans-serif;
-  	font-weight: 500;
-  	font-style: normal;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.head_Ref_Link{
+	transition: color 0.5s ease;
+
+}
+
+.head_Ref:hover{
+	.head_Ref_Link{
+		color: #7dcde3;
+	}
+}
+
+.head_Acceso_link{
+	transition: color 0.5s ease;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
 }
 
 .head_Acceso{
-	border: 1px solid #E7F0F8;
 	padding: 10px;
 	border-radius: 15px;
 	margin-right: 0px;
-	
+}
+
+.head_Acceso:hover{
+	.head_Acceso_link{
+		color: #57bfd9;
+	}
 }
 
 .head_Cont_list_acceso{
@@ -146,7 +168,6 @@ a:focus{
 	width: 100%;
 	margin-right: 0px;
 }
-
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .Cont_Tittle{
@@ -248,6 +269,14 @@ a:focus{
     margin-left: auto;
     border: none;
     border-radius: 10px;
+	transition: background-color 0.5s ease;
+	transition: transform 0.5s ease;
+
+}
+
+.Cont_Button:hover{
+	transform: scale(1.1);
+	background-color: #57bfd9;
 }
 
 
