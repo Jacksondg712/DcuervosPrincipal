@@ -70,15 +70,7 @@ a:link{
     text-decoration: none;
 
 }
-a:hover{
-    color: #7DCDE3;
-}
-a:active{
-    color: #7DCDE3;
-}
-a:focus{
-    color: #7DCDE3;
-}
+
 
 .flex-row{
 	display: flex;
@@ -95,7 +87,6 @@ a:focus{
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	/* border: 1px solid black; */
 	justify-content: space-around;
 	align-items: center;
 }
@@ -106,9 +97,13 @@ a:focus{
   	font-style: italic;
 }
 
+.Text_Medium{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
-
 .header{
 	background-color: #227598;
 	height: auto;
@@ -130,17 +125,42 @@ a:focus{
 
 .head_Ref{
 	margin-left: 30px;
+}
+
+.head_Ref_Text{
 	font-family: "Roboto", sans-serif;
-  	font-weight: 500;
-  	font-style: normal;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.head_Ref_Link{
+	transition: color 0.5s ease;
+
+}
+
+.head_Ref:hover{
+	.head_Ref_Link{
+		color: #7dcde3;
+	}
+}
+
+.head_Acceso_link{
+	transition: color 0.5s ease;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
 }
 
 .head_Acceso{
-	border: 1px solid #E7F0F8;
 	padding: 10px;
 	border-radius: 15px;
 	margin-right: 0px;
-	
+}
+
+.head_Acceso:hover{
+	.head_Acceso_link{
+		color: #57bfd9;
+	}
 }
 
 .head_Cont_list_acceso{
@@ -206,7 +226,7 @@ a:focus{
 .Port_Flot{
     width: 400px;
     height: 70px;
-    background-color: #7DCDE3;
+    background-color: #57bfd9;
     position: relative;
     z-index: 3;
     border-radius: 50px;
@@ -214,6 +234,11 @@ a:focus{
     display: flex;
     align-items: center;
     justify-content: center;
+	transition: transform 0.5s ease;
+}
+
+.Port_Flot:hover{
+	transform: scale(1.1);
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
@@ -221,7 +246,8 @@ a:focus{
 .Servi_List{
     width: 100%;
     justify-content: space-around;
-    margin-top: 120px;
+    margin-top: 150px;
+	margin-bottom: 150px;
 }
 
 .Servi_Item{
@@ -230,7 +256,12 @@ a:focus{
     background-color: #E8E8E8;
     border-radius: 20px;
     align-items: center;
+	transition: transform 0.5s ease; 
+
 }
+
+ .Servi_Item:hover{
+	transform: scale(1.2);} 
 
 .Servi_Cont_Titlle{
     width: 100%;
@@ -240,10 +271,11 @@ a:focus{
 }
 
 .Servi_Tittle{
-    width: 160px;
+    width: 200px;
     font-size: 20px;
     margin-left: 20px;
     text-align: center;
+	color: #404040;
 
 }
 
@@ -251,6 +283,7 @@ a:focus{
     width: 258px;
     text-align: center;
     margin-top: 40px;
+	color: #404040;
 }
 
 .Servi_Cont_Ref{
@@ -267,6 +300,53 @@ a:focus{
 
 
 }
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Contenido del modal */
+  .modal-content {
+	background-color: transparent;
+	margin: 5% auto;
+	width: 70%;
+	height: auto;
+	position: relative;
+  }
+  
+  /* Botón de cierre */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	position: absolute;
+	z-index: 3;
+	right: 2%;
+	top: 2%;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #57bfd9;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .modal-video{
+	width: 100%;
+	height: 100%;
+	
+  }
 
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
