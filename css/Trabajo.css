@@ -248,18 +248,20 @@ a:link{
 	font-size: 15px;
 	border: none;
 	border-radius: 20px;
-	margin-top: 10px;
+	margin-top: 25px;
 	margin-bottom: 10px;
 }
 
 .Trb_Arc_Button:hover{
-	
+	transform: scale(1.1);
+	background-color: #227598;
 }
 
 .Trb_Arc_text_Sec{
 	color: #787878;
 	font-size: 16px;
 	width: 230px;
+	margin-top: 20px;
 }
 
 .Trb_Cont_veri{
@@ -275,6 +277,7 @@ a:link{
 	margin-top: 10px;
 	color: #787878;
 	font-size: 16px;
+
 }
 
 .Trb_Button_Send{
@@ -307,6 +310,7 @@ a:link{
 	align-items: center;
 	justify-content: start;
 	height: 100%;
+	z-index: 2;
 }
 
 .Trb_cont_archi{
@@ -314,6 +318,82 @@ a:link{
 	justify-content: center;
 	text-align: center;
 }
+
+/* Estilos para el botón */
+.Trb_Button_Req, .Trb_Button_aut{
+	background-color: transparent;
+	color: #787878;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	text-align: start;
+
+  }
+
+  .Trb_Button_Req:hover, .Trb_Button_aut:hover{
+	color: #57bfd9;
+  }
+  
+  /* Estilos para el modal */
+  .modal_Req, .modal_aut {
+	display: none;
+	position: fixed;
+	z-index: 4;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Contenido del modal */
+  .modal-content_Req, .modal-content_aut {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+  }
+  
+  /* Botón de cierre */
+  .close_Req, .close_aut {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close_Req:hover,
+  .close_Req:focus{
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .close_aut:hover,
+  .close_aut:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  /* Imagen del modal */
+  #modal-image {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+  }
+
+  .Trb_Cont_Button{
+	position: absolute;
+	z-index: 3;
+	top: 406px;
+	right: 160px;
+	text-align: start;
+}
+  
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
@@ -377,6 +457,7 @@ footer{
 	width: 100%;
 	justify-content: space-around;
 }
+
 
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
