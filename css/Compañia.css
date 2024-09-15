@@ -672,15 +672,17 @@ a:link{
 }
 
 .Flo_modal_content{
-	margin: 5% auto;
+	margin: 0 auto;
 	padding: 0 30px 0 50px;
 	width: 610px;
-	height: 600px;
-	background-color: #effafc;
+	height: 540px;
+	/* background-color: #effafc; */
+	background-color: white;
 	justify-content: space-around;
 	position: absolute;
 	z-index: 4;
 	right: 50%;
+	top: 14%;
 	border-radius: 10px;
 }
 
@@ -716,7 +718,7 @@ a:link{
 }
 
 .Flo_modal_Cont{
-	width: 400px;
+	width: 500px;
 	justify-content: start;
 	position: relative;
 	z-index: 2;
@@ -730,12 +732,12 @@ a:link{
 }
 
 .Flo_modal_Image{
-	width: 570px;
-	height: 660px;
+	width: 600px;
+	height: 575px;
   	margin-bottom: 15px;
 	position: absolute;
 	z-index: 3;
-	top: 13.2%;
+	top: 12%;
 	left: 48%;
 }
 
