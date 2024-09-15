@@ -174,7 +174,7 @@ a:link{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background-image: url('../images-videos/Flota.jpg');
     width: 100%;
-    height: 360px;
+    height: 550px;
     background-size: cover;
 	background-position: center;
     background-repeat: no-repeat;
@@ -248,18 +248,20 @@ a:link{
 	font-size: 15px;
 	border: none;
 	border-radius: 20px;
-	margin-top: 10px;
+	margin-top: 25px;
 	margin-bottom: 10px;
 }
 
 .Trb_Arc_Button:hover{
-	
+	transform: scale(1.1);
+	background-color: #227598;
 }
 
 .Trb_Arc_text_Sec{
 	color: #787878;
 	font-size: 16px;
 	width: 230px;
+	margin-top: 20px;
 }
 
 .Trb_Cont_veri{
@@ -275,6 +277,7 @@ a:link{
 	margin-top: 10px;
 	color: #787878;
 	font-size: 16px;
+
 }
 
 .Trb_Button_Send{
@@ -307,6 +310,7 @@ a:link{
 	align-items: center;
 	justify-content: start;
 	height: 100%;
+	z-index: 2;
 }
 
 .Trb_cont_archi{
@@ -315,6 +319,109 @@ a:link{
 	text-align: center;
 }
 
+/* Estilos para el botón */
+.Trb_Button_Req, .Trb_Button_aut{
+	background-color: transparent;
+	color: #787878;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	text-align: start;
+
+  }
+
+  .Trb_Button_Req:hover, .Trb_Button_aut:hover{
+	color: #57bfd9;
+  }
+  
+  /* Estilos para el modal */
+  .modal_Req, .modal_aut {
+	display: none;
+	position: fixed;
+	z-index: 4;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Contenido del modal */
+  .modal-content_Req, .modal-content_aut {
+	background-color: #fefefe;
+	margin: 8% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%;
+
+  }
+  
+  /* Botón de cierre */
+  .close_Req, .close_aut {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close_Req:hover,
+  .close_Req:focus{
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .close_aut:hover,
+  .close_aut:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  /* Imagen del modal */
+  #modal-image {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+  }
+
+  .Trb_Cont_Button{
+	position: absolute;
+	z-index: 3;
+	top: 406px;
+	right: 50px;
+	text-align: start;
+}
+  
+
+.Req_list{
+	list-style: disc;
+}
+
+.Req_text{
+	margin-top: 15px;
+}
+
+.Req_Cont{
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Tra_Cont{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.Tra_text{
+	width: 90%;
+	margin-top: 15px;
+}
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 
@@ -323,7 +430,7 @@ footer{
 	height: 260px;
 	background-color: #227598;
 	padding: 0%;
-	margin-top: 50px;
+	margin-top: 100px;
 }
 
 .Foo_Cont_Info1{
@@ -377,6 +484,7 @@ footer{
 	width: 100%;
 	justify-content: space-around;
 }
+
 
 
 /* ////////////////////////////////////////////////////////////////////////////////// */

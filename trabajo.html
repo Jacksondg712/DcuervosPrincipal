@@ -21,7 +21,7 @@
             </ul>
             <ul class="list">
                 <div class="flex-row">
-                    <li class="head_Acceso"><a class="head_Acceso_link" href="#"><p>ACCESO CLIENTES</p></a></li>
+                    <li class="head_Acceso"><a class="head_Acceso_link" href="https://tms.driv.in/app/home"><p>ACCESO CLIENTES</p></a></li>
                 </div>
             </ul>
         </div>
@@ -38,32 +38,80 @@
             </div>
         </section>
         <section>
-            <div class="container flex-colum">
+            <div class="container flex-colum" style="position: relative; z-index: 1;">
                 <div class="Trab_Cont flex-row">
                     <img src="./images-videos/trabajador.jpg" alt="Trabajador" width="400px">
                     <div class="Trb_Cont_Fomr flex-colum">
                         <h1 class="Trab_Tiitle Text_Black">Envianos tu hoja de vida y nos pondremos en contacto contigo</h1>
                         <form action="" class="Cont_Form flex-colum">
                             <input type="text" placeholder="Nombre" class="Trb_input_name" required>
-                        <div class=" Trb_cont_input flex-row">
+                            <div class=" Trb_cont_input flex-row">
                             <input type="text" placeholder="Correo electronico" class="Trb_input_number" required>
                             <input type="text" name="" id="" placeholder="Numero celular" class="Trb_input_number" required>
-                        </div>
-                        <div class="Trb_cont_input flex-row">
-                            <div class="Trb_cont_archi flex-colum">
-                                <p class="Trb_Arc_text Text_Black">Adjunta tu hoja de vida</p>
-                                <button class="Trb_Arc_Button Text_Medium">seleccionar archivo</button>
-                                <p class="Trb_Arc_text_Sec Text_Medium">Adjunta tu hoja de vida en PDF y que no exceda los 20MB</p>
                             </div>
-                            <div class=" Trb_Cont_veri flex-colum">
+                            <div class="Trb_cont_input flex-row">
+                                <div class="Trb_cont_archi flex-colum">
+                                    <p class="Trb_Arc_text Text_Black">Adjunta tu hoja de vida</p>
+                                    <button class="Trb_Arc_Button Text_Medium">seleccionar archivo</button>
+                                    <p class="Trb_Arc_text_Sec Text_Medium">Adjunta tu hoja de vida en PDF y que no exceda los 20MB</p>
+                                </div>
+                                <div class=" Trb_Cont_veri flex-colum">
                                 <p class="Trb_Ver_Text Text_Black">Casilla de verificación</p>
-                                <p class="Trb_Ver_Casi Text_Black"><input type="checkbox" required>Soy mayor de 18 años</p>
-                                <p class="Trb_Ver_Casi Text_Black"><input type="checkbox" required>no soy un robot</p>
+                                <p class="Trb_Ver_Casi Text_Black"><input type="checkbox" required></p>
+                                <p class="Trb_Ver_Casi Text_Black"><input type="checkbox" required></p>
+                                </div>
                             </div>
-                        </div>
-                        <input type="submit" value="Enviar mensaje" class="Trb_Button_Send Text_Black">
-                    </form>
+                            <input type="submit" value="Enviar mensaje" class="Trb_Button_Send Text_Black">
+                        </form>
+                    </div>
+                    <div class="Trb_Cont_Button flex-colum">
+                        <button
+                        class="Trb_Button_Req Text_Black"
+                        id="Trb_Button_Req"
+                        >tratamiento de datos personales</button>
+                        <button
+                        class="Trb_Button_aut Text_Black"
+                        id="Trb_Button_aut"
+                        style="margin-top: 12px;"
+                        Titulo="Requisitos"
+                        >Requisitos</button>
+                    </div>
                 </div>
+                <div id="modal_Req" class="modal_Req">
+                    <div class="modal-content_Req">
+                        <span id="close-modal_Req" class="close_Req">&times;</span>
+                        <div class="Tra_Cont">
+                            <h2 id="modal-title_Req Text_Black">Autorizacion de tratamiento de datos personales</h2>
+                            <p class="Tra_text Text_Medium">DCUERVO SOLUCIONES LOGISTICAS S.A.S actuara como responsable del tratamiento de datos personales y que, conjunta o separadamente podrá recolectar, usar y tratar mis datos personales conforme la Política de Tratamiento de Datos Personales. </p>
+                            <p class="Tra_text Text_Medium">Registrar la información de datos personales en las bases de datos de DCUERVO SOLUCIONES LOGISTICAS S.A.S, con la finalidad de analizar y evaluar dichos datos.  </p>
+                            <p class="Tra_text Text_Medium">Mis derechos como titular de los datos son los previstos en la Constitución y la Ley, especialmente el derecho a conocer, actualizar, rectificar y suprimir mi información personal, así como el derechos a revocar el consentimiento otorgado para el tratamiento de datos personales. </p>
+                            <p class="Tra_text Text_Medium">DCUERVO SOLUCIONES LOGISTICAS S.A.S garantizara la confidencialidad, la libertad, seguridad, veracidad, transparencia, acceso y circulación restringida de mis datos y se reservara el derecho de modificar su Política de Tratamiento de Datos Personales en cualquier momento. Cualquier cambio será informado y publicado oportunamente.</p>
+                            <p class="Tra_text Text_Medium">Teniendo en cuenta lo anterior, autorizo de manera voluntaria, previa, explicita, informada e inequívoca a DCUERVO SOLUCIONES LOGISTICAS S.A.S, para tratar mis datos personales y tomar mi huella y fotografía de acuerdo de su Política de Tratamiento de Datos Personales para los fines relacionados a su objeto y en especial para fines legales, contractuales, misionales descritos en su Política de Tratamiento de Datos Personales.</p>
+                            <p class="Tra_text Text_Medium">La información obtenida para el Tratamiento de Datos de Datos Personales la he suministrado de forma voluntaria y es verídica. </p>
+                            <p class="Tra_text Text_Medium">Manifiesto que la presenta autorización me fue solicitada y pueda de presente antes de entregar mis datos y que la suscribo de forma libre y voluntaria una vez leída en su totalidad. </p>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="modal_aut" class="modal_aut">
+                    <div class="modal-content_aut">
+                        <span id="close-modal_aut" class="close_aut">&times;</span>
+                        <div class="Req_Cont">
+                            <h2 id="modal-title_aut" class="Text_Black">REQUISITOS</h2>
+                            <ul class="list flex-colum Req_list">
+                                <li class="Req_text Text_Medium"><p>Licencia de conducción C1, C2 C3 vigente.</p></li>
+                                <li class="Req_text Text_Medium"><p>Bachiller</p></li>
+                                <li class="Req_text Text_Medium"><p>Experiencia mínima de 2 años en transporte de mercancías.</p></li>
+                                <li class="Req_text Text_Medium"><p>Experiencia mínima de 2 años en transporte de mercancías.</p></li>
+                                <li class="Req_text Text_Medium"><p>Conocimiento de rutas y normas de tránsito locales y nacionales.</p></li>
+                                <li class="Req_text Text_Medium"><p>Capacidad para manejar vehículos de carga pesada</p></li>
+                                <li class="Req_text Text_Medium"><p>Disponibilidad para trabajar horarios flexibles y viajar</p></li>
+                                <li class="Req_text Text_Medium"><p>Alta orientacion a la seguridad</p></li>
+                                <li class="Req_text Text_Medium"><p>Conocimientos básicos de mecánica automotriz.</p></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -71,15 +119,15 @@
     <footer>
         <div class="container flex-row">
             <div class="Foo_Cont_Info1 flex-colum">
-                    <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="" width="250px">
-                    <p class="Foo_Text_Line Text_Black">Linea Nacional</p>
-                    <div class="Foo_Cont_Call flex-row">
-                        <svg height="50px" width="50px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M337.168,289.578c-5.129-5.133-13.457-5.133-18.598,0l-16.031,16.038c-4.68,4.68-12.122,5.149-17.352,1.102 c0,0-15.332-10.109-40.402-35.179c-25.07-25.07-35.175-40.414-35.175-40.414c-4.055-5.226-3.578-12.656,1.102-17.343l16.031-16.031 c5.141-5.134,5.141-13.462,0-18.594l-35.34-35.343c-5.133-5.133-13.453-5.133-18.594,0c-0.122,0.125-1.906,1.906-21.309,21.32 c-22.602,22.594,7.293,91.82,57.574,142.118c50.289,50.281,119.527,80.164,142.121,57.578 c19.394-19.406,21.184-21.203,21.305-21.32c5.141-5.133,5.141-13.461,0-18.586L337.168,289.578z"></path> <path class="st0" d="M256,0C114.614,0,0,114.617,0,256s114.614,256,256,256s256-114.617,256-256S397.386,0,256,0z M256,472 c-119.102,0-216-96.898-216-216S136.898,40,256,40s216,96.898,216,216S375.102,472,256,472z"></path> </g> </g></svg>
-                        <div class="flex-colum">
-                            <p class="Foo_Text_Call Text_Black">3108082165</p>
-                            <p class="Foo_Text_Call Text_Black">3213977488</p>
-                        </div>
+                <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="" width="250px">
+                <p class="Foo_Text_Line Text_Black">Linea Nacional</p>
+                <div class="Foo_Cont_Call flex-row">
+                    <svg height="50px" width="50px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M337.168,289.578c-5.129-5.133-13.457-5.133-18.598,0l-16.031,16.038c-4.68,4.68-12.122,5.149-17.352,1.102 c0,0-15.332-10.109-40.402-35.179c-25.07-25.07-35.175-40.414-35.175-40.414c-4.055-5.226-3.578-12.656,1.102-17.343l16.031-16.031 c5.141-5.134,5.141-13.462,0-18.594l-35.34-35.343c-5.133-5.133-13.453-5.133-18.594,0c-0.122,0.125-1.906,1.906-21.309,21.32 c-22.602,22.594,7.293,91.82,57.574,142.118c50.289,50.281,119.527,80.164,142.121,57.578 c19.394-19.406,21.184-21.203,21.305-21.32c5.141-5.133,5.141-13.461,0-18.586L337.168,289.578z"></path> <path class="st0" d="M256,0C114.614,0,0,114.617,0,256s114.614,256,256,256s256-114.617,256-256S397.386,0,256,0z M256,472 c-119.102,0-216-96.898-216-216S136.898,40,256,40s216,96.898,216,216S375.102,472,256,472z"></path> </g> </g></svg>
+                    <div class="flex-colum">
+                        <p class="Foo_Text_Call Text_Black">3108082165</p>
+                        <p class="Foo_Text_Call Text_Black">3213977488</p>
                     </div>
+                </div>
             </div>
             <div class="Foo_Cont_Info2 flex-colum">
                 <p class="Foo_Info2_Tittle Text_Black">Sobre Dcuervo</p>
@@ -91,18 +139,11 @@
                 </ul>
             </div>
             <div class="Foo_Cont_Info2 flex-colum">
-                <p class="Foo_Info2_Tittle Text_Black">Centro de atención</p>
-                <ul class="list flex-colum">
-                    <li class="Foo_Info2_Item"><a href="#">Líneas de Atención</a></li>
-                    <li class="Foo_Info2_Item"><a href="#">PQRs</a></li>
-                </ul>
-            </div>
-            <div class="Foo_Cont_Info2 flex-colum">
                 <p class="Foo_Info2_Tittle Text_Black">Enlaces Rapidos</p>
                 <ul class=" list flex-colum">
                     <li class="Foo_Info2_Item"><a href="#">TMS</a></li>
                     <li class="Foo_Info2_Item"><a href="#">Contáctanos</a></li>
-                    <li class="Foo_Info2_Item"><a href="#">Preguntas Frecuentes</a></li>
+                    <li class="Foo_Info2_Item"><a href="#">PQRs</a></li>
                 </ul>
             </div>
             <div class="Foo_Cont_contac Foo_Cont_Info2 flex-row">
@@ -120,5 +161,7 @@
             <a href="#"><p class="Text_Black Final_Text">Términos y Condiciones - Política de Privacidad - Condiciones de Uso</p></a>
         </div>
     </section>
+    <script src="./js/trabajo.js"></script>
+
 </body>
 </html>
