@@ -39,3 +39,7 @@ document.getElementById('form')
           modal.style.display = "none";
       }
   }
+
+  bton.addEventListener('click', function() {
+    modal.style.display = 'flex'; // Usamos flex para que funcione el centrado
+});

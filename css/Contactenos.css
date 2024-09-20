@@ -348,24 +348,123 @@ a:link{
 }
 
 .Cont_Modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding-top: 20px;
+	width: 100%;
+	background-color: transparent;
+	display: none;
+	justify-content: center;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+	background-color: transparent;
+	border-radius: 10px;
+	height: 350px;
+	width: 1500px;
+	text-align: center;
+}
+
+.Cont_Font_Modal{
+	width: 100%;
+	height: 100%;
+	background-color: #227598;
+	border-radius: 220px 220px 0 0;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+	align-items: center;
+	padding: 0;
+	position: relative;
+	z-index: 0;
+
+}
+
+.Text_tittle{
+	color: white;
+	width: 400px;
+	margin: 20px auto 0px auto;
+	font-size: 20px;
+
+}
+
+.form_Form{
+	margin: 40px auto 0px auto;
+	width: 100%;
+	padding: 0 60px 0 60px;
+}
+
+.Cont_form{
+	justify-content: space-between;
+}
+
+.Text_Termi{
+	text-align: start;
+	font-size: 15px;
+	margin-left: 5px;
+}
+.Cont_Termi{
+	align-items: start;
+	margin-top: 10px;
+	color: white;
+	margin-top: 40px;
+}
+
+.cont_Input{
+	align-items: start;
+	width: 265px;
+}
+
+
+.Cont_Close{
+	position: absolute;
+	z-index: 2;
+	right: 160px;
+	top: 10px;
+	cursor: pointer;
+
+}
+.close{
+	font-size: 30px;
+}
+
+.Cont_Close:hover{
+	color: #57bfd9;
+}
+
+.But_Form{
+	width: 300px;
+	height: 50px;
+	border-radius: 20px;
+	border: none;
+	font-size: 20px;
+	transition: transform 0.5s ease;
+	background-color: #57bfd9;
+	color: white;
+}
+
+.But_Form:hover{
+	transform: scale(1.1);
+	background-color:#7DCDE3;
+}
+
+.Cont_Button_Form{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+
+}
+
+.Text_Form_Input{
+	color: white;
+}
+
+.Input_Form{
+	width: 265px;
+	margin-top: 10px;
+	height: 35px;
+	border-radius: 5px;
+	border: none;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
