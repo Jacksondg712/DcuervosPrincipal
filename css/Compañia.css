@@ -277,24 +277,19 @@ a:link{
 }
 
 .Qsomos_tittle{
-	width: 480px;
 	margin-top: 50px;
-	display: flex;
-	justify-content: flex-end;
-	font-size: 20px;
-
 }
 
 .Qsomos_Subtittle{
-	margin-top: 30px;
+	margin-top: 20px;
 	color: #7DCDE3;
 	font-size: 40px;
 	width: 480px;
-	text-align: end;
+	text-align: center;
 }
 
 .Qsomos_Text_Sec1{
-	margin-top: 80px;
+	margin-top: 60px;
 	width: 480px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
