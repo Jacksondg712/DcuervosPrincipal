@@ -202,9 +202,7 @@ a:link{
     width: 627px;
     /* height: 440px; */
     margin-top: 45px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border: 1px solid black;
     border-radius: 20px;
     align-items: start;
 
@@ -216,13 +214,15 @@ a:link{
     background-color: #227598;
     display: flex;
     align-items: center;
+	justify-content: center;
     border-radius: 20px 20px 0px 0px;
 }
 
 .Formu_Text{
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 30px;
+	
 }
 
 .Cont_Item{
@@ -257,6 +257,10 @@ a:link{
     width: 270px;
     color: #767676;
 
+}
+
+.cont_But_Form{
+		
 }
 
 .Cont_Button{
