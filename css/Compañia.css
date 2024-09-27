@@ -803,6 +803,23 @@ footer{
 
 .Final{
 	width: 100%;
-	background-color: #7DCDE3;
-	height: 115px;
+	background-color: #227598;
+	height: 50px;
+	border-top: 2px solid #57bfd9;
+}
+
+.Final_Text{
+	color: white;
+	font-size: 14px;
+}
+
+.Foo_Cont_sgv_contac{
+	align-items: center;
+	width: 20%;
+	justify-content: space-around;
+}
+
+.Ref_Final:hover{
+	color: #57bfd9;
+	fill: #57bfd9;
 }
