@@ -277,24 +277,19 @@ a:link{
 }
 
 .Qsomos_tittle{
-	width: 480px;
 	margin-top: 50px;
-	display: flex;
-	justify-content: flex-end;
-	font-size: 20px;
-
 }
 
 .Qsomos_Subtittle{
-	margin-top: 30px;
+	margin-top: 20px;
 	color: #7DCDE3;
 	font-size: 40px;
 	width: 480px;
-	text-align: end;
+	text-align: center;
 }
 
 .Qsomos_Text_Sec1{
-	margin-top: 80px;
+	margin-top: 60px;
 	width: 480px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
@@ -797,17 +792,28 @@ footer{
 	width: 100px;
 }
 
-.Foo_Cont_sgv_contac{
-	align-items: center;
-	width: 100%;
-	justify-content: space-around;
-}
-
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .Final{
 	width: 100%;
-	background-color: #7DCDE3;
-	height: 115px;
+	background-color: #227598;
+	height: 50px;
+	border-top: 2px solid #57bfd9;
+}
+
+.Final_Text{
+	color: white;
+	font-size: 14px;
+}
+
+.Foo_Cont_sgv_contac{
+	align-items: center;
+	width: 20%;
+	justify-content: space-around;
+}
+
+.Ref_Final:hover{
+	color: #57bfd9;
+	fill: #57bfd9;
 }
