@@ -242,6 +242,10 @@ a:link{
     font-size: 12px;
 }
 
+.Cont_Images{
+	align-items: center;
+}
+
 .Cont_Label{
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -260,17 +264,18 @@ a:link{
 }
 
 .cont_But_Form{
-		
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
 }
 
 .Cont_Button{
-    width: 200px;
-    height: 30px;
+    width: 250px;
+    height: 50px;
     background-color: #227598;
     color: white;
-    margin-top: 30px;
-    margin-right: auto;
-    margin-left: auto;
     border: none;
     border-radius: 10px;
 	transition: background-color 0.5s ease;
@@ -301,9 +306,13 @@ a:link{
 .Cont_TextTarea{
 	height: 100px;
 	width: 80%;
-    resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+    resize: none;
     overflow: auto;
-	margin-top:15px 	;
+	margin-top:15px;
+	color: #767676;
+	font-size: 12px;
+	
+
 }
 
 .Cont_Form_Text{
@@ -527,17 +536,28 @@ footer{
 	width: 100px;
 }
 
-.Foo_Cont_sgv_contac{
-	align-items: center;
-	width: 100%;
-	justify-content: space-around;
-}
-
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .Final{
 	width: 100%;
-	background-color: #7DCDE3;
-	height: 115px;
+	background-color: #227598;
+	height: 50px;
+	border-top: 2px solid #57bfd9;
+}
+
+.Final_Text{
+	color: white;
+	font-size: 14px;
+}
+
+.Foo_Cont_sgv_contac{
+	align-items: center;
+	width: 20%;
+	justify-content: space-around;
+}
+
+.Ref_Final:hover{
+	color: #57bfd9;
+	fill: #57bfd9;
 }
