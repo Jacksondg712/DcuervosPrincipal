@@ -354,7 +354,7 @@ a:link{
   /* Contenido del modal */
   .modal-content_Req, .modal-content_aut {
 	background-color: #fefefe;
-	margin: 8% auto;
+	margin: 6% auto;
 	padding: 20px;
 	border: 1px solid #888;
 	width: 40%;
