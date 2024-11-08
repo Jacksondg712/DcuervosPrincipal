@@ -98,3 +98,57 @@ window.onclick = function(event) {
         modal2.style.display = "none";
     }
 }
+
+
+// Funciones para manejar cookies
+function setCookie(nombre, valor, dias) {
+  let fecha = new Date();
+  fecha.setTime(fecha.getTime() + (dias * 24 * 60 * 60 * 1000)); // días a milisegundos
+  let expiracion = "expires=" + fecha.toUTCString();
+  document.cookie = nombre + "=" + valor + ";" + expiracion + ";path=/";
+}
+
+function getCookie(nombre) {
+  let nombreEQ = nombre + "=";
+  let cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+      let cookie = cookies[i].trim();
+      if (cookie.indexOf(nombreEQ) == 0) {
+          return cookie.substring(nombreEQ.length, cookie.length);
+      }
+  }
+  return null;
+}
+
+function deleteAllCookies() {
+  const cookies = document.cookie.split(";");
+
+  cookies.forEach(cookie => {
+      const eqPos = cookie.indexOf("=");
+      const nombre = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = nombre + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+  });
+
+  alert("Todas las cookies han sido eliminadas.");
+}
+
+// Mostrar el modal solo si no existe la cookie 'cookieConsent'
+window.onload = function () {
+  if (!getCookie('cookieConsent')) {
+      document.getElementById('cookieModal').style.display = 'block';
+  }
+}
+
+// Manejar los botones de aceptar y rechazar
+document.getElementById('acceptCookies').addEventListener('click', function() {
+  setCookie('cookieConsent', 'accepted', 30);  // Cookie persistente por 30 días
+  document.getElementById('cookieModal').style.display = 'none';
+});
+
+document.getElementById('rejectCookies').addEventListener('click', function() {
+  setCookie('cookieConsent', 'rejected', 30);  // Cookie persistente por 30 días
+  document.getElementById('cookieModal').style.display = 'none';
+});
+
+// Borrar todas las cookies al hacer clic en el botón
+document.getElementById('clearCookies').addEventListener('click', deleteAllCookies);
