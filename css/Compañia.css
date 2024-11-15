@@ -786,7 +786,7 @@ a:link{
 
 /* Modal styles */
 .modalCo {
-	display: block; /* Oculto por defecto */
+	display: none; /* Oculto por defecto */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -797,22 +797,53 @@ a:link{
 }
 
 .modal-contentCo {
-    background-color: white;
+    background-color: #227598;
     margin: 0;
-    padding: 20px;
     border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    width: 80%;
+    width: 500px;
     height: 100%;
-    max-width: 400px;
     text-align: center;
 }
 
-.Cont_Coo{
+.modal_header{
+	margin-top: 0px;
+	width: 100%;
+	border-bottom: 1px solid white;
+	justify-content: space-between;
+	padding: 0 20px;
+	align-items: center;
+}
 
+.Cont_Coo{
+	width: 100%;
+	height: 90px;
+	align-items: start;
+	padding: 20px;
+	/* border: 1px solid black; */
+}
+
+.cont_Text_Parr{
+	color: white;
+	padding: 0px;
+	margin-top: 20px;
+	display: flex;
+	text-align: start;
+
+}
+
+.Cam_Botton{
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius:none;
+}
+
+
+
+.modal_Tittle{
+	margin-top: 20px;
+	color: white;
 }
 
 button {

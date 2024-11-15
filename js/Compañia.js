@@ -16,6 +16,29 @@ let currentIndex = 0;
 let currentDes = 0;
 let currentLo = 0;
 
+// Mostrar el modal solo si no existe la cookie 'cookieConsent'
+window.onload = function () {
+  if (!getCookie('cookieConsent')) {
+      document.getElementById('cookieModal').style.display = 'block';
+  }
+}
+
+// Manejar los botones de aceptar y rechazar
+document.getElementById('acceptCookies').addEventListener('click', function() {
+  setCookie('cookieConsent', 'accepted', 30);  // Cookie persistente por 30 días
+  document.getElementById('cookieModal').style.display = 'none';
+});
+
+document.getElementById('rejectCookies').addEventListener('click', function() {
+  setCookie('cookieConsent', 'rejected', 30);  // Cookie persistente por 30 días
+  document.getElementById('cookieModal').style.display = 'none';
+});
+
+// Borrar todas las cookies al hacer clic en el botón
+document.getElementById('clearCookies').addEventListener('click', deleteAllCookies);
+
+
+
 function showSlide(n) {
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.transform = `translateX(-${n * 100}%)`; /* Añadido para mover las diapositivas */
@@ -132,23 +155,5 @@ function deleteAllCookies() {
   alert("Todas las cookies han sido eliminadas.");
 }
 
-// Mostrar el modal solo si no existe la cookie 'cookieConsent'
-window.onload = function () {
-  if (!getCookie('cookieConsent')) {
-      document.getElementById('cookieModal').style.display = 'block';
-  }
-}
 
-// Manejar los botones de aceptar y rechazar
-document.getElementById('acceptCookies').addEventListener('click', function() {
-  setCookie('cookieConsent', 'accepted', 30);  // Cookie persistente por 30 días
-  document.getElementById('cookieModal').style.display = 'none';
-});
 
-document.getElementById('rejectCookies').addEventListener('click', function() {
-  setCookie('cookieConsent', 'rejected', 30);  // Cookie persistente por 30 días
-  document.getElementById('cookieModal').style.display = 'none';
-});
-
-// Borrar todas las cookies al hacer clic en el botón
-document.getElementById('clearCookies').addEventListener('click', deleteAllCookies);
