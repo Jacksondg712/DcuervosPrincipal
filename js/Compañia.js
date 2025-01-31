@@ -89,6 +89,16 @@ const button3 = document.getElementById('Trb_Button_Req');
 const modal2 = document.getElementById('modal_aut');
 const closeModal2 = document.getElementById('close-modal_aut');
 const button2 = document.getElementById('Trb_Button_aut');
+const div1 = document.getElementById('cont_Text_Parr_acor');
+const div2 = document.getElementById('cont_Text_Parr_largo');
+const buttonInfo = document.getElementById('Cambio');
+
+buttonInfo.addEventListener('click', () => {
+  div1.classList.toggle("hidden");
+  div2.classList.toggle("hidden");
+
+});
+
 
 button3.onclick = function() {
     modal3.style.display = "block";
@@ -154,6 +164,8 @@ function deleteAllCookies() {
 
   alert("Todas las cookies han sido eliminadas.");
 }
+
+
 
 
 

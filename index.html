@@ -307,7 +307,7 @@
 
 
         </section>
-        <a href="https://api.whatsapp.com/send?phone=3146592038&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float float_Wha" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=3142926216&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." class="float float_Wha" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
         </a>
         <a href="$" class="float_IL">
@@ -323,7 +323,7 @@
                 </div>
                 <div class="Cont_Coo flex-colum">
                     <h2 class="modal_Tittle Text_Black">Centro de preferencia de la privacidad</h2>
-                    <div class="cont_Text_Parr Text_Medium">
+                    <div id="cont_Text_Parr_acor" class="cont_Text_Parr_acor Text_Medium flex-colum">
                         <p>Las "cookies" son pequeños archivos que nos permiten almacenar información sobre su
                             dispositivo y, más específicamente, sobre nuestros usuarios, cuando visita uno de nuestros
                             sitios web. Las cookies nos ayudan a determinar la frecuencia con que se accede a
@@ -331,22 +331,30 @@
                             a adaptar nuestras ofertas para que resulten lo más cómodas y eficaces posible para los
                             usuarios.
                         </p>
-                        <button id="Cambio" class="Cam_Botton">
-                             Más información
-                        </button>
                     </div>
-                    <div>
+                    <div id="cont_Text_Parr_largo" class="hidden cont_Text_Parr_largo Text_Medium flex-colum">
+                        <p>
+                            Las "cookies" son pequeños archivos que nos permiten almacenar información sobre su
+                            dispositivo y, más específicamente, sobre nuestros usuarios, cuando visita uno de nuestros
+                            sitios web. Las cookies nos ayudan a determinar la frecuencia con que se accede a
+                            nuestras páginas web, además de cuántos usuarios acceden a ellas. Asimismo, nos ayudan
+                            a adaptar nuestras ofertas para que resulten lo más cómodas y eficaces posible para los
+                            usuarios.
+                        </p>
+                        <div class="espacio"></div>
                         <p>
                             Este sitio web utiliza cookies y tecnologías similares, que nos permiten, por ejemplo,
                             determinar la frecuencia con la que se visitan nuestras páginas en Internet, el número de
                             visitantes, configurar nuestras ofertas, para ofrecer la máxima comodidad y eficiencia, y
                             respaldar nuestros esfuerzos de marketing.
                         </p>
+                        <div class="espacio"></div>
                         <p>
                             Cuando acceda a nuestro sitio web, un centro de preferencias de privacidad le notificará
                             que se han configurado las cookies técnicamente necesarias y que, además, se requiere su
                             consentimiento para utilizar determinadas tecnologías, como cookies analíticas o similares.
                         </p>
+                        <div class="espacio"></div>
                         <p>
                             El procesamiento de datos mediante cookies técnicamente necesarias se basa en nuestro
                             interés, qu e pueda utilizar nuestro sitio web de la mejor manera posible, garantizar que
@@ -355,6 +363,7 @@
                             durante el tiempo que dura la visita del usuario a nuestro sitio web. Se eliminan
                             automáticamente al cerrar el navegador.
                         </p>
+                        <div class="espacio"></div>
                         <p>
                             Además, recibirá una notificación a través del centro de preferencias de privacidad para
                             informarle de que utilizamos otras tecnologías (tecnologías de rendimiento, funcionales o
@@ -365,8 +374,15 @@
                             accedan a ellas
                         </p>
                     </div>
-                    <button id="acceptCookies">Permitirlas todas</button>
-                    <button id="rejectCookies">Rechazar</button>
+                    <div class="cont_Button_Info">
+                        <button id="Cambio" class="Cam_Botton">
+                             Más información
+                        </button>
+                    </div>
+                    <div class="flex-row cont_Button_Permi">
+                        <button id="acceptCookies" class="ButtonCookies Text_Medium">Permitirlas todas</button>
+                        <button id="rejectCookies" class="ButtonCookies Text_Medium">Rechazar</button>
+                    </div>
                 </div>
             </div>
         </div>
