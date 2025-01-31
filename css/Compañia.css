@@ -781,6 +781,158 @@ a:link{
 	margin-top:16px;
 }
 
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* Modal styles */
+.modalCo {
+	display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.modal-contentCo {
+    background-color: #227598;
+    margin: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 100%;
+    text-align: center;
+	overflow-y: auto; 
+}
+
+.modal_header{
+	margin-top: 0px;
+	margin-bottom: 20px;
+	width: 100%;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	justify-content: space-between;
+	padding: 0 20px;
+	align-items: center;
+}
+
+.Cont_Coo{
+	width: 100%;
+	height: 90px;
+	align-items: start;
+	padding: 20px;
+
+}
+
+.cont_Text_Parr_acor{
+	color: white;
+	padding: 0px;
+	margin-top: 20px;
+	text-align: start;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	line-height: 1.5;
+
+}
+
+.cont_Text_Parr_largo{
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 20px;
+	display: flex;
+	text-align: start;
+	line-height: 2;
+}
+
+.espacio{
+	margin-top: 15px;
+}
+
+.hidden{
+	display: none;
+}
+
+.cont_Button_Info{
+	padding: 0%;
+}
+
+.ButtonCookies{
+	width: 34%;
+	height: 45px;
+	background-color: transparent;
+}
+
+.Cam_Botton{
+	background-color: transparent;
+	border-radius:none;
+	width: 140px;
+	margin: 0%;
+	padding: 0%;
+	margin-top: 20px;
+	color: white;
+	transition: color 0.5s;
+}
+
+.Cam_Botton:hover{
+	color: #7dcde3;
+
+}
+
+
+.modal_Tittle{
+	margin-bottom: 20px;
+	color: white;
+}
+
+.cont_Button_Permi{
+	width: 100%;
+	margin-top: 20px;
+	padding-bottom: 50px;
+	justify-content: space-around;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#acceptCookies {
+	background-color: #57bfd9;
+    color: white;
+	transition: background-color 0.5s,transform 0.5s, color 0.5s;
+	/* transition: transform 0.5s ease; */
+
+
+	
+}
+
+#acceptCookies:hover{
+	background-color: white;
+	color: #57bfd9;
+	transform: scale(1.1);
+}
+
+#rejectCookies {
+    color: white;
+	background-color: #57bfd9;
+	transition: background-color 0.5s,transform 0.5s, color 0.5s;
+
+}
+
+#rejectCookies:hover{
+	transform: scale(1.1);
+	background-color: #57bfd9 ;
+	background-color: white;
+	color: #57bfd9;
+	transform: scale(1.1);
+}
+
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 footer{
