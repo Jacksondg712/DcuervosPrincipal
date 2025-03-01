@@ -244,6 +244,7 @@ a:link{
 
 .Cont_Images{
 	align-items: center;
+	height: auto;
 }
 
 .Cont_Label{

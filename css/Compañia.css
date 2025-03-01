@@ -727,12 +727,11 @@ a:link{
 }
 
 .Flo_modal_Image{
-	width: 600px;
+	width: 800px;
 	height: 575px;
-  	margin-bottom: 15px;
 	position: absolute;
 	z-index: 3;
-	top: 12%;
+	top: 18%;
 	left: 48%;
 }
 
