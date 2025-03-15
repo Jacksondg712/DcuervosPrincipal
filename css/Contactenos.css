@@ -232,16 +232,6 @@ a:link{
     margin-top: 40px;
 }
 
-.Cont_Input{
-    width: 270px;
-    border: none;
-    border-bottom: 1px solid black;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 12px;
-}
-
 .Cont_Images{
 	align-items: center;
 	height: auto;
@@ -251,16 +241,34 @@ a:link{
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: italic;
-    font-size: 12px;
-    color: #767676;
+    font-size: 15px;
+    color: #227598;
+	
 }
 
 .Cont_select{
     margin-top: 10px;
-    border: none;
-    border-bottom: 1px solid black;
+}
+
+.select{
+	border: none;
+	color: #767676;
+	font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-size: 14px;
     width: 270px;
-    color: #767676;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+
+
+}
+
+.Text_Option{
+	font-weight: 500;
+    font-style: italic;
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
 
 }
 
@@ -395,10 +403,20 @@ a:link{
 
 .Text_tittle{
 	color: white;
-	width: 400px;
+	width: 600px;
 	margin: 20px auto 0px auto;
-	font-size: 20px;
+	font-size: 30px;
+	transition: transform 0.5s ease;
+}
 
+.Text_tittle:hover{
+	transform: scale(1.1);
+}
+
+.cont_Input_boletin{
+	margin-top: -20px;
+	justify-content: center;
+	align-items: center;
 }
 
 .form_Form{
@@ -423,11 +441,46 @@ a:link{
 	margin-top: 40px;
 }
 
-.cont_Input{
+.Cont_Input{
 	align-items: start;
-	width: 265px;
+	font-size: 14px;
+	width: 270px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+
+
 }
 
+.Cont_Input::placeholder{
+	font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.Cont_Input::-webkit-input-placeholder{
+	font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.Cont_Input::-moz-placeholder{
+	font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.Cont_Input:-ms-input-placeholder{
+	font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+}
 
 .Cont_Close{
 	position: absolute;
