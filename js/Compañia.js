@@ -3,18 +3,79 @@ const slider = document.querySelector(".Dcuervo_slider");
 const slides = document.querySelectorAll(".Dcuervo_slide");
 
 const modal = document.getElementById('Flo_Modal');
+const btn = document.querySelectorAll('.Flo_Button');
+
 const closeModal = document.getElementById('close-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalCaracter = document.getElementById('modal-Caracteristicas');
 const modalCapaciti = document.getElementById('modal-Capacidad');
 const modalMt3 = document.getElementById('modal-Mt3');
 const modalImage = document.getElementById('modal-image');
-const btn = document.querySelectorAll('.Flo_Button');
 
+const modal3 = document.getElementById('modal_Ter');
+const closeModal3 = document.getElementById('close_Ter');
+const button3 = document.getElementById('Trb_Button_Req');
+
+const modal2 = document.getElementById('modal_aut');
+const closeModal2 = document.getElementById('close_aut');
+const button2 = document.getElementById('Trb_Button_aut');
+
+const modal4 = document.getElementById('modal_Pol');
+const closeModal4 = document.getElementById('close_Pol');
+const button4 = document.getElementById('Trb_Button_Pol');
+
+const div1 = document.getElementById('cont_Text_Parr_acor');
+const div2 = document.getElementById('cont_Text_Parr_largo');
+
+const buttonInfo = document.getElementById('Cambio');
 
 let currentIndex = 0;
 let currentDes = 0;
 let currentLo = 0;
+
+button2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+closeModal2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+
+
+button3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+closeModal3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+
+
+button4.onclick = function() {
+  modal4.style.display = "block";
+}
+
+closeModal4.onclick = function() {
+  modal4.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+}
 
 // Mostrar el modal solo si no existe la cookie 'cookieConsent'
 window.onload = function () {
@@ -53,17 +114,21 @@ function nextSlide() {
 btn.forEach(btn => {
   btn.addEventListener('click', function(){
     const tittle = this.getAttribute('Titulo');
+    const Categoria = this.getAttribute('Categoria');
     const Caracter = this.getAttribute('Caracteristicas');
     const Capacidad = this.getAttribute('Capacidad');
     const Mt3 = this.getAttribute('Mt3');
     const image = this.getAttribute('image');
+    
 
     modalTitle.textContent = tittle;
+    modal_Categoria.textContent = Categoria;
     modalCaracter.textContent = Caracter;
     modalCapaciti.textContent = Capacidad;
     modalMt3.textContent = Mt3;
     modalImage.src = image;
     modal.style.display = "block";
+
   })
 })
 
@@ -80,18 +145,6 @@ window.addEventListener('click', function(event) {
 
 showSlide(currentIndex);
 setInterval(nextSlide, 5000);
-
-
-
-const modal3 = document.getElementById('modal_Req');
-const closeModal3 = document.getElementById('close-modal_Req');
-const button3 = document.getElementById('Trb_Button_Req');
-const modal2 = document.getElementById('modal_aut');
-const closeModal2 = document.getElementById('close-modal_aut');
-const button2 = document.getElementById('Trb_Button_aut');
-const div1 = document.getElementById('cont_Text_Parr_acor');
-const div2 = document.getElementById('cont_Text_Parr_largo');
-const buttonInfo = document.getElementById('Cambio');
 
 buttonInfo.addEventListener('click', () => {
   div1.classList.toggle("hidden");
