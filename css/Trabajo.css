@@ -153,6 +153,7 @@ a:link{
 
 .head_Acceso{
 	padding: 10px;
+	border: 1px solid #57bfd9;
 	border-radius: 15px;
 	margin-right: 0px;
 }
@@ -427,36 +428,35 @@ a:link{
 }
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
-
 footer{
 	width: 100%;
 	height: 260px;
 	background-color: #227598;
 	padding: 0%;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .Foo_Cont_Info1{
-	align-items: center;
+	align-items: start;
 	height: 100%;
 }
 
 .Foo_Cont_Call{
 	width: 100%;
-	justify-content: space-around;
-	align-items: center;
+
 }
 
 .Foo_Text_Line{
 	color: white;
 	font-size: 20px;
-	margin-top: 0px;
-	margin-bottom: 20px;
+	margin-top: 30px;
 }
 
 .Foo_Text_Call{
-	color: white;
-	font-size: 14px;
+	margin-top: 20px;
+	font-family: "Roboto", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
 }
 
 .Foo_Cont_Info2{
@@ -482,10 +482,36 @@ footer{
 	width: 100px;
 }
 
+.container_footer{
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: space-around;
+	align-items: center;
+}
 
+.Text_Pqr{
+	margin-top: 20px;
+	line-height: 1.2;
+}
+
+.Defi_list{
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.Sepa{
+	margin-left: 5px;
+}
+
+.Cot_title_Pol{
+	width: 80%;
+	display: flex;
+	justify-content: center;
+}
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
-
 
 .Final{
 	width: 100%;
@@ -505,7 +531,110 @@ footer{
 	justify-content: space-around;
 }
 
-.Ref_Final:hover{
+.Ref_Final{
+	background-color: transparent;
+	color: white;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	text-align: start;
+	padding: 0;
+}
+
+.Foo_Info2_Item:hover{
 	color: #57bfd9;
 	fill: #57bfd9;
+}
+
+.Tra_text,.Ter_Cont{
+	margin-top: 20px;
+}
+
+
+.modal_Ter, .modal_aut, .modal_Pol {
+	display: none;
+	position: fixed;
+	z-index: 4;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Contenido del modal */
+  .modal-content_Ter, .modal-content_aut, .modal-content_Pol{
+	background-color: #fefefe;
+	margin: 6% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%;
+	overflow-y: auto;
+	height: 650px;
+
+  }
+  
+  /* Botón de cierre */
+  .close_Ter, .close_aut, .close_Pol {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close_Ter:hover,
+  .close_Ter:focus,
+  .close_aut:hover,
+  .close_aut:focus,
+  .close_Pol:hover,
+  .close_Pol:focus{
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+
+  /* Imagen del modal */
+  #modal-image {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+  }
+
+  .Trb_Cont_Button{
+	position: absolute;
+	z-index: 3;
+	top: 406px;
+	right: 50px;
+	text-align: start;
+}
+  
+
+.Req_list{
+	list-style: disc;
+}
+
+.Req_text{
+	margin-top: 15px;
+}
+
+.Req_Cont{
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Ter_Cont{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.Ter_text{
+	width: 90%;
+	margin-top: 15px;
 }

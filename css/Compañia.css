@@ -154,6 +154,7 @@ a:link{
 
 .head_Acceso{
 	padding: 10px;
+	border: 1px solid #57bfd9;
 	border-radius: 15px;
 	margin-right: 0px;
 }
@@ -683,7 +684,7 @@ a:link{
 .close {
 	color: #aaa;
 	float: right;
-	height: 80px;
+	height: 100px;
 	margin-top: 10px;
 	font-size: 35px;
 	font-weight: bold;
