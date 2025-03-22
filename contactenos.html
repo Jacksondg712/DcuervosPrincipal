@@ -203,7 +203,7 @@
                 <div class="cont_But_Form">
                   <input
                     type="submit"
-                    class="Cont_Button"
+                    class="Cont_Button Text_Black"
                     id="button"
                     value="Enviar"
                   />
@@ -254,11 +254,13 @@
                     </div>
                   </div>
                   <div class="Cont_Termi flex-row">
-                    <input type="checkbox"> 
-                    <p class="Text_Termi Text_Medium">Al registrar su nombre y correo electrónico, autoriza el tratamiento de datos personales y a recibir información a través de los medios que Dcuervo tiene habilitados para comuinicarse con usted</p>
-                  </div>
-                  <div class="Cont_Button_Form">
-                    <input class="But_Form Text_Black" type="submit" value="SUSCRIBIRSE">
+                    <div class="Cont_check flex-row">
+                      <input type="checkbox"> 
+                      <p class="Text_Termi Text_Medium">Al registrar su nombre y correo electrónico, autoriza el tratamiento de datos personales y a recibir información a través de los medios que Dcuervo tiene habilitados para comuinicarse con usted</p>
+                    </div>
+                    <div class="Cont_Button_Form">
+                      <input class="But_Form Text_Black" type="submit" value="SUSCRIBIRSE">
+                    </div>
                   </div>
                 </form>
               </div>
@@ -269,18 +271,15 @@
     </main>
 
     <footer>
-      <div class="container flex-row">
-          <div class="Foo_Cont_Info1 flex-colum">
-              <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="" width="250px">
-              <p class="Foo_Text_Line Text_Black">Linea Nacional</p>
-              <div class="Foo_Cont_Call flex-row">
-                  <svg height="50px" width="50px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M337.168,289.578c-5.129-5.133-13.457-5.133-18.598,0l-16.031,16.038c-4.68,4.68-12.122,5.149-17.352,1.102 c0,0-15.332-10.109-40.402-35.179c-25.07-25.07-35.175-40.414-35.175-40.414c-4.055-5.226-3.578-12.656,1.102-17.343l16.031-16.031 c5.141-5.134,5.141-13.462,0-18.594l-35.34-35.343c-5.133-5.133-13.453-5.133-18.594,0c-0.122,0.125-1.906,1.906-21.309,21.32 c-22.602,22.594,7.293,91.82,57.574,142.118c50.289,50.281,119.527,80.164,142.121,57.578 c19.394-19.406,21.184-21.203,21.305-21.32c5.141-5.133,5.141-13.461,0-18.586L337.168,289.578z"></path> <path class="st0" d="M256,0C114.614,0,0,114.617,0,256s114.614,256,256,256s256-114.617,256-256S397.386,0,256,0z M256,472 c-119.102,0-216-96.898-216-216S136.898,40,256,40s216,96.898,216,216S375.102,472,256,472z"></path> </g> </g></svg>
-                  <div class="flex-colum">
-                      <p class="Foo_Text_Call Text_Black">3108082165</p>
-                      <p class="Foo_Text_Call Text_Black">3213977488</p>
-                  </div>
-              </div>
-          </div>
+      <div class="container_footer flex-row">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4892.961380551489!2d-74.13070069999999!3d4.682469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c9be51a1917%3A0x598deb04c6fadd2e!2sCra.%2097%20%2324c-23%2C%20Bogot%C3%A1!5e1!3m2!1ses!2sco!4v1741198473597!5m2!1ses!2sco" 
+          width="300" 
+          height="200" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="" width="250px">
           <div class="Foo_Cont_Info2 flex-colum">
               <p class="Foo_Info2_Tittle Text_Black">Sobre Dcuervo</p>
               <ul class="list flex-colum">
@@ -290,23 +289,187 @@
                   <li class="Foo_Info2_Item"><a href="#Nosotros">Visión</a></li>
               </ul>
           </div>
+          <div class="Foo_Cont_Info1 flex-colum">
+              <p class="Foo_Text_Line Text_Black">Linea Nacional</p>
+              <ul class="list flex-colum">
+                  <li class="Foo_Text_Call"><a href="+573142926216">+57 3142926216</a></li>
+                  <li class="Foo_Text_Call"><a href="+573213977488">+57 3213977488</a></li>
+              </ul>
+          </div>
           <div class="Foo_Cont_Info2 flex-colum">
               <p class="Foo_Info2_Tittle Text_Black">Enlaces Rapidos</p>
               <ul class=" list flex-colum">
                   <li class="Foo_Info2_Item"><a href="#">TMS</a></li>
                   <li class="Foo_Info2_Item"><a href="./contactenos.html">Contáctanos</a></li>
-                  <li class="Foo_Info2_Item"><a href="#">PQRs</a></li>
+                  <li class="Foo_Info2_Item"><Button class="Ref_Final" id="Trb_Button_Pol">PQR</Button></li>
               </ul>
           </div>
           
+      </div>
+      <div id="modal_Ter" class="modal_Ter">
+          <div class="modal-content_Ter">
+              <span id="close_Ter" class="close_Ter">&times;</span>
+              <div class="Ter_Cont">
+                  <h2 class="Text_Black">Términos y condiciones de uso
+                      Vol. 2024
+                      </h2>
+                  <p class="Ter_Cont Text_Medium">En esta página web encontrará los Términos y Condiciones del sitio web de DCUERVO
+                      SOLUCONES LOGÍSTICAS S.A.S. Por favor, tenga en cuenta que se pueden aplicar otros
+                      términos y condiciones en ciertos países
+                  </p>
+                  <p class="Ter_Cont Text_Medium">Estos Términos y Condiciones regulan el uso de nuestro sitio web y los servicios de
+                      transporte de carga masiva, logística y los servicios 3PL que ofrecemos. Al acceder a la
+                      página web de DCUERVO SOLUCIONES LOGISTICAS S.A.S, acepta estar sujeto a estos
+                      Términos y Condiciones.
+                  </p>
+                  <p class="Ter_Cont Text_Medium">Nos reservamos el derecho de modificar estos términos en cualquier momento. Por lo tanto
+                      es su responsabilidad revisar estos términos periódicamente. El uso continuado del sitio
+                      web tras la publicación de los cambios constituye la aceptación de los nuevos términos.
+                  </p>
+                  <ul class="list flex-colum TerCon_list">
+                      <li><p class="Ter_text Text_Medium">Derechos de autor.
+                              Los derechos de autor de esta publicación son propiedad de DCUERVO SOLUCIONES
+                              LOGISTICAS S.A.S
+                          </p>
+                      </li>
+                  </ul>
+                  <p class="Ter_Cont Text_Medium">El material informativo, de grabación y reproducción sólo puede ser utilizado para propósitos
+                      informativos y sin fines de lucro, no debe modificarse de ninguna forma.
+                  </p>
+                  <ul class="list flex-colum TerCon_list">
+                      <li><h2 class="Ter_Cont Ter_sub Text_Black">Información General.</h2></li>
+                  </ul>
+                  <p class="Ter_Cont Text_Medium">Toda la información que los visitantes y usuarios que ingresen en nuestra página web se
+                      consideran de carácter confidencial y no será divulgada a ningún tercero, a menos que sea
+                      necesario para ofrecer los servicios.
+                  </p>
+                  <p class="Ter_Cont Text_Medium">Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos en
+                      info.solucioneslogisticas@dcuervo.com o a los números + 57 3108082165 / 3213977488
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div id="modal_aut" class="modal_aut">
+          <div class="modal-content_aut">
+              <span class="close_aut" id="close_aut">&times;</span>
+              <div class="Req_Cont">
+                  <h2 id="modal-title_aut" class="Text_Black">Política de tratamiento de Datos Personales</h2>
+                  <p class="Tra_text Text_Medium">Nuestra política tiene como objetivo informar a nuestros usuarios sobre el tratamiento de
+                      sus datos personales, así como obtener su consentimiento previo, expreso e informado para
+                      dicho tratamiento, de conformidad con la Ley 1581 de 2012 y el Decreto 1377 de 2013.                            
+                  </p>
+                  <p class="Tra_text Text_Medium">DCUERVO SOLUCIONES LOGISTICAS S.A.S actuará como responsable del tratamiento de
+                      datos personales y que, conjunta o separadamente podrá recolectar, usar y tratar mis datos
+                      personales conforme la Política de Tratamiento de Datos Personales.
+                  </p>
+                  <p class="Tra_text Text_Medium">Registrar la información de datos personales en las bases de datos de DCUERVO
+                      SOLUCIONES LOGISTICAS S.A.S, con la finalidad de analizar y evaluar dichos datos.    
+                  </p>
+                  <p class="Tra_text Text_Medium">Mis derechos como titular de los datos son los previstos en la Constitución y la Ley,
+                      especialmente el derecho a conocer, actualizar, rectificar y suprimir mi información personal,
+                      así como el derecho a revocar el consentimiento otorgado para el tratamiento de datos
+                      personales.
+                  </p>
+                  <p class="Tra_text Text_Medium">DCUERVO SOLUCIONES LOGISTICAS S.A.S garantizará la confidencialidad, la libertad,
+                      seguridad, veracidad, transparencia, acceso y circulación restringida de mis datos y se
+                      reservará el derecho de modificar su Política de Tratamiento de Datos Personales en
+                      cualquier momento. Cualquier cambio será informado y publicado oportunamente, teniendo
+                      en cuenta la vigencia de esta autorización por el periodo de un año y posteriormente se
+                      solicitará nuevamente su autorización.
+                  </p>
+                  <p class="Tra_text Text_Medium">Teniendo en cuenta lo anterior, autorizo de manera voluntaria, previa, explícita, informada e
+                      inequívoca a DCUERVO SOLUCIONES LOGISTICAS S.A.S, para tratar mis datos personales y
+                      tomar mi huella y fotografía de acuerdo de su Política de Tratamiento de Datos Personales
+                      para los fines relacionados a su objeto y en especial para fines legales, contractuales,
+                      misionales descritos en su Política de Tratamiento de Datos Personales.
+                  </p>
+                  <p class="Tra_text Text_Medium">La información obtenida para el Tratamiento de Datos de Datos Personales la he
+                      suministrado de forma voluntaria y es verídica.
+                  </p>
+                  <p class="Tra_text Text_Medium">Manifiesto que la presente autorización me fue solicitada y pueda estar presente antes de
+                      entregar mis datos y que la suscribo de forma libre y voluntaria una vez leída en su totalidad.
+                  </p>
+              </div>
+          </div>
+      </div>
+      
+      <div id="modal_Pol" class="modal_Pol">
+          <div class="modal-content_Pol">
+              <span class="close_Pol" id="close_Pol">&times;</span>
+              <div>
+                  <div class="Cot_title_Pol"><h2 class="Text_Black">POLÍTICA DE PETICIONES, QUEJAS, RECLAMOS Y SUGERENCIAS (PQRS) </h2></div>
+                  <p class="Text_Pqr Text_Black"> 1. Objetivo</p>
+                  <p class="Text_Pqr Text_Medium">En Dcuervo Soluciones Logísticas S.A.S, nos comprometemos a brindar un servicio 
+                      eficiente, seguro y confiable. Para garantizar la satisfacción de nuestros clientes y mejorar 
+                      continuamente nuestros procesos, hemos establecido un canal de Peticiones, Quejas, 
+                      Reclamos y Sugerencias (PQRS), a través del cual nuestros clientes, proveedores y aliados 
+                      pueden comunicarse con nosotros de manera efectiva. </p>
+                  <p class="Text_Pqr Text_Black">2. Definiciones</p>
+                  <ul class="list flex-colum">
+                      <li class="Defi_list flex-row"> 
+                          <p class="Text_Black">Petición:<p class="Text_Medium" style="margin-left: 5px;">Solicitud de información o requerimiento relacionado con nuestros 
+                          servicios.</p></p>
+                      </li>
+                      <li class="Defi_list flex-row">
+                          <p class="Text_Black">Queja:<p class="Text_Medium" style="margin-left: 5px;">Manifestación de insatisfacción por el servicio recibido. </p></p> 
+                      </li>
+                      <li class="Defi_list flex-row">
+                          <p class="Text_Black">Sugerencia:<p class="Text_Medium" style="margin-left: 5px;"> Propuesta para mejorar nuestros servicios o procesos. </p></p>
+                      </li>
+                  </ul>
+                  <p class="Text_Pqr Text_Black">3. Canales de Atención </p>
+                  <ul class="list flex-colum">
+                      <li class="Defi_list Text_Black flex-row"><p class="">Correo electrónico: <a href="#" class="Text_Medium" style="color: black;">info.solucioneslogisticas@dcuervo.com  </a></p></li>
+                      <li class="Defi_list Text_Black flex-row">Línea de atención: <p class="Text_Medium" style="margin-left: 5px;">3213977488 / 3142926216 </p></p></li>
+                      <li class="Defi_list Text_Black flex-row">Oficina principal: <p class="Text_Medium" style="margin-left: 5px;">Carrera 97 # 24 C23 Muelle empresarial 1 Bodega 14 </p></p></li>
+                      <li class="Defi_list Text_Black flex-row">Formulario en línea: <p class="Text_Medium" style="margin-left: 5px;"></p></p></li>
+                  </ul>
+                  <p class="Text_Pqr Text_Black">4. Proceso de presentación de PQRS </p>
+                  <ul class="list flex-colum">
+                      <p class="Defi_list">Identifica el tipo de solicitud: Antes de presentar tu PQR, determina si se trata de:</p>
+                      <li style="margin-left: 20px;">
+                          <ul class="list flex-colum">
+                              <li class="Defi_list flex-row"><p class="Text_Black" >Petición:<p class="Text_Medium Sepa">Solicitud de información o aclaración sobre un servicio.</p></p></li>
+                              <li class="Defi_list flex-row"><p class="Text_Black" >Queja:<p class="Text_Medium Sepa">Inconformidad con la atención o el servicio recibido. </p></p></li>
+                              <li class="Defi_list flex-row"><p class="Text_Black" >Reclamo:<p class="Text_Medium Sepa">Solicitud de corrección por un servicio deficiente o incumplimiento </p></p></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <ul class="list flex-colum">
+                              <p class=" Text_Pqr" style="margin-left: 20px;">Reúne la información necesaria: Para agilizar la respuesta, ten a la mano: </p>
+                                  <p style="margin-left: 20px;"> Nombre y datos de contacto:</p>
+                                  <ul class="flex-colum">
+                                      <li class="flex-row" style="margin-top: 10px;"><p class="Text_Black">Nombre completo  </p></li>
+                                      <li class="flex-row" style="margin-top: 10px;"><p class="Text_Black">Numero de celular </p></li>
+                                      <li class="flex-row" style="margin-top: 10px;"><p class="Text_Black">Correo electrónico</p></li>
+                                  </ul>
+                              <li class="Text_Pqr" style="margin-left: 20px;"><p class="Text_Medium">Tipo de servicio: (Transporte, Almacenamiento, Logistica integral, Logistica inversa)</p></li>
+                              <li class="Text_Pqr" style="margin-left: 20px;"><p class="Text_Medium">Descripción: Menciona de manera clara y detallada el caso </p></li>
+                              <li class="Text_Pqr" style="margin-left: 20px;"><p class="Text_Medium">Evidencias: (Factura, correos, fotos, videos, etc)</p></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <p class="Text_Pqr Text_Black">5. valuación y respuesta:</p>
+                  <ul class="list flex-colum">
+                      <li class="Text_Pqr flex-row" style="margin-left: 20px;"><p class="Text_Black">Peticiones: <p class="Text_Medium Sepa"> Respuesta en un máximo de 5 días hábiles.</p></p></li>
+                      <li class="Defi_list flex-row"><p class="Text_Black">Quejas y Reclamos: <p class="Text_Medium Sepa"> Respuesta en un máximo de 15 días hábiles.</p></p></li>
+                      <li class="Defi_list flex-row"><p class="Text_Black">Sugerencias: <p class="Text_Medium Sepa"> Se analizan y se implementan si son viables.</p></p></li>
+                  </ul>
+                  <p class="Text_Pqr Text_Black">6. Compromiso con la Transparencia y Mejora Continua </p>
+                  <p class="Text_Pqr Text_Medium" style="margin-left: 20px;">En Dcuervo Soluciones Logísticas S.A.S, valoramos la retroalimentación de nuestros clientes 
+                      y garantizamos la confidencialidad de la información suministrada. Todas las PQRS serán 
+                      gestionadas de manera objetiva y oportuna, con el fin de mejorar nuestros procesos y 
+                      servicios. </p>
+              </div>
+          </div>
       </div>
   </footer>
   <section class="Final">
       <div class="container flex-row">
           <p class="Text_Medium Final_Text">
               Dcuervo 2024.
-              <a href="#" class="Ref_Final">Política de privacidad</a>  |  
-              <a href="#" class="Ref_Final">Términos y condiciones</a>  |  
+              <button id="Trb_Button_aut" class="Ref_Final Text_Medium">Política de privacidad</button>  |  
+              <button id="Trb_Button_Req" class="Ref_Final Text_Medium">Términos y condiciones</button>  |  
               <a class="Ref_Final" href="https://www.google.com/maps/place/Cra.+97+%2324c-23,+Bogot%C3%A1/@4.6824743,-74.1332756,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9c9be51a1917:0x598deb04c6fadd2e!8m2!3d4.682469!4d-74.1307007!16s%2Fg%2F11hyc85p2l?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D">Mapa del sitio</a> | </p>
           <div class="Foo_Cont_sgv_contac flex-row">
               <a href="#" ><svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M256.001,0C148.342,0,60.755,87.586,60.755,195.245c0,56.66,16.898,115.289,50.225,174.26 c28.99,51.297,65.23,93.242,90.526,119.398C215.912,503.798,235.265,512,256,512c20.735,0,40.088-8.202,54.494-23.098 c25.296-26.155,61.536-68.101,90.526-119.398c33.327-58.971,50.225-117.6,50.225-174.26C451.246,87.586,363.659,0,256.001,0z M256.001,270.381c-41.43,0-75.136-33.706-75.136-75.136c0-41.43,33.705-75.136,75.136-75.136 c41.43,0,75.136,33.706,75.136,75.136C331.137,236.675,297.431,270.381,256.001,270.381z"></path> </g> </g> </g></svg></a>
