@@ -231,6 +231,27 @@ a:link{
 	color: #787878;
 }
 
+.Trb_input_number,.Trb_input_name::-webkit-input-placeholder{
+	font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.Trb_input_number,.Trb_input_name:-moz-placeholder{
+	font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.Trb_input_number,.Trb_input_name:-ms-input-placeholder{
+	font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+}
+
 .Trb_cont_input{
 	width: 100%;
 	justify-content: space-between;
@@ -281,7 +302,8 @@ a:link{
 	margin-top: 10px;
 	color: #787878;
 	font-size: 16px;
-
+	align-items: center;
+	padding: 0%;
 }
 
 .Trb_Button_Send{
@@ -328,9 +350,9 @@ a:link{
 	background-color: transparent;
 	color: #787878;
 	border: none;
-	text-align: center;
 	cursor: pointer;
 	text-align: start;
+	transition: color 0.5s ease;
 
   }
 
@@ -392,10 +414,7 @@ a:link{
   }
 
   .Trb_Cont_Button{
-	position: absolute;
-	z-index: 3;
-	top: 406px;
-	right: 50px;
+	border: 1px solid black;
 	text-align: start;
 }
   
