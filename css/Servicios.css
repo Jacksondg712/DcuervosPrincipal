@@ -175,7 +175,7 @@ a:link{
 .PortServi{
     width: 100%;
     height: 349px;
-    background-color: #e5f3f9;
+    background-color: #227598;
     margin-top: 70px;
 }
 
@@ -205,7 +205,7 @@ a:link{
 .Port_Text1{
     width: 478px;
     font-size: 48px;
-    color: #404040;
+    color: white;
     text-align: center;
 }
 
@@ -352,6 +352,158 @@ a:link{
 	height: 100%;
 	
   }
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+  .cont_api{
+	width: 100%;
+	height: 500px;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 100px;
+  }
+
+  .line{
+	width: 100%;
+	height: 300px;
+	background-color: #227598;
+	position: absolute;
+	z-index: 2;
+	top: 20%;
+	}
+
+
+	.Cont_item_api{
+	position: absolute;
+	z-index: 3;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	
+	}
+
+	.Cont_seecion1{
+		height: 300px;
+		width: 600px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.Text_seccion1{
+		color: white;
+		width: 350px;
+		text-align: center;
+		margin-bottom: 50px;
+		font-size: 32px;
+	}
+
+	.Cont_seccion_black{
+		width: 100%;
+		color: white;
+
+		justify-content: space-around;
+
+	}
+
+	.cont_Text_api{
+		margin-left: 10px;
+		justify-content: center;
+		align-items: center;
+		width: auto;
+
+		
+	}
+
+	.Cont_Black{
+		justify-content: center;
+		width: 220px;
+		background-color: black;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+		justify-content: center;
+		align-items: center;
+		transition: transform 0.5s ease;
+	}
+
+	.Cont_Black:hover{
+		transform: scale(1.1);
+	}
+
+	.carousel_container_img, .carousel_container_img1{
+		position: relative;
+		width: 250px;
+		height: auto;
+		margin: 0 auto;
+		padding: 0%;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;		
+	}
+
+	.carousel_container_img2 {
+		position: relative;
+		width: 500px;
+		height: auto;
+		margin: 0 auto;
+		padding: 0%;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;	
+	}
+	
+	.carousel_slide_img, .carousel_slide_img1{
+		display: flex;
+		width: 350px;
+		flex-direction: row;
+		height: 400px;
+		padding: 0%;
+		transition: transform 0.8s ease-in-out;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.carousel_slide_img2{
+		display: flex;
+		width: 800px;
+		flex-direction: row;
+		height: 400px;
+		padding: 0%;
+		transition: transform 0.8s ease-in-out;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	
+	.carousel_slide_img, .carousel_slide_img1{
+		height: 500px;
+		width: 100%;
+		/* padding-left: 20px; */
+
+	}
+	
+	.img_def{
+		height: 490px;
+		margin-top: -16px;
+	}
+	
+	.fade_in_out, .fade_in_out{
+		animation: fadeEffect 0.5s infinite;
+	}
+	
+
+
+	@keyframes fadeEffect{
+		0% { opacity: 1; }
+		40% { opacity: 1; }
+		50% { opacity: 0; }
+		90% { opacity: 0; }
+		100% { opacity: 1; }
+	}
 
 
 /* ////////////////////////////////////////////////////////////////////////////////// */

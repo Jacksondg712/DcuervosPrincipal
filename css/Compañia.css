@@ -1042,6 +1042,15 @@ footer{
 	margin-top: 10px;
 }
 
+.pqr_Form{
+	color: black;
+	transition: color 0.5s ease;
+}
+
+.pqr_Form:hover{
+	color: #57bfd9;
+}
+
 .Sepa{
 	margin-left: 5px;
 }

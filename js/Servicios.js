@@ -25,3 +25,47 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('carousel_img');
+    let position = 0;
+    
+    function nextSlide() {
+        position = position === 0 ? -350 : 0;
+        carousel.style.transform = `translateX(${position}px)`;
+    }
+    
+    // Cambio automático cada 3 segundos
+    setInterval(nextSlide, 3000);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('carousel_img1');
+    let position = 0;
+    
+    function nextSlide() {
+        position = position === 0 ? -300 : 0;
+
+        carousel.style.transform = `translateX(${position}px)`;
+    }
+    
+    // Cambio automático cada 3 segundos
+    setInterval(nextSlide, 4000);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('carousel_img2');
+    let position = 0;
+    
+    function nextSlide() {
+        position = position === 0 ? -550 : 0;
+
+        carousel.style.transform = `translateX(${position}px)`;
+    }
+    
+    // Cambio automático cada 3 segundos
+    setInterval(nextSlide, 5000);
+});
+
