@@ -83,12 +83,13 @@ a:link{
 }
 
 .container{
-	width: 1200px;
+	width: 1400px;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: space-around;
 	align-items: center;
+	/* border: 1px solid black; */
 }
 
 .Text_Black{
@@ -244,6 +245,11 @@ a:link{
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
+.Servicios{
+	position: relative;
+	z-index: 1;
+}
+
 .Servi_List{
     width: 100%;
     justify-content: space-around;
@@ -288,8 +294,10 @@ a:link{
 }
 
 .Servi_Cont_Ref{
+	
     width: 100%;
     margin-top: 20px;
+	z-index: 1;
 }
 
 .Servi_Button{
@@ -357,26 +365,34 @@ a:link{
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
   .cont_api{
-	width: 100%;
+	width: 1400PX;
 	height: 500px;
 	position: relative;
 	z-index: 1;
 	margin-bottom: 100px;
   }
 
+  .API{
+	width: 100%;
+	height: 500PX;
+	position: relative;
+	display: flex;
+	justify-content: center;
+  }
+
   .line{
 	width: 100%;
-	height: 300px;
+	height: 250px;
 	background-color: #227598;
 	position: absolute;
-	z-index: 2;
-	top: 20%;
+	z-index: 0;
+	top: 25%;
 	}
 
 
-	.Cont_item_api{
+	.Cont_item_api{	
 	position: absolute;
-	z-index: 3;
+	z-index: 0;
 	height: 100%;
 	width: 100%;
 	align-items: center;
@@ -395,7 +411,7 @@ a:link{
 		color: white;
 		width: 350px;
 		text-align: center;
-		margin-bottom: 50px;
+		margin-bottom: 0;
 		font-size: 32px;
 	}
 
@@ -432,19 +448,20 @@ a:link{
 
 	.carousel_container_img, .carousel_container_img1{
 		position: relative;
-		width: 250px;
+		width: 200px;
 		height: auto;
 		margin: 0 auto;
 		padding: 0%;
 		overflow: hidden;
 		display: flex;
 		align-items: center;
-		justify-content: center;		
+		justify-content: center;
+
 	}
 
 	.carousel_container_img2 {
 		position: relative;
-		width: 500px;
+		width: 400px;
 		height: auto;
 		margin: 0 auto;
 		padding: 0%;
@@ -452,6 +469,7 @@ a:link{
 		display: flex;
 		align-items: center;
 		justify-content: center;	
+		/* border: 1px solid black; */
 	}
 	
 	.carousel_slide_img, .carousel_slide_img1{
@@ -464,11 +482,12 @@ a:link{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		/* border: 1px soilid black; */
 	}
 
 	.carousel_slide_img2{
 		display: flex;
-		width: 800px;
+		width: 450px;
 		flex-direction: row;
 		height: 400px;
 		padding: 0%;
@@ -476,6 +495,7 @@ a:link{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		/* border: 1px solid black; */
 	}
 
 	
@@ -487,7 +507,7 @@ a:link{
 	}
 	
 	.img_def{
-		height: 490px;
+		height: 400px;
 		margin-top: -16px;
 	}
 	
@@ -562,7 +582,6 @@ footer{
 }
 
 .container_footer{
-	width: 100%;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
