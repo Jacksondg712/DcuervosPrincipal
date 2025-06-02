@@ -83,7 +83,7 @@ a:link{
 }
 
 .container{
-	width: 1200px;
+	width: 1400px;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -1024,8 +1024,8 @@ footer{
 }
 
 .container_footer{
-	width: 100%;
-	height: 100%;
+	/* width: 100%;
+	height: 100%; */
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: space-around;
@@ -1066,8 +1066,14 @@ footer{
 .Final{
 	width: 100%;
 	background-color: #227598;
-	height: 50px;
+	height: 80px;
 	border-top: 2px solid #57bfd9;
+}
+
+
+.con_final{
+	justify-content: space-around;
+	align-items: center;
 }
 
 .Final_Text{
@@ -1078,7 +1084,18 @@ footer{
 .Foo_Cont_sgv_contac{
 	align-items: center;
 	width: 20%;
-	justify-content: space-around;
+	justify-content: space-between;
+}
+
+
+
+.imgSuper{
+	background-image: url('../images-videos/Supertransporte.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 180px;
+	height: 101px;
 }
 
 .Ref_Final{
