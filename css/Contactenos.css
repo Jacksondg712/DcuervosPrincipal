@@ -604,8 +604,8 @@ footer{
 }
 
 .container_footer{
-	width: 100%;
-	height: 100%;
+	/* width: 100%;
+	height: 100%; */
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: space-around;
@@ -622,6 +622,15 @@ footer{
 	margin-top: 10px;
 }
 
+.pqr_Form{
+	color: black;
+	transition: color 0.5s ease;
+}
+
+.pqr_Form:hover{
+	color: #57bfd9;
+}
+
 .Sepa{
 	margin-left: 5px;
 }
@@ -634,11 +643,68 @@ footer{
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
+
+
+.float_Wha{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+	z-index:100;
+	transition: transform 0.5s ease;
+}
+
+.fa-whatsapp{
+	border: 1px soldi black;
+}
+.float_IL{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:120px;
+	background-color:#0077B5;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	font-size:30px;
+	z-index:100;
+	transition: transform 0.5s ease;
+	
+}
+
+.float_IL:hover {
+	transform: scale(1.1);
+}
+
+.float_Wha:hover{
+	transform: scale(1.1);
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
 .Final{
 	width: 100%;
 	background-color: #227598;
-	height: 50px;
+	height: 80px;
 	border-top: 2px solid #57bfd9;
+}
+
+
+.con_final{
+	justify-content: space-around;
+	align-items: center;
 }
 
 .Final_Text{
@@ -649,7 +715,18 @@ footer{
 .Foo_Cont_sgv_contac{
 	align-items: center;
 	width: 20%;
-	justify-content: space-around;
+	justify-content: space-between;
+}
+
+
+
+.imgSuper{
+	background-image: url('../images-videos/Supertransporte.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 180px;
+	height: 101px;
 }
 
 .Ref_Final{
