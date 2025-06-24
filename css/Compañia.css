@@ -760,7 +760,6 @@ a:link{
 
 .Flo_modal_hiper{
 	font-size: 28px;
-	transition: color 0.5s ease;
 }
 
 .Flot_modal_cont_hiper:hover{
@@ -786,6 +785,10 @@ a:link{
 	box-shadow: 2px 2px 3px #999;
   	z-index:100;
   	transition: transform 0.5s ease;
+}
+
+.fa-whatsapp{
+	border: 1px soldi black;
 }
 .float_IL{
 	position:fixed;
