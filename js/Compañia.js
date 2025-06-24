@@ -4,13 +4,14 @@ const slides = document.querySelectorAll(".Dcuervo_slide");
 
 const modal = document.getElementById('Flo_Modal');
 const btn = document.querySelectorAll('.Flo_Button');
-
 const closeModal = document.getElementById('close-modal');
 const modalTitle = document.getElementById('modal-title');
+const modalCategoria = document.getElementById('modal_Categoria');
 const modalCaracter = document.getElementById('modal-Caracteristicas');
-const modalCapaciti = document.getElementById('modal-Capacidad');
-const modalMt3 = document.getElementById('modal-Mt3');
 const modalImage = document.getElementById('modal-image');
+const sliderImage = document.getElementById('sliderImage');
+const duble_image = document.getElementById('duble_image');
+
 
 const modal3 = document.getElementById('modal_Ter');
 const closeModal3 = document.getElementById('close_Ter');
@@ -111,36 +112,77 @@ function nextSlide() {
   showSlide(currentIndex);
 }
 
-btn.forEach(btn => {
-  btn.addEventListener('click', function(){
-    const tittle = this.getAttribute('Titulo');
-    const Categoria = this.getAttribute('Categoria');
-    const Caracter = this.getAttribute('Caracteristicas');
-    const Capacidad = this.getAttribute('Capacidad');
-    const Mt3 = this.getAttribute('Mt3');
-    const image = this.getAttribute('image');
+let currentIndexImage = 0;
+let sliderInterval;
+function changeImage() {
+    const images = sliderImage.querySelectorAll('img');
     
+    images[currentIndexImage].classList.remove('active');
+    currentIndexImage = (currentIndexImage + 1) % images.length;
+    images[currentIndexImage].classList.add('active');
+}
 
-    modalTitle.textContent = tittle;
-    modal_Categoria.textContent = Categoria;
-    modalCaracter.textContent = Caracter;
-    modalCapaciti.textContent = Capacidad;
-    modalMt3.textContent = Mt3;
-    modalImage.src = image;
-    modal.style.display = "block";
+btn.forEach(button => {
+    button.addEventListener('click', function() {
+        const titulo = this.getAttribute('Titulo');
+        const categoria = this.getAttribute('Categoria');
+        const caracteristicas = this.getAttribute('Caracteristicas');
+        const image = this.getAttribute('image');
+        const image2 = this.getAttribute('image2');
+        const image3 = this.getAttribute('image3');
 
-  })
-})
+        modalTitle.textContent = titulo;
+        modalCategoria.textContent = categoria;
+        modalCaracter.textContent = caracteristicas;
+        modal.style.display = "block";
 
+        // Limpiar interval anterior si existe
+        if (sliderInterval) {
+            clearInterval(sliderInterval);
+        }
+
+        // Verificar si tiene múltiples imágenes para el slider
+        if (image2 && image3) {
+            // Mostrar slider, ocultar imagen única
+            modalImage.style.display = "none";
+            sliderImage.style.display = "block";
+            
+            // Configurar las imágenes del slider
+            document.getElementById('imagen2').src = image2;
+            document.getElementById('imagen3').src = image3;
+            
+            // Resetear el índice y iniciar el slider
+            currentIndexImage = 0;
+            const images = sliderImage.querySelectorAll('img');
+            images.forEach((img, index) => {
+                img.classList.remove('active');
+                if (index === 0) img.classList.add('active');
+            });
+            
+            sliderInterval = setInterval(changeImage, 3000);
+        } else {
+            // Mostrar imagen única, ocultar slider
+            modalImage.style.display = "block";
+            sliderImage.style.display = "none";
+            modalImage.src = image;
+        }
+    });
+});
 closeModal.addEventListener('click', function() {
-  modal.style.display = 'none';
+    modal.style.display = "none";
+    if (sliderInterval) {
+        clearInterval(sliderInterval);
+    }
 });
 
-// Cerrar el modal si se hace clic fuera del contenido del modal
+// Cerrar modal al hacer clic fuera
 window.addEventListener('click', function(event) {
-  if (event.target == modal) {
-      modal.style.display = 'none';
-  }
+    if (event.target === modal) {
+        modal.style.display = "none";
+        if (sliderInterval) {
+            clearInterval(sliderInterval);
+        }
+    }
 });
 
 showSlide(currentIndex);
