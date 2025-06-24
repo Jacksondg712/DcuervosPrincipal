@@ -316,7 +316,7 @@ a:link{
 .modal {
 	display: none;
 	position: fixed;
-	z-index: 1;
+	z-index: 10;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -368,7 +368,7 @@ a:link{
 	width: 1400PX;
 	height: 500px;
 	position: relative;
-	z-index: 1;
+	z-index: 0;
 	margin-bottom: 100px;
   }
 
@@ -404,6 +404,7 @@ a:link{
 		height: 300px;
 		width: 600px;
 		justify-content: center;
+		z-index: 0;
 		align-items: center;
 	}
 
