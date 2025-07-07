@@ -9,8 +9,11 @@ const modalTitle = document.getElementById('modal-title');
 const modalCategoria = document.getElementById('modal_Categoria');
 const modalCaracter = document.getElementById('modal-Caracteristicas');
 const modalImage = document.getElementById('modal-image');
-const sliderImage = document.getElementById('sliderImage');
-const duble_image = document.getElementById('duble_image');
+const modalImage2 = document.getElementById('modal-image2');
+
+// Contenedores de imágenes
+const contImageOne = document.querySelector('.Cont_image_one');
+const contImageTwo = document.querySelector('.cont_image_two');
 
 
 const modal3 = document.getElementById('modal_Ter');
@@ -30,6 +33,9 @@ const div2 = document.getElementById('cont_Text_Parr_largo');
 
 const buttonInfo = document.getElementById('Cambio');
 
+
+// Variable para controlar el intervalo de alternancia
+let intervalId = null;
 let currentIndex = 0;
 let currentDes = 0;
 let currentLo = 0;
@@ -123,66 +129,89 @@ function changeImage() {
 }
 
 btn.forEach(button => {
-    button.addEventListener('click', function() {
-        const titulo = this.getAttribute('Titulo');
-        const categoria = this.getAttribute('Categoria');
-        const caracteristicas = this.getAttribute('Caracteristicas');
-        const image = this.getAttribute('image');
-        const image2 = this.getAttribute('image2');
-        const image3 = this.getAttribute('image3');
+  button.addEventListener('click', function(){
+    const tittle = this.getAttribute('Titulo');
+    const categoria = this.getAttribute('Categoria');
+    const caracter = this.getAttribute('Caracteristicas');
+    const image = this.getAttribute('image');
+    const image2 = this.getAttribute('image2');
+    const isDouble = this.getAttribute('double') === 'true';
 
-        modalTitle.textContent = titulo;
-        modalCategoria.textContent = categoria;
-        modalCaracter.textContent = caracteristicas;
-        modal.style.display = "block";
+    // Limpiar intervalo anterior si existe
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
 
-        // Limpiar interval anterior si existe
-        if (sliderInterval) {
-            clearInterval(sliderInterval);
-        }
+    // Llenar datos del modal
+    modalTitle.textContent = tittle;
+    modalCategoria.textContent = categoria;
+    modalCaracter.textContent = caracter;
 
-        // Verificar si tiene múltiples imágenes para el slider
-        if (image2 && image3) {
-            // Mostrar slider, ocultar imagen única
-            modalImage.style.display = "none";
-            sliderImage.style.display = "block";
-            
-            // Configurar las imágenes del slider
-            document.getElementById('imagen2').src = image2;
-            document.getElementById('imagen3').src = image3;
-            
-            // Resetear el índice y iniciar el slider
-            currentIndexImage = 0;
-            const images = sliderImage.querySelectorAll('img');
-            images.forEach((img, index) => {
-                img.classList.remove('active');
-                if (index === 0) img.classList.add('active');
-            });
-            
-            sliderInterval = setInterval(changeImage, 3000);
+    if (isDouble && image2) {
+      // Mostrar contenedor doble y ocultar simple
+      contImageOne.style.display = 'none';
+      contImageTwo.style.display = 'block';
+      
+      // Configurar las imágenes
+      const img1 = contImageTwo.querySelector('.Flo_modal_Image');
+      const img2 = contImageTwo.querySelector('.Flo_modal_Image2');
+      
+      img1.src = image;
+      img2.src = image2;
+      
+      // Configurar alternancia de imágenes
+      img1.style.display = 'block';
+      img2.style.display = 'none';
+      
+      let showingFirst = true;
+      
+      // Alternar cada 3 segundos
+      intervalId = setInterval(() => {
+        if (showingFirst) {
+          img1.style.display = 'none';
+          img2.style.display = 'block';
         } else {
-            // Mostrar imagen única, ocultar slider
-            modalImage.style.display = "block";
-            sliderImage.style.display = "none";
-            modalImage.src = image;
+          img1.style.display = 'block';
+          img2.style.display = 'none';
         }
-    });
-});
-closeModal.addEventListener('click', function() {
-    modal.style.display = "none";
-    if (sliderInterval) {
-        clearInterval(sliderInterval);
+        showingFirst = !showingFirst;
+      }, 3000);
+      
+    } else {
+      // Mostrar contenedor simple y ocultar doble
+      contImageTwo.style.display = 'none';
+      contImageOne.style.display = 'block';
+      
+      // Configurar imagen simple
+      const imgSimple = contImageOne.querySelector('.Flo_modal_Image');
+      imgSimple.src = image;
     }
+
+    console.log('Modal abierto para:', tittle);
+    modal.style.display = "block";
+  });
 });
 
-// Cerrar modal al hacer clic fuera
+closeModal.addEventListener('click', function() {
+  // Limpiar intervalo al cerrar
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+  modal.style.display = 'none';
+});
+
+// Cerrar el modal si se hace clic fuera del contenido del modal
 window.addEventListener('click', function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-        if (sliderInterval) {
-            clearInterval(sliderInterval);
-        }
+  if (event.target == modal) {
+    // Limpiar intervalo al cerrar
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
     }
+    modal.style.display = 'none';
+  }
 });
 
 showSlide(currentIndex);

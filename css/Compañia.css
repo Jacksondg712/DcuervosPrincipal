@@ -652,8 +652,10 @@ a:link{
 	transform: scale(1.2);
 }
 
+
+
 .Flo_Modal{
-	display: none;
+    display: none;
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -664,26 +666,50 @@ a:link{
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
 	padding-top: 60px;
+    
 }
 
-.Flo_modal_cont {
-    display: flex;
-    position: relative;
+.Flo_ModalBi{
+    display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 60px;
+    
+}
+
+.Cont_general{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid black;
+    justify-content: center;
+    align-items: center;
 }
 
 .Flo_modal_content{
-	margin: 0 auto;
+
 	padding: 0 30px 0 50px;
 	width: 610px;
-	height: 540px;
+	height: 640px;
 	/* background-color: #effafc; */
 	background-color: white;
 	justify-content: space-around;
-	position: absolute;
-	z-index: 4;
-	right: 50%;
-	top: 14%;
+    align-items: center;
+
 	border-radius: 10px;
+}
+
+
+.cont_image{
+    width: auto;
+    height: auto;
 }
 
 .close {
@@ -701,32 +727,45 @@ a:link{
     cursor: pointer;
 }
 
+.cont_head{
+    margin-top: -120px;
+    width: 100%;
+
+}
+
 .Flo_modal_tittle{
-	font-size: 64px;
-	color: black;
-	margin-top: -100px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+	font-size: clamp(36px, 5vw, 52px);
+    color: #2c3e50;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #7DCDE3, #227598);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .Flo_modal_sudtitle{
-	margin-top: -45px;
 	padding-left: 5px;
+    text-align: center;
 }
 
 .Flo_modal_sub{
 	color: #839DD1;
-	font-size: 32px;
+	font-size: 35px;
+	margin-bottom: 20px;
 }
 
 .Flo_modal_text{
 	color: black;
-	font-size: 24px;
+	font-size: 18px;
+	text-align: justify;
 }
 
 .Flo_modal_Cont{
 	width: 500px;
 	justify-content: start;
-	position: relative;
-	z-index: 2;
 }
 
 .Flo_modal_content_x{
@@ -736,53 +775,20 @@ a:link{
 	margin-top: -30px;
 }
 
+.cont_image{
+    width: auto;
+    height: auto;
+    padding: 10px 10px 10px 0;
+    background-color: #effbfc;
+    border-radius: 0 5px 5px 0; 
+}
+
+
 .Flo_modal_Image{
 	width: 800px;
-	height: 600px;
-	position: absolute;
-	z-index: 3;
-	top: 18%;
-	left: 48%;
-	border-radius: 5px;
-	background-color: #d5f3f8;
-
+	height: auto;
+    border-radius: 0 5px 5px 0; 
 }
-
-.Flo_Cont_duble_image{
-            position: absolute;
-            z-index: 3;
-            top: 18%;
-            left: 48%;
-			
-			
-}
-
-
-.slider-container {
-            width: 800px; /* Cambia este valor según necesites */
-            height: 300px; /* Ajusta la altura según tus imágenes */
-            overflow: hidden;
-            position: relative;
-			display: none;
-			border-radius: 5px;
-            background-color: #d5f3f8;
-        }
-        
-        .slider-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-        
-        .slider-container img.active {
-            opacity: 1;
-        }
-
 
 .Flot_modal_cont_hiper{
 	width: 450px;
@@ -804,6 +810,7 @@ a:link{
 
 .Flo_modal_hiper{
 	font-size: 28px;
+	transition: color 0.5s ease;
 }
 
 .Flot_modal_cont_hiper:hover{
@@ -811,6 +818,59 @@ a:link{
 	.Flo_modal_hiper{
 		color: #227598;
 	}
+}
+
+
+.cont_image_two {
+    display: none; /* Oculto por defecto */
+}
+
+.Cont_image_one {
+    display: block; /* Visible por defecto */
+}
+
+/* Estilos existentes del modal... */
+
+.cont_image {
+    width: auto;
+    height: auto;
+    padding: 10px 10px 10px 0;
+    background-color: #effbfc;
+    border-radius: 0 5px 5px 0; 
+}
+
+.Flo_modal_Image {
+    width: 800px;
+    height: auto;
+    border-radius: 0 5px 5px 0; 
+}
+
+/* Contenedor para imagen simple */
+.Cont_image_one {
+    display: block; /* Visible por defecto */
+}
+
+/* Contenedor para imágenes dobles */
+.cont_image_two {
+    display: none; /* Oculto por defecto */
+    position: relative; /* Para posicionamiento absoluto de las imágenes */
+    width: 800px;
+    height: 450px;
+}
+
+.cont_image_two .Flo_modal_Image,
+.cont_image_two .Flo_modal_Image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0 5px 5px 0;
+    transition: opacity 0.5s ease-in-out; /* Transición suave opcional */
+}
+
+.cont_image_two .Flo_modal_Image2 {
+    display: none; /* Inicialmente oculta */
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
