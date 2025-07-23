@@ -87,7 +87,7 @@ a:link{
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -337,7 +337,7 @@ a:link{
 	margin-top: 120px;
 	display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 150px;
 	justify-content: center;
 	position: relative;
 	z-index: 1;
@@ -378,7 +378,7 @@ a:link{
 
 .Corp_cont_animation:hover{
 	.cont_Car{
-		transform: translatex(1000px);
+		transform: translatex(1200px);
 	}
 	.car{
 		transform: scaleX(1);
