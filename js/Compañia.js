@@ -33,12 +33,72 @@ const div2 = document.getElementById('cont_Text_Parr_largo');
 
 const buttonInfo = document.getElementById('Cambio');
 
+let currentCard = 0;
+const totalCards = 3;
+const autoSlideInterval = 4000; // 4 segundos
+let autoSlideTimer;
 
 // Variable para controlar el intervalo de alternancia
 let intervalId = null;
 let currentIndex = 0;
 let currentDes = 0;
 let currentLo = 0;
+
+function updateCarousel() {
+    const wrapper = document.querySelector('.carousel-wrapper');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    // Mover el carrusel
+    wrapper.style.transform = `translateX(-${currentCard * (100 / totalCards)}%)`;
+    
+    // Actualizar indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentCard);
+    });
+}
+function nextCard() {
+    currentCard = (currentCard + 1) % totalCards;
+    updateCarousel();
+    resetAutoSlide();
+}
+function prevCard() {
+    currentCard = (currentCard - 1 + totalCards) % totalCards;
+    updateCarousel();
+    resetAutoSlide();
+}
+function goToCard(index) {
+    currentCard = index;
+    updateCarousel();
+    resetAutoSlide();
+}
+function startAutoSlide() {
+    autoSlideTimer = setInterval(nextCard, autoSlideInterval);
+}
+function resetAutoSlide() {
+    clearInterval(autoSlideTimer);
+    startAutoSlide();
+}
+// Pausar el auto-slide cuando el mouse está sobre el carrusel
+document.querySelector('.Ad_Cont_card').addEventListener('mouseenter', () => {
+    clearInterval(autoSlideTimer);
+});
+// Reanudar el auto-slide cuando el mouse sale del carrusel
+document.querySelector('.Ad_Cont_card').addEventListener('mouseleave', () => {
+    startAutoSlide();
+});
+// Inicializar el carrusel
+document.addEventListener('DOMContentLoaded', () => {
+    updateCarousel();
+    startAutoSlide();
+});
+// Soporte para navegación con teclado
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        prevCard();
+    } else if (e.key === 'ArrowRight') {
+        nextCard();
+    }
+});
 
 button2.onclick = function() {
   modal2.style.display = "block";
