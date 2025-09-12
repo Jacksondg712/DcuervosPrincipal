@@ -233,7 +233,7 @@ function changeImage() {
         setTimeout(() => {
             btn.classList.remove('success');
             btn.disabled = false;
-            btnText.innerHTML = '<span>📄</span><span>Descargar Plan Ambiental PDF</span>';
+            btnText.innerHTML = '<span>Descargar Plan Ambiental PDF</span>';
         }, 3000);
         
     }, 1500); // Simula 1.5 segundos de "preparación de descarga"
