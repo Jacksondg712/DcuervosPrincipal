@@ -28,8 +28,16 @@ const modal4 = document.getElementById('modal_Pol');
 const closeModal4 = document.getElementById('close_Pol');
 const button4 = document.getElementById('Trb_Button_Pol');
 
+
 const div1 = document.getElementById('cont_Text_Parr_acor');
 const div2 = document.getElementById('cont_Text_Parr_largo');
+
+//Variables Seccion Eco
+const openModalBtnEco = document.getElementById('openModalEco');
+const modalOverlayEco = document.getElementById('modalOverlayEco');
+const closeModalBtnEco = document.getElementById('closeModalEco');
+const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+const spinner = document.getElementById('spinner');
 
 const buttonInfo = document.getElementById('Cambio');
 
@@ -187,6 +195,127 @@ function changeImage() {
     currentIndexImage = (currentIndexImage + 1) % images.length;
     images[currentIndexImage].classList.add('active');
 }
+
+// Función para abrir el modal
+        function openModalEco() {
+            modalOverlayEco.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function downloadPDF() {
+    const btn = downloadPdfBtn;
+    const btnText = btn.querySelector('.btn-text');
+    
+    // Cambiar estado a descargando
+    btn.classList.add('downloading');
+    btn.disabled = true;
+    btnText.style.display = 'none';
+    spinner.style.display = 'block';
+    
+    // Simular proceso de descarga (puedes ajustar el tiempo)
+    setTimeout(() => {
+        // Crear enlace de descarga
+        const link = document.createElement('a');
+        link.href = './pdf/Logística_Sostenible.pdf'; // CAMBIA ESTA RUTA POR LA DE TU PDF
+        link.download = 'Plan-Logistica-Sostenible-2024.pdf'; // Nombre del archivo descargado
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Cambiar estado a éxito
+        btn.classList.remove('downloading');
+        btn.classList.add('success');
+        spinner.style.display = 'none';
+        btnText.innerHTML = '<span>¡Descarga Iniciada!</span>';
+        btnText.style.display = 'flex';
+        
+        // Restaurar botón después de 3 segundos
+        setTimeout(() => {
+            btn.classList.remove('success');
+            btn.disabled = false;
+            btnText.innerHTML = '<span>Descargar Plan Ambiental PDF</span>';
+        }, 3000);
+        
+    }, 1500); // Simula 1.5 segundos de "preparación de descarga"
+}
+
+
+if (downloadPdfBtn) {
+    downloadPdfBtn.addEventListener('click', downloadPDF);
+}
+
+        // Función para cerrar el modal
+        function closeModalEco() {
+            modalOverlayEco.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event listeners para modal
+        openModalBtnEco.addEventListener('click', openModalEco);
+        closeModalBtnEco.addEventListener('click', closeModalEco);
+
+        modalOverlayEco.addEventListener('click', function(e) {
+            if (e.target === modalOverlayEco) {
+                closeModalEco();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modalOverlayEco.classList.contains('show')) {
+                closeModalEco();
+            }
+        });
+
+        // Función para animar contador con efecto más suave
+        function animateCounter(element, target, duration = 2500) {
+            const counter = element.querySelector('.counter');
+            let current = 0;
+            const increment = target / (duration / 16);
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Intersection Observer mejorado
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('visible');
+                    
+                    if (entry.target.hasAttribute('data-counter')) {
+                        const targetValue = parseInt(entry.target.getAttribute('data-counter'));
+                        setTimeout(() => {
+                            animateCounter(entry.target, targetValue, 3000);
+                        }, 500);
+                    }
+                    
+                    if (entry.target.classList.contains('Eco_card_textSec')) {
+                        entry.target.classList.add('animate-in');
+                    }
+                    
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observar todos los elementos cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            const counterElements = document.querySelectorAll('.Eco_card_textPrin');
+            const textElements = document.querySelectorAll('.Eco_card_textSec');
+
+            counterElements.forEach(counter => observer.observe(counter));
+            textElements.forEach(text => observer.observe(text));
+        });
 
 btn.forEach(button => {
   button.addEventListener('click', function(){
