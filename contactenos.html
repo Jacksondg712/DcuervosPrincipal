@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/Contactenos.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container flex-row head_Cont">
-        <a href="./index.html"><img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="Logo" width="137"></a>
-          <ul class="list flex-row">
-              <li class="head_Ref"><a class="head_Ref_Link" href="./index.html" ><p class="head_Ref_Text">COMPAÑIA</p></a></li>
-              <li class="head_Ref"><a class="head_Ref_Link" href="./servicios.html" ><p class="head_Ref_Text">SERVICIOS</p></a></li>
-              <li class="head_Ref"><a class="head_Ref_Link" style="color: #57bfd9;" href="./contactenos.html" ><p class="head_Ref_Text">CONTACTENOS</p></a></li>
-              <li class="head_Ref"><a class="head_Ref_Link" href="./trabajo.html" ><p class="head_Ref_Text">TRABAJA CON NOSOTROS</p></a></li>
-          </ul>
-          <ul class="list">
-              <div class="flex-row">
-                  <li class="head_Acceso"><a class="head_Acceso_link" href="https://tms.driv.in/app/home"><p>ACCESO CLIENTES</p></a></li>
-              </div>
-          </ul>
-      </div>
-  </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/Contactenos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+  <header class="header">
+        <div class="head_Cont">
+            <div class="logo-container">
+                <a href="./index.html">
+                    <img src="./IMAGENES/COMPARTIDO/Logo-Dcuervo-PNG Blanco.png" alt="Logo">
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-wrapper" id="navWrapper">
+                <ul class="list">
+                    <li class="head_Ref">
+                        <a class="head_Ref_Link"  href="./index.html">
+                            <p class="head_Ref_Text">COMPAÑÍA</p>
+                        </a>
+                    </li>
+                    <li class="head_Ref">
+                        <a class="head_Ref_Link" href="./servicios.html">
+                            <p class="head_Ref_Text">SERVICIOS</p>
+                        </a>
+                    </li>
+                    <li class="head_Ref">
+                        <a class="head_Ref_Link" style="color: #57bfd9;" href="./contactenos.html">
+                            <p class="head_Ref_Text">CONTÁCTENOS</p>
+                        </a>
+                    </li>
+                    <li class="head_Ref">
+                        <a class="head_Ref_Link" href="./trabajo.html">
+                            <p class="head_Ref_Text">TRABAJA CON NOSOTROS</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="head_Acceso">
+                        <a class="head_Acceso_link" href="https://tms.driv.in/app/home">
+                            <p>ACCESO CLIENTES</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
       <section class="Contact">
@@ -141,7 +169,7 @@
                     </div>
                   </div>
                   <div class="flex-colum">
-                    <label class="Cont_Label" for="">Ciudad</label>
+                    <label class="Cont_Label Cont_Label1" for="">Ciudad</label>
                     <div class="content">
                       <select id="city" name="city" class="select">
                         <option class="Text_Option" value="Armenia">Armenia</option>
@@ -198,7 +226,7 @@
                 </div>
                 <div class="Cont_Form_Text flex-colum">
                     <label for="message" class="Cont_Label Text_Medium">Escribenos un mensaje</label>
-                    <textarea id="message" name="message" class="Cont_TextTarea Text_Medium"></textarea>
+                    <textarea id="message" placeholder="escribe aqui el mensaje" name="message" class="Cont_TextTarea Text_Medium"></textarea>
                 </div>
                 <div class="cont_But_Form">
                   <input
@@ -217,7 +245,7 @@
               width="435px"
               />
               <img
-                src="./images-videos/trabajador.png"
+                src="./IMAGENES/COMPARTIDO/trabajador.png"
                 alt="trabajador"
                 width="250px"
               />
@@ -240,15 +268,15 @@
                       <p class="Text_Form_Input Text_Medium">Nombre</p>
                       <input class="Input_Form" type="text" placeholder="Escriba su nombre" required>
                     </div>
-                    <div class="cont_Input_boletin flex-colum">
+                    <div class="cont_Input_boletin1 cont_Input_boletin flex-colum">
                       <p class="Text_Form_Input Text_Medium">Apellido</p>
                       <input class="Input_Form" type="text" placeholder="Escriba su apellido" required>
                     </div>
-                    <div class="cont_Input_boletin flex-colum">
+                    <div class="cont_Input_boletin1 cont_Input_boletin flex-colum">
                       <p class="Text_Form_Input Text_Medium">Teléfono</p>
                       <input class="Input_Form" type="text" placeholder="Escriba su numero de telefono" required>
                     </div>
-                    <div class="cont_Input_boletin flex-colum">
+                    <div class="cont_Input_boletin1 cont_Input_boletin flex-colum">
                       <p class="Text_Form_Input Text_Medium">Correo electrónico</p>
                       <input class="Input_Form" type="text" placeholder="Escriba su correo electrónico" required>
                     </div>
@@ -279,7 +307,7 @@
 
     <footer class="footer">
             <div class="container container_footer flex-row">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37738.67869853316!2d-74.13432320000001!3d4.6202879999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b6b4aea8a43%3A0x935eec4c90b47078!2zQ2wuIDY3YSAjIDczQS0xNywgRW5nYXRpdsOhLCBCb2dvdMOhLCBELkMuLCBCb2dvdMOhLCBCb2dvdMOhLCBELkMu!5e1!3m2!1ses!2sco!4v1748814878208!5m2!1ses!2sco" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="Foo_Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37738.67869853316!2d-74.13432320000001!3d4.6202879999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b6b4aea8a43%3A0x935eec4c90b47078!2zQ2wuIDY3YSAjIDczQS0xNywgRW5nYXRpdsOhLCBCb2dvdMOhLCBELkMuLCBCb2dvdMOhLCBCb2dvdMOhLCBELkMu!5e1!3m2!1ses!2sco!4v1748814878208!5m2!1ses!2sco" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="" width="250px">
                 <div class="Foo_Cont_Info2 flex-colum">
                     <p class="Foo_Info2_Tittle Text_Black">Sobre Dcuervo</p>

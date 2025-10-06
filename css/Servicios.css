@@ -24,14 +24,14 @@ h5,
 h6,
 p {
 	margin-top: 0;
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 /* Clase para restablecer las propiedades básicas de las listas (ul) */
 ul{
     list-style: none;
     display: flex;
 }
- 
+
 .li{
     list-style: none;
     padding-left: 0;
@@ -105,71 +105,125 @@ a:link{
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
-.header{
-	background-color: #227598;
-	height: auto;
-   	/* border-bottom: 1px solid #21f391; */
-   	position: fixed; /* Fija el encabezado en la parte superior */
-   	top: 0;
-   	width: 100%;
-   	z-index: 100;
-   	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-   	left: 0%;
-   	padding: 0%;
-   	height: 70px;
-}
+.header {
+            background-color: #227598;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            left: 0;
+        }
 
-.head_Cont{
-	justify-content: space-around;
-}
+        .head_Cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .logo-container {
+            z-index: 101;
+        }
 
-.head_Ref{
-	margin-left: 30px;
-}
+        .logo-container img {
+            width: 137px;
+            height: auto;
+        }
 
-.head_Ref_Text{
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
+        /* Menú hamburguesa */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 101;
+        }
 
-.head_Ref_Link{
-	transition: color 0.5s ease;
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
 
-}
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
 
-.head_Ref:hover{
-	.head_Ref_Link{
-		color: #7dcde3;
-	}
-}
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
 
-.head_Acceso_link{
-	transition: color 0.5s ease;
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
 
-.head_Acceso{
-	padding: 10px;
-	border: 1px solid #57bfd9;
-	border-radius: 15px;
-	margin-right: 0px;
-}
+        /* Navegación */
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-.head_Acceso:hover{
-	.head_Acceso_link{
-		color: #57bfd9;
-	}
-}
+        .list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
 
-.head_Cont_list_acceso{
+        .head_Ref {
+            margin-left: 30px;
+        }
 
-	width: 100%;
-	margin-right: 0px;
-}
+        .head_Ref_Link {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.5s ease;
+        }
+
+        .head_Ref_Text {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin: 0;
+        }
+
+        .head_Ref:hover .head_Ref_Link {
+            color: #7dcde3;
+        }
+
+        .head_Acceso {
+            padding: 10px 20px;
+            border: 1px solid #57bfd9;
+            border-radius: 15px;
+            margin-left: 20px;
+        }
+
+        .head_Acceso_link {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.5s ease;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .head_Acceso_link p {
+            margin: 0;
+        }
+
+        .head_Acceso:hover .head_Acceso_link {
+            color: #57bfd9;
+        }
+
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
@@ -263,12 +317,12 @@ a:link{
     background-color: #E8E8E8;
     border-radius: 20px;
     align-items: center;
-	transition: transform 0.5s ease; 
+	transition: transform 0.5s ease;
 
 }
 
  .Servi_Item:hover{
-	transform: scale(1.2);} 
+	transform: scale(1.2);}
 
 .Servi_Cont_Titlle{
     width: 100%;
@@ -294,7 +348,7 @@ a:link{
 }
 
 .Servi_Cont_Ref{
-	
+
     width: 100%;
     margin-top: 20px;
 	z-index: 1;
@@ -325,7 +379,7 @@ a:link{
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.4);
   }
-  
+
   /* Contenido del modal */
   .modal-content {
 	background-color: transparent;
@@ -335,7 +389,7 @@ a:link{
 	height: auto;
 	position: relative;
   }
-  
+
   /* Botón de cierre */
   .close {
 	color: #aaa;
@@ -347,7 +401,7 @@ a:link{
 	right: 2%;
 	top: 2%;
   }
-  
+
   .close:hover,
   .close:focus {
 	color: #57bfd9;
@@ -358,7 +412,7 @@ a:link{
   .modal-video{
 	width: 100%;
 	height: 100%;
-	
+
   }
 
 
@@ -390,14 +444,14 @@ a:link{
 	}
 
 
-	.Cont_item_api{	
+	.Cont_item_api{
 	position: absolute;
 	z-index: 0;
 	height: 100%;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	
+
 	}
 
 	.Cont_seecion1{
@@ -430,7 +484,7 @@ a:link{
 		align-items: center;
 		width: auto;
 
-		
+
 	}
 
 	.Cont_Black{
@@ -469,10 +523,10 @@ a:link{
 		overflow: hidden;
 		display: flex;
 		align-items: center;
-		justify-content: center;	
+		justify-content: center;
 		/* border: 1px solid black; */
 	}
-	
+
 	.carousel_slide_img, .carousel_slide_img1{
 		display: flex;
 		width: 350px;
@@ -499,23 +553,23 @@ a:link{
 		/* border: 1px solid black; */
 	}
 
-	
+
 	.carousel_slide_img, .carousel_slide_img1{
 		height: 500px;
 		width: 100%;
 		/* padding-left: 20px; */
 
 	}
-	
+
 	.img_def{
 		height: 400px;
 		margin-top: -16px;
 	}
-	
+
 	.fade_in_out, .fade_in_out{
 		animation: fadeEffect 0.5s infinite;
 	}
-	
+
 
 
 	@keyframes fadeEffect{
@@ -611,7 +665,7 @@ footer{
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
-	
+
 .float_Wha{
 	position:fixed;
 	width:60px;
@@ -817,7 +871,7 @@ footer{
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.4);
   }
-  
+
   /* Contenido del modal */
   .modal-content_Ter, .modal-content_aut, .modal-content_Pol{
 	background-color: #fefefe;
@@ -829,7 +883,7 @@ footer{
 	height: 650px;
 
   }
-  
+
   /* Botón de cierre */
   .close_Ter, .close_aut, .close_Pol {
 	color: #aaa;
@@ -837,7 +891,7 @@ footer{
 	font-size: 28px;
 	font-weight: bold;
   }
-  
+
   .close_Ter:hover,
   .close_Ter:focus,
   .close_aut:hover,
@@ -864,7 +918,7 @@ footer{
 	right: 50px;
 	text-align: start;
 }
-  
+
 
 .Req_list{
 	list-style: disc;
@@ -892,3 +946,269 @@ footer{
 	width: 90%;
 	margin-top: 15px;
 }
+
+@media (max-width: 768px) {
+    .container{
+        width: 768px;
+    }
+
+    /* .header{
+        width: 97%;
+    } */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #227598;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .nav-wrapper.active {
+        left: 0;
+    }
+
+    .list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .head_Ref {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(87, 191, 217, 0.2);
+    }
+
+    .head_Ref_Link {
+        display: block;
+        width: 100%;
+    }
+
+    .head_Acceso {
+        margin: 20px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+	/* seccion 1 */
+
+
+
+
+	.Port_Cont_Info{
+
+		flex-direction: column;
+	}
+
+	.Port_Text1{
+    font-size: 48px;
+		width: 60%;
+	}
+
+	.PortServi{
+		height: 550px;
+	}
+
+	.Port_Flot{
+		top: 270px;
+	}
+
+	/* Seccion 2 */
+
+	.Servi_Item1{
+		margin-top: 30px;
+	}
+
+	/* seccion 3 */
+
+	.Cont_item_api{
+		flex-direction: column;
+	}
+
+	.Text_seccion1{
+		color: #57bfd9;
+		font: 60px;
+	}
+
+	.carousel_container_img1{
+		display: none;
+	}
+
+	/* Seccion footer */
+
+	.container_footer{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    footer{
+        height: auto;
+    }
+
+    .Foo_Maps{
+        margin-top: 50px;
+    }
+
+    .Foo_Cont_sgv_contac{
+        margin-left: 0px;
+        width: 50%;
+    }
+
+    /* QR politica  */
+
+    .modal-content_Ter, .modal-content_aut, .modal-content_Pol{
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .modal_Ter, .modal_aut, .modal_Pol{
+        top:30px;
+
+    }
+
+}
+
+@media (max-width: 480px){
+
+	.container{
+        width: 480px;
+    }
+
+	.header{
+		width: 90%;
+	}
+
+	.Port_Cont{
+		width: 100%;
+	}
+
+	.Servi_List{
+		width: 50%;
+		justify-content: none;
+	}
+
+	.cont_servi{
+		display: flex;
+		align-items: center;
+	}
+
+	.Servi_List{
+		width: 100%;
+	}
+
+	.modal{
+		border: 1px solid black;
+		width: 100%;
+	}
+
+	.modal-content{
+		border: solid black;
+		top: 13%;
+		left: 0;
+		width: 70%;
+
+
+	}
+
+	.float_Wha{
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+
+	.float_IL{
+		margin-right: 50px;
+	}
+
+	.Api_cont_animation{
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	.Text_seccion1{
+		font-size: 48px;
+		width: 75%;
+	}
+
+	.cont_api{
+		width: 100%;
+		height: 900px;
+	}
+
+	.line{
+		top: 20%;
+		height: 820px;
+		border-radius: 20px;
+	}
+
+	.carousel_container_img{
+		right: 60px;
+	}
+
+	.container_footer{
+		margin-top: 500px;
+	}
+}
+
+@media (max-width: 320px){
+	.container{
+        width: 320px;
+        padding: 0;
+        margin: 0;
+    }
+
+	.header{
+		width: 70%;
+	}
+
+	.Port_Text1{
+		width: 100%;
+	}
+
+	.Port_Flot{
+		width: 80%;
+	}
+
+	.float_Wha{
+		margin-right: 100px;
+
+	}
+
+	.float_IL{
+		margin-right:90px;
+	}
+
+	.Text_seccion1{
+		font-size: 38px;
+		width: 50%;
+	}
+
+	.container_footer{
+		margin-top: 500px;
+	}
+
+	.Foo_Maps{
+        width: 70%;
+        margin-left: 0;
+    }
+
+}
+
+
+
+
+	
+
