@@ -3,6 +3,38 @@ var modal = document.getElementById("myModal");
 var bton = document.getElementById("openModalBtn");
 var span = document.getElementsByClassName("close")[0];
 
+// reponsive scroll de hamburguesa 
+const menuToggle = document.getElementById('menuToggle');
+const navWrapper = document.getElementById('navWrapper');
+
+// Hrader responsive 
+
+menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navWrapper.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        const menuLinks = document.querySelectorAll('.nav-wrapper a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                navWrapper.classList.remove('active');
+            });
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = navWrapper.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && navWrapper.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                navWrapper.classList.remove('active');
+        }
+});
+
+
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();

@@ -104,76 +104,130 @@ a:link{
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
-.header{
-	background-color: #227598;
-	height: auto;
-   	/* border-bottom: 1px solid #21f391; */
-   	position: fixed; /* Fija el encabezado en la parte superior */
-   	top: 0;
-   	width: 100%;
-   	z-index: 100;
-   	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-   	left: 0%;
-   	padding: 0%;
-   	height: 70px;
-}
+.header {
+            background-color: #227598;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            left: 0;
+        }
 
-.head_Cont{
-	justify-content: space-around;
-}
+        .head_Cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .logo-container {
+            z-index: 101;
+        }
 
-.head_Ref{
-	margin-left: 30px;
-}
+        .logo-container img {
+            width: 137px;
+            height: auto;
+        }
 
-.head_Ref_Text{
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
+        /* Menú hamburguesa */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 101;
+        }
 
-.head_Ref_Link{
-	transition: color 0.5s ease;
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
 
-}
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
 
-.head_Ref:hover{
-	.head_Ref_Link{
-		color: #7dcde3;
-	}
-}
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
 
-.head_Acceso_link{
-	transition: color 0.5s ease;
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
 
-.head_Acceso{
-	padding: 10px;
-	border: 1px solid #57bfd9;
-	border-radius: 15px;
-	margin-right: 0px;
-}
+        /* Navegación */
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-.head_Acceso:hover{
-	.head_Acceso_link{
-		color: #57bfd9;
-	}
-}
+        .list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
 
-.head_Cont_list_acceso{
+        .head_Ref {
+            margin-left: 30px;
+        }
 
-	width: 100%;
-	margin-right: 0px;
-}
+        .head_Ref_Link {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.5s ease;
+        }
+
+        .head_Ref_Text {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin: 0;
+        }
+
+        .head_Ref:hover .head_Ref_Link {
+            color: #7dcde3;
+        }
+
+        .head_Acceso {
+            padding: 10px 20px;
+            border: 1px solid #57bfd9;
+            border-radius: 15px;
+            margin-left: 20px;
+        }
+
+        .head_Acceso_link {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.5s ease;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .head_Acceso_link p {
+            margin: 0;
+        }
+
+        .head_Acceso:hover .head_Acceso_link {
+            color: #57bfd9;
+        }
+
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .Portada{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background-image: url('../images-videos/TrabajaConN.png');
+    background-image: url('../IMAGENES/TRABAJO/CHAQUETAS.png');
     width: 100%;
     height: 550px;
     background-size: cover;
@@ -733,4 +787,121 @@ footer{
 .Ter_text{
 	width: 90%;
 	margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .container{
+        width: 768px;
+    }
+
+    /* .header{
+        width: 97%;
+    } */
+
+    .menu-toggle {
+                display: block;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #227598;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .nav-wrapper.active {
+        left: 0;
+    }
+
+    .list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .head_Ref {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(87, 191, 217, 0.2);
+    }
+
+    .head_Ref_Link {
+        display: block;
+        width: 100%;
+    }
+
+    .head_Acceso {
+        margin: 20px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+	.Trab_Cont{
+		flex-direction: column;
+	}
+
+	.Trb_Cont_Fomr{
+		margin-top: 70px;
+	}
+
+		/* Seccion footer */
+
+	.container_footer{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    footer{
+        height: auto;
+    }
+
+    /* .Foo_Maps{
+        margin-top: 50px;
+    } */
+
+    .Foo_Cont_sgv_contac{
+        margin-left: 0px;
+        width: 50%;
+    }
+
+    /* QR politica  */
+
+    .modal-content_Ter, .modal-content_aut, .modal-content_Pol{
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .modal_Ter, .modal_aut, .modal_Pol{
+        top:30px;
+
+    }
+
+}
+
+@media (max-width: 480px){
+	.container{
+        width: 480px;
+    }
+
+	.Cont_Form{
+		width: 100%;
+		border: 1px solid black;
+	}
+
+	.Trb_cont_input{
+		flex-direction: column;
+	}
+
+	.Trb_input_name{
+		width: 100%;
+	}
 }
