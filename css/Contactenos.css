@@ -892,9 +892,9 @@ footer{
 	margin-top: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .container{
-        width: 768px;
+        width: 900px;
     }
 
     /* .header{
@@ -1101,8 +1101,20 @@ footer{
 
 	}
 
+	.Cont_Images{
+		width: 90%;
+		align-items: center;
+		margin-left: 0px;
+		padding-right: 15px;
+
+	}
+
 	.float_IL{
 		margin-right: 20px;
+	}
+
+	.Foo_Maps{
+		width: 80%;
 	}
 
 

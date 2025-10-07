@@ -538,7 +538,7 @@ a:link{
 }
 
 .Corp_cont_animation{
-	width: 100%;
+	width: 80%;
 	justify-content: space-around;
 	position: relative;
 	z-index: 1;
@@ -2067,9 +2067,9 @@ footer{
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .container{
-        width: 768px;
+        width: 900px;
     }
 
     /* .header{
@@ -2146,7 +2146,7 @@ footer{
 
     .Corp_cont_animation{
         /* border: 1px solid black; */
-        width: 88%;
+        width: 80%;
     }
 
     .Corp_Card_Fondo{
@@ -2258,9 +2258,9 @@ footer{
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .container{
-        width: 480px;
+        width: 768px;
     }
 
     .header{
@@ -2356,10 +2356,14 @@ footer{
 
 }
 
-@media (max-width: 320px){
+@media (max-width:480px){
+
+    .header{
+        width: 100%;
+    }
 
     .container{
-        width: 320px;
+        width: 100%;
         padding: 0;
         margin: 0;
     }
