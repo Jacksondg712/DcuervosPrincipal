@@ -788,9 +788,9 @@ footer{
 	margin-top: 15px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .container{
-        width: 900px;
+        width: 100%;
     }
 
     /* .header{
@@ -884,17 +884,27 @@ footer{
 
     }
 
+	.Foo_Maps{
+		padding-top: 30px;
+	}
+
 }
 
 @media (max-width: 480px){
 	.container{
-        width: 480px;
+        width: 100%;
     }
 
+	.Trb_Cont_Fomr{
+		align-items: center;
+	}
+
 	.Cont_Form{
-		width: 88%;
-		/* border: 1px solid black; */
-		margin-left: -12px;
+		width: 100%;
+		border: 1px solid black;
+		padding-top: 20px;
+		border-radius: 15px;
+		padding-bottom: 20px;
 	}
 
 	.Trb_cont_input{
@@ -917,28 +927,11 @@ footer{
 		width: 200px;
 	}
 
-	.Trb_cont_input1{
-		margin-top: 20px;
-		/* border: 1px solid black; */
-	}
 
 	.Trb_Arc_text1{
 		font-size: 15px;
-		width: 90%;
+		width: 100%;
 
-	}
-
-	.Trb_cont_archi{
-		width: 70%;
-		margin-left: -12px;
-		/* border:1px solid black; */
-	}
-}
-
-@media (max-width: 320px){
-
-	.container{
-		width: 320px;
 	}
 
 	.Trb_cont_input1{
@@ -947,8 +940,9 @@ footer{
 	}
 
 	.Trb_Cont_veri{
-		align-items: center;
+		align-items: start;
 		margin-top: 30px;
+
 	}
 
 	.Trab_Tiitle{
@@ -969,5 +963,13 @@ footer{
 		width: 70%;
 	}
 
+	.Trb_cont_archi{
+		width: 70%;
+		margin-left: -12px;
+		/* border:1px solid black; */
+	}
 
+	.Foo_Maps{
+		padding-top: 30px;
+	}
 }

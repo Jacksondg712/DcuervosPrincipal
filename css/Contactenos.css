@@ -892,17 +892,17 @@ footer{
 	margin-top: 15px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px){
     .container{
-        width: 900px;
+        width: 100%;
     }
 
-    /* .header{
-        width: 97%;
-    } */
+    .header{
+        width: 100%;
+    }
 
     .menu-toggle {
-                display: block;
+        display: block;
     }
 
     .nav-wrapper {
@@ -1027,8 +1027,9 @@ footer{
 
 
 	.container{
-        width: 480px;
+        width: 100%;
     }
+
 
 	.form{
 		width: 100%;
@@ -1037,6 +1038,16 @@ footer{
 	.Cont_Form_Item{
 		flex-direction: column;
 		align-items: center;
+	}
+
+	.Cont_Botelin{
+		width: 100%;
+		align-items: center;
+	}
+
+	.Cont_Bot_text{
+		width: 90%;
+		text-align: center;
 	}
 
 	.Cont_Input{
@@ -1057,6 +1068,10 @@ footer{
 
 	}
 
+	.Eco_Cont_info{
+		border: 1px solid black;
+	}
+
 	.Cont_Termi{
 		flex-direction: column;
 	}
@@ -1069,53 +1084,19 @@ footer{
 		width: 60%;
 		font-size: 20px;
 	}
-}
 
-@media (max-width: 320px){
+	.Foo_Cont_sgv_contac{
 
-
-	.container{
-        width: 320px;
-    }
-
-	.Cont_Botelin{
-		width: 	90%;
+		gap: 30px;
+		margin-right: -50px;
 	}
 
-	.Cont_Bot_text{
-		width: 90%;
-		text-align: center;
+	.Final_Text{
+		margin-left: 10px;
+		padding-right: 20px;
 	}
 
-	.Cont_Font_Modal{
-		width: 90%;
-	}
 
-	.Cont_check{
-		width: 100%;
-		border: 1px solid black;
-	}
-
-	.float_Wha{
-		margin-right: 30px;
-
-	}
-
-	.Cont_Images{
-		width: 90%;
-		align-items: center;
-		margin-left: 0px;
-		padding-right: 15px;
-
-	}
-
-	.float_IL{
-		margin-right: 20px;
-	}
-
-	.Foo_Maps{
-		width: 80%;
-	}
 
 
 }
