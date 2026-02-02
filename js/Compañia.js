@@ -21,6 +21,8 @@ const contImageOne = document.querySelector('.Cont_image_one');
 const contImageTwo = document.querySelector('.cont_image_two');
 
 
+//footer modales terminos y condiciones - pqr - politica
+
 const modal3 = document.getElementById('modal_Ter');
 const closeModal3 = document.getElementById('close_Ter');
 const button3 = document.getElementById('Trb_Button_Req');

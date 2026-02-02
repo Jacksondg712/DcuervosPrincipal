@@ -237,11 +237,14 @@ a:link{
 .Port_Cont{
     position: relative;
     z-index: 1;
+	width: 100%;
+	/* border: 1px solid black; */
 }
 
 .Port_Cont_Info{
     position: absolute;
     z-index: 2;
+	justify-content: center;
 }
 
 .Port_Imag{
@@ -281,12 +284,14 @@ a:link{
 
 .Port_Flot{
     width: 400px;
+	/* border: 1px solid black; */
     height: 70px;
     background-color: #57bfd9;
     position: relative;
     z-index: 3;
     border-radius: 50px;
     top: 175px;
+	margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -467,7 +472,7 @@ a:link{
 		width: 350px;
 		text-align: center;
 		margin-bottom: 0;
-		font-size: 32px;
+		font-size: 26px;
 	}
 
 	.Cont_seccion_black{
@@ -644,14 +649,26 @@ footer{
 	align-items: center;
 }
 
+.Pol_esteti{
+    width: 90%;
+	padding: 0px;
+	align-items: start;
+	border: 1px solid black;
+}
+
+
 .Text_Pqr{
 	margin-top: 20px;
 	line-height: 1.2;
+	width: 100%;
+
 }
 
 .Defi_list{
 	margin-left: 20px;
 	margin-top: 10px;
+	width: 100%;
+    align-items: start;
 }
 
 .Sepa{
@@ -765,8 +782,7 @@ footer{
 }
 
 .container_footer{
-	/* width: 100%;
-	height: 100%; */
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: space-around;
@@ -784,12 +800,13 @@ footer{
 }
 
 .pqr_Form{
-	color: black;
-	transition: color 0.5s ease;
+	color: #0077B5;
+	transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .pqr_Form:hover{
 	color: #57bfd9;
+    transform: scale(1.2);
 }
 
 .Sepa{
@@ -831,7 +848,7 @@ footer{
 
 
 .imgSuper{
-	background-image: url('../images-videos/Supertransporte.png');
+	background-image: url('../IMAGENES/COMPARTIDO/Supertransporte.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -947,6 +964,44 @@ footer{
 	margin-top: 15px;
 }
 
+@media (max-width: 1200px) {
+
+	.Image_footer{
+		display: none;
+	}
+	/* seccion footer
+
+    .container_footer{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    footer{
+        height: auto;
+    }
+
+    .Foo_Maps{
+        margin-top: 50px;
+    }
+
+    .Foo_Cont_sgv_contac{
+        margin-left: 0px;
+        width: 50%;
+    } */
+
+    /* QR politica  */
+
+    .modal-content_Ter, .modal-content_aut, .modal-content_Pol{
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .modal_Ter, .modal_aut, .modal_Pol{
+        top:30px;
+
+    }
+}
+
 @media (max-width: 900px) {
     .container{
         width: 100%;
@@ -1034,6 +1089,7 @@ footer{
 
 	/* seccion 3 */
 
+
 	.Cont_item_api{
 		flex-direction: column;
 	}
@@ -1044,7 +1100,7 @@ footer{
 
 	.Text_seccion1{
 		color: #57bfd9;
-		font: 60px;
+		font-size: 38px;
 	}
 
 	.carousel_container_img1{
@@ -1055,7 +1111,6 @@ footer{
 	/* Seccion footer */
 
 	.container_footer{
-        flex-direction: column;
         padding-bottom: 20px;
     }
 
@@ -1069,8 +1124,13 @@ footer{
 
     .Foo_Cont_sgv_contac{
         margin-left: 0px;
-        width: 50%;
+        width: 40%;
     }
+
+	.Final_Text{
+		width: 30%;
+	}
+
 
     /* QR politica  */
 
@@ -1083,6 +1143,10 @@ footer{
         top:30px;
 
     }
+
+	.con_final{
+		margin-left: 10px;
+	}
 
 }
 
@@ -1165,8 +1229,24 @@ footer{
 	}
 
 	.container_footer{
+		flex-direction: column;
 		margin-top: 430px;
 	}
+
+	
+
+	.Foo_Cont_sgv_contac{
+        width: 40%;
+    }
+
+	.Final_Text{
+		width: 40%;
+	}
+
+	.imgSuper{
+		display: none;
+	}
+
 }
 
 

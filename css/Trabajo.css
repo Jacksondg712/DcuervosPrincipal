@@ -406,12 +406,13 @@ a:link{
 	border: none;
 	cursor: pointer;
 	text-align: start;
-	transition: color 0.5s ease;
+	transition: color 0.5s ease, transform 0.5s ease;
 
   }
 
   .Trb_Button_Req:hover, .Trb_Button_aut:hover{
 	color: #57bfd9;
+	transform: scale(1.1);
   }
 
   /* Estilos para el modal */
@@ -550,7 +551,6 @@ a:link{
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
-
 footer{
 	width: 100%;
 	height: 260px;
@@ -606,8 +606,7 @@ footer{
 }
 
 .container_footer{
-	/* width: 100%;
-	height: 100%; */
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: space-around;
@@ -619,18 +618,33 @@ footer{
 	line-height: 1.2;
 }
 
+
+
+.Cot_text_pqr{
+
+	width: 100%;
+	align-items: start;
+
+}
+
+.Text_Pqr{
+	margin-left: 20px;
+}
+
 .Defi_list{
+
 	margin-left: 20px;
 	margin-top: 10px;
 }
 
 .pqr_Form{
-	color: black;
-	transition: color 0.5s ease;
+	color: #0077B5;
+	transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .pqr_Form:hover{
 	color: #57bfd9;
+    transform: scale(1.2);
 }
 
 .Sepa{
@@ -642,7 +656,6 @@ footer{
 	display: flex;
 	justify-content: center;
 }
-
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .Final{
@@ -672,7 +685,7 @@ footer{
 
 
 .imgSuper{
-	background-image: url('../images-videos/Supertransporte.png');
+	background-image: url('../IMAGENES/COMPARTIDO/Supertransporte.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -688,6 +701,11 @@ footer{
 	cursor: pointer;
 	text-align: start;
 	padding: 0;
+	transition: color 0.5s ease;
+}
+
+.Ref_Final:hover{
+	color: #57bfd9;
 }
 
 .Foo_Info2_Item:hover{
@@ -788,7 +806,7 @@ footer{
 	margin-top: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .container{
         width: 100%;
     }
@@ -855,9 +873,14 @@ footer{
 		/* Seccion footer */
 
 	.container_footer{
-        flex-direction: column;
+        flex-direction: row;
         padding-bottom: 20px;
     }
+
+	.Image_footer{
+		display: none;
+	}
+
 
     footer{
         height: auto;
@@ -869,8 +892,12 @@ footer{
 
     .Foo_Cont_sgv_contac{
         margin-left: 0px;
-        width: 50%;
+        width: 40%;
     }
+
+	.Final_Text{
+		width: 30%;
+	}
 
     /* QR politica  */
 
@@ -886,6 +913,10 @@ footer{
 
 	.Foo_Maps{
 		padding-top: 30px;
+	}
+
+	.con_final{
+		margin-left: 10px;
 	}
 
 }
@@ -971,5 +1002,22 @@ footer{
 
 	.Foo_Maps{
 		padding-top: 30px;
+	}
+
+	.container_footer{
+		flex-direction: column;
+		margin-top: 430px;
+	}
+
+	.Foo_Cont_sgv_contac{
+        width: 40%;
+    }
+
+	.Final_Text{
+		width: 40%;
+	}
+
+	.imgSuper{
+		display: none;
 	}
 }

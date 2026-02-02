@@ -1,13 +1,67 @@
-const modal = document.getElementById('modal_Req');
-const closeModal = document.getElementById('close-modal_Req');
-const button = document.getElementById('Trb_Button_Req');
-const modal2 = document.getElementById('modal_aut');
-const closeModal2 = document.getElementById('close-modal_aut');
-const button2 = document.getElementById('Trb_Button_aut');
 
 // reponsive scroll de hamburguesa 
 const menuToggle = document.getElementById('menuToggle');
 const navWrapper = document.getElementById('navWrapper');
+
+//footer modales terminos y condiciones - pqr - politica
+
+const modal3 = document.getElementById('modal_Ter');
+const closeModal3 = document.getElementById('close_Ter');
+const button3 = document.getElementById('Trb_Button_R');
+
+const modal2 = document.getElementById('modal_aut');
+const closeModal2 = document.getElementById('close_aut');
+const button2 = document.getElementById('Trb_Button_a');
+
+const modal4 = document.getElementById('modal_Pol');
+const closeModal4 = document.getElementById('close_Pol');
+const button4 = document.getElementById('Trb_Button_Pol');
+
+//footer modales terminos y condiciones - pqr - politica
+
+button2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+closeModal2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+
+
+button3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+closeModal3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+
+
+button4.onclick = function() {
+  modal4.style.display = "block";
+}
+
+closeModal4.onclick = function() {
+  modal4.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+}
 
 // Hrader responsive 
 
@@ -34,37 +88,4 @@ menuToggle.addEventListener('click', function() {
                 menuToggle.classList.remove('active');
                 navWrapper.classList.remove('active');
         }
-});
-
-
-button.onclick = function() {
-    modal.style.display = "block";
-}
-
-// Cuando el usuario hace clic en <span> (x), cerrar el modal
-closeModal.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Cuando el usuario hace clic fuera del modal, también cerrar el modal
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-button2.onclick = function() {
-    modal2.style.display = "block";
-}
-
-// Cuando el usuario hace clic en <span> (x), cerrar el modal
-closeModal2.onclick = function() {
-    modal2.style.display = "none";
-}
-
-// Cuando el usuario hace clic fuera del modal, también cerrar el modal
-window.onclick = function(event) {
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-}
+})

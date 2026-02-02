@@ -295,8 +295,7 @@ a:link{
 	justify-content: center;
 	align-items: center;
 	border-radius: 15px;
-	transition: background-color 0.5s ease;
-	transition: transform 0.5s ease;
+	transition: transform 0.5s ease,background-color 0.5s ease;
 
 }
 
@@ -591,7 +590,7 @@ a:link{
 
 .Corp_Card{
 	width: 260px;
-	height: 320px;
+	height: 380px;
 	background-color: #227598;
 	border-radius: 20px 0px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -974,9 +973,9 @@ a:link{
     position: relative;
 }
 
-.modal-header h2 {
+.tittle_pdf{
     margin: 0;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
@@ -1207,9 +1206,7 @@ a:link{
         padding: 30px 20px;
     }
 
-    .modal-header h2 {
-        font-size: 24px;
-    }
+
 
     .download-btn {
         min-width: 200px;
@@ -1635,6 +1632,12 @@ a:link{
 
 }
 
+.Text_Coo{
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
 .cont_Text_Parr_largo{
 	color: white;
 	padding-left: 20px;
@@ -1645,9 +1648,7 @@ a:link{
 	line-height: 2;
 }
 
-.espacio{
-	margin-top: 15px;
-}
+
 
 .hidden{
 	display: none;
@@ -1761,6 +1762,11 @@ footer{
 	font-family: "Roboto", sans-serif;
   	font-weight: 400;
   	font-style: normal;
+    transition: transform 0.5s ease;
+}
+
+.Foo_Text_Call:hover{
+    transform: scale(1.1);
 }
 
 .Foo_Cont_Info2{
@@ -1779,6 +1785,7 @@ footer{
 	font-family: "Roboto", sans-serif;
   	font-weight: 400;
   	font-style: normal;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .Foo_Cont_contac{
@@ -1830,11 +1837,12 @@ footer{
 
 .pqr_Form{
 	color: #0077B5;
-	transition: color 0.5s ease;
+	transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .pqr_Form:hover{
 	color: #57bfd9;
+    transform: scale(1.2);
 }
 
 .Sepa{
@@ -1871,13 +1879,14 @@ footer{
 .Foo_Cont_sgv_contac{
 	align-items: center;
 	width: 20%;
+    /* border: 1px solid black; */
 	justify-content: space-between;
 }
 
 
 
 .imgSuper{
-	background-image: url('../images-videos/Supertransporte.png');
+	background-image: url('../IMAGENES/COMPARTIDO/Supertransporte.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1898,6 +1907,7 @@ footer{
 .Foo_Info2_Item:hover{
 	color: #57bfd9;
 	fill: #57bfd9;
+    transform: scale(1.1);
 }
 
 .Tra_text,.Ter_Cont{
@@ -2242,10 +2252,10 @@ footer{
 
     /* seccion footer */
 
-    .container_footer{
-        flex-direction: column;
-        padding-bottom: 20px;
+    .Foo_logo{
+        display: none;
     }
+    
 
     footer{
         height: auto;
@@ -2441,6 +2451,15 @@ footer{
         border-radius: none;
     }
 
+    .Foo_Cont_sgv_contac{
+        margin-left: 0px;
+        width: 40%;
+    }
+
+	.Final_Text{
+		width: 30%;
+	}
+
 
 }
 
@@ -2494,6 +2513,15 @@ footer{
         text-align: center;
     }
 
+    .tittle_pdf{
+        font-size: 21px;
+        /* font-weight: 500; */
+    }
+
+    .modal-header{
+        text-align: start;
+    }
+
     /* Seccion 5  */
 
     .ConAuxFlota{
@@ -2517,6 +2545,7 @@ footer{
 
     .Flo_Modal{
         width: 100%;
+        padding-top: 10px;
     }
 
     .Cont_general{
@@ -2555,6 +2584,12 @@ footer{
         width: 100%;
     }
 
+    /* Cookies  */
+
+    .modal-contentCo{
+        width: 90%;
+    }
+
     /* Seccion footer */
 
     .Foo_Maps{
@@ -2564,6 +2599,20 @@ footer{
 
     .container_footer{
         padding-bottom: 20px;
+        flex-direction: column;
     }
+
+    .Foo_Cont_sgv_contac{
+        width: 40%;
+    }
+
+	.Final_Text{
+		width: 40%;
+	}
+
+	.imgSuper{
+		display: none;
+	}
+
 
 }

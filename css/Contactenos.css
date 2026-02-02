@@ -604,6 +604,7 @@ a:link{
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
 footer{
 	width: 100%;
 	height: 260px;
@@ -659,8 +660,7 @@ footer{
 }
 
 .container_footer{
-	/* width: 100%;
-	height: 100%; */
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: space-around;
@@ -672,18 +672,33 @@ footer{
 	line-height: 1.2;
 }
 
+
+
+.Cot_text_pqr{
+
+	width: 100%;
+	align-items: start;
+
+}
+
+.Text_Pqr{
+	margin-left: 20px;
+}
+
 .Defi_list{
+
 	margin-left: 20px;
 	margin-top: 10px;
 }
 
 .pqr_Form{
-	color: black;
-	transition: color 0.5s ease;
+	color: #0077B5;
+	transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .pqr_Form:hover{
 	color: #57bfd9;
+    transform: scale(1.2);
 }
 
 .Sepa{
@@ -776,7 +791,7 @@ footer{
 
 
 .imgSuper{
-	background-image: url('../images-videos/Supertransporte.png');
+	background-image: url('../IMAGENES/COMPARTIDO/Supertransporte.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -816,7 +831,7 @@ footer{
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.4);
   }
-  
+
   /* Contenido del modal */
   .modal-content_Ter, .modal-content_aut, .modal-content_Pol{
 	background-color: #fefefe;
@@ -828,7 +843,7 @@ footer{
 	height: 650px;
 
   }
-  
+
   /* Botón de cierre */
   .close_Ter, .close_aut, .close_Pol {
 	color: #aaa;
@@ -836,7 +851,7 @@ footer{
 	font-size: 28px;
 	font-weight: bold;
   }
-  
+
   .close_Ter:hover,
   .close_Ter:focus,
   .close_aut:hover,
@@ -863,7 +878,7 @@ footer{
 	right: 50px;
 	text-align: start;
 }
-  
+
 
 .Req_list{
 	list-style: disc;
@@ -991,9 +1006,13 @@ footer{
 	/* Seccion footer */
 
 	.container_footer{
-        flex-direction: column;
+        flex-direction: row;
         padding-bottom: 20px;
     }
+
+	.Image_footer{
+		display: none;
+	}
 
     footer{
         height: auto;
@@ -1005,8 +1024,12 @@ footer{
 
     .Foo_Cont_sgv_contac{
         margin-left: 0px;
-        width: 50%;
+        width: 40%;
     }
+
+	.Final_Text{
+		width: 30%;
+	}
 
     /* QR politica  */
 
@@ -1019,6 +1042,10 @@ footer{
         top:30px;
 
     }
+
+	.con_final{
+		margin-left: 10px;
+	}
 
 
 }
@@ -1085,15 +1112,26 @@ footer{
 		font-size: 20px;
 	}
 
-	.Foo_Cont_sgv_contac{
-
-		gap: 30px;
-		margin-right: -50px;
-	}
-
 	.Final_Text{
 		margin-left: 10px;
 		padding-right: 20px;
+	}
+
+	.container_footer{
+		flex-direction: column;
+		margin-top: 430px;
+	}
+
+	.Foo_Cont_sgv_contac{
+        width: 40%;
+    }
+
+	.Final_Text{
+		width: 40%;
+	}
+
+	.imgSuper{
+		display: none;
 	}
 
 
