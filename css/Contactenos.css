@@ -396,6 +396,7 @@ a:link{
 	margin-top: 40px;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 0px;
 	transition: background-color 0.5s ease;
 }
 
@@ -415,6 +416,7 @@ a:link{
 	background-color: #227598;
 	border: none;
 	font-size: 16px;
+	transition: background-color 0.5s ease;
 }
 
 .Cont_Botelin:hover{
@@ -426,6 +428,7 @@ a:link{
 }
 
 .Cont_Modal {
+	/* border: 1px solid black; */
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -552,6 +555,7 @@ a:link{
 	right: 160px;
 	top: 10px;
 	cursor: pointer;
+	color: white;
 
 }
 .close{
@@ -665,6 +669,7 @@ footer{
 	margin-right: auto;
 	justify-content: space-around;
 	align-items: center;
+	margin-top: 0px;
 }
 
 .Text_Pqr{
@@ -907,6 +912,12 @@ footer{
 	margin-top: 15px;
 }
 
+@media (max-width: 1200px){
+	.Input_Form{
+		width: 230px;
+	}
+}
+
 @media (max-width: 900px){
     .container{
         width: 100%;
@@ -972,6 +983,7 @@ footer{
 		margin-bottom: 100px;
 
 	}
+
 
 	.Cont_form{
 		flex-direction: column;
@@ -1115,6 +1127,23 @@ footer{
 	.Final_Text{
 		margin-left: 10px;
 		padding-right: 20px;
+	}
+
+	.Cont_Modal{
+		height: 80%;
+	}
+
+	.Cont_Font_Modal{
+		box-shadow: none;
+	}
+
+	.modal-content{
+		height: 100%;
+		/* border: 1px solid black; */
+	}
+
+	.Cont_Font_Modal{
+		height: auto;
 	}
 
 	.container_footer{

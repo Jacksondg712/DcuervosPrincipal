@@ -17,6 +17,12 @@ const modal4 = document.getElementById('modal_Pol');
 const closeModal4 = document.getElementById('close_Pol');
 const button4 = document.getElementById('Trb_Button_Pol');
 
+
+
+const modal5 = document.getElementById('modal_Req');
+const closeModal5 = document.getElementById('close_modal_Req');
+const button5 = document.getElementById('Trb_Button_Req');
+
 //footer modales terminos y condiciones - pqr - politica
 
 button2.onclick = function() {
@@ -62,6 +68,23 @@ window.onclick = function(event) {
     modal4.style.display = "none";
   }
 }
+
+
+button5.onclick = function() {
+  modal5.style.display = "block";
+}
+
+closeModal5.onclick = function() {
+  modal5.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal5) {
+    modal5.style.display = "none";
+  }
+}
+
+
 
 // Hrader responsive 
 
