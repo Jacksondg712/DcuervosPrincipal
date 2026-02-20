@@ -1480,6 +1480,8 @@ a:link{
 
 .Cont_image_one {
     display: block; /* Visible por defecto */
+    height: auto;
+
 }
 
 /* Estilos existentes del modal... */
@@ -1487,12 +1489,12 @@ a:link{
 .cont_image {
     width: auto;
     height: auto;
-    padding: 10px 10px 0px 0;
-    background-color: #effbfc;
+    padding: 0px;
+    background-color: transparent;
     border-radius: 0 5px 5px 0;
 }
 
-.Flo_modal_Image {
+.Flo_modal_Image, .Flo_modal_Image2 {
     width: 800px;
     height: auto;
     border-radius: 0 5px 5px 0;

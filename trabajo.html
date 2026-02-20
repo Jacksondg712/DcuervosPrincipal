@@ -86,21 +86,34 @@
                                 </div>
                                 <div class=" Trb_Cont_veri flex-colum">
                                     <p class="Trb_Ver_Text Text_Black">Casilla de verificación</p>
-                                    <div class="Trb_Ver_Casi Text_Black flex-row"><input type="checkbox" required>
+                                    <div class="Trb_Ver_Casi Text_Black flex-row">
+                                        <input type="radio" name="opcion" value="C1">
+                                        <label for="C1" class="Text_Veri Text_Medium">Conductor Pase C1</label>
+                                    </div>
+                                    <div class="Trb_Ver_Casi Text_Black flex-row">
+                                        <input type="radio" name="opcion" value="C2">
+                                        <label for="C2" class="Text_Veri Text_Medium">Conductor Pase C2</label>
+                                    </div>
+                                    <div class="Trb_Ver_Casi Text_Black flex-row">
+                                        <input type="radio" name="opcion" value="Aux">
+                                        <label for="Aux" class="Text_Veri Text_Medium">Auxiliar de Entregas</label>
+                                    </div>
+                                    <div class="Trb_Ver_Casi Text_Black flex-row"><input type="radio" required>
                                         <button
                                         class="Trb_Button_Req Text_Black"
                                         id="Trb_Button_Req"
                                         >Tratamiento de datos personales
                                         </button>
                                     </div>
-                                    <div class="Trb_Ver_Casi Text_Black flex-row"><input type="checkbox" required>
+                                    <!-- <div class="Trb_Ver_Casi Text_Black flex-row"><input type="checkbox" required>
                                         <button
                                         class="Trb_Button_aut Text_Black"
                                         id="Trb_Button_aut"
                                         Titulo="Requisitos"
                                         >Requisitos de vinculación
                                         </button>
-                                    </div>
+                                    </div> -->
+                                    
                                 </div>
                             </div>
                             <input type="submit" value="Enviar mensaje" class="Trb_Button_Send Text_Black">
@@ -121,7 +134,7 @@
                 </div>
                 <div id="modal_Req" class="modal_Req">
                     <div class="modal-content_Req">
-                        <span id="close-modal_Req" class="close_Req">&times;</span>
+                        <span id="close_modal_Req" class="close_Req">&times;</span>
                         <div class="Tra_Cont">
                             <h2 class="Text_Black">Autorizacion de tratamiento de datos personales</h2>
                             <p class="Tra_text Text_Medium">DCUERVO SOLUCIONES LOGISTICAS S.A.S actuara como responsable del tratamiento de datos personales y que, conjunta o separadamente podrá recolectar, usar y tratar mis datos personales conforme la Política de Tratamiento de Datos Personales. </p>
@@ -134,24 +147,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="modal_aut" class="modal_aut">
-                    <div class="modal-content_aut">
-                        <span id="close-modal_aut" class="close_aut">&times;</span>
-                        <div class="Req_Cont">
-                            <h2 class="Text_Black">REQUISITOS</h2>
-                            <ul class="list flex-colum Req_list">
-                                <li class="Req_text Text_Medium"><p>Licencia de conducción C1, C2 C3 vigente.</p></li>
-                                <li class="Req_text Text_Medium"><p>Bachiller</p></li>
-                                <li class="Req_text Text_Medium"><p>Experiencia mínima de 2 años en transporte de mercancías.</p></li>
-                                <li class="Req_text Text_Medium"><p>Conocimiento de rutas y normas de tránsito locales y nacionales.</p></li>
-                                <li class="Req_text Text_Medium"><p>Capacidad para manejar vehículos de carga pesada</p></li>
-                                <li class="Req_text Text_Medium"><p>Disponibilidad para trabajar horarios flexibles y viajar</p></li>
-                                <li class="Req_text Text_Medium"><p>Alta orientacion a la seguridad</p></li>
-                                <li class="Req_text Text_Medium"><p>Conocimientos básicos de mecánica automotriz.</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </section>
         <a href="https://api.whatsapp.com/send?phone=3142926216&text=Hola%2C%20buen%20d%C3%ADa.%20%0AEstoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20transporte%20y%20log%C3%ADstica.%20%C2%BFPodr%C3%ADan%20brindarme%20mayor%20informaci%C3%B3n%3F" class="float float_Wha" target="_blank">
@@ -170,8 +166,8 @@
                     <ul class="list flex-colum">
                         <li class="Foo_Info2_Item"><a href="#Qsomos">En Dcuervo somos</a></li>
                         <li class="Foo_Info2_Item"><a href="#Qsomos">Nuestro Propósito</a></li>
-                        <li class="Foo_Info2_Item"><a href="#Nosotros">Misión</a></li>
-                        <li class="Foo_Info2_Item"><a href="#Nosotros">Visión</a></li>
+                        <!-- <li class="Foo_Info2_Item"><a href="#Nosotros">Misión</a></li>
+                        <li class="Foo_Info2_Item"><a href="#Nosotros">Visión</a></li> -->
                     </ul>
                 </div>
                 <div class="Foo_Cont_Info1 flex-colum">
