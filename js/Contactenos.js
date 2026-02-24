@@ -22,8 +22,8 @@ const closeModal4 = document.getElementById('close_Pol');
 const button4 = document.getElementById('Trb_Button_Pol');
 
 // Desarrollo local: 'http://localhost:5000/api/contacto'
-// Producción: 'https://tu-servicio.onrender.com/api/contacto'
-const API_URL = 'http://localhost:5000/api/contacto';
+// Producción:
+const API_URL = 'https://dcuervosprincipal.onrender.com';
 
 // Hrader responsive 
 
