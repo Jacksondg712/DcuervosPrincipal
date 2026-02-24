@@ -7,19 +7,20 @@ from datetime import datetime
 import os
 from dotenv import load_dotenv
 
-# Cargar variables de entorno
 load_dotenv()
 
 app = Flask(__name__)
 
-# ⚠️ IMPORTANTE: En producción, cambia "*" por tu dominio de GitHub Pages
-# Ejemplo: CORS(app, resources={r"/api/*": {"origins": ["https://tuusuario.github.io"]}})
-#Local:  CORS(app, resources={r"/api/*": {"origins": "*"}})
-# Configuración de CORS - NOTA LOS CORCHETES []
-CORS(app, resources={r"/api/*": {"origins": [
-    "https://jacksondg712.github.io",
-    "http://localhost:5000"
-]}})
+# CONFIGURACIÓN DE CORS - CRÍTICO
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "https://jacksondg712.github.io"
+        ],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type"]
+    }
+})
 # "http://localhost:5000"
 
 # Configuración de correo desde variables de entorno
