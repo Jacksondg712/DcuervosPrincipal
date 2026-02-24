@@ -15,10 +15,11 @@ app = Flask(__name__)
 # ⚠️ IMPORTANTE: En producción, cambia "*" por tu dominio de GitHub Pages
 # Ejemplo: CORS(app, resources={r"/api/*": {"origins": ["https://tuusuario.github.io"]}})
 #Local:  CORS(app, resources={r"/api/*": {"origins": "*"}})
-CORS(app, resources={r"/api/*": {"origins":[
-    "https://jacksondg712.github.io",  # Tu dominio real
-    "http://localhost:5000"
-]}})
+CORS(app, resources={r"/api/*": {"origins":
+    "https://jacksondg712.github.io"
+}})
+
+# "http://localhost:5000"
 
 # Configuración de correo desde variables de entorno
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
