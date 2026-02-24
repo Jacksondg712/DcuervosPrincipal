@@ -16,7 +16,7 @@ app = Flask(__name__)
 # Ejemplo: CORS(app, resources={r"/api/*": {"origins": ["https://tuusuario.github.io"]}})
 #Local:  CORS(app, resources={r"/api/*": {"origins": "*"}})
 CORS(app, resources={r"/api/*": {"origins":[
-    "https://jacksondg712.github.io/DcuervosPrincipal/",  # Tu dominio real
+    "https://jacksondg712.github.io",  # Tu dominio real
     "http://localhost:5000"
 ]}})
 
