@@ -262,7 +262,7 @@ def home():
         "status": "online",
         "endpoints": {
             "GET /api/health": "Verificar estado del servidor",
-            "POST /api/contacto": "Enviar formulario de contacto"
+            "POST /contacto": "Enviar formulario de contacto"
         }
     })
 
