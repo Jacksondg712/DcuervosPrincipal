@@ -12,16 +12,19 @@ load_dotenv()
 app = Flask(__name__)
 
 # CONFIGURACIÓN DE CORS - CRÍTICO
-CORS(app, resources={
-    r"/api/*": {
-        "origins": [
-            "https://jacksondg712.github.io"
-        ],
-        "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type"]
-    }
-})
+# CORS(app, resources={
+#     r"/api/*": {
+#         "origins": [
+#             "https://jacksondg712.github.io"
+#         ],
+#         "methods": ["GET", "POST", "OPTIONS"],
+#         "allow_headers": ["Content-Type"]
+#     }
+# })
 # "http://localhost:5000"
+
+# CORS TEMPORAL - permite todos los orígenes
+CORS(app)
 
 # Configuración de correo desde variables de entorno
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
