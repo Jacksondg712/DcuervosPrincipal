@@ -277,7 +277,7 @@ def health():
         "service": "Formulario de Contacto API"
     }), 200
 
-@app.route('/api/contacto', methods=['POST'])
+@app.route('/contacto', methods=['POST'])
 def contacto():
     """
     Endpoint para recibir los datos del formulario completo
