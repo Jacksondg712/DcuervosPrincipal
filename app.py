@@ -15,7 +15,7 @@ app = Flask(__name__)
 CORS(app, resources={
     r"/api/*": {
         "origins": [
-            "https://jacksondg712.github.io/DcuervosPrincipal"
+            "https://jacksondg712.github.io"
         ],
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
