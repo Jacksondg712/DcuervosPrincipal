@@ -15,7 +15,7 @@ app = Flask(__name__)
 CORS(app, resources={
     r"/api/*": {
         "origins": [
-            "https://jacksondg712.github.io"
+            "https://jacksondg712.github.io/DcuervosPrincipal/contactenos.html"
         ],
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
@@ -262,7 +262,7 @@ def home():
         "status": "online",
         "endpoints": {
             "GET /api/health": "Verificar estado del servidor",
-            "POST /contacto": "Enviar formulario de contacto"
+            "POST /api/contacto": "Enviar formulario de contacto"
         }
     })
 
@@ -277,7 +277,7 @@ def health():
         "service": "Formulario de Contacto API"
     }), 200
 
-@app.route('/contacto', methods=['POST'])
+@app.route('/api/contacto', methods=['POST'])
 def contacto():
     """
     Endpoint para recibir los datos del formulario completo
