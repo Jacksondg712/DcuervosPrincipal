@@ -7,24 +7,24 @@ from datetime import datetime
 import os
 from dotenv import load_dotenv
 
+# Cargar variables de entorno
 load_dotenv()
 
 app = Flask(__name__)
 
-# CONFIGURACIÓN DE CORS - CRÍTICO
-# CORS(app, resources={
-#     r"/api/*": {
-#         "origins": [
-#             "https://jacksondg712.github.io"
-#         ],
-#         "methods": ["GET", "POST", "OPTIONS"],
-#         "allow_headers": ["Content-Type"]
-#     }
-# })
-# "http://localhost:5000"
-
-# CORS TEMPORAL - permite todos los orígenes
-CORS(app)
+# Configuración de CORS - Permite peticiones desde GitHub Pages
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "https://jacksondg712.github.io",
+            "http://localhost:5000",
+            "http://127.0.0.1:5000"
+        ],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"],
+        "supports_credentials": False
+    }
+})
 
 # Configuración de correo desde variables de entorno
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
@@ -37,7 +37,19 @@ def enviar_correo(datos):
     """
     Función para enviar el correo con TODOS los datos del formulario
     """
+    import sys
+    
     try:
+        # Verificar variables de entorno
+        print("🔍 Verificando configuración de correo...")
+        if not EMAIL_USER or not EMAIL_PASSWORD or not RECIPIENT_EMAIL:
+            error_msg = f"Variables de entorno faltantes: USER={EMAIL_USER}, PASS={'***' if EMAIL_PASSWORD else 'NONE'}, RECIPIENT={RECIPIENT_EMAIL}"
+            print(f"❌ {error_msg}", file=sys.stderr)
+            return False
+        
+        print(f"✅ Configuración OK - Enviando desde: {EMAIL_USER}")
+        print(f"✅ Destinatario: {RECIPIENT_EMAIL}")
+        
         # Crear el mensaje
         msg = MIMEMultipart('alternative')
         msg['From'] = EMAIL_USER
@@ -246,15 +258,35 @@ def enviar_correo(datos):
         msg.attach(MIMEText(html_body, 'html'))
         
         # Conectar al servidor SMTP y enviar
-        server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)
+        print(f"🌐 Conectando a {EMAIL_HOST}:{EMAIL_PORT}...")
+        server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT, timeout=60)
+        
+        print("🔐 Iniciando TLS...")
         server.starttls()
+        
+        print("🔑 Autenticando...")
         server.login(EMAIL_USER, EMAIL_PASSWORD)
+        
+        print("📧 Enviando correo...")
         server.send_message(msg)
+        
+        print("✅ Correo enviado exitosamente")
         server.quit()
         
         return True
+    except smtplib.SMTPAuthenticationError as e:
+        error_msg = f"Error de autenticación SMTP: {str(e)}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        return False
+    except smtplib.SMTPException as e:
+        error_msg = f"Error SMTP: {str(e)}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        return False
     except Exception as e:
-        print(f"❌ Error al enviar correo: {str(e)}")
+        error_msg = f"Error general al enviar correo: {type(e).__name__}: {str(e)}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        import traceback
+        traceback.print_exc()
         return False
 
 @app.route('/')
@@ -333,10 +365,14 @@ def contacto():
             }), 500
             
     except Exception as e:
-        print(f"❌ Error en el servidor: {str(e)}")
+        import sys
+        import traceback
+        error_msg = f"Error en el servidor: {type(e).__name__}: {str(e)}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        traceback.print_exc()
         return jsonify({
             "success": False,
-            "error": f"Error en el servidor: {str(e)}"
+            "error": "Error interno del servidor. Revisa los logs."
         }), 500
 
 if __name__ == '__main__':
