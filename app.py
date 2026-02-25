@@ -259,10 +259,15 @@ def enviar_correo(datos):
         
         # Conectar al servidor SMTP y enviar
         print(f"🌐 Conectando a {EMAIL_HOST}:{EMAIL_PORT}...")
-        server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT, timeout=60)
         
-        print("🔐 Iniciando TLS...")
-        server.starttls()
+        # Usar SMTP_SSL para puerto 465 o SMTP para puerto 587
+        if int(EMAIL_PORT) == 465:
+            server = smtplib.SMTP_SSL(EMAIL_HOST, EMAIL_PORT, timeout=60)
+            print("🔐 Conexión SSL establecida")
+        else:
+            server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT, timeout=60)
+            print("🔐 Iniciando TLS...")
+            server.starttls()
         
         print("🔑 Autenticando...")
         server.login(EMAIL_USER, EMAIL_PASSWORD)
