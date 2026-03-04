@@ -33,9 +33,260 @@ EMAIL_USER = os.getenv('EMAIL_USER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
 RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL')
 
+# Opción alternativa: Brevo API Key (más confiable que SMTP)
+BREVO_API_KEY = os.getenv('BREVO_API_KEY')
+USE_BREVO = os.getenv('USE_BREVO', 'false').lower() == 'true'
+
+def enviar_correo_brevo(datos):
+    """
+    Enviar correo usando Brevo API (antes Sendinblue)
+    """
+    try:
+        import sib_api_v3_sdk
+        from sib_api_v3_sdk.rest import ApiException
+        
+        print("📧 Usando Brevo API...")
+        
+        # Configurar API
+        configuration = sib_api_v3_sdk.Configuration()
+        configuration.api_key['api-key'] = BREVO_API_KEY
+        
+        api_instance = sib_api_v3_sdk.TransactionalEmailsApi(
+            sib_api_v3_sdk.ApiClient(configuration)
+        )
+        
+        # Crear contenido HTML del correo
+        html_body = crear_html_correo(datos)
+        
+        # Configurar el email
+        send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
+            to=[{"email": RECIPIENT_EMAIL, "name": "Destinatario"}],
+            sender={"email": EMAIL_USER, "name": "D Cuervos - Formulario Web"},
+            subject=f"📬 Nuevo contacto: {datos['name']} {datos['last']}",
+            html_content=html_body,
+            reply_to={"email": datos['email'], "name": f"{datos['name']} {datos['last']}"}
+        )
+        
+        # Enviar
+        api_response = api_instance.send_transac_email(send_smtp_email)
+        message_id = api_response.message_id if hasattr(api_response, 'message_id') else 'N/A'
+        
+        print(f"✅ Correo enviado via Brevo - Message ID: {message_id}")
+        return True
+        
+    except ApiException as e:
+        import sys
+        error_msg = f"Error API Brevo: {e}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        return False
+    except Exception as e:
+        import sys
+        error_msg = f"Error general Brevo: {type(e).__name__}: {str(e)}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        import traceback
+        traceback.print_exc()
+        return False
+
+def crear_html_correo(datos):
+    """
+    Crear el HTML del correo (reutilizable para SMTP y SendGrid)
+    """
+    return f"""
+    <html>
+        <head>
+            <style>
+                body {{
+                    font-family: 'Segoe UI', Arial, sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                    background-color: #f5f5f5;
+                }}
+                .container {{
+                    max-width: 700px;
+                    margin: 20px auto;
+                    background-color: #ffffff;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }}
+                .header {{
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    padding: 30px;
+                    text-align: center;
+                }}
+                .header h1 {{
+                    margin: 0;
+                    font-size: 24px;
+                    font-weight: 600;
+                }}
+                .content {{
+                    padding: 30px;
+                }}
+                .section {{
+                    margin-bottom: 25px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #e0e0e0;
+                }}
+                .section:last-child {{
+                    border-bottom: none;
+                }}
+                .section-title {{
+                    color: #667eea;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }}
+                .field-group {{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 15px;
+                    margin-bottom: 10px;
+                }}
+                .field {{
+                    background-color: #f8f9fa;
+                    padding: 12px;
+                    border-radius: 6px;
+                    border-left: 3px solid #667eea;
+                }}
+                .label {{
+                    font-weight: 600;
+                    color: #667eea;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 5px;
+                }}
+                .value {{
+                    color: #333;
+                    font-size: 14px;
+                    word-wrap: break-word;
+                }}
+                .message-box {{
+                    background-color: #f8f9fa;
+                    padding: 15px;
+                    border-radius: 6px;
+                    border-left: 3px solid #667eea;
+                    margin-top: 10px;
+                }}
+                .footer {{
+                    background-color: #f8f9fa;
+                    padding: 20px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #666;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>📬 Nuevo Mensaje de Contacto</h1>
+                </div>
+                
+                <div class="content">
+                    <div class="section">
+                        <div class="section-title">🆔 Identificación</div>
+                        <div class="field-group">
+                            <div class="field">
+                                <div class="label">Tipo de Documento</div>
+                                <div class="value">{datos['document']}</div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Número de Documento</div>
+                                <div class="value">{datos['numbers']}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">👤 Datos Personales</div>
+                        <div class="field-group">
+                            <div class="field">
+                                <div class="label">Nombres</div>
+                                <div class="value">{datos['name']}</div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Apellidos</div>
+                                <div class="value">{datos['last']}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">📞 Información de Contacto</div>
+                        <div class="field-group">
+                            <div class="field">
+                                <div class="label">Teléfono</div>
+                                <div class="value">{datos['phone']}</div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Correo Electrónico</div>
+                                <div class="value"><a href="mailto:{datos['email']}">{datos['email']}</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">📍 Ubicación</div>
+                        <div class="field-group">
+                            <div class="field">
+                                <div class="label">Departamento</div>
+                                <div class="value">{datos['departments']}</div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Ciudad</div>
+                                <div class="value">{datos['city']}</div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Barrio</div>
+                                <div class="value">{datos['neighborhood']}</div>
+                            </div>
+                            <div class="field">
+                                <div class="label">Dirección</div>
+                                <div class="value">{datos['address']}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">💬 Mensaje</div>
+                        <div class="message-box">
+                            <div class="value">{datos['message']}</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer">
+                    <div>Mensaje recibido desde el formulario web</div>
+                    <div>📅 {datetime.now().strftime('%d/%m/%Y a las %H:%M:%S')}</div>
+                </div>
+            </div>
+        </body>
+    </html>
+    """
+
 def enviar_correo(datos):
     """
     Función para enviar el correo con TODOS los datos del formulario
+    Soporta SMTP (Gmail) y Brevo API
+    """
+    import sys
+    
+    # Si Brevo está habilitado, usarlo (más confiable)
+    if USE_BREVO and BREVO_API_KEY:
+        print("🚀 Usando Brevo API (recomendado)")
+        return enviar_correo_brevo(datos)
+    
+    # Si no, intentar con SMTP
+    print("📮 Usando SMTP tradicional")
+    return enviar_correo_smtp(datos)
+
+def enviar_correo_smtp(datos):
+    """
+    Enviar correo usando SMTP (Gmail)
     """
     import sys
     
@@ -56,203 +307,8 @@ def enviar_correo(datos):
         msg['To'] = RECIPIENT_EMAIL
         msg['Subject'] = f"📬 Nuevo contacto: {datos['name']} {datos['last']}"
         
-        # Crear el cuerpo del correo en HTML (profesional y organizado)
-        html_body = f"""
-        <html>
-            <head>
-                <style>
-                    body {{
-                        font-family: 'Segoe UI', Arial, sans-serif;
-                        line-height: 1.6;
-                        color: #333;
-                        background-color: #f5f5f5;
-                    }}
-                    .container {{
-                        max-width: 700px;
-                        margin: 20px auto;
-                        background-color: #ffffff;
-                        border-radius: 12px;
-                        overflow: hidden;
-                        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                    }}
-                    .header {{
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        color: white;
-                        padding: 30px;
-                        text-align: center;
-                    }}
-                    .header h1 {{
-                        margin: 0;
-                        font-size: 24px;
-                        font-weight: 600;
-                    }}
-                    .content {{
-                        padding: 30px;
-                    }}
-                    .section {{
-                        margin-bottom: 25px;
-                        padding-bottom: 20px;
-                        border-bottom: 1px solid #e0e0e0;
-                    }}
-                    .section:last-child {{
-                        border-bottom: none;
-                    }}
-                    .section-title {{
-                        color: #667eea;
-                        font-size: 16px;
-                        font-weight: 700;
-                        margin-bottom: 15px;
-                        text-transform: uppercase;
-                        letter-spacing: 0.5px;
-                    }}
-                    .field-group {{
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 15px;
-                        margin-bottom: 10px;
-                    }}
-                    .field {{
-                        background-color: #f8f9fa;
-                        padding: 12px;
-                        border-radius: 6px;
-                        border-left: 3px solid #667eea;
-                    }}
-                    .field-full {{
-                        grid-column: 1 / -1;
-                    }}
-                    .label {{
-                        font-weight: 600;
-                        color: #667eea;
-                        font-size: 12px;
-                        text-transform: uppercase;
-                        letter-spacing: 0.5px;
-                        margin-bottom: 5px;
-                    }}
-                    .value {{
-                        color: #333;
-                        font-size: 14px;
-                        word-wrap: break-word;
-                    }}
-                    .message-box {{
-                        background-color: #f8f9fa;
-                        padding: 15px;
-                        border-radius: 6px;
-                        border-left: 3px solid #667eea;
-                        margin-top: 10px;
-                    }}
-                    .footer {{
-                        background-color: #f8f9fa;
-                        padding: 20px;
-                        text-align: center;
-                        font-size: 12px;
-                        color: #666;
-                    }}
-                    .footer .time {{
-                        color: #999;
-                        margin-top: 5px;
-                    }}
-                    .highlight {{
-                        background-color: #fff3cd;
-                        padding: 2px 6px;
-                        border-radius: 3px;
-                    }}
-                </style>
-            </head>
-            <body>
-                <div class="container">
-                    <!-- Header -->
-                    <div class="header">
-                        <h1>📬 Nuevo Mensaje de Contacto</h1>
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="content">
-                        <!-- Identificación -->
-                        <div class="section">
-                            <div class="section-title">🆔 Identificación</div>
-                            <div class="field-group">
-                                <div class="field">
-                                    <div class="label">Tipo de Documento</div>
-                                    <div class="value">{datos['document']}</div>
-                                </div>
-                                <div class="field">
-                                    <div class="label">Número de Documento</div>
-                                    <div class="value">{datos['numbers']}</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Datos Personales -->
-                        <div class="section">
-                            <div class="section-title">👤 Datos Personales</div>
-                            <div class="field-group">
-                                <div class="field">
-                                    <div class="label">Nombres</div>
-                                    <div class="value">{datos['name']}</div>
-                                </div>
-                                <div class="field">
-                                    <div class="label">Apellidos</div>
-                                    <div class="value">{datos['last']}</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Contacto -->
-                        <div class="section">
-                            <div class="section-title">📞 Información de Contacto</div>
-                            <div class="field-group">
-                                <div class="field">
-                                    <div class="label">Teléfono</div>
-                                    <div class="value">{datos['phone']}</div>
-                                </div>
-                                <div class="field">
-                                    <div class="label">Correo Electrónico</div>
-                                    <div class="value"><a href="mailto:{datos['email']}" style="color: #667eea; text-decoration: none;">{datos['email']}</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Ubicación -->
-                        <div class="section">
-                            <div class="section-title">📍 Ubicación</div>
-                            <div class="field-group">
-                                <div class="field">
-                                    <div class="label">Departamento</div>
-                                    <div class="value">{datos['departments']}</div>
-                                </div>
-                                <div class="field">
-                                    <div class="label">Ciudad</div>
-                                    <div class="value">{datos['city']}</div>
-                                </div>
-                                <div class="field">
-                                    <div class="label">Barrio</div>
-                                    <div class="value">{datos['neighborhood']}</div>
-                                </div>
-                                <div class="field">
-                                    <div class="label">Dirección</div>
-                                    <div class="value">{datos['address']}</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Mensaje -->
-                        <div class="section">
-                            <div class="section-title">💬 Mensaje</div>
-                            <div class="message-box">
-                                <div class="value">{datos['message']}</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Footer -->
-                    <div class="footer">
-                        <div>Mensaje recibido desde el formulario web</div>
-                        <div class="time">📅 {datetime.now().strftime('%d/%m/%Y a las %H:%M:%S')}</div>
-                    </div>
-                </div>
-            </body>
-        </html>
-        """
+        # Usar la función centralizada para crear HTML
+        html_body = crear_html_correo(datos)
         
         # Adjuntar el HTML al mensaje
         msg.attach(MIMEText(html_body, 'html'))
