@@ -71,53 +71,115 @@
                 <div class="Trab_Cont flex-row">
                     <img class="image_traba" src="./IMAGENES/COMPARTIDO/trabajador.png" alt="Trabajador" width="400px">
                     <div class="Trb_Cont_Fomr flex-colum">
-                        <h1 class="Trab_Tiitle Text_Black">Envianos tu hoja de vida y nos pondremos en contacto contigo</h1>
-                        <form action="" class="Cont_Form flex-colum">
-                            <input type="text" placeholder="Nombre" class="Trb_input_name" required>
-                            <div class=" Trb_cont_input Trb_cont_input1 flex-row">
-                                <input type="text" placeholder="Correo electronico" class="Trb_input_number" required>
-                                <input type="text" name="" id="" placeholder="Numero celular" class="Trb_input_number Trb_input_number1" required>
-                            </div>
+                        <!-- Formulario de Trabajo - ACTUALIZADO -->
+                        <h1 class="Trab_Tiitle Text_Black">Envíanos tu hoja de vida y nos pondremos en contacto contigo</h1>                                      
+                        <form id="formulario-trabajo" class="Cont_Form flex-colum">
+                            <!-- Nombre -->
+                            <input 
+                                type="text" 
+                                id="trb-nombre" 
+                                name="nombre"
+                                placeholder="Nombre completo" 
+                                class="Trb_input_name" 
+                                required
+                            >
+
+                            <!-- Email y Teléfono -->
                             <div class="Trb_cont_input Trb_cont_input1 flex-row">
+                                <input 
+                                    type="email" 
+                                    id="trb-email" 
+                                    name="email"
+                                    placeholder="Correo electrónico" 
+                                    class="Trb_input_number" 
+                                    required
+                                >
+                                <input 
+                                    type="tel" 
+                                    id="trb-telefono" 
+                                    name="telefono"
+                                    placeholder="Número celular" 
+                                    class="Trb_input_number Trb_input_number1" 
+                                    required
+                                >
+                            </div>
+
+                            <!-- Archivo y Opciones -->
+                            <div class="Trb_cont_input Trb_cont_input1 flex-row">
+                                <!-- Sección de archivo -->
                                 <div class="Trb_cont_archi flex-colum">
                                     <p class="Trb_Arc_text Trb_Arc_text1 Text_Black">Adjunta tu hoja de vida</p>
-                                    <button class="Trb_Arc_Button Text_Medium">seleccionar archivo</button>
-                                    <p class="Trb_Arc_text_Sec Trb_Arc_text1 Text_Medium">Adjunta tu hoja de vida en PDF y que no exceda los 20MB</p>
+
+                                    <!-- Input file oculto -->
+                                    <input 
+                                        type="file" 
+                                        id="trb-archivo" 
+                                        name="archivo"
+                                        accept=".pdf"
+                                        style="display: none;"
+                                        required
+                                    >
+
+                                    <!-- Botón personalizado -->
+                                    <button 
+                                        type="button" 
+                                        id="trb-button-archivo" 
+                                        class="Trb_Arc_Button Text_Medium"
+                                    >
+                                        Seleccionar archivo
+                                    </button>
+
+                                    <!-- Mensaje de archivo seleccionado -->
+                                    <p id="trb-archivo-nombre" class="Trb_Arc_text_Sec Trb_Arc_text1 Text_Medium">
+                                        Adjunta tu hoja de vida en PDF y que no exceda los 20MB
+                                    </p>
                                 </div>
-                                <div class=" Trb_Cont_veri flex-colum">
-                                    <p class="Trb_Ver_Text Text_Black">Casilla de verificación</p>
+
+                                <!-- Sección de verificación -->
+                                <div class="Trb_Cont_veri flex-colum">
+                                    <p class="Trb_Ver_Text Text_Black">Tipo de posición</p>
+
                                     <div class="Trb_Ver_Casi Text_Black flex-row">
-                                        <input type="radio" name="opcion" value="C1">
-                                        <label for="C1" class="Text_Veri Text_Medium">Conductor Pase C1</label>
+                                        <input type="radio" id="trb-c1" name="posicion" value="Conductor Pase C1" required>
+                                        <label for="trb-c1" class="Text_Veri Text_Medium">Conductor Pase C1</label>
                                     </div>
+
                                     <div class="Trb_Ver_Casi Text_Black flex-row">
-                                        <input type="radio" name="opcion" value="C2">
-                                        <label for="C2" class="Text_Veri Text_Medium">Conductor Pase C2</label>
+                                        <input type="radio" id="trb-c2" name="posicion" value="Conductor Pase C2">
+                                        <label for="trb-c2" class="Text_Veri Text_Medium">Conductor Pase C2</label>
                                     </div>
+
                                     <div class="Trb_Ver_Casi Text_Black flex-row">
-                                        <input type="radio" name="opcion" value="Aux">
-                                        <label for="Aux" class="Text_Veri Text_Medium">Auxiliar de Entregas</label>
+                                        <input type="radio" id="trb-aux" name="posicion" value="Auxiliar de Entregas">
+                                        <label for="trb-aux" class="Text_Veri Text_Medium">Auxiliar de Entregas</label>
                                     </div>
-                                    <div class="Trb_Ver_Casi Text_Black flex-row"><input type="radio" required>
-                                        <button
-                                        class="Trb_Button_Req Text_Black"
-                                        id="Trb_Button_Req"
-                                        >Tratamiento de datos personales
-                                        </button>
+
+                                    <div class="Trb_Ver_Casi Text_Black flex-row">
+                                        <input type="checkbox" id="trb-datos" name="datos" required>
+                                        <label for="trb-datos" class="Text_Veri Text_Medium">
+                                            Acepto el 
+                                            <button
+                                                type="button"
+                                                class="Trb_Button_Req Text_Black"
+                                                id="Trb_Button_Req"
+                                            >
+                                                tratamiento de datos personales
+                                            </button>
+                                        </label>
                                     </div>
-                                    <!-- <div class="Trb_Ver_Casi Text_Black flex-row"><input type="checkbox" required>
-                                        <button
-                                        class="Trb_Button_aut Text_Black"
-                                        id="Trb_Button_aut"
-                                        Titulo="Requisitos"
-                                        >Requisitos de vinculación
-                                        </button>
-                                    </div> -->
-                                    
                                 </div>
                             </div>
-                            <input type="submit" value="Enviar mensaje" class="Trb_Button_Send Text_Black">
+
+                            <!-- Botón de envío -->
+                            <button type="submit" class="Trb_Button_Send Text_Black">
+                                <span id="trb-button-text">Enviar mensaje</span>
+                                <span id="trb-button-loading" style="display: none;">Enviando...</span>
+                            </button>
                         </form>
+
+                        <!-- Mensaje de éxito/error -->
+                        <div id="trb-mensaje" style="display: none; margin-top: 20px; padding: 15px; border-radius: 8px; text-align: center;">
+                        </div>
                     </div>
                     <!-- <div class="Trb_Cont_Button flex-colum">
                         <button
