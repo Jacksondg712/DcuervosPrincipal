@@ -1272,7 +1272,7 @@ def enviar_correo_trabajo(datos):
                     </div>
                     
                     <div class="footer">
-                        <div>Hoja de vida recibida desde el formulario web Dcuervo</div>
+                        <div>Hoja de vida recibida desde el formulario web DCUERVO</div>
                         <div>📅 {datetime.now().strftime('%d/%m/%Y a las %H:%M:%S')}</div>
                     </div>
                 </div>
@@ -1438,7 +1438,7 @@ def enviar_correo_boletin(datos):
                     </div>
                     
                     <div class="footer">
-                        <div>Suscripción recibida desde el formulario web</div>
+                        <div>Suscripción recibida desde el formulario web DCUERVO</div>
                         <div>📅 {datetime.now().strftime('%d/%m/%Y a las %H:%M:%S')}</div>
                     </div>
                 </div>
@@ -1659,7 +1659,7 @@ def crear_html_correo(datos):
                 </div>
                 
                 <div class="footer">
-                    <div>Mensaje recibido desde el formulario web Dcuervo</div>
+                    <div>Mensaje recibido desde el formulario web DCUERVO</div>
                     <div>📅 {datetime.now().strftime('%d/%m/%Y a las %H:%M:%S')}</div>
                 </div>
             </div>
