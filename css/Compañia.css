@@ -24,14 +24,14 @@ h5,
 h6,
 p {
 	margin-top: 0;
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 /* Clase para restablecer las propiedades básicas de las listas (ul) */
 ul{
     list-style: none;
     display: flex;
 }
- 
+
 .li{
     list-style: none;
     padding-left: 0;
@@ -83,11 +83,11 @@ a:link{
 }
 
 .container{
-	width: 1200px;
+	width: 1400px;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -105,71 +105,124 @@ a:link{
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
-.header{
-	background-color: #227598;
-	height: auto;
-   	/* border-bottom: 1px solid #21f391; */
-   	position: fixed; /* Fija el encabezado en la parte superior */
-   	top: 0;
-   	width: 100%;
-   	z-index: 100;
-   	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-   	left: 0%;
-   	padding: 0%;
-   	height: 70px;
-}
+.header {
+            background-color: #227598;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            left: 0;
+        }
 
-.head_Cont{
-	justify-content: space-around;
-}
+        .head_Cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .logo-container {
+            z-index: 101;
+        }
 
-.head_Ref{
-	margin-left: 30px;
-}
+        .logo-container img {
+            width: 137px;
+            height: auto;
+        }
 
-.head_Ref_Text{
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
+        /* Menú hamburguesa */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 101;
+        }
 
-.head_Ref_Link{
-	transition: color 0.5s ease;
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
 
-}
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
 
-.head_Ref:hover{
-	.head_Ref_Link{
-		color: #7dcde3;
-	}
-}
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
 
-.head_Acceso_link{
-	transition: color 0.5s ease;
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
 
-.head_Acceso{
-	padding: 10px;
-	border: 1px solid #57bfd9;
-	border-radius: 15px;
-	margin-right: 0px;
-}
+        /* Navegación */
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-.head_Acceso:hover{
-	.head_Acceso_link{
-		color: #57bfd9;
-	}
-}
+        .list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
 
-.head_Cont_list_acceso{
+        .head_Ref {
+            margin-left: 30px;
+        }
 
-	width: 100%;
-	margin-right: 0px;
-}
+        .head_Ref_Link {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.5s ease;
+        }
+
+        .head_Ref_Text {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin: 0;
+        }
+
+        .head_Ref:hover .head_Ref_Link {
+            color: #7dcde3;
+        }
+
+        .head_Acceso {
+            padding: 10px 20px;
+            border: 1px solid #57bfd9;
+            border-radius: 15px;
+            margin-left: 20px;
+        }
+
+        .head_Acceso_link {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.5s ease;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .head_Acceso_link p {
+            margin: 0;
+        }
+
+        .head_Acceso:hover .head_Acceso_link {
+            color: #57bfd9;
+        }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
@@ -227,7 +280,7 @@ a:link{
 	width: 500px;
 	height: 70px;
 	justify-content: space-between;
-	
+
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -242,8 +295,7 @@ a:link{
 	justify-content: center;
 	align-items: center;
 	border-radius: 15px;
-	transition: background-color 0.5s ease;
-	transition: transform 0.5s ease;
+	transition: transform 0.5s ease,background-color 0.5s ease;
 
 }
 
@@ -259,77 +311,206 @@ a:link{
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
-.Qsomos{
-	width: auto;
-	height: auto;
-	margin-top: 10px;
-}
-
-.Qsomos_Cont_En{
-	width: 610px;
-	align-items: center;
-}
-
-.Qsomos_Cont_Sec1{
+.Admin{
 	width: 100%;
-	margin: 0px;
-	height: 480px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 150px;
+	margin-bottom: 100px;
 }
 
-.Qsomos_tittle{
-	margin-top: 50px;
+
+.Ad_image{
+	background-image: url("../IMAGENES/PRINCIPAL/Dcuervo_Logistica.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 595px;
+	width: 507px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.Qsomos_Subtittle{
+.Ad_cont_ima_grand{
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+}
+
+.Ad_Cont_Text{
+	width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	/* border: 1px solid black; */
+}
+
+.Ad_title{
+	color: #7DCDE3;
+	text-align: center;
+	font-size: 50px;
+}
+
+.Ad_Subtitle{
+	color: #227598;
+	width: 100%;
 	margin-top: 20px;
-	color: #7DCDE3;
-	font-size: 40px;
-	width: 480px;
+	font-size: 22px;
 	text-align: center;
 }
 
-.Qsomos_Text_Sec1{
-	margin-top: 60px;
-	width: 480px;
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: italic;
-	font-size: 24px;
-	text-align: end;
+.Ad_Cont_left{
+	margin-right: 80px;
 }
 
-.Qsomos_Cont_Sec2{
-	width: 100%;
-	margin: 0px;
-	height: 480px;
-	margin-top: 10px;
+ /* ESTILOS DEL CARRUSEL */
+.Ad_Cont_card {
+    width: 340px;
+    height: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	/* border: 1px solid black; */
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.carousel-wrapper {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.Ad_Card1, .Ad_Card2, .Ad_Card3 {
+    width: 340px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+    flex-shrink: 0;
+}
+.Ad_Card1 {
+    background: linear-gradient(135deg, #effafc, #d6f1f7);
+}
+.Ad_Card2 {
+    background: linear-gradient(135deg, #d6f1f7, #effafc);
+}
+.Ad_Card3 {
+    background: linear-gradient(135deg, #effafc, #d6f1f7);
+}
+.Ad_Card_image {
+    /* background: linear-gradient(135deg, #7DCDE3, #227598); */
+    /* background-image: url("../img/Lider_despachos.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.Qsomos_Cont_Nu{
-	width: 100%;
-	align-items: center;
-	margin-right: 10px;
-	background-color: #227598;
+.Ad_img_lider{
+    background-image: url("../IMAGENES/PRINCIPAL/Lider_despachos.png");
 }
 
-.Qsomos_Text_Sec2{
-	margin-top: 40px;
-	width: 480px;
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: italic;
-	font-size: 24px;
-	color: #E7F0F8;
+.Ad_img_gerente{
+    background-image: url("../IMAGENES/PRINCIPAL/Gerente.png");
 }
 
-.Qsomos_Subtittle_Sec{
-	margin-top: 30px;
-	color: #7DCDE3;
-	font-size: 40px;
-	width: 480px;
-	text-align: center;
-	width: 100%;
+.Ad_img_contadora{
+    background-image: url("../IMAGENES/PRINCIPAL/Contadora.png");
 }
+
+.Ad_Card_tittle {
+    width: 250px;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #227598;
+    font-size: 14px;
+}
+.Ad_Card_text {
+    text-align: center;
+    width: 250px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+/* Indicadores del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.Ad_cont_aux{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Ad_logo_dcuervo{
+    width: 150px;
+    height: 66px;
+    background-image: url("../images-videos/Logo_Dcuervo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.indicator.active {
+    background-color: #7DCDE3;
+    transform: scale(1.2);
+}
+/* Controles del carrusel */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #227598;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+.Ad_Cont_card:hover .carousel-controls {
+    opacity: 1;
+}
+.carousel-controls:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+.prev1 {
+    left: 10px;
+}
+.next1 {
+    right: 10px;
+}
+
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
@@ -337,7 +518,7 @@ a:link{
 	margin-top: 120px;
 	display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 150px;
 	justify-content: center;
 	position: relative;
 	z-index: 1;
@@ -356,7 +537,7 @@ a:link{
 }
 
 .Corp_cont_animation{
-	width: 100%;
+	width: 80%;
 	justify-content: space-around;
 	position: relative;
 	z-index: 1;
@@ -378,7 +559,7 @@ a:link{
 
 .Corp_cont_animation:hover{
 	.cont_Car{
-		transform: translatex(1000px);
+		transform: translatex(1200px);
 	}
 	.car{
 		transform: scaleX(1);
@@ -403,23 +584,19 @@ a:link{
 	position: absolute;
 	margin-top: 350px;
 	border-radius: 500px 0px;
-	
+
 }
-
-
-
 
 
 .Corp_Card{
 	width: 260px;
-	height: 320px;
+	height: 380px;
 	background-color: #227598;
 	border-radius: 20px 0px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 	z-index: 0;
 	transition: background-color transform 0.5s ease;
 	transition: transform 0.5s ease;
-
 }
 
 .Corp_Card_Prop{
@@ -429,6 +606,7 @@ a:link{
 	justify-content: space-between;
 	/* border: 1px solid black; */
 	margin-top: 10px;
+
 }
 
 .Corp_Card_Text{
@@ -476,7 +654,7 @@ a:link{
 		color: #227598;
 	}
 	.svg{
-		stroke: #227598;	
+		stroke: #227598;
 	}
 	.svgfill{
 		fill: #227598;
@@ -486,98 +664,572 @@ a:link{
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
-.Nos_Container{
-	align-items: center;
-	height: 100%;
-	margin-right: 30px;
+.Eco {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 0;
+            min-height: 100vh;
+        }
+
+        .Eco_cont_image {
+            background-image: url("../IMAGENES/PRINCIPAL/DCUERVO_COMPAÑIA_ECO.png");
+            /* background-color: #7dcde3; */
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .Eco_Cont_Card {
+            width: 100%;
+            justify-content: space-around;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .Eco_Card {
+            justify-content: center;
+            align-items: center;
+            background-color: #2691b4;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ANIMACIÓN 1: Hover con escalado y brillo */
+        .Eco_Card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            background-color: #41adcf;
+        }
+
+        /* ANIMACIÓN 2: Efecto de partículas flotantes */
+        .Eco_Card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: float 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .Eco_Card:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-100px) translateY(-100px); }
+            100% { transform: translateX(100px) translateY(100px); }
+        }
+
+        /* ANIMACIÓN 3: SVG con rotación suave */
+        .Eco_Logo_card {
+            margin: 0 auto 20px;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+        }
+
+        .Eco_Card:hover .Eco_Logo_card {
+            transform: rotateY(360deg) scale(1.1);
+            filter: drop-shadow(0 10px 25px rgba(255,255,255,0.2));
+        }
+
+        /* ANIMACIÓN 4: Contador con efecto de typewriter */
+        .Eco_card_textPrin {
+            color: #E7F0F8;
+            font-size: 65px;
+            opacity: 0;
+            text-align: center;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            /* text-shadow: 0 5px 15px rgba(0,0,0,0.5); */
+            position: relative;
+        }
+
+        .Eco_card_textPrin.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ANIMACIÓN 5: Efecto de brillo en los números */
+        .counter {
+            background: linear-gradient(45deg, #E7F0F8, #fff, #E7F0F8);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ANIMACIÓN 6: Texto secundario con efecto de ondas */
+        .Eco_card_textSec {
+            color: #E7F0F8;
+            text-align: center;
+            font-size: 22px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+            transition-delay: 0.5s;
+        }
+
+        .Eco_card_textSec.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+            animation: textWave 2s ease-in-out;
+        }
+
+        @keyframes textWave {
+            0%, 100% { transform: translateY(0); }
+            25% { transform: translateY(-5px); }
+            75% { transform: translateY(5px); }
+        }
+
+        /* ANIMACIÓN 7: Contenedor principal con entrada desde diferentes direcciones */
+        .Eco_Card:nth-child(1) {
+            animation: slideInLeft 1s ease-out 0.2s both;
+        }
+
+        .Eco_Card:nth-child(2) {
+            animation: slideInUp 1s ease-out 0.4s both;
+        }
+
+        .Eco_Card:nth-child(3) {
+            animation: slideInRight 1s ease-out 0.6s both;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(100px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ANIMACIÓN 8: Título con efecto de neón */
+        .Eco_Cont_info {
+            width: 100%;
+            /* justify-content: center;
+            align-items: center; */
+            text-align: start;
+        }
+
+        .Eco_tittle {
+            color: white;
+            font-size: 60px;
+            text-align: center;
+            width: 400px;
+            margin-left: 50px;
+            /* border: 1px solid black; */
+            /* text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 15px #2691b4,
+                0 0 20px #2691b4,
+                0 0 35px #2691b4;
+            animation: neonPulse 2s ease-in-out infinite alternate; */
+        }
+
+        @keyframes neonPulse {
+            from {
+                text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 15px #2691b4,
+                    0 0 20px #2691b4,
+                    0 0 35px #2691b4;
+            }
+            to {
+                text-shadow:
+                    0 0 2px #fff,
+                    0 0 5px #fff,
+                    0 0 8px #2691b4,
+                    0 0 12px #2691b4,
+                    0 0 18px #2691b4;
+            }
+        }
+
+        /* ANIMACIÓN 9: Botón con efecto de ondas */
+        .Eco_button {
+            width: 400px;
+            height: 80px;
+            background: linear-gradient(45deg, #2691b4, #1e7a9a);
+            border: none;
+            border-radius: 50px;
+            margin-top: 50px;
+            margin-left: 50px;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(38, 145, 180, 0.3);
+        }
+
+        .Eco_button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.6s ease;
+        }
+
+        .Eco_button:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .Eco_button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(38, 145, 180, 0.4);
+        }
+
+        /* ANIMACIÓN 10: Efecto de entrada staggered para toda la sección */
+        .animate-section {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+ 
+
+.ECo_modal_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-out;
 }
 
-.Nos_Cont_Color{
-	background-color: #227598;
-	margin-top: 70px;
-	width: 100%;
-	height: 700px;
+.ECo_modal_overlay.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.Nos_Cont_info{
-	width: 400px;
-	height: 200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #57bfd9;
-	border-radius: 20px;
-	position: relative;
-	z-index: 1;
-	transition: background-color 0.5s ease;
-	transition: transform 0.5s ease;
-
+.modalEco {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 25px 0 0 25px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
-.Nos_Text_Cont{
-	font-size: 36px;
-	color: white;
-	position: absolute;
-	z-index: 2;
-	opacity: 1;
-	transition: opacity 0.5s ease;
+/* Header del Modal */
+.modal-header {
+    background: linear-gradient(135deg, #2691b4 0%, #1e7a9a 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 25px 0 0 0;
+    text-align: center;
+    position: relative;
 }
 
-.Nos_Text_Vision{
-	width: 350px;
-	text-align: center;
-	color: white;
-	opacity: 0;
-	transition: opacity 0.5s ease;
-	font-size: 20px;
+.tittle_pdf{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.Nos_Cont_info:hover{
-	transform: scale(1.05);	.Nos_Text_Vision{
-		opacity: 1;
-
-	}
-
-	.Nos_Text_Cont{
-		opacity: 0;
-	}
+.modal-header .eco-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
 }
 
-
-.Nos_Cont_Ref{
-	width: 300px;
-	height: 70px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #57bfd9;
-	margin-bottom: 50px;
-	margin-left: 450px;
-	border-radius: 20px;
-	transition: transform 0.5s ease;
+/* Botón Cerrar - ACTUALIZADO */
+.Eco_closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.Nos_Ref{
-	font-size: 28px;
-	transition: color 0.5s ease;
+.Eco_closebtn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: rotate(90deg);
 }
 
-.Nos_video{
-	width: 700px;
-	height: 400px;
-	margin-top: 110px;
-	margin-left: 20px;
+/* Contenido del Modal */
+.modal-content {
+    padding: 40px 30px;
+    text-align: center;
 }
 
-.Nos_Cont_Ref:hover{
-	transform: scale(1.1);
-	.Nos_Ref{
-		color: #227598;
-	}
+.modal-content h3 {
+    color: #2691b4;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
+.modal-description {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.pdf-preview {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px dashed #2691b4;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.pdf-preview:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(38, 145, 180, 0.1);
+}
+
+.pdf-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.pdf-info h4 {
+    color: #2691b4;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pdf-info p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Botón de Descarga */
+.download-btn {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px auto;
+    min-width: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(40, 167, 69, 0.4);
+}
+
+.download-btn:active {
+    transform: translateY(-1px);
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+}
+
+.download-btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+.download-btn.downloading {
+    background: linear-gradient(45deg, #6c757d, #495057);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.download-btn.success {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    animation: successPulse 0.6s ease;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Footer del Modal */
+.modal-footer {
+    background: #f8f9fa;
+    padding: 20px 30px;
+    border-radius: 0 0 25px 25px;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-note {
+    color: #6c757d;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Animaciones del Modal */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Responsive para Modal */
+@media (max-width: 768px) {
+    .modalEco {
+        width: 95%;
+        margin: 20px;
+    }
+
+    .modal-header {
+        padding: 25px 20px;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+    }
+
+
+
+    .download-btn {
+        min-width: 200px;
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { width: 95%; }
+            .Eco_Cont_Card { flex-direction: column; gap: 30px; }
+            .Eco_Card { margin: 0 20px; }
+            .Eco_tittle { font-size: 36px; }
+            .Eco_button { width: 300px; font-size: 16px; }
+        }
+
+        .Eco_Cont_aux{
+            width: 100%;
+            justify-content: start;
+            margin-top: 100px;
+            /* border: 1px solid black; */
+        }
 
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
@@ -586,6 +1238,7 @@ a:link{
 	width: 331PX;
 	align-items: center;
 	margin-top: 0px;
+	margin-right: 120px;
 }
 
 .Flo_info_Tittle{
@@ -652,8 +1305,10 @@ a:link{
 	transform: scale(1.2);
 }
 
+
+
 .Flo_Modal{
-	display: none;
+    display: none;
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -664,21 +1319,47 @@ a:link{
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
 	padding-top: 60px;
+
+}
+
+.Flo_ModalBi{
+    display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 60px;
+
+}
+
+.Cont_general{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .Flo_modal_content{
-	margin: 0 auto;
 	padding: 0 30px 0 50px;
 	width: 610px;
-	height: 540px;
+	height: 640px;
 	/* background-color: #effafc; */
 	background-color: white;
 	justify-content: space-around;
-	position: absolute;
-	z-index: 4;
-	right: 50%;
-	top: 14%;
-	border-radius: 10px;
+    align-items: center;
+	border-radius: 10px 10px 0 0;
+}
+
+
+.cont_image{
+    width: auto;
+    height: auto;
 }
 
 .close {
@@ -696,48 +1377,70 @@ a:link{
     cursor: pointer;
 }
 
+.cont_head{
+    margin-top: -120px;
+    width: 100%;
+
+}
+
 .Flo_modal_tittle{
-	font-size: 64px;
-	color: black;
-	margin-top: -100px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+	font-size: clamp(36px, 5vw, 52px);
+    color: #2c3e50;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #7DCDE3, #227598);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .Flo_modal_sudtitle{
-	margin-top: -45px;
 	padding-left: 5px;
+    text-align: center;
 }
 
 .Flo_modal_sub{
 	color: #839DD1;
-	font-size: 32px;
+	font-size: 35px;
+	margin-bottom: 20px;
 }
 
 .Flo_modal_text{
 	color: black;
-	font-size: 24px;
+	font-size: 18px;
+	text-align: justify;
+    width: 100%;
+
+
 }
 
 .Flo_modal_Cont{
-	width: 500px;
+	width: 100%;
 	justify-content: start;
-	position: relative;
-	z-index: 2;
 }
 
 .Flo_modal_content_x{
 	width: 100%;
 	display: flex;
 	justify-content: end;
-	margin-top: -30px;
+	margin-top: 0;
 }
+
+.cont_image{
+    width: auto;
+    height: auto;
+    padding: 10px 10px 10px 0;
+    background-color: #effbfc;
+    border-radius: 0 5px 5px 0;
+}
+
 
 .Flo_modal_Image{
 	width: 800px;
-	height: 575px;
-	position: absolute;
-	z-index: 3;
-	top: 18%;
-	left: 48%;
+	height: auto;
+    border-radius: 0 5px 5px 0;
 }
 
 .Flot_modal_cont_hiper{
@@ -770,8 +1473,63 @@ a:link{
 	}
 }
 
+
+.cont_image_two {
+    display: none; /* Oculto por defecto */
+}
+
+.Cont_image_one {
+    display: block; /* Visible por defecto */
+    height: auto;
+
+}
+
+/* Estilos existentes del modal... */
+
+.cont_image {
+    width: auto;
+    height: auto;
+    padding: 0px;
+    background-color: transparent;
+    border-radius: 0 5px 5px 0;
+}
+
+.Flo_modal_Image, .Flo_modal_Image2 {
+    width: 800px;
+    height: auto;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Contenedor para imagen simple */
+.Cont_image_one {
+    display: block; /* Visible por defecto */
+}
+
+/* Contenedor para imágenes dobles */
+.cont_image_two {
+    display: none; /* Oculto por defecto */
+    position: relative; /* Para posicionamiento absoluto de las imágenes */
+    width: 800px;
+    height: 450px;
+}
+
+.cont_image_two .Flo_modal_Image,
+.cont_image_two .Flo_modal_Image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* border-radius: 0 5px 5px 0; */
+    transition: opacity 0.5s ease-in-out; /* Transición suave opcional */
+}
+
+.cont_image_two .Flo_modal_Image2 {
+    display: none; /* Inicialmente oculta */
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////// */
-	
+
 .float_Wha{
 	position:fixed;
 	width:60px;
@@ -786,6 +1544,10 @@ a:link{
 	box-shadow: 2px 2px 3px #999;
   	z-index:100;
   	transition: transform 0.5s ease;
+}
+
+.fa-whatsapp{
+	border: 1px soldi black;
 }
 .float_IL{
 	position:fixed;
@@ -839,7 +1601,7 @@ a:link{
     width: 500px;
     height: 100%;
     text-align: center;
-	overflow-y: auto; 
+	overflow-y: auto;
 }
 
 .modal_header{
@@ -872,6 +1634,12 @@ a:link{
 
 }
 
+.Text_Coo{
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
 .cont_Text_Parr_largo{
 	color: white;
 	padding-left: 20px;
@@ -882,9 +1650,7 @@ a:link{
 	line-height: 2;
 }
 
-.espacio{
-	margin-top: 15px;
-}
+
 
 .hidden{
 	display: none;
@@ -943,7 +1709,7 @@ button {
 	/* transition: transform 0.5s ease; */
 
 
-	
+
 }
 
 #acceptCookies:hover{
@@ -998,6 +1764,11 @@ footer{
 	font-family: "Roboto", sans-serif;
   	font-weight: 400;
   	font-style: normal;
+    transition: transform 0.5s ease;
+}
+
+.Foo_Text_Call:hover{
+    transform: scale(1.1);
 }
 
 .Foo_Cont_Info2{
@@ -1016,6 +1787,7 @@ footer{
 	font-family: "Roboto", sans-serif;
   	font-weight: 400;
   	font-style: normal;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .Foo_Cont_contac{
@@ -1023,9 +1795,11 @@ footer{
 	width: 100px;
 }
 
+
+
 .container_footer{
-	width: 100%;
-	height: 100%;
+	/* width: 100%;
+	height: 100%; */
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: space-around;
@@ -1035,20 +1809,42 @@ footer{
 .Text_Pqr{
 	margin-top: 20px;
 	line-height: 1.2;
+    /* border: 1px solid black; */
+    width: 100%;
 }
 
 .Defi_list{
 	margin-left: 20px;
 	margin-top: 10px;
+    /* border: 1px solid black; */
+    width: 100%;
+    align-items: start;
+}
+
+.Pol_Text_corre{
+    width: 100%;
+}
+
+.cualquiera{
+    width: 100%;
+    align-items: start;
+    margin-left: 60px;
+}
+
+
+
+.Pol_esteti{
+    width: 90%;
 }
 
 .pqr_Form{
-	color: black;
-	transition: color 0.5s ease;
+	color: #0077B5;
+	transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .pqr_Form:hover{
 	color: #57bfd9;
+    transform: scale(1.2);
 }
 
 .Sepa{
@@ -1066,19 +1862,38 @@ footer{
 .Final{
 	width: 100%;
 	background-color: #227598;
-	height: 50px;
+	height: 80px;
 	border-top: 2px solid #57bfd9;
+}
+
+
+.con_final{
+	justify-content: space-around;
+	align-items: center;
 }
 
 .Final_Text{
 	color: white;
 	font-size: 14px;
+    padding-left: 20px;
 }
 
 .Foo_Cont_sgv_contac{
 	align-items: center;
 	width: 20%;
-	justify-content: space-around;
+    /* border: 1px solid black; */
+	justify-content: space-between;
+}
+
+
+
+.imgSuper{
+	background-image: url('../IMAGENES/COMPARTIDO/Supertransporte.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 180px;
+	height: 101px;
 }
 
 .Ref_Final{
@@ -1094,6 +1909,7 @@ footer{
 .Foo_Info2_Item:hover{
 	color: #57bfd9;
 	fill: #57bfd9;
+    transform: scale(1.1);
 }
 
 .Tra_text,.Ter_Cont{
@@ -1113,7 +1929,7 @@ footer{
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.4);
   }
-  
+
   /* Contenido del modal */
   .modal-content_Ter, .modal-content_aut, .modal-content_Pol{
 	background-color: #fefefe;
@@ -1125,7 +1941,7 @@ footer{
 	height: 650px;
 
   }
-  
+
   /* Botón de cierre */
   .close_Ter, .close_aut, .close_Pol {
 	color: #aaa;
@@ -1133,7 +1949,7 @@ footer{
 	font-size: 28px;
 	font-weight: bold;
   }
-  
+
   .close_Ter:hover,
   .close_Ter:focus,
   .close_aut:hover,
@@ -1160,7 +1976,7 @@ footer{
 	right: 50px;
 	text-align: start;
 }
-  
+
 
 .Req_list{
 	list-style: disc;
@@ -1187,4 +2003,618 @@ footer{
 .Ter_text{
 	width: 90%;
 	margin-top: 15px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .container{
+        width: 1010px;
+    }
+
+
+    /*Seccion 2 Administrativos*/
+
+    .Ad_Cont_left{
+        margin-right: 0px;
+    }
+
+    .Ad_Subtitle{
+        width: 80%;
+    }
+
+
+    /* Seccion 3 Valores */
+
+    .Corp_cont_animation:hover{
+	    .cont_Car{
+		    transform: translatex(1000px);
+	    }
+    }
+
+    /* Seccion 4 */
+
+    .Eco_Logo_card{
+        height: 150px;
+        width: 150px;
+    }
+
+    .Eco_card_textPrin{
+        font-size: 50px;
+    }
+
+    /* seccion 5 flota */
+
+    .Flo_modal_content{
+        width: 500px;
+        height: 540px;
+        margin-left: 10px;
+    }
+
+    .Flo_modal_text{
+        font-size: 15px;
+        width: auto;
+        padding-right: 30px;
+    }
+
+    .cont_image{
+        margin-right: 10px;
+    }
+
+    .Flo_modal_Image{
+        width: 500px;
+    }
+
+    .cont_image_two{
+        width: 480px;
+        height: 280px;
+    }
+
+    /* Footer */
+
+    .Foo_logo{
+        display: none;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .container{
+        width: 100%;
+    }
+
+    /* .header{
+        width: 97%;
+    } */
+
+    .menu-toggle {
+                display: block;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #227598;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .nav-wrapper.active {
+        left: 0;
+    }
+
+    .list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .head_Ref {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(87, 191, 217, 0.2);
+    }
+
+    .head_Ref_Link {
+        display: block;
+        width: 100%;
+    }
+
+    .head_Acceso {
+        margin: 20px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Seccion 1 carrusel */
+    .Dcuer_button768{
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .Dcuer_button{
+        padding: 20px;
+    }
+    /* Seccion 2 */
+
+    .AdminCont{
+        flex-direction: column;
+    }
+
+    .Ad_cont_ima_grand{
+        margin-top: 100px;
+    }
+
+    .Ad_Cont_left{
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Seccion 3 */
+
+    .Corp_cont_animation{
+        /* border: 1px solid black; */
+        width: 80%;
+
+    }
+
+    .Corp_cont_animation:hover{
+	    .cont_Car{
+		    transform: translatex(1000%);
+	    }
+    }
+
+    .Corp_Card_Fondo{
+        width: 90%;
+    }
+
+    .line1{
+        display: none;
+    }
+
+    .Corp_list{
+        padding-bottom: 50px;
+        /* gap: 30px; */
+        width: 100%;
+    }
+
+    .Corp_Card_item{
+        margin-top: 30px;
+    }
+
+    /* seccion 5 */
+
+    .ConAuxFlota{
+        flex-direction: column;
+    }
+
+    .Flo_Line{
+        display: none;
+    }
+
+    .Flo_Cont_Info{
+        margin-right: 0;
+    }
+
+    .cont_image{
+        width: 80%;
+        background-color: transparent;
+        /* border: 1px solid black; */
+        padding: 0px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .Cont_image_one{
+        width: 100%;
+    }
+
+    .cont_image_two{
+        width: 100%;
+    }
+
+    .Flo_modal_content{
+        margin-top: 500px;
+        margin-right: 0px;
+        width: 80%;
+    }
+
+    .cont_image_two{
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .Flo_modal_Image{
+        border-radius: 0px 0px 10px 10px;
+        width: 100%;
+    }
+
+    .Flo_Modal{
+        padding-bottom: 30px;
+    }
+
+    .Cont_general{
+        margin-top: 15px;
+    }
+
+    .Flo_modal_Image2{
+        border-radius: 0px 0px 10px 10px;
+        width: 100%;
+    }
+
+
+    /* seccion footer */
+
+    .Foo_logo{
+        display: none;
+    }
+    
+
+    footer{
+        height: auto;
+    }
+
+    .Foo_Maps{
+        margin-top: 50px;
+    }
+
+    .Foo_Cont_sgv_contac{
+        margin-left: 0px;
+        width: 50%;
+    }
+
+    /* QR politica  */
+
+    .modal-content_Ter, .modal-content_aut, .modal-content_Pol{
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .modal_Ter, .modal_aut, .modal_Pol{
+        top:30px;
+
+    }
+
+
+}
+
+@media (max-width: 900px) {
+    .container{
+        width: 100%;
+    }
+
+    .header{
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #227598;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .nav-wrapper.active {
+        left: 0;
+    }
+
+    .list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .head_Ref {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(87, 191, 217, 0.2);
+    }
+
+    .head_Ref_Link {
+        display: block;
+        width: 100%;
+    }
+
+    .head_Acceso {
+        margin: 20px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+
+    /* Seccion 2 */
+
+    .Ad_image{
+        width: 100%;
+    }
+
+    .Ad_cont_ima_grand{
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .Corp_cont_animation{
+        /* border: 1px solid black; */
+        width: 80%;
+    }
+
+    .Corp_Card_Fondo{
+        width: 90%;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+
+    /* Seccion 3 Valores */
+
+    .Corp_cont_animation:hover{
+	    .cont_Car{
+		    transform: translatex(400px);
+	    }
+    }
+
+    .Corp_list{
+        margin-top: 50px;
+    }
+
+    /* Seccion 4 */
+
+    .Eco_cont_image{
+        width: 95%;
+    }
+
+    .Eco_tittle{
+        margin-left: 0px;
+    }
+
+    .Eco_Cont_info{
+        align-items: center;
+    }
+
+    .Eco_button{
+        margin-left: 0px;
+    }
+
+
+
+    /* seccion 5 */
+
+    .Flo_modal_content{
+        width: 98%;
+
+    }
+
+    .Cont_general{
+        margin-top:50px;
+        margin-bottom: 50px;
+    }
+
+    .Flo_modal_tittle{
+        padding-top: 20px;
+    }
+
+    .close{
+        height: 0px;
+        padding-bottom: 10px;
+        float: none;
+    }
+
+    .Flo_modal_content_x{
+        align-items: star;
+    }
+
+    .cont_head{
+        margin-top: 0px;
+    }
+    
+    .Cont_image_one{
+        background-color: transparent;
+        height: auto;
+        /* border: 1px solid black; */
+        padding-bottom: 50px;
+        height: 50px;
+        border-radius: none;
+        width: 100%;
+    }
+
+    .cont_image_two{
+        width: 100%;
+    }
+
+    .cont_image{
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .Flo_modal_Image{
+        width: 100%;
+        border-radius: none;
+    }
+
+    .Foo_Cont_sgv_contac{
+        margin-left: 0px;
+        width: 40%;
+    }
+
+	.Final_Text{
+		width: 30%;
+	}
+
+
+}
+
+@media (max-width:480px){
+
+    .header{
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Seccion 2 */
+
+    .Ad_Cont_left{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Ad_Cont_Text{
+     width: 100%;
+    }
+
+    .Ad_Cont_Text{
+        width: 100%;
+    }
+
+    .Ad_cont_ima_grand{
+        width: 90%;
+    }
+
+    /* Seccion 3 */
+
+    .Corp_cont_animation:hover{
+	    .cont_Car{
+		    transform: translatex(170px);
+	    }
+    }
+
+    /* Seccion 4 */
+
+    .Eco_button{
+        margin-bottom: 15px;
+    }
+
+    .Eco_tittle{
+        width: 100%;
+        text-align: center;
+    }
+
+    .tittle_pdf{
+        font-size: 21px;
+        /* font-weight: 500; */
+    }
+
+    .modal-header{
+        text-align: start;
+    }
+
+    /* Seccion 5  */
+
+    .ConAuxFlota{
+        align-items: center;
+    }
+    
+    .Flo_Item{
+        width: 90%;
+
+    }
+
+    .Flo_modal_content{
+        width: 100%;
+    }
+
+    .Flo_list{
+        align-items: center;
+
+        width: 100%;
+    }
+
+    .Flo_Modal{
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .Cont_general{
+        width: 100%;
+        margin-top: 120px;
+    }
+
+    .Flo_info_Text{
+        width: 90%;
+    }
+
+    .Flot_modal_cont_hiper{
+        margin-top: 20px;
+    }
+
+    .cont_image{
+        /* margin-top: -50px; */
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        align-items: start;
+    }
+
+    .Flot_modal_cont_hiper{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cont_image_one{
+        background-color: transparent;
+        height: 100%;
+    }
+
+    .cont_image_two{
+        width: 100%;
+    }
+
+    /* Cookies  */
+
+    .modal-contentCo{
+        width: 90%;
+    }
+
+    /* Seccion footer */
+
+    .Foo_Maps{
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .container_footer{
+        padding-bottom: 20px;
+        flex-direction: column;
+    }
+
+    .Foo_Cont_sgv_contac{
+        width: 40%;
+    }
+
+	.Final_Text{
+		width: 40%;
+	}
+
+	.imgSuper{
+		display: none;
+	}
+
+
 }

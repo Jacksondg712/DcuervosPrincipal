@@ -11,55 +11,148 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container flex-row head_Cont">
-            <a href="./index.html"><img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="Logo" width="137"></a>
-            <ul class="list flex-row">
-                <li class="head_Ref"><a class="head_Ref_Link" style="color: #57bfd9;" href="./index.html" ><p class="head_Ref_Text">COMPAÑIA</p></a></li>
-                <li class="head_Ref"><a class="head_Ref_Link" href="./servicios.html" ><p class="head_Ref_Text">SERVICIOS</p></a></li>
-                <li class="head_Ref"><a class="head_Ref_Link" href="./contactenos.html" ><p class="head_Ref_Text">CONTACTENOS</p></a></li>
-                <li class="head_Ref"><a class="head_Ref_Link" href="./trabajo.html" ><p class="head_Ref_Text">TRABAJA CON NOSOTROS</p></a></li>
-            </ul>
-            <ul class="list">
-                <li class="head_Acceso"><a class="head_Acceso_link" href="https://tms.driv.in/app/home"><p>ACCESO CLIENTES</p></a></li>
-            </ul>
+     <header class="header">
+        <div class="head_Cont">
+            <div class="logo-container">
+                <a href="./index.html">
+                    <img src="./IMAGENES/COMPARTIDO/Logo-Dcuervo-PNG Blanco.png" alt="Logo">
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-wrapper" id="navWrapper">
+                <ul class="list">
+                    <li class="head_Ref">
+                        <a class="head_Ref_Link" style="color: #57bfd9;" href="./index.html">
+                            <p class="head_Ref_Text">COMPAÑÍA</p>
+                        </a>
+                    </li>
+                    <li class="head_Ref">
+                        <a class="head_Ref_Link" href="./servicios.html">
+                            <p class="head_Ref_Text">SERVICIOS</p>
+                        </a>
+                    </li>
+                    <li class="head_Ref">
+                        <a class="head_Ref_Link" href="./contactenos.html">
+                            <p class="head_Ref_Text">CONTÁCTENOS</p>
+                        </a>
+                    </li>
+                    <li class="head_Ref">
+                        <a class="head_Ref_Link" href="./trabajo.html">
+                            <p class="head_Ref_Text">TRABAJA CON NOSOTROS</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="head_Acceso">
+                        <a class="head_Acceso_link" href="https://tms.driv.in/app/home">
+                            <p>ACCESO CLIENTES</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
         <section class="dcuervo">
             <div class="Dcuer_container flex-colum">
                 <div class="Dcuervo_slider">
-                    <div class="Dcuervo_slide" style="background-image: url('./images-videos/Carrusel3.png');" > </div>
-                    <div class="Dcuervo_slide" style="background-image: url('./images-videos/Carrusel1.jpeg');"></div>
-                    <div class="Dcuervo_slide" style="background-image: url('./images-videos/Carrusel2.png');"></div>
+                    <div class="Dcuervo_slide" style="background-image: url('./IMAGENES/PRINCIPAL/TrabajaConN.png');"> </div>
+                    <div class="Dcuervo_slide" style="background-image: url('./IMAGENES/PRINCIPAL/DOTACION.png');"></div>
+                    <div class="Dcuervo_slide" style="background-image: url('./IMAGENES/PRINCIPAL/Carrusel2.png');"></div>
                 </div>
-                <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="Logo" width="650" class="Dcuervo_Img">
+                <img src="./IMAGENES/COMPARTIDO/Logo-Dcuervo-PNG Blanco.png" alt="Logo" width="650" class="Dcuervo_Img">
                 <ul class="list Dcuer_Cont_Button">
                     <li class="Dcuer_button"><a href="#Flota"><p class="Dcuervo_Text_Button Text_Black">Nuestra Flota</p></a></li>
-                    <li class="Dcuer_button"><a href="./contactenos.html"><p class="Dcuervo_Text_Button Text_Black">Contáctanos</p></a></li>
+                    <li class="Dcuer_button Dcuer_button768"><a href="./contactenos.html"><p class="Dcuervo_Text_Button   Text_Black">Contáctanos</p></a></li>
                 </ul>
             </div>
         </section>
-        <section class="Qsomos" id="Qsomos">
-            <div class="container flex-colum">
-                <div class="Qsomos_Cont_Sec1 flex-row">
-                    <img src="./images-videos/Guide to Starting a Transportation Business_ Key Steps and Strategies.jpg" alt="" width="595px">
-                    <div class="Qsomos_Cont_En flex-colum">
-                        <img class="Qsomos_tittle" src="./images-videos/Logo-Dcuervo-PNG-negro-azul.png" alt="" width="300px">
-                        <H2 class="Qsomos_Subtittle Text_Black">EN DCUERVO SOMOS</H2>
-                        <div class="Qsomos_Text_Sec1"><p>Especialistas en soluciones logísticas integrales, nos dedicamos a ofrecer servicios confiables y de alta calidad que optimizan la cadena de suministro de nuestros clientes.</p></div>
+        <section class="Admin">
+            <div class="container flex-row AdminCont">
+                <div class="Ad_Cont_left flex-colum">
+                    <div class="Ad_Cont_Text">
+                        <h2 class="Text_Black Ad_title">SOMOS DCUERVO</h2>
+                        <p class="Text_Medium Ad_Subtitle">Una empresa especializada en soluciones logísticas integrales, con amplia experiencia en el sector. Nos dedicamos a ofrecer servicios confiables y de alta calidad que optimizan la cadena de suministro de nuestros clientes, como transporte masivo, almacenamiento y monitoreo.</p>
+                    </div>
+                    <div class="Ad_Cont_card">
+                        <div class="carousel-wrapper">
+                            <div class="Ad_Card1">
+                                <div class="Ad_Card_image Ad_img_lider"></div>
+                                <p class="Text_Medium Ad_Card_tittle">NATHALIA ANDREA CUERVO TAPIAS</p>
+                                <p class="Text_Black">DIRECTORA ADMINISTRATIVA</p>
+                                <p class="Text_Medium Ad_Card_text">Nuestro compromiso es impulsar la eficiencia y seguridad en cada proceso para garantizar un servicio logístico con calidad, puntualidad y que supere las expectativas de nuestros clientes.</p>
+                                <div class="Ad_cont_aux flex-row">
+                                    <div class="Ad_logo_dcuervo"></div>
+                                    <div>
+                                        <!-- <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Ad_Card2">
+                                <div class="Ad_Card_image Ad_img_gerente"></div>
+                                <p class="Text_Medium Ad_Card_tittle">YESID ARIEL CERVO OROZCO</p>
+                                <p class="Text_Black">GERENTE GENERAL</p>
+                                <p class="Text_Medium Ad_Card_text">Mi prioridad es garantizar la seguridad operacional en cada proyecto y ofrecer nuestros servicios logísticos con los más altos estándares de calidad, compromiso y eficiencia para nuestros clientes.</p>
+                                <div class="Ad_cont_aux flex-row">
+                                    <div class="Ad_logo_dcuervo"></div>
+                                    <div>
+                                        <!-- <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Ad_Card3">
+                                <div class="Ad_Card_image Ad_img_contadora"></div>
+                                <p class="Text_Medium Ad_Card_tittle">DEISSY VERONICA JUNIELES ORGANISTA</p>
+                                <p class="Text_Black">ANALISTA FINANCIERO</p>
+                                <p class="Text_Medium Ad_Card_text">Los resultados económicos, son las garantías de una logística eficiente y comprometida con nuestros clientes.</p>
+                                <div class="Ad_cont_aux flex-row">
+                                    <div class="Ad_logo_dcuervo"></div>
+                                    <div>
+                                        <!-- <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg>
+                                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#394240" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478 M31.998,0 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719 c0.302,0.166,0.636,0.25,0.968,0.25c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704 l14.294-14.657c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0L31.998,0z"></path> <path fill="#F9EBB2" d="M31.998,2.478c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167l-14.999,15.38l3.541,21.701 l-18.54-10.254l-18.54,10.254l3.541-21.701L2,24.912l20.729-3.167l8.798-18.743C31.527,3.002,31.719,2.478,31.998,2.478"></path> </g> </g></svg> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Controles del carrusel -->
+                        <button class="carousel-controls prev1" onclick="prevCard()">‹</button>
+                        <button class="carousel-controls next1" onclick="nextCard()">›</button>
+                        
+                        
+                    
+                        <!-- Indicadores -->
+                        <div class="carousel-indicators">
+                            <span class="indicator active" onclick="goToCard(0)"></span>
+                            <span class="indicator" onclick="goToCard(1)"></span>
+                            <span class="indicator" onclick="goToCard(2)"></span>
+                        </div>
                     </div>
                 </div>
-                <div class="Qsomos_Cont_Sec2 flex-row">
-                    <div class="Qsomos_Cont_Nu flex-colum">
-                        <img class="Qsomos_tittle" src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="" width="300px">
-                        <H2 class="Qsomos_Subtittle_Sec Text_Black">NUESTRO PROPOSITO</H2>
-                        <div class="Qsomos_Text_Sec2"><p>Especialistas en soluciones logísticas integrales, nos dedicamos a ofrecer servicios confiables y de alta calidad que optimizan la cadena de suministro de nuestros clientes.</p></div>
-                    </div>
-                    <img class="Qsomos_img_Second " src="./images-videos/Guide to Starting a Transportation Business_ Key Steps and Strategies.jpg" alt="" width="595px">
+                <div class="Ad_cont_ima_grand">
+                    <div class="Ad_image"></div>
                 </div>
             </div>
-        </section>
+        </section> 
+
+
         <section class="Corp">
             <div class="container flex-colum">
                 <h1 class="Corp_title Text_Black">Valores</h1>
@@ -67,16 +160,16 @@
                 <div class="Corp_cont_animation flex-row">
                     <svg height="70px" width="70px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984" xml:space="preserve" width="64px" height="64px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#227598;" d="M464.455,187.558L268.414,60.461c-3.438-2.227-7.844-2.289-11.344-0.164L47.795,187.394 c-3.172,1.93-5.125,5.391-5.125,9.117v267.305c0,5.891,4.781,10.672,10.672,10.672h405.316c5.891,0,10.672-4.781,10.672-10.672 V196.511C469.33,192.894,467.502,189.527,464.455,187.558z"></path> <path style="fill:#F0F2F5;" d="M506.265,166.371L260.93,38.375c-3.094-1.609-6.766-1.609-9.859,0L5.733,166.371 C2.217,168.207,0,171.855,0,175.831v42.663c0,3.727,1.952,7.188,5.14,9.117c3.188,1.938,7.156,2.062,10.469,0.344L255.992,102.53 L496.39,227.956c1.547,0.797,3.25,1.203,4.938,1.203c1.922,0,3.828-0.516,5.531-1.547c3.188-1.93,5.125-5.391,5.125-9.117v-42.663 C511.984,171.855,509.781,168.207,506.265,166.371z"></path> <path style="fill:#434A54;" d="M415.987,474.488H95.997c-5.891,0-10.656-4.781-10.656-10.672V229.503 c0-5.898,4.766-10.672,10.656-10.672h319.99c5.905,0,10.671,4.773,10.671,10.672v234.313 C426.658,469.707,421.892,474.488,415.987,474.488z"></path> <rect x="351.992" y="400.142" style="fill:#7dcde3;" width="63.998" height="63.998"></rect> <path style="fill:#57bfd9;" d="M415.987,474.816h-63.998c-5.891,0-10.656-4.781-10.656-10.672v-63.998 c0-5.891,4.766-10.656,10.656-10.656h63.998c5.905,0,10.671,4.766,10.671,10.656v63.998 C426.658,470.035,421.892,474.816,415.987,474.816z M362.66,453.488h42.671v-42.67H362.66V453.488z"></path> <rect x="287.992" y="400.142" style="fill:#7dcde3;" width="63.999" height="63.998"></rect> <path style="fill:#57bfd9;" d="M351.989,474.816H287.99c-5.89,0-10.655-4.781-10.655-10.672v-63.998 c0-5.891,4.766-10.656,10.655-10.656h63.999c5.905,0,10.671,4.766,10.671,10.656v63.998 C362.66,470.035,357.894,474.816,351.989,474.816z M298.662,453.488h42.671v-42.67h-42.671V453.488z"></path> <rect x="319.992" y="336.152" style="fill:#7dcde3;" width="63.998" height="63.998"></rect> <path style="fill:#57bfd9;" d="M383.988,410.818H319.99c-5.891,0-10.656-4.781-10.656-10.672v-63.998 c0-5.891,4.766-10.656,10.656-10.656h63.998c5.906,0,10.672,4.766,10.672,10.656v63.998 C394.66,406.037,389.894,410.818,383.988,410.818z M330.662,389.49h42.67v-42.671h-42.67L330.662,389.49L330.662,389.49z"></path> <rect x="351.992" y="272.152" style="fill:#7dcde3;" width="63.998" height="63.999"></rect> <path style="fill:#57bfd9;" d="M415.987,346.819h-63.998c-5.891,0-10.656-4.781-10.656-10.671v-63.999 c0-5.882,4.766-10.647,10.656-10.647h63.998c5.905,0,10.671,4.766,10.671,10.647v63.999 C426.658,342.038,421.892,346.819,415.987,346.819z M362.66,325.492h42.671v-42.671H362.66V325.492z"></path> <rect x="383.992" y="336.152" style="fill:#7dcde3;" width="42.67" height="63.998"></rect> <path style="fill:#57bfd9;" d="M426.658,389.49H394.66v-42.671h31.998v-21.327h-42.67c-5.891,0-10.656,4.766-10.656,10.656v63.998 c0,5.891,4.766,10.672,10.656,10.672h42.67L426.658,389.49L426.658,389.49z"></path> <rect x="95.992" y="400.142" style="fill:#7dcde3;" width="63.998" height="63.998"></rect> <path style="fill:#57bfd9;" d="M85.341,464.144v-63.998c0-5.891,4.766-10.656,10.656-10.656h63.998 c5.906,0,10.671,4.766,10.671,10.656v63.998c0,5.891-4.765,10.672-10.671,10.672H95.997 C90.106,474.816,85.341,470.035,85.341,464.144z M149.339,410.818h-42.671v42.67h42.671V410.818z"></path> <rect x="159.992" y="400.142" style="fill:#7dcde3;" width="63.998" height="63.998"></rect> <path style="fill:#57bfd9;" d="M149.339,464.144v-63.998c0-5.891,4.766-10.656,10.656-10.656h63.998 c5.906,0,10.672,4.766,10.672,10.656v63.998c0,5.891-4.766,10.672-10.672,10.672h-63.998 C154.104,474.816,149.339,470.035,149.339,464.144z M213.337,410.818h-42.671v42.67h42.671V410.818z"></path> <rect x="127.992" y="336.152" style="fill:#7dcde3;" width="63.998" height="63.998"></rect> <path style="fill:#57bfd9;" d="M117.34,400.146v-63.998c0-5.891,4.766-10.656,10.656-10.656h63.998 c5.906,0,10.671,4.766,10.671,10.656v63.998c0,5.891-4.765,10.672-10.671,10.672h-63.998 C122.105,410.818,117.34,406.037,117.34,400.146z M181.338,346.819h-42.671v42.671h42.671V346.819z"></path> <rect x="95.992" y="272.152" style="fill:#7dcde3;" width="63.998" height="63.999"></rect> <path style="fill:#57bfd9;" d="M85.341,336.148v-63.999c0-5.882,4.766-10.647,10.656-10.647h63.998 c5.906,0,10.671,4.766,10.671,10.647v63.999c0,5.89-4.765,10.671-10.671,10.671H95.997 C90.106,346.819,85.341,342.038,85.341,336.148z M149.339,282.821h-42.671v42.671h42.671V282.821z"></path> <rect x="85.342" y="336.152" style="fill:#7dcde3;" width="42.655" height="63.998"></rect> <path style="fill:#57bfd9;" d="M85.341,389.49h31.999v-42.671H85.341v-21.327h42.655c5.906,0,10.671,4.766,10.671,10.656v63.998 c0,5.891-4.765,10.672-10.671,10.672H85.341V389.49z"></path> <path style="fill:#656D78;" d="M479.985,474.488H31.999c-5.891,0-10.656-4.781-10.656-10.672s4.766-10.672,10.656-10.672h447.986 c5.906,0,10.671,4.781,10.671,10.672S485.891,474.488,479.985,474.488z"></path> <path style="fill:#E6E9ED;" d="M415.987,218.831H95.997c-5.891,0-10.656,4.773-10.656,10.672v42.646h341.317v-42.646 C426.658,223.604,421.892,218.831,415.987,218.831z"></path> <path style="fill:#CCD1D9;" d="M276.944,272.149h-41.889c-5.891,0-10.672-4.757-10.672-10.647c0-5.906,4.781-10.672,10.672-10.672 h41.889c5.891,0,10.671,4.766,10.671,10.672C287.615,267.392,282.835,272.149,276.944,272.149z"></path> </g></svg>
                     <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                    <div class="line "></div>
+                    <div class="line line1"></div>
                     <svg height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#227598;" d="M378.645,127.996c-5.875,0-10.656,4.781-10.656,10.671v362.661c0,5.891,4.781,10.656,10.656,10.656 h106.686c5.873,0,10.654-4.766,10.654-10.656V202.666C495.984,176.838,471.456,127.996,378.645,127.996z"></path> <g> <path style="fill:#434A54;" d="M378.645,127.996c-5.875,0-10.656,4.781-10.656,10.671v63.999h127.996 C495.984,176.838,471.456,127.996,378.645,127.996z"></path> <path style="fill:#434A54;" d="M271.992,85.341c-5.891,0-10.664-4.781-10.664-10.672V10.671C261.328,4.78,266.102,0,271.992,0 s10.656,4.78,10.656,10.671v63.998C282.648,80.559,277.883,85.341,271.992,85.341z"></path> </g> <path style="fill:#4A89DC;" d="M313.896,63.998h-84.567c-5.891,0-10.671,4.781-10.671,10.671v63.998 c0,5.891,4.781,10.672,10.671,10.672h84.567c5.875,0,10.656-4.781,10.656-10.672V74.669 C324.553,68.779,319.771,63.998,313.896,63.998z"></path> <path style="fill:#7DCDE3;" d="M335.99,511.984H207.993c-5.89,0-10.664-4.766-10.664-10.656V138.667 c0-5.89,4.773-10.671,10.664-10.671h127.997c5.891,0,10.656,4.781,10.656,10.671v362.661 C346.646,507.219,341.882,511.984,335.99,511.984z"></path> <g> <path style="fill:#4A89DC;" d="M250.657,170.667c-5.891,0-10.664,4.78-10.664,10.671v330.646h21.335V181.338 C261.328,175.447,256.547,170.667,250.657,170.667z"></path> <path style="fill:#4A89DC;" d="M293.335,170.667c-5.906,0-10.686,4.78-10.686,10.671v330.646h21.342V181.338 C303.99,175.447,299.21,170.667,293.335,170.667z"></path> </g> <rect x="218.662" y="85.342" style="fill:#4A89DC;" width="105.89" height="21.327"></rect> <g> <path style="fill:#7DCDE3;" d="M453.456,266.664h-42.654c-5.891,0-10.672-4.781-10.672-10.672s4.781-10.656,10.672-10.656h42.654 c5.906,0,10.672,4.766,10.672,10.656C464.128,261.882,459.361,266.664,453.456,266.664z"></path> <path style="fill:#7DCDE3;" d="M453.456,309.334h-42.654c-5.891,0-10.672-4.781-10.672-10.672c0-5.89,4.781-10.671,10.672-10.671 h42.654c5.906,0,10.672,4.781,10.672,10.671C464.128,304.553,459.361,309.334,453.456,309.334z"></path> <path style="fill:#7DCDE3;" d="M453.456,351.989h-42.654c-5.891,0-10.672-4.766-10.672-10.656s4.781-10.671,10.672-10.671h42.654 c5.906,0,10.672,4.781,10.672,10.671S459.361,351.989,453.456,351.989z"></path> <path style="fill:#7DCDE3;" d="M453.456,394.66h-42.654c-5.891,0-10.672-4.766-10.672-10.672c0-5.891,4.781-10.656,10.672-10.656 h42.654c5.906,0,10.672,4.766,10.672,10.656C464.128,389.894,459.361,394.66,453.456,394.66z"></path> <path style="fill:#7DCDE3;" d="M453.456,437.33h-42.654c-5.891,0-10.672-4.781-10.672-10.671c0-5.891,4.781-10.672,10.672-10.672 h42.654c5.906,0,10.672,4.781,10.672,10.672C464.128,432.549,459.361,437.33,453.456,437.33z"></path> <path style="fill:#7DCDE3;" d="M453.456,479.985h-42.654c-5.891,0-10.672-4.765-10.672-10.655s4.781-10.672,10.672-10.672h42.654 c5.906,0,10.672,4.781,10.672,10.672S459.361,479.985,453.456,479.985z"></path> </g> <path style="fill:#656D78;" d="M399.895,175.572c19.094,5.547,31.623,14.656,37.311,27.094h22.141c0-1.141-0.172-2.312-0.578-3.453 c-16.859-49.312-87.779-49.874-90.779-49.874v21.328C368.145,170.667,383.191,170.729,399.895,175.572z"></path> <path style="fill:#227598;" d="M165.331,223.993H37.334c-5.89,0-10.671,4.781-10.671,10.672v266.663 c0,5.891,4.781,10.656,10.671,10.656h127.997c5.89,0,10.664-4.766,10.664-10.656V234.665 C175.994,228.774,171.221,223.993,165.331,223.993z"></path> <g> <path style="fill:#7DCDE3;" d="M69.334,319.99c-5.89,0-10.671-4.766-10.671-10.656v-18.671c0-5.891,4.781-10.672,10.671-10.672 c5.891,0,10.664,4.781,10.664,10.672v18.671C79.997,315.224,75.225,319.99,69.334,319.99z"></path> <path style="fill:#7DCDE3;" d="M101.332,319.99c-5.89,0-10.671-4.766-10.671-10.656v-18.671c0-5.891,4.781-10.672,10.671-10.672 c5.891,0,10.664,4.781,10.664,10.672v18.671C111.996,315.224,107.224,319.99,101.332,319.99z"></path> <path style="fill:#7DCDE3;" d="M133.332,319.99c-5.891,0-10.672-4.766-10.672-10.656v-18.671c0-5.891,4.781-10.672,10.672-10.672 c5.89,0,10.664,4.781,10.664,10.672v18.671C143.995,315.224,139.222,319.99,133.332,319.99z"></path> <path style="fill:#7DCDE3;" d="M69.334,373.332c-5.89,0-10.671-4.781-10.671-10.672v-18.671c0-5.874,4.781-10.655,10.671-10.655 c5.891,0,10.664,4.781,10.664,10.655v18.671C79.997,368.551,75.225,373.332,69.334,373.332z"></path> <path style="fill:#7DCDE3;" d="M101.332,373.332c-5.89,0-10.671-4.781-10.671-10.672v-18.671c0-5.874,4.781-10.655,10.671-10.655 c5.891,0,10.664,4.781,10.664,10.655v18.671C111.996,368.551,107.224,373.332,101.332,373.332z"></path> <path style="fill:#7DCDE3;" d="M133.332,373.332c-5.891,0-10.672-4.781-10.672-10.672v-18.671c0-5.874,4.781-10.655,10.672-10.655 c5.89,0,10.664,4.781,10.664,10.655v18.671C143.995,368.551,139.222,373.332,133.332,373.332z"></path> <path style="fill:#7DCDE3;" d="M69.334,426.659c-5.89,0-10.671-4.766-10.671-10.672v-18.655c0-5.891,4.781-10.672,10.671-10.672 c5.891,0,10.664,4.781,10.664,10.672v18.655C79.997,421.893,75.225,426.659,69.334,426.659z"></path> <path style="fill:#7DCDE3;" d="M101.332,426.659c-5.89,0-10.671-4.766-10.671-10.672v-18.655c0-5.891,4.781-10.672,10.671-10.672 c5.891,0,10.664,4.781,10.664,10.672v18.655C111.996,421.893,107.224,426.659,101.332,426.659z"></path> <path style="fill:#7DCDE3;" d="M133.332,426.659c-5.891,0-10.672-4.766-10.672-10.672v-18.655c0-5.891,4.781-10.672,10.672-10.672 c5.89,0,10.664,4.781,10.664,10.672v18.655C143.995,421.893,139.222,426.659,133.332,426.659z"></path> <path style="fill:#7DCDE3;" d="M69.334,479.985c-5.89,0-10.671-4.765-10.671-10.655v-18.672c0-5.891,4.781-10.672,10.671-10.672 c5.891,0,10.664,4.781,10.664,10.672v18.672C79.997,475.221,75.225,479.985,69.334,479.985z"></path> <path style="fill:#7DCDE3;" d="M101.332,479.985c-5.89,0-10.671-4.765-10.671-10.655v-18.672c0-5.891,4.781-10.672,10.671-10.672 c5.891,0,10.664,4.781,10.664,10.672v18.672C111.996,475.221,107.224,479.985,101.332,479.985z"></path> <path style="fill:#7DCDE3;" d="M133.332,479.985c-5.891,0-10.672-4.765-10.672-10.655v-18.672c0-5.891,4.781-10.672,10.672-10.672 c5.89,0,10.664,4.781,10.664,10.672v18.672C143.995,475.221,139.222,479.985,133.332,479.985z"></path> </g> <path style="fill:#656D78;" d="M175.994,245.336H26.663c-5.891,0-10.664-4.781-10.664-10.671c0-5.891,4.773-10.672,10.664-10.672 h149.332c5.891,0,10.664,4.781,10.664,10.672C186.658,240.554,181.885,245.336,175.994,245.336z"></path> </g></svg>
                     <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                    <div class="line "></div>
+                    <div class="line line1"></div>
                     <svg height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#CCD1D9;" d="M348.672,384.551c-1.578,0-3.156-0.344-4.672-1.062l-176.495-85.904 c-5.281-2.577-7.5-8.968-4.922-14.265s8.968-7.5,14.265-4.922l176.495,85.903c5.296,2.578,7.499,8.969,4.921,14.25 C356.421,382.347,352.625,384.551,348.672,384.551z"></path> <path style="fill:#CCD1D9;" d="M153.896,469.33c-4.109,0-8.015-2.406-9.765-6.406c-2.375-5.391,0.094-11.688,5.484-14.031 l194.775-85.342c5.406-2.375,11.687,0.094,14.046,5.5c2.375,5.375-0.094,11.688-5.483,14.031l-194.776,85.342 C156.786,469.033,155.333,469.33,153.896,469.33z"></path> </g> <path style="fill:#434A54;" d="M255.987,511.984c-5.89,0-10.671-4.781-10.671-10.656V266.656c0-5.891,4.781-10.664,10.671-10.664 c5.891,0,10.672,4.773,10.672,10.664v234.672C266.659,507.203,261.878,511.984,255.987,511.984z"></path> <g> <path style="fill:#E6E9ED;" d="M149.334,511.984c-0.375,0-0.766-0.031-1.141-0.062c-5.859-0.625-10.094-5.875-9.469-11.75 l31.999-298.646c0.625-5.859,5.875-10.093,11.734-9.468s10.093,5.882,9.468,11.742l-31.999,298.654 C159.349,507.922,154.724,511.984,149.334,511.984z"></path> <path style="fill:#E6E9ED;" d="M362.639,511.984c-5.375,0-9.983-4.047-10.593-9.5l-32.764-298.662 c-0.641-5.852,3.594-11.125,9.453-11.765s11.108,3.586,11.765,9.437l32.749,298.662c0.641,5.859-3.578,11.109-9.438,11.766 C363.421,511.953,363.03,511.984,362.639,511.984z"></path> </g> <path style="fill:#5D9CEC;" d="M255.987,277.335c-47.045,0-85.326-38.288-85.326-85.34V63.998c0-5.89,4.766-10.664,10.656-10.664 h149.34c5.891,0,10.655,4.773,10.655,10.664v127.997C341.312,239.047,303.032,277.335,255.987,277.335z"></path> <g> <path style="fill:#434A54;" d="M367.046,54.272L260.753,1.125c-3-1.5-6.532-1.5-9.531,0L144.553,54.459 c-4.422,2.211-6.75,7.171-5.609,11.992c1.141,4.812,5.438,8.21,10.375,8.21h213.337c0,0,0,0,0.016,0 c5.891,0,10.656-4.773,10.656-10.664C373.327,59.67,370.749,55.944,367.046,54.272z"></path> <path style="fill:#434A54;" d="M213.316,213.329c-5.891,0-10.656-4.781-10.656-10.671V181.33c0-5.891,4.766-10.671,10.656-10.671 s10.671,4.781,10.671,10.671v21.328C223.988,208.548,219.206,213.329,213.316,213.329z"></path> <path style="fill:#434A54;" d="M170.661,213.329c-5.89,0-10.671-4.781-10.671-10.671V181.33c0-5.891,4.781-10.671,10.671-10.671 c5.891,0,10.656,4.781,10.656,10.671v21.328C181.317,208.548,176.552,213.329,170.661,213.329z"></path> <path style="fill:#434A54;" d="M255.987,213.329c-5.89,0-10.671-4.781-10.671-10.671V181.33c0-5.891,4.781-10.671,10.671-10.671 c5.891,0,10.672,4.781,10.672,10.671v21.328C266.659,208.548,261.878,213.329,255.987,213.329z"></path> <path style="fill:#434A54;" d="M298.657,213.329c-5.891,0-10.672-4.781-10.672-10.671V181.33c0-5.891,4.781-10.671,10.672-10.671 s10.656,4.781,10.656,10.671v21.328C309.313,208.548,304.548,213.329,298.657,213.329z"></path> <path style="fill:#434A54;" d="M341.312,213.329c-5.89,0-10.655-4.781-10.655-10.671V181.33c0-5.891,4.766-10.671,10.655-10.671 c5.891,0,10.672,4.781,10.672,10.671v21.328C351.984,208.548,347.203,213.329,341.312,213.329z"></path> </g> <g> <path style="fill:#E6E9ED;" d="M163.052,383.988c-3.969,0-7.766-2.219-9.609-6.016c-2.578-5.297-0.359-11.688,4.953-14.25 l176.214-85.325c5.296-2.578,11.671-0.359,14.233,4.938c2.578,5.312,0.359,11.688-4.938,14.249l-176.213,85.342 C166.193,383.644,164.599,383.988,163.052,383.988z"></path> <path style="fill:#E6E9ED;" d="M357.968,469.33c-1.438,0-2.875-0.297-4.28-0.906l-194.933-85.342 c-5.391-2.344-7.843-8.641-5.484-14.031c2.359-5.406,8.641-7.875,14.047-5.5l194.931,85.326c5.391,2.359,7.859,8.656,5.5,14.047 C365.983,466.924,362.077,469.33,357.968,469.33z"></path> </g> <path style="fill:#F5F7FA;" d="M277.314,127.996c0,11.78-9.546,21.335-21.328,21.335c-11.781,0-21.327-9.555-21.327-21.335 c0-11.781,9.546-32,21.327-32C267.768,95.997,277.314,116.215,277.314,127.996z"></path> <path style="fill:#656D78;" d="M341.312,213.329H170.661c-5.89,0-10.671-4.781-10.671-10.671c0-5.891,4.781-10.664,10.671-10.664 h170.651c5.891,0,10.672,4.773,10.672,10.664C351.984,208.548,347.203,213.329,341.312,213.329z"></path> </g></svg>
                     <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                    <div class="line "></div>
+                    <div class="line line1"></div>
                     <div class="cont_Car">
                         <svg class="car" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.99 511.99" xml:space="preserve" width="64px" height="64px" fill="#000000" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon style="fill:#CCD1D9;" points="310.432,373.088 329.759,181.216 420.929,181.122 461.022,241.231 501.318,281.512 501.131,373.088 "></polygon> <polygon style="fill:#4FC2E9;" points="456.491,234.434 420.929,181.122 329.759,181.216 324.399,234.434 "></polygon> <path style="fill:#CCD1D9;" d="M469.304,234.434l-42.672-63.983l-106.514,0.109l-21.468,213.2h213.121l0.219-106.654 L469.304,234.434z M490.475,362.432H322.227l17.188-170.559l75.812-0.078l36.343,54.483l1.172,1.75l1.484,1.5l36.422,36.39 L490.475,362.432z"></path> <path style="fill:#CCD1D9;" d="M319.977,85.124H21.343C9.562,85.124,0,94.671,0,106.452v255.979 c0,11.781,9.547,21.328,21.328,21.328h298.65c11.781,0,21.328-9.547,21.328-21.328V106.452 C341.306,94.671,331.759,85.124,319.977,85.124z"></path> <g> <circle style="fill:#434A54;" cx="415.975" cy="373.536" r="53.33"></circle> <circle style="fill:#434A54;" cx="96.015" cy="373.536" r="53.33"></circle> </g> <g> <path style="fill:#F5F7FA;" d="M405.32,373.541c0,5.891,4.766,10.656,10.656,10.656s10.671-4.766,10.671-10.656 s-4.781-10.672-10.671-10.672C410.086,362.869,405.32,367.65,405.32,373.541z"></path> <path style="fill:#F5F7FA;" d="M85.342,373.541c0,5.891,4.781,10.656,10.671,10.656s10.656-4.766,10.656-10.656 s-4.766-10.672-10.656-10.672S85.342,367.65,85.342,373.541z"></path> </g> <g> <path style="fill:#656D78;" d="M42.686,277.105c-5.906,0-10.671,4.766-10.671,10.656v21.342c0,5.891,4.766,10.656,10.671,10.656 c5.891,0,10.656-4.766,10.656-10.656v-21.342C53.343,281.871,48.577,277.105,42.686,277.105z"></path> <path style="fill:#656D78;" d="M85.342,277.105c-5.891,0-10.672,4.766-10.672,10.656v21.342c0,5.891,4.781,10.656,10.672,10.656 c5.89,0,10.671-4.766,10.671-10.656v-21.342C96.014,281.871,91.232,277.105,85.342,277.105z"></path> <path style="fill:#656D78;" d="M127.997,277.105c-5.875,0-10.656,4.766-10.656,10.656v21.342c0,5.891,4.781,10.656,10.656,10.656 c5.906,0,10.672-4.766,10.672-10.656v-21.342C138.669,281.871,133.904,277.105,127.997,277.105z"></path> <path style="fill:#656D78;" d="M170.668,277.105c-5.891,0-10.671,4.766-10.671,10.656v21.342c0,5.891,4.781,10.656,10.671,10.656 s10.672-4.766,10.672-10.656v-21.342C181.34,281.871,176.559,277.105,170.668,277.105z"></path> <path style="fill:#656D78;" d="M213.34,277.105c-5.906,0-10.672,4.766-10.672,10.656v21.342c0,5.891,4.766,10.656,10.672,10.656 c5.89,0,10.656-4.766,10.656-10.656v-21.342C223.995,281.871,219.23,277.105,213.34,277.105z"></path> <path style="fill:#656D78;" d="M255.995,277.105c-5.891,0-10.672,4.766-10.672,10.656v21.342c0,5.891,4.781,10.656,10.672,10.656 s10.672-4.766,10.672-10.656v-21.342C266.667,281.871,261.886,277.105,255.995,277.105z"></path> <path style="fill:#656D78;" d="M298.65,277.105c-5.875,0-10.655,4.766-10.655,10.656v21.342c0,5.891,4.78,10.656,10.655,10.656 c5.906,0,10.672-4.766,10.672-10.656v-21.342C309.322,281.871,304.557,277.105,298.65,277.105z"></path> </g> <rect x="362.505" y="191.776" style="fill:#3BAFDA;" width="21.328" height="42.655"></rect> <path style="fill:#5D9CEC;" d="M319.977,85.124H21.343C9.562,85.124,0,94.671,0,106.452v191.981h341.306V106.452 C341.306,94.671,331.759,85.124,319.977,85.124z"></path> </g></svg>
                     </div>
@@ -140,35 +233,91 @@
                             </div>
                             <div class="Corp_Card_Prop flex-colum">
                                 <h3 class="Corp_Card_tittle Text_Black">Orientación al Cliente</h3>
-                                <p class="Corp_Card_Text">Estamos dedicados a ofrecer servicios de alta calidad que no solo cumpla, sino que supere las expectativas generando tranquilidad y seguridad de nuestros servicios y equipo de trabajo.</p>
+                                <p class="Corp_Card_Text">Estamos dedicados a ofrecer servicios de alta calidad que cumpla y supere las expectativas generando tranquilidad y seguridad de nuestros servicios y equipo de trabajo.</p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="Nosotros" id="Nosotros">
-            <div class="Nos_Cont_Color">
-                <div class="container flex-colum">
-                    <div class="flex-row">
-                        <div class="Nos_Container flex-colum">
-                            <div class="Nos_Cont_info" style="margin-top: 70px;">
-                                <h1 class="Nos_Text_Cont Text_Black">Misión</h1>
-                                <p class="Nos_Text_Vision Text_Black">Brindar soluciones logísticas  personalizadas que garanticen la  seguridad, alta calidad y la eficiencia en  el transporte, almacenamiento,  alistamiento de mercancías  contribuyendo al éxito de nuestros  clientes.</p>
-                            </div>
-                            <div class="Nos_Cont_info" style="margin-top: 80px;">
-                                <h1 class="Nos_Text_Cont Text_Black">Visión</h1>
-                                <p class="Nos_Text_Vision Text_Black">Ser la empresa líder en logística  integral,reconocida por nuestra  excelencia operativa, servicio al cliente  e innovación estableciendo nuevos  estándares de calidad y servicio.</p>
-                            </div>
-                        </div>
-                        <video class="Nos_video" src="./images-videos/DcuervoVideo.mp4" controls></video>
-                    </div>
-                    <div class="Nos_Cont_Ref"><a class="Nos_Ref Text_Black" href="./servicios.html">Nuestros Servicios</a></div>
+        <section class="Eco animate-section">
+        <div class="container Eco_cont_image">
+            <div class="Eco_Cont_Card flex-row">
+                <div class="Eco_Card flex-colum">
+                    <svg class="Eco_Logo_card" fill="white" height="200px" width="200px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="white"><g id="SVGRepo_bgCarrier" stroke-whiteidth="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M112,356c-4.418,0-8,3.582-8,8c0,4.411-3.589,8-8,8s-8-3.589-8-8s3.589-8,8-8c4.418,0,8-3.582,8-8s-3.582-8-8-8 c-13.234,0-24,10.767-24,24s10.766,24,24,24s24-10.767,24-24C120,359.582,116.418,356,112,356z"></path> <path d="M432,356c-4.418,0-8,3.582-8,8c0,4.411-3.589,8-8,8s-8-3.589-8-8s3.589-8,8-8c4.418,0,8-3.582,8-8s-3.582-8-8-8 c-13.234,0-24,10.767-24,24s10.766,24,24,24s24-10.767,24-24C440,359.582,436.418,356,432,356z"></path> <path d="M512,252c0-2.231-0.915-4.247-2.388-5.698c-3.421-9.455-10.352-17.394-19.723-22.08c-0.25-0.125-0.505-0.236-0.767-0.334 l-26.439-9.925l-16.106-61.195c-0.023-0.088-0.047-0.176-0.074-0.263C441.389,135.456,425.992,124,408.191,124H352v-16 c0-8.822-7.178-16-16-16H16c-8.822,0-16,7.178-16,16v224c0,8.822,7.178,16,16,16h26.341c-0.775,2.594-1.368,5.265-1.761,8H8 c-4.418,0-8,3.582-8,8s3.582,8,8,8h32.581c3.895,27.102,27.258,48,55.419,48s51.525-20.898,55.419-48H168c0,13.233,10.766,24,24,24 h48c13.234,0,24-10.767,24-24h96.581c3.895,27.102,27.258,48,55.419,48s51.525-20.898,55.419-48H504c4.418,0,8-3.582,8-8 s-3.582-8-8-8h-32.581c-0.393-2.735-0.986-5.406-1.761-8H496c8.822,0,16-7.178,16-16v-72c0-1.88-0.131-3.735-0.383-5.558 C511.864,253.672,512,252.852,512,252z M496,300h-8v-8h8V300z M489.899,244H352v-16h102.549l28.531,10.71 C485.708,240.077,487.998,241.881,489.899,244z M408.191,140c10.638,0,19.846,6.819,22.951,16.982L445.622,212H352v-72H408.191z M48.001,332H16v-40h248.004c4.418,0,8-3.582,8-8s-3.582-8-8-8H16V108h320v224h-96h-48h-47.998c-0.661,0-1.3,0.089-1.915,0.24 C131.975,317.61,115.092,308,96,308c-19.092,0-35.974,9.61-46.087,24.24C49.299,332.089,48.661,332,48.001,332z M96,404 c-22.056,0-40-17.944-40-40s17.944-40,40-40s40,17.944,40,40S118.056,404,96,404z M151.419,356c-0.393-2.735-0.986-5.406-1.761-8 h19.718c-0.888,2.504-1.376,5.196-1.376,8H151.419z M248,372c0,4.411-3.589,8-8,8h-48c-4.411,0-8-3.589-8-8v-7.981 c0-0.007,0.001-0.013,0.001-0.019S184,363.987,184,363.981V356c0-4.411,3.589-8,8-8h48c4.411,0,8,3.589,8,8V372z M262.624,348H344 h18.341c-0.775,2.594-1.368,5.265-1.761,8H264C264,353.196,263.512,350.504,262.624,348z M416,404c-22.056,0-40-17.944-40-40 s17.944-40,40-40s40,17.944,40,40S438.056,404,416,404z M464,332c-0.66,0-1.299,0.089-1.913,0.24 C451.974,317.61,435.092,308,416,308s-35.974,9.61-46.087,24.24c-0.614-0.151-1.252-0.24-1.912-0.24h-16v-72h144v16h-8 c-8.822,0-16,7.178-16,16v8c0,8.822,7.178,16,16,16h8v16H464z"></path> <path d="M200,356c-2.11,0-4.17,0.859-5.66,2.34c-1.49,1.49-2.34,3.56-2.34,5.66c0,2.109,0.85,4.17,2.34,5.66 c1.49,1.489,3.55,2.34,5.66,2.34c2.11,0,4.17-0.851,5.66-2.34c1.49-1.49,2.34-3.561,2.34-5.66c0-2.101-0.85-4.17-2.34-5.66 C204.17,356.859,202.11,356,200,356z"></path> <path d="M296.004,292H312c4.418,0,8-3.582,8-8s-3.582-8-8-8h-15.996c-4.418,0-8,3.582-8,8S291.585,292,296.004,292z"></path> </g> </g></svg>
+                    <p class="Eco_card_textPrin Text_Medium" data-counter="12">+<span class="counter">0</span> Millones</p>
+                    <p class="Eco_card_textSec Text_Medium">Kilómetros recorridos</p>
+                </div>
+                <div class="Eco_Card flex-colum">
+                    <svg class="Eco_Logo_card" height="200px" width="200px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="white" stroke="white"><g id="SVGRepo_bgCarrier" stroke-whiteidth="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:white;} </style> <g> <path class="st0" d="M487.014,300.33l-211.416,69.377c6.826,7.133,12.37,15.629,16.202,25.26l204.272-67.029 c7.63-2.499,11.778-10.71,9.281-18.335C502.846,301.977,494.639,297.824,487.014,300.33z"></path> <path class="st0" d="M228.332,345.781l-76.42-232.859c-11.163-34.021-40.151-59.102-75.416-65.26L17.03,37.273 C9.126,35.893,1.595,41.172,0.218,49.09c-1.376,7.918,3.907,15.44,11.821,16.821l-0.009-0.01L71.496,76.29 c24.684,4.314,44.986,21.873,52.8,45.686l74.078,225.735C208.413,345.09,218.54,344.531,228.332,345.781z"></path> <path class="st0" d="M199.736,367.398c-31.358,10.313-48.41,44.04-38.136,75.402c10.303,31.353,44.027,48.411,75.394,38.128 c31.358-10.293,48.415-44.022,38.136-75.384C264.832,374.192,231.104,357.124,199.736,367.398z M237.098,433.643 c-2.469,4.844-6.623,8.638-12.185,10.473c-5.568,1.808-11.155,1.23-16.022-1.22c-4.844-2.479-8.638-6.623-10.469-12.186 c-1.821-5.564-1.225-11.154,1.211-16.008c2.474-4.854,6.628-8.648,12.19-10.473c5.567-1.826,11.159-1.23,16.022,1.201 c4.844,2.478,8.633,6.632,10.469,12.204C240.13,423.179,239.534,428.771,237.098,433.643z"></path> <path class="st0" d="M512,266.641l-3.023-9.215L433.712,28.078l-254.675,83.577l78.288,238.544L512,266.641z M421.342,52.524 l66.206,201.743L269.69,325.752l-66.198-201.733L421.342,52.524z"></path> <path class="st0" d="M389.279,213.263c13.69,5.658,19.626,19.906,16.864,26.282c-2.332,5.431-6.693,13.075-6.693,13.075 l17.351-5.694l17.361-5.696c0,0-8.042-3.577-13.137-6.557c-6.012-3.51-9.668-18.496-1.991-31.174 c12.919-21.305,7.01-37.219,7.01-37.219s-5.076,1.675-11.216,3.681l-5.648,11.164l4.905-1.618l-11.792,27.928l1.731-20.738 l-8.401,2.752l1.646-13.728c-1.636,0.549-2.862,0.946-3.458,1.145c-3.713,1.22-32.229,10.577-32.229,10.577 S366.246,203.755,389.279,213.263z"></path> </g> </g></svg>
+                    <p class="Eco_card_textPrin Text_Medium" data-counter="105">+<span class="counter">0</span> Mil</p>
+                    <p class="Eco_card_textSec Text_Medium">Pedidos entregados</p>
+                </div>
+                <div class="Eco_Card flex-colum">
+                    <svg class="Eco_Logo_card" fill="white" height="195px" width="195px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 463 463" xml:space="preserve" stroke="white"><g id="SVGRepo_bgCarrier" stroke-whiteidth="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M367.5,32h-57.734c-3.138-9.29-11.93-16-22.266-16h-24.416c-7.41-9.965-19.148-16-31.584-16 c-12.435,0-24.174,6.035-31.585,16H175.5c-10.336,0-19.128,6.71-22.266,16H95.5C78.131,32,64,46.131,64,63.5v368 c0,17.369,14.131,31.5,31.5,31.5h272c17.369,0,31.5-14.131,31.5-31.5v-368C399,46.131,384.869,32,367.5,32z M175.5,87h112 c7.023,0,13.332-3.101,17.641-8H352v337H111V79h46.859C162.168,83.899,168.477,87,175.5,87z M175.5,31h28.438 c2.67,0,5.139-1.419,6.482-3.727C214.893,19.588,222.773,15,231.5,15c8.728,0,16.607,4.588,21.079,12.272 c1.343,2.308,3.813,3.728,6.482,3.728H287.5c4.687,0,8.5,3.813,8.5,8.5v24c0,4.687-3.813,8.5-8.5,8.5h-112 c-4.687,0-8.5-3.813-8.5-8.5v-24C167,34.813,170.813,31,175.5,31z M384,431.5c0,9.098-7.402,16.5-16.5,16.5h-272 c-9.098,0-16.5-7.402-16.5-16.5v-368C79,54.402,86.402,47,95.5,47H152v16.5c0,0.168,0.009,0.333,0.013,0.5H103.5 c-4.143,0-7.5,3.358-7.5,7.5v352c0,4.142,3.357,7.5,7.5,7.5h256c4.143,0,7.5-3.358,7.5-7.5v-352c0-4.142-3.357-7.5-7.5-7.5h-48.513 c0.004-0.167,0.013-0.332,0.013-0.5V47h56.5c9.098,0,16.5,7.402,16.5,16.5V431.5z"></path> <path d="M231.5,47c1.979,0,3.91-0.8,5.3-2.2c1.4-1.39,2.2-3.33,2.2-5.3c0-1.97-0.8-3.91-2.2-5.3c-1.39-1.4-3.32-2.2-5.3-2.2 c-1.98,0-3.91,0.8-5.3,2.2c-1.4,1.39-2.2,3.32-2.2,5.3s0.8,3.91,2.2,5.3C227.59,46.2,229.52,47,231.5,47z"></path> <path d="M183.5,159h136c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-136c-4.143,0-7.5,3.358-7.5,7.5S179.357,159,183.5,159z"></path> <path d="M183.5,239h136c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-136c-4.143,0-7.5,3.358-7.5,7.5S179.357,239,183.5,239z"></path> <path d="M183.5,319h24c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-24c-4.143,0-7.5,3.358-7.5,7.5S179.357,319,183.5,319z"></path> <path d="M183.5,199h136c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-136c-4.143,0-7.5,3.358-7.5,7.5S179.357,199,183.5,199z"></path> <path d="M183.5,279h32c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-32c-4.143,0-7.5,3.358-7.5,7.5S179.357,279,183.5,279z"></path> <path d="M183.5,359h32c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-32c-4.143,0-7.5,3.358-7.5,7.5S179.357,359,183.5,359z"></path> <path d="M143.5,159h8c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-8c-4.143,0-7.5,3.358-7.5,7.5S139.357,159,143.5,159z"></path> <path d="M143.5,239h8c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-8c-4.143,0-7.5,3.358-7.5,7.5S139.357,239,143.5,239z"></path> <path d="M143.5,319h8c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-8c-4.143,0-7.5,3.358-7.5,7.5S139.357,319,143.5,319z"></path> <path d="M143.5,199h8c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-8c-4.143,0-7.5,3.358-7.5,7.5S139.357,199,143.5,199z"></path> <path d="M143.5,279h8c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-8c-4.143,0-7.5,3.358-7.5,7.5S139.357,279,143.5,279z"></path> <path d="M143.5,359h8c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-8c-4.143,0-7.5,3.358-7.5,7.5S139.357,359,143.5,359z"></path> <path d="M279.5,264c-26.191,0-47.5,21.309-47.5,47.5s21.309,47.5,47.5,47.5c10.583,0,20.367-3.482,28.272-9.357 c0.074-0.052,0.155-0.088,0.228-0.143c0.2-0.15,0.389-0.309,0.57-0.474C319.771,340.329,327,326.747,327,311.5 C327,285.309,305.691,264,279.5,264z M272,279.883V304h-24.117C250.708,292.094,260.094,282.708,272,279.883z M247.883,319h27.867 l16.719,22.292c-3.976,1.737-8.36,2.708-12.969,2.708C264.161,344,251.279,333.315,247.883,319z M304.463,332.284L287,309v-29.117 c14.315,3.396,25,16.278,25,31.617C312,319.398,309.165,326.646,304.463,332.284z"></path> </g> </g></svg>
+                    <p class="Eco_card_textPrin Text_Medium" data-counter="7">+<span class="counter">0</span></p>
+                    <p class="Eco_card_textSec Text_Medium">Años de experiencia</p>
                 </div>
             </div>
-        </section>
+            <div class="Eco_Cont_aux">
+                <div class="Eco_Cont_info flex-colum">
+                    <p class="Eco_tittle Text_Black">LOGÍSTICA SOSTENIBLE</p>
+                    <button class="Eco_button Text_Medium" id="openModalEco">CONOCE NUESTRO PLAN DE GESTIÓN AMBIENTAL</button>
+                </div>
+            </div>
+        </div>
+       <div class="ECo_modal_overlay" id="modalOverlayEco">
+    <div class="modalEco">
+        <!-- Header -->
+        <div class="modal-header">
+            <h2 class="tittle_pdf">Plan de Gestión Ambiental</h2>
+            <button class="Eco_closebtn" id="closeModalEco">&times;</button>
+        </div>
+
+        <!-- Contenido -->
+        <div class="modal-content">
+            <h3>Compromiso con la Sostenibilidad</h3>
+            <p class="modal-description">
+                Nuestro Plan de Gestión Ambiental representa nuestro compromiso firme con la protección del medio ambiente y el desarrollo sostenible. Este documento integra y detalla nuestras estrategias para reducir la huella de carbono, optimizar rutas de entrega, implementar vehículos eco-amigables y promover prácticas logísticas responsables que contribuyan a un futuro más verde y sustentable para las próximas generaciones.
+            </p>
+
+            <!-- Preview del PDF -->
+            <div class="pdf-preview">
+                <div class="pdf-icon">PDF</div>
+                <div class="pdf-info">
+                    <h4>Logística Sostenible 2024</h4>
+                    <p>Documento completo</p>
+                    <p>Estrategias ambientales</p>
+                    <p>Métricas de sostenibilidad</p>
+                    <p>Optimización de rutas verdes</p>
+                </div>
+            </div>
+
+            <p style="color: #28a745; font-weight: 600; margin: 20px 0;">
+                Al presionar el botón, se iniciará automáticamente la descarga del PDF con toda la información detallada sobre nuestras iniciativas de logística sostenible.
+            </p>
+
+            <!-- Botón de Descarga -->
+            <button class="download-btn" id="downloadPdfBtn">
+                <span class="btn-text">
+                    <span>Descargar Plan Ambiental PDF</span>
+                </span>
+                <div class="spinner" id="spinner"></div>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+            <p class="footer-note">
+                * Este documento está disponible gratuitamente como parte de nuestro compromiso con la transparencia ambiental
+            </p>
+        </div>
+    </div>
+</div>
+    </section>
+        
         <section class="Flota" id="Flota">
-            <div class="container flex-row">
+            <div class="container flex-row ConAuxFlota">
                 <div class="Flo_Cont_Info flex-colum">
                     <h1 class="Flo_info_Tittle Text_Black">FLOTA</h1>
                     <h2 class="Flo_info_Subtittle Text_Black">VEHÍCULOS</h2>
@@ -183,11 +332,9 @@
                         </div>
                         <button class="Flo_Button" id="Flo_Button"
                         Titulo="VAN"
-                        Categoria="Carga Seca"
-                        Caracteristicas=" Furgoneta cerrada con espacio de carga en la parte trasera"
-                        Capacidad="800KG - 1.7 Ton"
-                        Mt3="6 - 15 m3"
-                        image="./images-videos/Van.png">
+                        Categoria="Carga Seca 700kg"
+                        Caracteristicas="La solución ideal para carga ligera y mediana.Transportamos carga general, alimentos o dispositivos médicos, entre otros. Asegurando el cumplimiento de la normatividad aplicable para el transporte de sus mercancías."
+                        image="./IMAGENES/PRINCIPAL/VAN.png">
                         <svg fill="#227598"  width="70px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M392.533,298.667c-23.526,0-42.667,19.14-42.667,42.667c0,23.526,19.14,42.667,42.667,42.667 c23.526,0,42.667-19.14,42.667-42.667C435.2,317.807,416.06,298.667,392.533,298.667z M392.533,366.933 c-14.114,0-25.6-11.486-25.6-25.6c0-14.114,11.486-25.6,25.6-25.6c14.114,0,25.6,11.486,25.6,25.6 C418.133,355.447,406.647,366.933,392.533,366.933z"></path> </g> </g> <g> <g> <path d="M509.5,292.634l-6.033-6.033V136.533c0-4.71-3.814-8.533-8.533-8.533h-384c-2.782,0-5.393,1.357-6.989,3.644 l-59.068,84.378c-17.391,14.43-33.562,33.135-36.139,70.374l-6.229,6.238C0.896,294.229,0,296.405,0,298.667v17.067 c0,2.261,0.896,4.437,2.5,6.033l6.033,6.033v13.534c0,4.71,3.814,8.533,8.533,8.533H51.2c4.719,0,8.533-3.823,8.533-8.533 c0-32.939,26.803-59.733,59.733-59.733s59.733,26.795,59.733,59.733c0,4.71,3.814,8.533,8.533,8.533h136.533 c4.719,0,8.533-3.823,8.533-8.533c0-32.939,26.803-59.733,59.733-59.733c32.93,0,59.733,26.795,59.733,59.733 c0,4.71,3.814,8.533,8.533,8.533h34.133c4.719,0,8.533-3.823,8.533-8.533v-13.534l6.033-6.033c1.604-1.596,2.5-3.772,2.5-6.033 v-17.067C512,296.405,511.104,294.229,509.5,292.634z M115.379,145.067h72.354v68.267H67.593L115.379,145.067z M494.933,312.201 l-6.033,6.033c-1.604,1.596-2.5,3.772-2.5,6.033v8.533h-17.545c-4.258-38.349-36.855-68.267-76.322-68.267 c-39.467,0-72.064,29.918-76.322,68.267H195.789c-4.258-38.349-36.855-68.267-76.322-68.267S47.403,294.451,43.145,332.8H25.6 v-8.533c0-2.261-0.896-4.437-2.5-6.033l-6.033-6.033v-10.001l6.033-6.033c1.51-1.502,2.389-3.516,2.492-5.641 c0.299-6.494,1.101-12.194,2.21-17.459h14.865c4.719,0,8.533-3.823,8.533-8.533S47.386,256,42.667,256h-9.165 c4.958-10.18,11.989-18.099,20.787-25.6h141.978c4.719,0,8.533-3.823,8.533-8.533v-76.8h281.6V256h-8.533 c-4.719,0-8.533,3.823-8.533,8.533s3.814,8.533,8.533,8.533h8.533v17.067c0,2.261,0.896,4.437,2.5,6.033l6.033,6.033V312.201z"></path> </g> </g> <g> <g> <path d="M119.467,298.667c-23.526,0-42.667,19.14-42.667,42.667C76.8,364.86,95.94,384,119.467,384s42.667-19.14,42.667-42.667 C162.133,317.807,142.993,298.667,119.467,298.667z M119.467,366.933c-14.114,0-25.6-11.486-25.6-25.6 c0-14.114,11.486-25.6,25.6-25.6s25.6,11.486,25.6,25.6C145.067,355.447,133.581,366.933,119.467,366.933z"></path> </g> </g> </g></svg>
                         </button>
                     </li>
@@ -198,11 +345,12 @@
                         </div>
                         <button class="Flo_Button" id="Flo_Button"
                         Titulo="NHR"
-                        Categoria="Carga Seca / Refrigerada"
-                        Caracteristicas=" Camión pequeño, generalmente con dos ejes, utilizado para transporte de carga en distancias cortas y medias."
-                        Capacidad=" 2 Ton-  3.5 Ton"
-                        Mt3="17 - 29 m3"
-                        image="./images-videos/CAMION_NHR.png">
+                        Categoria="CARGA SECA / REFRIGERADA / CONGELADA"
+                        Caracteristicas="Diseñado para carga mediana. Transportamos carga general, alimentos o dispositivos médicos, entre otros. Asegurando el cumplimiento de la normatividad aplicable para el transporte de sus mercancías. "
+                        double="true"
+                        image="./IMAGENES/PRINCIPAL/NHR_CARGA_SECA.png"
+                        image2="./IMAGENES/PRINCIPAL/NHR_REFRIGERADA.png">
+                        
                         <svg fill="#227598" height="60px" width="60px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 463.185 463.185" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M83.083,311.884c-13.807,0-25.039,11.232-25.039,25.039s11.232,25.04,25.039,25.04s25.039-11.233,25.039-25.04 S96.89,311.884,83.083,311.884z M83.083,346.963c-5.535,0-10.039-4.504-10.039-10.04s4.504-10.039,10.039-10.039 s10.039,4.503,10.039,10.039S88.618,346.963,83.083,346.963z"></path> <path d="M380.97,311.884c-13.807,0-25.039,11.232-25.039,25.039s11.232,25.04,25.039,25.04c13.806,0,25.038-11.233,25.038-25.04 S394.775,311.884,380.97,311.884z M380.97,346.963c-5.535,0-10.039-4.504-10.039-10.04s4.504-10.039,10.039-10.039 s10.038,4.503,10.038,10.039S386.505,346.963,380.97,346.963z"></path> <path d="M462.636,219.623l-36.459-89.995c-1.146-2.832-3.896-4.684-6.951-4.684H296.23V83.506c0-4.142-3.357-7.5-7.5-7.5H7.5 c-4.143,0-7.5,3.358-7.5,7.5v256.2c0,4.142,3.357,7.5,7.5,7.5h26.389c4.759,22.796,25.007,39.974,49.194,39.974 s44.435-17.178,49.193-39.974l199.499-0.001c4.758,22.796,25.007,39.975,49.195,39.975s44.436-17.178,49.194-39.975h25.521 c4.143,0,7.5-3.358,7.5-7.5V222.439C463.185,221.474,462.998,220.518,462.636,219.623z M15,325.676h19.112 c-0.489,2.13-0.849,4.307-1.056,6.53H15V325.676z M83.083,372.179c-19.44,0-35.256-15.816-35.256-35.256 s15.815-35.255,35.256-35.255c19.439,0,35.255,15.815,35.255,35.255S102.522,372.179,83.083,372.179z M281.23,332.205H133.109 c-2.387-25.506-23.907-45.538-50.026-45.538c-18.097,0-33.986,9.618-42.836,24.008H15V91.006h266.23V332.205z M380.97,372.179 c-19.44,0-35.256-15.816-35.256-35.256s15.815-35.255,35.256-35.255c19.439,0,35.255,15.815,35.255,35.255 S400.409,372.179,380.97,372.179z M380.97,286.668c-26.119,0-47.64,20.031-50.027,45.537h-34.711v-192.26h117.94l34.013,83.957 v86.775h-24.379C414.956,296.286,399.067,286.668,380.97,286.668z M430.996,332.204c-0.208-2.222-0.567-4.399-1.056-6.529h18.245 v6.529H430.996z"></path> <path d="M439.9,230.916c1.394-2.068,1.668-4.695,0.731-7.007l-29.28-72.28c-1.146-2.832-3.896-4.684-6.951-4.684h-93.67 c-4.143,0-7.5,3.358-7.5,7.5v72.28c0,4.142,3.357,7.5,7.5,7.5h122.95C436.175,234.225,438.507,232.985,439.9,230.916z M318.23,219.225v-57.28h81.116l23.204,57.28H318.23z"></path> <path d="M433.681,257.725c-4.143,0-7.5,3.358-7.5,7.5v18.95c0,4.142,3.357,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-18.95 C441.181,261.083,437.823,257.725,433.681,257.725z"></path> <path d="M29.782,120.342h236.666c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5H29.782c-4.143,0-7.5,3.358-7.5,7.5 S25.64,120.342,29.782,120.342z"></path> <path d="M29.782,168.786h215.722c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5H29.782c-4.143,0-7.5,3.358-7.5,7.5 S25.64,168.786,29.782,168.786z"></path> <path d="M272.686,157.121c-1.768-2.584-5.002-3.88-8.058-3.107c-2.922,0.739-5.14,3.197-5.598,6.171 c-0.455,2.958,1.003,6.004,3.567,7.531c2.858,1.703,6.607,1.311,9.017-0.999C274.222,164.217,274.669,160.139,272.686,157.121 C272.405,156.711,272.955,157.531,272.686,157.121z"></path> <path d="M266.448,250.676H50.727c-4.143,0-7.5,3.358-7.5,7.5s3.357,7.5,7.5,7.5h215.722c4.143,0,7.5-3.358,7.5-7.5 S270.591,250.676,266.448,250.676z"></path> <path d="M36.705,255.311c-2.018-4.899-8.479-6.086-12.229-2.44c-3.974,4.094-2.11,11.16,3.482,12.577 C33.805,266.931,39.057,260.87,36.705,255.311C36.516,254.851,36.896,255.761,36.705,255.311z"></path> <path d="M29.782,217.231h236.666c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5H29.782c-4.143,0-7.5,3.358-7.5,7.5 S25.64,217.231,29.782,217.231z"></path> </g> </g></svg>
                         </button>
                     </li>
@@ -213,11 +361,13 @@
                         </div>
                         <button class="Flo_Button" id="Flo_Button"
                         Titulo="TURBO"
-                        Categoria="Carga Seca / Refrigerada"
-                        Caracteristicas=" Camión pequeño con mayor potencia que un NHR, generalmente utilizado para transporte de carga un poco más pesada."
-                        Capacidad="3.5 Ton - 5.5 Ton"
-                        Mt3="29 - 38m3"
-                        image="./images-videos/CAMION_TURBO.png">
+                        Categoria="CARGA SECA / REFRIGERADA"
+                        Caracteristicas="Adecuado para carga mediana y grande. Transportamos carga general, alimentos o dispositivos médicos, entre otros. Asegurando el cumplimiento de la normatividad aplicable para el transporte de sus mercancías. "
+                        double="true"
+                        image="./IMAGENES/PRINCIPAL/TURBO_CARGA_SECA.png"
+                        image2="./IMAGENES/PRINCIPAL/TURBO_REFRIGERADA.jpeg"
+                        >
+
                         <svg fill="#227598" height="60px" width="60px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 463 463" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M455.5,300H455v-43.246c0-10.55-4.108-20.469-11.568-27.929l-5.22-5.221l-18.653-68.393 C415.832,141.545,403.335,132,389.169,132H335v-24.5c0-8.547-6.953-15.5-15.5-15.5h-304C6.953,92,0,98.953,0,107.5v192 c0,8.547,6.953,15.5,15.5,15.5h28.125c-1.31,2.836-2.294,5.851-2.902,9H23.5c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5,7.5,7.5h17.223 c3.515,18.205,19.561,32,38.777,32s35.262-13.795,38.777-32h115.668c2.647,4.765,7.728,8,13.555,8h64c5.827,0,10.908-3.235,13.555-8 h19.668c3.515,18.205,19.561,32,38.777,32s35.262-13.795,38.777-32H455.5c4.143,0,7.5-3.357,7.5-7.5v-24 C463,303.357,459.643,300,455.5,300z M421.681,219.999L367.5,220c-0.275,0-0.5-0.225-0.5-0.5V171h40.5 c0.272,0,0.54-0.016,0.805-0.045L421.681,219.999z M389.169,147c6.268,0,11.901,3.576,14.68,9H359.5c-4.143,0-7.5,3.357-7.5,7.5v56 c0,8.547,6.953,15.5,15.5,15.5l60.893-0.001l4.431,4.433c4.628,4.627,7.176,10.778,7.176,17.322V276h-8.5 c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5,7.5,7.5h8.5v9h-32.5c-0.063,0-0.125,0.008-0.188,0.01c-6.626-5.023-14.875-8.01-23.812-8.01 s-17.186,2.987-23.812,8.01c-0.063-0.002-0.125-0.01-0.188-0.01H335V147H389.169z M344.723,324H327v-8.5 c0-0.169-0.02-0.333-0.025-0.5h0.525h20.125C346.315,317.836,345.331,320.851,344.723,324z M15,299.5V251h254.393l-11.196,11.196 c-2.929,2.93-2.929,7.678,0,10.607c1.465,1.464,3.385,2.196,5.304,2.196s3.839-0.732,5.304-2.196l24-24 c0.028-0.028,0.052-0.059,0.079-0.088c0.144-0.148,0.285-0.3,0.416-0.46c0.077-0.094,0.144-0.192,0.216-0.289 c0.074-0.1,0.152-0.197,0.221-0.301c0.074-0.111,0.139-0.226,0.207-0.34c0.057-0.096,0.118-0.19,0.171-0.289 c0.062-0.115,0.114-0.234,0.169-0.351c0.049-0.104,0.101-0.207,0.146-0.314c0.048-0.115,0.086-0.232,0.128-0.349 c0.041-0.114,0.085-0.227,0.12-0.343c0.036-0.118,0.062-0.238,0.092-0.358c0.029-0.118,0.063-0.234,0.086-0.353 c0.028-0.141,0.045-0.283,0.065-0.425c0.014-0.1,0.033-0.199,0.043-0.3c0.049-0.494,0.049-0.991,0-1.485 c-0.01-0.102-0.029-0.2-0.043-0.3c-0.02-0.142-0.037-0.284-0.065-0.425c-0.024-0.12-0.057-0.236-0.086-0.353 c-0.03-0.12-0.056-0.24-0.092-0.358c-0.036-0.117-0.079-0.23-0.12-0.344c-0.042-0.116-0.08-0.234-0.127-0.348 c-0.044-0.107-0.097-0.21-0.146-0.315c-0.055-0.117-0.107-0.235-0.169-0.35c-0.053-0.099-0.114-0.193-0.171-0.289 c-0.068-0.114-0.132-0.229-0.207-0.34c-0.069-0.104-0.147-0.201-0.221-0.301c-0.072-0.096-0.139-0.195-0.216-0.289 c-0.131-0.16-0.272-0.312-0.416-0.46c-0.028-0.029-0.051-0.06-0.079-0.088l-24-24c-2.93-2.928-7.678-2.928-10.607,0 c-2.929,2.93-2.929,7.678,0,10.607L269.393,236H15V107.5c0-0.275,0.225-0.5,0.5-0.5h304c0.275,0,0.5,0.225,0.5,0.5V300H103.497 c-0.063,0-0.123,0.008-0.186,0.009C96.686,294.987,88.436,292,79.5,292c-8.936,0-17.186,2.987-23.812,8.01 c-0.064-0.002-0.126-0.01-0.19-0.01H15.5C15.225,300,15,299.775,15,299.5z M232,315.5v8.5H118.277c-0.608-3.149-1.592-6.164-2.902-9 h116.65C232.02,315.167,232,315.331,232,315.5z M79.5,356C65.99,356,55,345.01,55,331.5S65.99,307,79.5,307s24.5,10.99,24.5,24.5 S93.01,356,79.5,356z M311.5,332h-64c-0.275,0-0.5-0.225-0.5-0.5v-16c0-0.275,0.225-0.5,0.5-0.5h64c0.275,0,0.5,0.225,0.5,0.5 v15.961c0,0.013-0.002,0.026-0.002,0.039c0,0.003,0,0.005,0,0.008C311.994,331.779,311.773,332,311.5,332z M383.5,356 c-13.51,0-24.5-10.99-24.5-24.5s10.99-24.5,24.5-24.5s24.5,10.99,24.5,24.5S397.01,356,383.5,356z M448,324h-25.723 c-0.608-3.149-1.592-6.164-2.902-9H448V324z"></path> </g></svg>
                         </button>
                     </li>
@@ -228,11 +378,12 @@
                         </div>
                         <button class="Flo_Button" id="Flo_Button"
                         Titulo="SENCILLO"
-                        Categoria="Carga Seca / Refrigerada"
-                        Caracteristicas="Camión de mayor tamaño que un Turbo, generalmente utilizado para transporte de carga pesada."
-                        Capacidad="6 Ton - 15 Ton"
-                        Mt3="45 - 70 m3"
-                        image="./images-videos/Van.jpeg">
+                        Categoria="CARGA SECA / REFRIGERADA"
+                        Caracteristicas="Ideales para operaciones logísticas de alto peso y volumen.Transportamos carga general, alimentos o dispositivos médicos, entre otros. Asegurando el cumplimiento de la normatividad aplicable para el transporte de sus mercancías. "
+                        double="true"
+                        image='./IMAGENES/PRINCIPAL/SENCILLO_CARGA_SECA.png'
+                        image2='./IMAGENES/PRINCIPAL/SENCILLO_REFRIGERADO.png'
+                        >
                         <svg style="margin-right: 5px;" fill="#227598" height="60px" width="60px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 502 502" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M500.45,223.742l-60.859-96.156c-1.833-2.896-5.022-4.652-8.45-4.652H10c-5.523,0-10,4.477-10,10V345.94 c0,5.523,4.477,10,10,10h30.189c3.825,13.336,16.121,23.126,30.67,23.126c9.096,0,17.308-3.832,23.126-9.958 c5.818,6.126,14.031,9.958,23.126,9.958c14.548,0,26.845-9.79,30.67-23.126H267.8c3.825,13.336,16.122,23.126,30.67,23.126 c14.548,0,26.845-9.79,30.67-23.126h24.102h54.532c3.825,13.336,16.122,23.126,30.67,23.126c14.548,0,26.845-9.79,30.67-23.126 H492c5.523,0,10-4.477,10-10V229.09C502,227.214,501.452,225.327,500.45,223.742z M82.659,348.758 c-0.79,5.807-5.94,10.306-11.801,10.306c-5.178,0-9.895-3.521-11.4-8.471c-1.361-4.475,0.116-9.437,3.663-12.471 c3.949-3.378,9.786-3.789,14.163-0.976C81.141,339.628,83.278,344.209,82.659,348.758z M128.912,348.758 c-0.79,5.807-5.94,10.306-11.801,10.306c-5.178,0-9.895-3.521-11.4-8.471c-1.361-4.475,0.116-9.437,3.663-12.471 c3.949-3.378,9.786-3.79,14.163-0.976C127.393,339.628,129.531,344.209,128.912,348.758z M310.271,348.758 c-0.79,5.807-5.94,10.306-11.801,10.306c-5.178,0-9.895-3.521-11.4-8.471c-1.361-4.475,0.116-9.437,3.663-12.471 c3.949-3.378,9.786-3.79,14.164-0.976C308.752,339.628,310.89,344.209,310.271,348.758z M343.242,335.938h-14.904 c-4.55-12.076-16.22-20.692-29.868-20.692s-25.318,8.616-29.868,20.692H146.979c-4.55-12.076-16.22-20.692-29.868-20.692 c-9.096,0-17.308,3.832-23.126,9.958c-5.818-6.127-14.031-9.958-23.126-9.958c-13.648,0-25.317,8.616-29.868,20.692H20v-29.904 h323.242V335.938z M343.242,286.034H20v-143.1h323.242V286.034z M363.242,142.934H391v20.065c0,5.523,4.477,10,10,10 s10-4.477,10-10v-20.065h14.636l48.2,76.156H363.242V142.934z M450.245,348.758c-0.79,5.807-5.94,10.306-11.801,10.306 c-5.178,0-9.895-3.521-11.4-8.471c-1.361-4.475,0.116-9.437,3.663-12.471c3.949-3.378,9.786-3.79,14.164-0.976 C448.727,339.628,450.864,344.209,450.245,348.758z M482,262h-12c-5.523,0-10,4.477-10,10s4.477,10,10,10h12v9h-12 c-5.523,0-10,4.477-10,10s4.477,10,10,10h12v24.939h-13.687c-4.55-12.076-16.22-20.692-29.868-20.692 s-25.318,8.616-29.868,20.692h-45.334V239.09H482V262z"></path> <path d="M45,176.999h91c5.523,0,10-4.477,10-10s-4.477-10-10-10H45c-5.523,0-10,4.477-10,10S39.477,176.999,45,176.999z"></path> <path d="M175,176.999h14c5.523,0,10-4.477,10-10s-4.477-10-10-10h-14c-5.523,0-10,4.477-10,10S169.477,176.999,175,176.999z"></path> <path d="M401,184.999c-5.523,0-10,4.477-10,10v3c0,5.523,4.477,10,10,10s10-4.477,10-10v-3 C411,189.476,406.523,184.999,401,184.999z"></path> </g> </g> </g> </g></svg>
                         </button>
                     </li>
@@ -243,11 +394,9 @@
                         </div>
                         <button class="Flo_Button" id="Flo_Button"
                         Titulo="TRACTOCAMIÓN"
-                        Categoria="Carga Seca / Refrigerada"
-                        Caracteristicas="Características: Camión compuesto por dos partes: la cabeza tractora (que jala el semi-remolque) y el semi-remolque (que no tiene motor propio)."
-                        Capacidad="30 Ton - 35Ton"
-                        Mt3="70 - 90 M3"
-                        image="./images-videos/Van.jpeg">
+                        Categoria="Carga Seca / 70m3 - 90m3 / 30Ton - 35Ton"
+                        Caracteristicas="Diseñasdo para transporte de carga de alto peso y volumen. Transportamos carga general, alimentos o dispositivos médicos, entre otros. Asegurando el cumplimiento de la normatividad aplicable para el transporte de sus mercancías."
+                        image="./IMAGENES/PRINCIPAL/TRACTOCAMION.png">
                         <svg style="margin-right: 11px;" fill="#227598" height="70px" width="70px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 463 463" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M462.684,241.345l-20.579-68.598C439.1,162.73,430.054,156,419.596,156H375.5c-4.142,0-7.5,3.357-7.5,7.5V180h-17v-39.5 c0-4.687-3.813-8.5-8.5-8.5H8.5c-4.687,0-8.5,3.813-8.5,8.5v134c0,4.687,3.813,8.5,8.5,8.5H16v16.5c0,4.143,3.358,7.5,7.5,7.5 h57.409c3.374,13.759,15.806,24,30.591,24c9.607,0,18.217-4.328,24-11.131c5.783,6.803,14.393,11.131,24,11.131 c14.785,0,27.216-10.241,30.591-24h75.855c2.647,4.765,7.728,8,13.555,8h40c5.827,0,10.908-3.235,13.555-8h19.855 c3.374,13.759,15.806,24,30.591,24s27.216-10.241,30.591-24H455.5c4.142,0,7.5-3.357,7.5-7.5v-56 C463,242.771,462.894,242.044,462.684,241.345z M445.42,236H423.5c-9.098,0-16.5-7.402-16.5-16.5V195h26.12L445.42,236z M352.909,292H335v-8.5c0-0.169-0.02-0.333-0.025-0.5h8.525h13.181C354.984,285.749,353.7,288.778,352.909,292z M368,195v73h-17v-73 H368z M15,235h278.393l-3.196,3.196c-2.929,2.93-2.929,7.678,0,10.607c1.464,1.464,3.384,2.196,5.303,2.196s3.839-0.732,5.303-2.196 l16-16c2.929-2.93,2.929-7.678,0-10.607l-16-16c-2.929-2.928-7.678-2.928-10.606,0c-2.929,2.93-2.929,7.678,0,10.607l3.196,3.196H15 v-73h321v121H15V235z M264,283.5v8.5h-73.909c-0.79-3.222-2.074-6.251-3.772-9h77.707C264.02,283.167,264,283.331,264,283.5z M31,283h53.681c-1.698,2.749-2.982,5.778-3.772,9H31V283z M111.5,316c-9.098,0-16.5-7.402-16.5-16.5s7.402-16.5,16.5-16.5 s16.5,7.402,16.5,16.5S120.598,316,111.5,316z M159.5,316c-9.098,0-16.5-7.402-16.5-16.5s7.402-16.5,16.5-16.5s16.5,7.402,16.5,16.5 S168.598,316,159.5,316z M319.5,300h-40c-0.276,0-0.5-0.225-0.5-0.5v-16c0-0.275,0.224-0.5,0.5-0.5h40c0.276,0,0.5,0.225,0.5,0.5v16 C320,299.775,319.776,300,319.5,300z M383.5,316c-9.098,0-16.5-7.402-16.5-16.5s7.402-16.5,16.5-16.5s16.5,7.402,16.5,16.5 S392.598,316,383.5,316z M414.091,292c-3.374-13.759-15.806-24-30.591-24c-0.168,0-0.333,0.01-0.5,0.013V171h36.596 c3.783,0,7.055,2.435,8.142,6.058L428.62,180H399.5c-4.142,0-7.5,3.357-7.5,7.5v32c0,17.369,14.131,31.5,31.5,31.5H448v9h-8.5 c-4.142,0-7.5,3.357-7.5,7.5s3.358,7.5,7.5,7.5h8.5v17H414.091z"></path> </g></svg>
                         </button>
                     </li>
@@ -255,53 +404,55 @@
                 </ul>
             </div>
             <div id="Flo_Modal" class="Flo_Modal">
-                <!-- Contenido de la Modal -->
-                <div class="Flo_modal_cont flex-row">
+                <div class="Cont_general flex-row ConAuxFlota">
+                    <!-- Contenido de la Modal -->
                     <div class="Flo_modal_content flex-colum">
                         <div class="Flo_modal_content_x">
                             <span id="close-modal" class="close">&times;</span>
                         </div>
-                        <h2 class="Flo_modal_tittle Text_Black" id="modal-title"></h2>
-                        <p class="Flo_modal_sudtitle Text_Black" id="modal_Categoria"></p>
+                        <div class="cont_head flex-colum">
+                            <h2 class="Flo_modal_tittle Text_Black" id="modal-title"></h2>
+                            <p class="Flo_modal_sudtitle Text_Black" id="modal_Categoria"></p>
+                        </div>
                         <div class="Flo_modal_Cont flex-colum">
                             <span class="Flo_modal_sub Text_Black">Caracteristicas</span>
                             <p class="Flo_modal_text Text_Medium" id="modal-Caracteristicas"></p>
                         </div>
-                        <div class="Flo_modal_Cont flex-colum">
-                            <span class="Flo_modal_sub Text_Black">Capacidad</span>
-                            <p class="Flo_modal_text Text_Medium" id="modal-Capacidad"></p>
-                        </div>
-                        <div class="Flo_modal_Cont_h flex-row">
-                            <div class="Flo_modal_Cont flex-colum">
-                                <span class="Flo_modal_sub Text_Black">Mt3</span>
-                                <p class="Flo_modal_text Text_Medium" id="modal-Mt3"></p>
-                            </div>
-                            <div class="Flot_modal_cont_hiper"><a href="./contactenos.html" class="Flo_modal_hiper Text_Black">Cotizar servicio</a></div>
+                        <div class="Flot_modal_cont_hiper">
+                            <a href="./contactenos.html" class="Flo_modal_hiper Text_Black">Cotizar servicio</a>
                         </div>
                     </div>
-                    <img class="Flo_modal_Image" id="modal-image"  src="" alt="Van">
+                    <div class="cont_image">
+                        <div class="cont_image_two">
+                            <img class="Flo_modal_Image" id="modal-image"  src="" alt="Van">
+                            <img class="Flo_modal_Image2" id="modal-image2"  src="" alt="Van">
+                        </div>
+                        <div class="Cont_image_one">
+                            <img class="Flo_modal_Image" id="modal-image"  src="" alt="Van">
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
+            
         </section>
-        <a href="https://api.whatsapp.com/send?phone=3142926216&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." class="float float_Wha" target="_blank">
+
+        <a href="https://api.whatsapp.com/send?phone=3142926216&text=Hola%2C%20buen%20d%C3%ADa.%20%0AEstoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20transporte%20y%20log%C3%ADstica.%20%C2%BFPodr%C3%ADan%20brindarme%20mayor%20informaci%C3%B3n%3F" class="float float_Wha" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
         </a>
-        <a href="$" class="float_IL">
+        <a href="https://www.linkedin.com/company/dcuervo-soluciones-logisticas/posts/?feedView=all" class="float_IL">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle class="Color_Back" cx="24" cy="24" r="20" fill="#0077B5"></circle> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7747 14.2839C18.7747 15.529 17.8267 16.5366 16.3442 16.5366C14.9194 16.5366 13.9713 15.529 14.0007 14.2839C13.9713 12.9783 14.9193 12 16.3726 12C17.8267 12 18.7463 12.9783 18.7747 14.2839ZM14.1199 32.8191V18.3162H18.6271V32.8181H14.1199V32.8191Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2393 22.9446C22.2393 21.1357 22.1797 19.5935 22.1201 18.3182H26.0351L26.2432 20.305H26.3322C26.9254 19.3854 28.4079 17.9927 30.8101 17.9927C33.7752 17.9927 35.9995 19.9502 35.9995 24.219V32.821H31.4922V24.7838C31.4922 22.9144 30.8404 21.6399 29.2093 21.6399C27.9633 21.6399 27.2224 22.4999 26.9263 23.3297C26.8071 23.6268 26.7484 24.0412 26.7484 24.4574V32.821H22.2411V22.9446H22.2393Z" fill="white"></path> </g></svg>
         </a>
 
         <div id="cookieModal" class="modalCo">
             <div class="modal-contentCo">
                 <div class="modal_header flex-row">
-                    <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="Logo" width="180px">
+                    <img src="./IMAGENES/COMPARTIDO/Logo-Dcuervo-PNG Blanco.png" alt="Logo" width="180px">
                     <span id="close-modal" class="close">&times;</span>
                 </div>
                 <div class="Cont_Coo flex-colum">
                     <h2 class="modal_Tittle Text_Black">Centro de preferencia de la privacidad</h2>
                     <div id="cont_Text_Parr_acor" class="cont_Text_Parr_acor Text_Medium flex-colum">
-                        <p>Las "cookies" son pequeños archivos que nos permiten almacenar información sobre su
+                        <p class="Text_Coo">Las "cookies" son pequeños archivos que nos permiten almacenar información sobre su
                             dispositivo y, más específicamente, sobre nuestros usuarios, cuando visita uno de nuestros
                             sitios web. Las cookies nos ayudan a determinar la frecuencia con que se accede a
                             nuestras páginas web, además de cuántos usuarios acceden a ellas. Asimismo, nos ayudan
@@ -310,7 +461,7 @@
                         </p>
                     </div>
                     <div id="cont_Text_Parr_largo" class="hidden cont_Text_Parr_largo Text_Medium flex-colum">
-                        <p>
+                        <p class="Text_Coo">
                             Las "cookies" son pequeños archivos que nos permiten almacenar información sobre su
                             dispositivo y, más específicamente, sobre nuestros usuarios, cuando visita uno de nuestros
                             sitios web. Las cookies nos ayudan a determinar la frecuencia con que se accede a
@@ -318,21 +469,21 @@
                             a adaptar nuestras ofertas para que resulten lo más cómodas y eficaces posible para los
                             usuarios.
                         </p>
-                        <div class="espacio"></div>
-                        <p>
+                        
+                        <p class="Text_Coo">
                             Este sitio web utiliza cookies y tecnologías similares, que nos permiten, por ejemplo,
                             determinar la frecuencia con la que se visitan nuestras páginas en Internet, el número de
                             visitantes, configurar nuestras ofertas, para ofrecer la máxima comodidad y eficiencia, y
                             respaldar nuestros esfuerzos de marketing.
                         </p>
-                        <div class="espacio"></div>
-                        <p>
+                        
+                        <p class="Text_Coo">
                             Cuando acceda a nuestro sitio web, un centro de preferencias de privacidad le notificará
                             que se han configurado las cookies técnicamente necesarias y que, además, se requiere su
                             consentimiento para utilizar determinadas tecnologías, como cookies analíticas o similares.
                         </p>
-                        <div class="espacio"></div>
-                        <p>
+                        
+                        <p class="Text_Coo">
                             El procesamiento de datos mediante cookies técnicamente necesarias se basa en nuestro
                             interés, qu e pueda utilizar nuestro sitio web de la mejor manera posible, garantizar que
                             nuestro sitio web funcione correctamente y garantizar una experiencia de usuario cómoda y
@@ -340,8 +491,8 @@
                             durante el tiempo que dura la visita del usuario a nuestro sitio web. Se eliminan
                             automáticamente al cerrar el navegador.
                         </p>
-                        <div class="espacio"></div>
-                        <p>
+                        
+                        <p class="Text_Coo">
                             Además, recibirá una notificación a través del centro de preferencias de privacidad para
                             informarle de que utilizamos otras tecnologías (tecnologías de rendimiento, funcionales o
                             de análisis) para almacenar información sobre los visitantes que acceden de forma habitual
@@ -367,22 +518,16 @@
         <button id="clearCookies" style="margin-top: 20px;">Borrar Cookies</button>
 
         <footer>
-            <div class="container_footer flex-row">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4892.961380551489!2d-74.13070069999999!3d4.682469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c9be51a1917%3A0x598deb04c6fadd2e!2sCra.%2097%20%2324c-23%2C%20Bogot%C3%A1!5e1!3m2!1ses!2sco!4v1741198473597!5m2!1ses!2sco" 
-                width="300" 
-                height="200" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <img src="./images-videos/Logo-Dcuervo-PNG Blanco.png" alt="" width="250px">
+            <div class="container container_footer flex-row">
+                <iframe class="Foo_Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37738.67869853316!2d-74.13432320000001!3d4.6202879999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b6b4aea8a43%3A0x935eec4c90b47078!2zQ2wuIDY3YSAjIDczQS0xNywgRW5nYXRpdsOhLCBCb2dvdMOhLCBELkMuLCBCb2dvdMOhLCBCb2dvdMOhLCBELkMu!5e1!3m2!1ses!2sco!4v1748814878208!5m2!1ses!2sco" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <img class="Foo_logo" src="./IMAGENES/COMPARTIDO/Logo-Dcuervo-PNG Blanco.png" alt="" width="250px">
                 <div class="Foo_Cont_Info2 flex-colum">
                     <p class="Foo_Info2_Tittle Text_Black">Sobre Dcuervo</p>
                     <ul class="list flex-colum">
                         <li class="Foo_Info2_Item"><a href="#Qsomos">En Dcuervo somos</a></li>
                         <li class="Foo_Info2_Item"><a href="#Qsomos">Nuestro Propósito</a></li>
-                        <li class="Foo_Info2_Item"><a href="#Nosotros">Misión</a></li>
-                        <li class="Foo_Info2_Item"><a href="#Nosotros">Visión</a></li>
+                        <!-- <li class="Foo_Info2_Item"><a href="#Nosotros">Misión</a></li>
+                        <li class="Foo_Info2_Item"><a href="#Nosotros">Visión</a></li> -->
                     </ul>
                 </div>
                 <div class="Foo_Cont_Info1 flex-colum">
@@ -503,7 +648,7 @@
                         <p class="Text_Pqr Text_Black">2. Definiciones</p>
                         <ul class="list flex-colum">
                             <li class="Defi_list flex-row"> 
-                                <p class="Text_Black">Petición:<p class="Text_Medium" style="margin-left: 5px;">Solicitud de información o requerimiento relacionado con nuestros 
+                                <p class="Text_Black Pol_text">Petición:<p class="Text_Medium" style="margin-left: 5px;">Solicitud de información o requerimiento relacionado con nuestros 
                                 servicios.</p></p>
                             </li>
                             <li class="Defi_list flex-row">
@@ -517,31 +662,31 @@
                         <ul class="list flex-colum">
                             <li class="Defi_list Text_Black flex-row"><p class="">Correo electrónico: <a href="#" class="Text_Medium" style="color: black;">info.solucioneslogisticas@dcuervo.com  </a></p></li>
                             <li class="Defi_list Text_Black flex-row">Línea de atención: <p class="Text_Medium" style="margin-left: 5px;">3213977488 / 3142926216 </p></p></li>
-                            <li class="Defi_list Text_Black flex-row">Oficina principal: <p class="Text_Medium" style="margin-left: 5px;">Carrera 97 # 24 C23 Muelle empresarial 1 Bodega 14 </p></p></li>
+                            <li class="Defi_list Text_Black flex-row">Oficina principal: <p class="Text_Medium" style="margin-left: 5px;">Calle 67A # 73A 17</p></p></li>
                             <li class="Defi_list Text_Black flex-row"><a href="https://docs.google.com/forms/d/e/1FAIpQLSch4YLE_nBCYhdnFa1kQW3Y9WhFp0-Lz8B--y8kZEI3XDUw1g/viewform" class="Text_Black pqr_Form">Formulario en línea</a></li>
                         </ul>
                         <p class="Text_Pqr Text_Black">4. Proceso de presentación de PQRS </p>
                         <ul class="list flex-colum">
                             <p class="Defi_list">Identifica el tipo de solicitud: Antes de presentar tu PQR, determina si se trata de:</p>
-                            <li style="margin-left: 20px;">
-                                <ul class="list flex-colum">
-                                    <li class="Defi_list flex-row"><p class="Text_Black" >Petición:<p class="Text_Medium Sepa">Solicitud de información o aclaración sobre un servicio.</p></p></li>
-                                    <li class="Defi_list flex-row"><p class="Text_Black" >Queja:<p class="Text_Medium Sepa">Inconformidad con la atención o el servicio recibido. </p></p></li>
-                                    <li class="Defi_list flex-row"><p class="Text_Black" >Reclamo:<p class="Text_Medium Sepa">Solicitud de corrección por un servicio deficiente o incumplimiento </p></p></li>
+                            <li class="Pol_Text_corre">
+                                <ul class="list flex-colum cualquiera">
+                                    <li class="Text_Pqr flex-row"><p class="Text_Black" >Petición:<p class="Text_Medium Sepa">Solicitud de información o aclaración sobre un servicio.</p></p></li>
+                                    <li class="Text_Pqr flex-row"><p class="Text_Black" >Queja:<p class="Text_Medium Sepa">Inconformidad con la atención o el servicio recibido. </p></p></li>
+                                    <li class="Text_Pqr flex-row"><p class="Text_Black" >Reclamo:<p class="Text_Medium Sepa">Solicitud de corrección por un servicio deficiente o incumplimiento </p></p></li>
                                 </ul>
                             </li>
-                            <li>
-                                <ul class="list flex-colum">
-                                    <p class=" Text_Pqr" style="margin-left: 20px;">Reúne la información necesaria: Para agilizar la respuesta, ten a la mano: </p>
-                                        <ul class="flex-colum">
-                                            <li class="flex-row" style="margin-top: 10px;"><p class="Text_Black">Nombre completo  </p></li>
-                                            <li class="flex-row" style="margin-top: 10px;"><p class="Text_Black">Numero de celular </p></li>
-                                            <li class="flex-row" style="margin-top: 10px;"><p class="Text_Black">Correo electrónico</p></li>
+                            <li  class="Pol_Text_corre">
+                                <div class=" flex-colum">
+                                    <p class=" Text_Pqr" style="margin-left: 12px;">Reúne la información necesaria: Para agilizar la respuesta, ten a la mano: </p>
+                                        <ul class="flex-colum Pol_esteti">
+                                            <li class="flex-row Defi_list" style="margin-top: 10px;"><p class="Text_Black">Nombre completo  </p></li>
+                                            <li class="flex-row Defi_list" style="margin-top: 10px;"><p class="Text_Black">Numero de celular </p></li>
+                                            <li class="flex-row Defi_list" style="margin-top: 10px;"><p class="Text_Black">Correo electrónico</p></li>
                                         </ul>
                                     <li class="Text_Pqr" style="margin-left: 20px;"><p class="Text_Medium">Tipo de servicio: (Transporte, Almacenamiento, Logistica integral, Logistica inversa)</p></li>
                                     <li class="Text_Pqr" style="margin-left: 20px;"><p class="Text_Medium">Descripción: Menciona de manera clara y detallada el caso </p></li>
                                     <li class="Text_Pqr" style="margin-left: 20px;"><p class="Text_Medium">Evidencias: (Factura, correos, fotos, videos, etc)</p></li>
-                                </ul>
+                                </div>
                             </li>
                         </ul>
                         <p class="Text_Pqr Text_Black">5. Evaluación y respuesta:</p>
@@ -560,17 +705,18 @@
             </div>
         </footer>
         <section class="Final">
-            <div class="container flex-row">
+            <div class="container flex-row con_final">
                 <p class="Text_Medium Final_Text">
                     Dcuervo 2024.
                     <button id="Trb_Button_aut" class="Ref_Final Text_Medium">Política de privacidad</button>  |  
                     <button id="Trb_Button_Req" class="Ref_Final Text_Medium">Términos y condiciones</button>  |  
-                    <a class="Ref_Final" href="https://www.google.com/maps/place/Cra.+97+%2324c-23,+Bogot%C3%A1/@4.6824743,-74.1332756,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9c9be51a1917:0x598deb04c6fadd2e!8m2!3d4.682469!4d-74.1307007!16s%2Fg%2F11hyc85p2l?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D">Mapa del sitio</a> | </p>
+                    <a class="Ref_Final" href="https://maps.app.goo.gl/zrRq7H4cvmaW71EDA">Mapa del sitio</a> | </p>
                 <div class="Foo_Cont_sgv_contac flex-row">
-                    <a href="#" ><svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M256.001,0C148.342,0,60.755,87.586,60.755,195.245c0,56.66,16.898,115.289,50.225,174.26 c28.99,51.297,65.23,93.242,90.526,119.398C215.912,503.798,235.265,512,256,512c20.735,0,40.088-8.202,54.494-23.098 c25.296-26.155,61.536-68.101,90.526-119.398c33.327-58.971,50.225-117.6,50.225-174.26C451.246,87.586,363.659,0,256.001,0z M256.001,270.381c-41.43,0-75.136-33.706-75.136-75.136c0-41.43,33.705-75.136,75.136-75.136 c41.43,0,75.136,33.706,75.136,75.136C331.137,236.675,297.431,270.381,256.001,270.381z"></path> </g> </g> </g></svg></a>
-                    <a href="#" ><svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13 c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3 c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13 c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z"></path> </g></svg></a>
+                    <a href="https://maps.app.goo.gl/zrRq7H4cvmaW71EDA" ><svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M256.001,0C148.342,0,60.755,87.586,60.755,195.245c0,56.66,16.898,115.289,50.225,174.26 c28.99,51.297,65.23,93.242,90.526,119.398C215.912,503.798,235.265,512,256,512c20.735,0,40.088-8.202,54.494-23.098 c25.296-26.155,61.536-68.101,90.526-119.398c33.327-58.971,50.225-117.6,50.225-174.26C451.246,87.586,363.659,0,256.001,0z M256.001,270.381c-41.43,0-75.136-33.706-75.136-75.136c0-41.43,33.705-75.136,75.136-75.136 c41.43,0,75.136,33.706,75.136,75.136C331.137,236.675,297.431,270.381,256.001,270.381z"></path> </g> </g> </g></svg></a>
+                    <a href="https://www.linkedin.com/company/dcuervo-soluciones-logisticas/posts/?feedView=all" class="Linkked" ><svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13 c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3 c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13 c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z"></path> </g></svg></a>
                     <a href="#" ><svg height="35px" width="35px"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Communication / Mail"> <path id="Vector" d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg></a>
                 </div>
+                <div class="imgSuper"></div>
             </div>
         </section>
     </main>

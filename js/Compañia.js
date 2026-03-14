@@ -2,15 +2,26 @@
 const slider = document.querySelector(".Dcuervo_slider");
 const slides = document.querySelectorAll(".Dcuervo_slide");
 
+// reponsive scroll de hamburguesa 
+const menuToggle = document.getElementById('menuToggle');
+const navWrapper = document.getElementById('navWrapper');
+
+
 const modal = document.getElementById('Flo_Modal');
 const btn = document.querySelectorAll('.Flo_Button');
-
 const closeModal = document.getElementById('close-modal');
 const modalTitle = document.getElementById('modal-title');
+const modalCategoria = document.getElementById('modal_Categoria');
 const modalCaracter = document.getElementById('modal-Caracteristicas');
-const modalCapaciti = document.getElementById('modal-Capacidad');
-const modalMt3 = document.getElementById('modal-Mt3');
 const modalImage = document.getElementById('modal-image');
+const modalImage2 = document.getElementById('modal-image2');
+
+// Contenedores de imágenes
+const contImageOne = document.querySelector('.Cont_image_one');
+const contImageTwo = document.querySelector('.cont_image_two');
+
+
+//footer modales terminos y condiciones - pqr - politica
 
 const modal3 = document.getElementById('modal_Ter');
 const closeModal3 = document.getElementById('close_Ter');
@@ -24,14 +35,112 @@ const modal4 = document.getElementById('modal_Pol');
 const closeModal4 = document.getElementById('close_Pol');
 const button4 = document.getElementById('Trb_Button_Pol');
 
+
 const div1 = document.getElementById('cont_Text_Parr_acor');
 const div2 = document.getElementById('cont_Text_Parr_largo');
 
+//Variables Seccion Eco
+const openModalBtnEco = document.getElementById('openModalEco');
+const modalOverlayEco = document.getElementById('modalOverlayEco');
+const closeModalBtnEco = document.getElementById('closeModalEco');
+const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+const spinner = document.getElementById('spinner');
+
 const buttonInfo = document.getElementById('Cambio');
 
+let currentCard = 0;
+const totalCards = 3;
+const autoSlideInterval = 4000; // 4 segundos
+let autoSlideTimer;
+
+// Variable para controlar el intervalo de alternancia
+let intervalId = null;
 let currentIndex = 0;
 let currentDes = 0;
 let currentLo = 0;
+
+// Hrader responsive 
+
+menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navWrapper.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        const menuLinks = document.querySelectorAll('.nav-wrapper a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                navWrapper.classList.remove('active');
+            });
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = navWrapper.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && navWrapper.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                navWrapper.classList.remove('active');
+        }
+});
+
+function updateCarousel() {
+    const wrapper = document.querySelector('.carousel-wrapper');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    // Mover el carrusel
+    wrapper.style.transform = `translateX(-${currentCard * (100 / totalCards)}%)`;
+    
+    // Actualizar indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentCard);
+    });
+}
+function nextCard() {
+    currentCard = (currentCard + 1) % totalCards;
+    updateCarousel();
+    resetAutoSlide();
+}
+function prevCard() {
+    currentCard = (currentCard - 1 + totalCards) % totalCards;
+    updateCarousel();
+    resetAutoSlide();
+}
+function goToCard(index) {
+    currentCard = index;
+    updateCarousel();
+    resetAutoSlide();
+}
+function startAutoSlide() {
+    autoSlideTimer = setInterval(nextCard, autoSlideInterval);
+}
+function resetAutoSlide() {
+    clearInterval(autoSlideTimer);
+    startAutoSlide();
+}
+// Pausar el auto-slide cuando el mouse está sobre el carrusel
+document.querySelector('.Ad_Cont_card').addEventListener('mouseenter', () => {
+    clearInterval(autoSlideTimer);
+});
+// Reanudar el auto-slide cuando el mouse sale del carrusel
+document.querySelector('.Ad_Cont_card').addEventListener('mouseleave', () => {
+    startAutoSlide();
+});
+// Inicializar el carrusel
+document.addEventListener('DOMContentLoaded', () => {
+    updateCarousel();
+    startAutoSlide();
+});
+// Soporte para navegación con teclado
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        prevCard();
+    } else if (e.key === 'ArrowRight') {
+        nextCard();
+    }
+});
 
 button2.onclick = function() {
   modal2.style.display = "block";
@@ -111,35 +220,220 @@ function nextSlide() {
   showSlide(currentIndex);
 }
 
-btn.forEach(btn => {
-  btn.addEventListener('click', function(){
-    const tittle = this.getAttribute('Titulo');
-    const Categoria = this.getAttribute('Categoria');
-    const Caracter = this.getAttribute('Caracteristicas');
-    const Capacidad = this.getAttribute('Capacidad');
-    const Mt3 = this.getAttribute('Mt3');
-    const image = this.getAttribute('image');
+let currentIndexImage = 0;
+let sliderInterval;
+function changeImage() {
+    const images = sliderImage.querySelectorAll('img');
     
+    images[currentIndexImage].classList.remove('active');
+    currentIndexImage = (currentIndexImage + 1) % images.length;
+    images[currentIndexImage].classList.add('active');
+}
 
+// Función para abrir el modal
+        function openModalEco() {
+            modalOverlayEco.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function downloadPDF() {
+    const btn = downloadPdfBtn;
+    const btnText = btn.querySelector('.btn-text');
+    
+    // Cambiar estado a descargando
+    btn.classList.add('downloading');
+    btn.disabled = true;
+    btnText.style.display = 'none';
+    spinner.style.display = 'block';
+    
+    // Simular proceso de descarga (puedes ajustar el tiempo)
+    setTimeout(() => {
+        // Crear enlace de descarga
+        const link = document.createElement('a');
+        link.href = './PDF/Logística_Sostenible.pdf'; // CAMBIA ESTA RUTA POR LA DE TU PDF
+        link.download = 'Plan-Logistica-Sostenible-2024.pdf'; // Nombre del archivo descargado
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Cambiar estado a éxito
+        btn.classList.remove('downloading');
+        btn.classList.add('success');
+        spinner.style.display = 'none';
+        btnText.innerHTML = '<span>¡Descarga Iniciada!</span>';
+        btnText.style.display = 'flex';
+        
+        // Restaurar botón después de 3 segundos
+        setTimeout(() => {
+            btn.classList.remove('success');
+            btn.disabled = false;
+            btnText.innerHTML = '<span>Descargar Plan Ambiental PDF</span>';
+        }, 3000);
+        
+    }, 1500); // Simula 1.5 segundos de "preparación de descarga"
+}
+
+
+if (downloadPdfBtn) {
+    downloadPdfBtn.addEventListener('click', downloadPDF);
+}
+
+        // Función para cerrar el modal
+        function closeModalEco() {
+            modalOverlayEco.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event listeners para modal
+        openModalBtnEco.addEventListener('click', openModalEco);
+        closeModalBtnEco.addEventListener('click', closeModalEco);
+
+        modalOverlayEco.addEventListener('click', function(e) {
+            if (e.target === modalOverlayEco) {
+                closeModalEco();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modalOverlayEco.classList.contains('show')) {
+                closeModalEco();
+            }
+        });
+
+        // Función para animar contador con efecto más suave
+        function animateCounter(element, target, duration = 2500) {
+            const counter = element.querySelector('.counter');
+            let current = 0;
+            const increment = target / (duration / 16);
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Intersection Observer mejorado
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('visible');
+                    
+                    if (entry.target.hasAttribute('data-counter')) {
+                        const targetValue = parseInt(entry.target.getAttribute('data-counter'));
+                        setTimeout(() => {
+                            animateCounter(entry.target, targetValue, 3000);
+                        }, 500);
+                    }
+                    
+                    if (entry.target.classList.contains('Eco_card_textSec')) {
+                        entry.target.classList.add('animate-in');
+                    }
+                    
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observar todos los elementos cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            const counterElements = document.querySelectorAll('.Eco_card_textPrin');
+            const textElements = document.querySelectorAll('.Eco_card_textSec');
+
+            counterElements.forEach(counter => observer.observe(counter));
+            textElements.forEach(text => observer.observe(text));
+        });
+
+btn.forEach(button => {
+  button.addEventListener('click', function(){
+    const tittle = this.getAttribute('Titulo');
+    const categoria = this.getAttribute('Categoria');
+    const caracter = this.getAttribute('Caracteristicas');
+    const image = this.getAttribute('image');
+    const image2 = this.getAttribute('image2');
+    const isDouble = this.getAttribute('double') === 'true';
+
+    // Limpiar intervalo anterior si existe
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+
+    // Llenar datos del modal
     modalTitle.textContent = tittle;
-    modal_Categoria.textContent = Categoria;
-    modalCaracter.textContent = Caracter;
-    modalCapaciti.textContent = Capacidad;
-    modalMt3.textContent = Mt3;
-    modalImage.src = image;
-    modal.style.display = "block";
+    modalCategoria.textContent = categoria;
+    modalCaracter.textContent = caracter;
 
-  })
-})
+    if (isDouble && image2) {
+      // Mostrar contenedor doble y ocultar simple
+      contImageOne.style.display = 'none';
+      contImageTwo.style.display = 'block';
+      
+      // Configurar las imágenes
+      const img1 = contImageTwo.querySelector('.Flo_modal_Image');
+      const img2 = contImageTwo.querySelector('.Flo_modal_Image2');
+      
+      img1.src = image;
+      img2.src = image2;
+      
+      // Configurar alternancia de imágenes
+      img1.style.display = 'block';
+      img2.style.display = 'none';
+      
+      let showingFirst = true;
+      
+      // Alternar cada 3 segundos
+      intervalId = setInterval(() => {
+        if (showingFirst) {
+          img1.style.display = 'none';
+          img2.style.display = 'block';
+        } else {
+          img1.style.display = 'block';
+          img2.style.display = 'none';
+        }
+        showingFirst = !showingFirst;
+      }, 3000);
+      
+    } else {
+      // Mostrar contenedor simple y ocultar doble
+      contImageTwo.style.display = 'none';
+      contImageOne.style.display = 'block';
+      
+      // Configurar imagen simple
+      const imgSimple = contImageOne.querySelector('.Flo_modal_Image');
+      imgSimple.src = image;
+    }
+
+    console.log('Modal abierto para:', tittle);
+    modal.style.display = "block";
+  });
+});
 
 closeModal.addEventListener('click', function() {
+  // Limpiar intervalo al cerrar
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
   modal.style.display = 'none';
 });
 
 // Cerrar el modal si se hace clic fuera del contenido del modal
 window.addEventListener('click', function(event) {
   if (event.target == modal) {
-      modal.style.display = 'none';
+    // Limpiar intervalo al cerrar
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+    modal.style.display = 'none';
   }
 });
 

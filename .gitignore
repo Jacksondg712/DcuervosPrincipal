@@ -1,0 +1,24 @@
+# Variables de entorno (NUNCA subir a Git)
+.env
+.env.local
+.env.production
+
+
+# Entorno virtual de Python
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos de IDE
+.vscode/
+.idea/
