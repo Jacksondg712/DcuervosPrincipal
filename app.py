@@ -1448,8 +1448,8 @@ def enviar_correo_boletin(datos):
         
         # Configurar el email
         send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
-            to=[{"email": RECIPIENT_EMAIL, "name": "Equipo D Cuervos"}],
-            sender={"email": EMAIL_USER, "name": "D Cuervos - Boletín"},
+            to=[{"email": RECIPIENT_EMAIL, "name": "Equipo DCUERVO"}],
+            sender={"email": EMAIL_USER, "name": "DCUERVO - Boletín"},
             subject=f"📬 Nueva suscripción al boletín: {datos['nombre']} {datos['apellido']}",
             html_content=html_body,
             reply_to={"email": datos['email'], "name": f"{datos['nombre']} {datos['apellido']}"}
