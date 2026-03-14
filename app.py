@@ -230,7 +230,7 @@
 #         # Configurar el email
 #         send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
 #             to=[{"email": RECIPIENT_EMAIL, "name": "Recursos Humanos"}],
-#             sender={"email": EMAIL_USER, "name": "D Cuervos - Portal de Trabajo"},
+#             sender={"email": EMAIL_USER, "name": "DCUERVO - Portal de Trabajo"},
 #             subject=f"💼 Nueva hoja de vida: {datos['nombre']} - {datos['posicion']}",
 #             html_content=html_body,
 #             reply_to={"email": datos['email'], "name": datos['nombre']},
@@ -754,7 +754,7 @@ def enviar_correo_brevo(datos):
         # Configurar el email
         send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
             to=[{"email": RECIPIENT_EMAIL, "name": "Destinatario"}],
-            sender={"email": EMAIL_USER, "name": "D Cuervos - Formulario Web"},
+            sender={"email": EMAIL_USER, "name": "DCUERVO - Formulario Web"},
             subject=f"📬 Nuevo contacto: {datos['name']} {datos['last']}",
             html_content=html_body,
             reply_to={"email": datos['email'], "name": f"{datos['name']} {datos['last']}"}
@@ -926,7 +926,7 @@ def enviar_confirmacion_contacto(datos):
                     
                     <div class="footer">
                         <div class="signature">Saludos cordiales,</div>
-                        <div class="company">Equipo D Cuervos</div>
+                        <div class="company">Equipo DCUERVO</div>
                         <div class="contact">
                             Este es un correo automático, por favor no responder.<br>
                             Para consultas adicionales, escríbenos a {RECIPIENT_EMAIL}
@@ -940,10 +940,10 @@ def enviar_confirmacion_contacto(datos):
         # Configurar el email de confirmación
         send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
             to=[{"email": datos['email'], "name": f"{datos['name']} {datos['last']}"}],
-            sender={"email": EMAIL_USER, "name": "D Cuervos - Servicios Logísticos"},
-            subject="✅ Confirmación de solicitud - D Cuervos",
+            sender={"email": EMAIL_USER, "name": "DCUERVO - Servicios Logísticos"},
+            subject="✅ Confirmación de solicitud - DCUERVO",
             html_content=html_body,
-            reply_to={"email": RECIPIENT_EMAIL, "name": "D Cuervos"}
+            reply_to={"email": RECIPIENT_EMAIL, "name": "DCUERVO"}
         )
         
         # Enviar
@@ -1004,7 +1004,7 @@ def enviar_confirmacion_trabajo(datos):
                         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
                     }}
                     .header {{
-                        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                         color: white;
                         padding: 40px 30px;
                         text-align: center;
@@ -1036,14 +1036,14 @@ def enviar_confirmacion_trabajo(datos):
                     }}
                     .highlight {{
                         background-color: #f0fff4;
-                        border-left: 4px solid #28a745;
+                        border-left: 4px solid #667eea;
                         padding: 20px;
                         border-radius: 6px;
                         margin: 25px 0;
                     }}
                     .highlight p {{
                         margin: 0;
-                        color: #28a745;
+                        color: #667eea;
                         font-weight: 600;
                         font-size: 15px;
                     }}
@@ -1065,7 +1065,7 @@ def enviar_confirmacion_trabajo(datos):
                     .footer .signature {{
                         font-size: 18px;
                         font-weight: 700;
-                        color: #28a745;
+                        color: #667eea;
                         margin-bottom: 10px;
                     }}
                     .footer .company {{
@@ -1112,7 +1112,7 @@ def enviar_confirmacion_trabajo(datos):
                     
                     <div class="footer">
                         <div class="signature">Saludos cordiales,</div>
-                        <div class="company">Equipo de Recursos Humanos - D Cuervos</div>
+                        <div class="company">Equipo de Recursos Humanos - DCUERVO</div>
                         <div class="contact">
                             Este es un correo automático, por favor no responder.<br>
                             Para consultas adicionales, escríbenos a {RECIPIENT_EMAIL}
@@ -1126,10 +1126,10 @@ def enviar_confirmacion_trabajo(datos):
         # Configurar el email de confirmación
         send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
             to=[{"email": datos['email'], "name": datos['nombre']}],
-            sender={"email": EMAIL_USER, "name": "D Cuervos - Recursos Humanos"},
-            subject="💼 Confirmación de postulación - D Cuervos",
+            sender={"email": EMAIL_USER, "name": "DCUERVO - Recursos Humanos"},
+            subject="💼 Confirmación de postulación - DCUERVO",
             html_content=html_body,
-            reply_to={"email": RECIPIENT_EMAIL, "name": "D Cuervos RH"}
+            reply_to={"email": RECIPIENT_EMAIL, "name": "DCUERVO RH"}
         )
         
         # Enviar
@@ -1272,7 +1272,7 @@ def enviar_correo_trabajo(datos):
                     </div>
                     
                     <div class="footer">
-                        <div>Hoja de vida recibida desde el formulario web</div>
+                        <div>Hoja de vida recibida desde el formulario web Dcuervo</div>
                         <div>📅 {datetime.now().strftime('%d/%m/%Y a las %H:%M:%S')}</div>
                     </div>
                 </div>
@@ -1292,7 +1292,7 @@ def enviar_correo_trabajo(datos):
         # Configurar el email
         send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
             to=[{"email": RECIPIENT_EMAIL, "name": "Recursos Humanos"}],
-            sender={"email": EMAIL_USER, "name": "D Cuervos - Portal de Trabajo"},
+            sender={"email": EMAIL_USER, "name": "DCUERVO - Portal de Trabajo"},
             subject=f"💼 Nueva hoja de vida: {datos['nombre']} - {datos['posicion']}",
             html_content=html_body,
             reply_to={"email": datos['email'], "name": datos['nombre']},
@@ -1506,7 +1506,7 @@ def crear_html_correo(datos):
                 </div>
                 
                 <div class="footer">
-                    <div>Mensaje recibido desde el formulario web</div>
+                    <div>Mensaje recibido desde el formulario web Dcuervo</div>
                     <div>📅 {datetime.now().strftime('%d/%m/%Y a las %H:%M:%S')}</div>
                 </div>
             </div>
