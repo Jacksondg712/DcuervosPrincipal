@@ -1332,6 +1332,159 @@ def enviar_correo_trabajo(datos):
         import traceback
         traceback.print_exc()
         return False
+    
+def enviar_correo_boletin(datos):
+    """
+    Enviar email con suscripción al boletín
+    """
+    try:
+        import sib_api_v3_sdk
+        from sib_api_v3_sdk.rest import ApiException
+        
+        print("📧 Enviando suscripción al boletín con Brevo API...")
+        
+        # Configurar API
+        configuration = sib_api_v3_sdk.Configuration()
+        configuration.api_key['api-key'] = BREVO_API_KEY
+        
+        api_instance = sib_api_v3_sdk.TransactionalEmailsApi(
+            sib_api_v3_sdk.ApiClient(configuration)
+        )
+        
+        # Crear contenido HTML del correo
+        # IMPORTANTE: Usa TU MISMO ESTILO visual que ya tienes
+        # Solo cambia el contenido del mensaje
+        html_body = f"""
+        <html>
+            <head>
+                <style>
+                    /* Usa aquí los mismos estilos que tienes en tus otras funciones */
+                    body {{
+                        font-family: 'Segoe UI', Arial, sans-serif;
+                        line-height: 1.6;
+                        color: #333;
+                        background-color: #f5f5f5;
+                    }}
+                    .container {{
+                        max-width: 600px;
+                        margin: 20px auto;
+                        background-color: #ffffff;
+                        border-radius: 12px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    }}
+                    .header {{
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        color: white;
+                        padding: 30px;
+                        text-align: center;
+                    }}
+                    .header h1 {{
+                        margin: 0;
+                        font-size: 24px;
+                        font-weight: 600;
+                    }}
+                    .content {{
+                        padding: 30px;
+                    }}
+                    .field {{
+                        background-color: #f8f9fa;
+                        padding: 12px;
+                        border-radius: 6px;
+                        border-left: 3px solid #667eea;
+                        margin-bottom: 15px;
+                    }}
+                    .label {{
+                        font-weight: 600;
+                        color: #667eea;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+                    }}
+                    .value {{
+                        color: #333;
+                        font-size: 14px;
+                    }}
+                    .footer {{
+                        background-color: #f8f9fa;
+                        padding: 20px;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #666;
+                    }}
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                        <h1>📬 Nueva Suscripción al Boletín</h1>
+                    </div>
+                    
+                    <div class="content">
+                        <div class="field">
+                            <div class="label">Nombre Completo</div>
+                            <div class="value">{datos['nombre']} {datos['apellido']}</div>
+                        </div>
+                        
+                        <div class="field">
+                            <div class="label">Correo Electrónico</div>
+                            <div class="value">{datos['email']}</div>
+                        </div>
+                        
+                        <div class="field">
+                            <div class="label">Teléfono</div>
+                            <div class="value">{datos['telefono']}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer">
+                        <div>Suscripción recibida desde el formulario web</div>
+                        <div>📅 {datetime.now().strftime('%d/%m/%Y a las %H:%M:%S')}</div>
+                    </div>
+                </div>
+            </body>
+        </html>
+        """
+        
+        # Configurar el email
+        send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
+            to=[{"email": RECIPIENT_EMAIL, "name": "Equipo D Cuervos"}],
+            sender={"email": EMAIL_USER, "name": "D Cuervos - Boletín"},
+            subject=f"📬 Nueva suscripción al boletín: {datos['nombre']} {datos['apellido']}",
+            html_content=html_body,
+            reply_to={"email": datos['email'], "name": f"{datos['nombre']} {datos['apellido']}"}
+        )
+        
+        # Enviar
+        api_response = api_instance.send_transac_email(send_smtp_email)
+        message_id = api_response.message_id if hasattr(api_response, 'message_id') else 'N/A'
+        
+        print(f"✅ Suscripción enviada via Brevo - Message ID: {message_id}")
+        return True
+        
+    except ApiException as e:
+        import sys
+        import json
+        
+        error_msg = f"Error API Brevo (Boletín): {e}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        
+        try:
+            error_body = json.loads(e.body) if hasattr(e, 'body') else {}
+            print(f"❌ Error Brevo - Detalles: {error_body}", file=sys.stderr)
+        except:
+            pass
+            
+        print(f"❌ Error Brevo - Status: {e.status if hasattr(e, 'status') else 'N/A'}", file=sys.stderr)
+        print(f"❌ Error Brevo - Reason: {e.reason if hasattr(e, 'reason') else 'N/A'}", file=sys.stderr)
+        return False
+    except Exception as e:
+        import sys
+        error_msg = f"Error general enviando boletín: {type(e).__name__}: {str(e)}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        import traceback
+        traceback.print_exc()
+        return False
 
 def crear_html_correo(datos):
     """
@@ -1746,6 +1899,65 @@ def trabajo():
             return jsonify({
                 "success": False,
                 "error": "Error al enviar la hoja de vida. Por favor intenta nuevamente."
+            }), 500
+            
+    except Exception as e:
+        import sys
+        import traceback
+        error_msg = f"Error en el servidor: {type(e).__name__}: {str(e)}"
+        print(f"❌ {error_msg}", file=sys.stderr)
+        traceback.print_exc()
+        return jsonify({
+            "success": False,
+            "error": "Error interno del servidor. Revisa los logs."
+        }), 500
+
+@app.route('/api/boletin', methods=['POST'])
+def boletin():
+    """
+    Endpoint para recibir suscripciones al boletín
+    """
+    try:
+        # Obtener datos del JSON
+        datos = request.get_json()
+        
+        # Campos requeridos
+        campos_requeridos = ['nombre', 'apellido', 'telefono', 'email']
+        
+        # Validar que vengan todos los campos
+        for campo in campos_requeridos:
+            if campo not in datos or not str(datos[campo]).strip():
+                return jsonify({
+                    "success": False,
+                    "error": f"El campo '{campo}' es requerido"
+                }), 400
+        
+        # Validar email
+        email = datos['email'].strip()
+        if '@' not in email or '.' not in email:
+            return jsonify({
+                "success": False,
+                "error": "Email no válido"
+            }), 400
+        
+        # Log para debugging
+        print("📬 Suscripción al boletín recibida:")
+        print(f"   Nombre: {datos['nombre']} {datos['apellido']}")
+        print(f"   Email: {datos['email']}")
+        print(f"   Teléfono: {datos['telefono']}")
+        
+        # Enviar el correo
+        if enviar_correo_boletin(datos):
+            print("✅ Suscripción procesada exitosamente")
+            return jsonify({
+                "success": True,
+                "mensaje": "Suscripción exitosa. Pronto recibirás nuestro boletín."
+            }), 200
+        else:
+            print("❌ Error al procesar la suscripción")
+            return jsonify({
+                "success": False,
+                "error": "Error al procesar la suscripción. Por favor intenta nuevamente."
             }), 500
             
     except Exception as e:

@@ -21,9 +21,17 @@ const modal4 = document.getElementById('modal_Pol');
 const closeModal4 = document.getElementById('close_Pol');
 const button4 = document.getElementById('Trb_Button_Pol');
 
+const formularioBoletin = document.getElementById('formulario-boletin');
+const boletinButtonText = document.getElementById('boletin-button-text');
+const boletinButtonLoading = document.getElementById('boletin-button-loading');
+const boletinMensaje = document.getElementById('boletin-mensaje');
+
+
+
 // Desarrollo local: 'http://localhost:5000/api/contacto'
 // Producción:
 const API_URL = 'https://dcuervosprincipal.onrender.com/api/contacto';
+const BOLETIN_API_URL = 'https://dcuervosprincipal.onrender.com/api/boletin';
 
 // Hrader responsive 
 
@@ -229,6 +237,111 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+// ============================================
+// ENVÍO DEL FORMULARIO
+// ============================================
+ 
+formularioBoletin.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    console.log('📧 Enviando suscripción al boletín...');
+    
+    // Obtener datos del formulario
+    const nombre = document.getElementById('boletin-nombre').value.trim();
+    const apellido = document.getElementById('boletin-apellido').value.trim();
+    const telefono = document.getElementById('boletin-telefono').value.trim();
+    const email = document.getElementById('boletin-email').value.trim();
+    
+    // Validar email
+    if (!email.includes('@') || !email.includes('.')) {
+        mostrarMensaje('❌ Por favor ingresa un correo electrónico válido', 'error');
+        return;
+    }
+    
+    // Validar que aceptó términos
+    const terminos = document.getElementById('boletin-terminos').checked;
+    if (!terminos) {
+        mostrarMensaje('❌ Debes aceptar el tratamiento de datos personales', 'error');
+        return;
+    }
+    
+    // Deshabilitar botón
+    boletinButtonText.style.display = 'none';
+    boletinButtonLoading.style.display = 'inline';
+    formularioBoletin.querySelector('button[type="submit"]').disabled = true;
+    
+    try {
+        // Preparar datos
+        const datos = {
+            nombre: nombre,
+            apellido: apellido,
+            telefono: telefono,
+            email: email
+        };
+        
+        console.log('📤 Datos a enviar:', datos);
+        console.log('🌐 Conectando con:', BOLETIN_API_URL);
+        
+        // Enviar al backend
+        const response = await fetch(BOLETIN_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(datos)
+        });
+        
+        console.log('📥 Status de respuesta:', response.status);
+        
+        const resultado = await response.json();
+        console.log('📦 Datos recibidos:', resultado);
+        
+        if (response.ok && resultado.success) {
+            // Éxito
+            mostrarMensaje('✅ ¡Suscripción exitosa! Pronto recibirás nuestro boletín.', 'success');
+            formularioBoletin.reset();
+        } else {
+            // Error del servidor
+            mostrarMensaje(`❌ ${resultado.error || 'Error al procesar la suscripción'}`, 'error');
+        }
+        
+    } catch (error) {
+        console.error('❌ Error:', error);
+        mostrarMensaje('❌ Error de conexión. Por favor intenta nuevamente.', 'error');
+    } finally {
+        // Rehabilitar botón
+        boletinButtonText.style.display = 'inline';
+        boletinButtonLoading.style.display = 'none';
+        formularioBoletin.querySelector('button[type="submit"]').disabled = false;
+    }
+});
+
+// ============================================
+// FUNCIÓN PARA MOSTRAR MENSAJES
+// ============================================
+ 
+function mostrarMensaje(texto, tipo) {
+    boletinMensaje.textContent = texto;
+    boletinMensaje.style.display = 'block';
+    
+    if (tipo === 'success') {
+        boletinMensaje.style.backgroundColor = '#d4edda';
+        boletinMensaje.style.color = '#155724';
+        boletinMensaje.style.border = '1px solid #c3e6cb';
+    } else {
+        boletinMensaje.style.backgroundColor = '#f8d7da';
+        boletinMensaje.style.color = '#721c24';
+        boletinMensaje.style.border = '1px solid #f5c6cb';
+    }
+    
+    // Ocultar después de 5 segundos
+    setTimeout(() => {
+        boletinMensaje.style.display = 'none';
+    }, 5000);
+}
+ 
+console.log('✅ Script de boletín cargado');
 
 
 
