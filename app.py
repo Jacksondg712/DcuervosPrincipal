@@ -1025,7 +1025,7 @@ def enviar_confirmacion_trabajo(datos):
                     .greeting {{
                         font-size: 20px;
                         font-weight: 600;
-                        color: #28a745;
+                        color: #667eea;
                         margin-bottom: 20px;
                     }}
                     .message {{
@@ -1035,7 +1035,7 @@ def enviar_confirmacion_trabajo(datos):
                         margin-bottom: 20px;
                     }}
                     .highlight {{
-                        background-color: #f0fff4;
+                        background-color: #f0f4ff;
                         border-left: 4px solid #667eea;
                         padding: 20px;
                         border-radius: 6px;
