@@ -1743,20 +1743,9 @@ footer{
 	margin-top: 50px;
 }
 
-.Foo_Cont_Info1{
-	align-items: start;
-	height: 100%;
-}
-
 .Foo_Cont_Call{
 	width: 100%;
 
-}
-
-.Foo_Text_Line{
-	color: white;
-	font-size: 20px;
-	margin-top: 30px;
 }
 
 .Foo_Text_Call{
@@ -1772,14 +1761,15 @@ footer{
 }
 
 .Foo_Cont_Info2{
-	align-items: start;
+	align-items: center;
 	height: 100%;
 }
 
 .Foo_Info2_Tittle{
 	color: white;
-	font-size: 20px;
+	font-size: 25px;
 	margin-top: 30px;
+
 }
 
 .Foo_Info2_Item{

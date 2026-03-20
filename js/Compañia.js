@@ -251,7 +251,7 @@ function changeImage() {
         // Crear enlace de descarga
         const link = document.createElement('a');
         link.href = './PDF/Logística_Sostenible.pdf'; // CAMBIA ESTA RUTA POR LA DE TU PDF
-        link.download = 'Plan-Logistica-Sostenible-2024.pdf'; // Nombre del archivo descargado
+        link.download = 'Plan-Logistica-Sostenible-2026.pdf'; // Nombre del archivo descargado
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -300,56 +300,77 @@ if (downloadPdfBtn) {
             }
         });
 
-        // Función para animar contador con efecto más suave
-        function animateCounter(element, target, duration = 2500) {
-            const counter = element.querySelector('.counter');
-            let current = 0;
-            const increment = target / (duration / 16);
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                counter.textContent = Math.floor(current);
-            }, 16);
+        const floatElement = document.getElementById('float_Count');
+
+function animateCounter(element, target, duration = 2500) {
+    const counter = element.querySelector('.counter');
+    let current = 0;
+    const increment = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
         }
+        counter.textContent = Math.floor(current);
+    }, 16);
+}
 
-        // Intersection Observer mejorado
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                    entry.target.classList.add('visible');
-                    
-                    if (entry.target.hasAttribute('data-counter')) {
-                        const targetValue = parseInt(entry.target.getAttribute('data-counter'));
-                        setTimeout(() => {
-                            animateCounter(entry.target, targetValue, 3000);
-                        }, 500);
+function animateCounterFloat(element, target, duration = 2500, decimals = 1) {
+    const counter = element.querySelector('.counter');
+    let current = 0.0;
+    const increment = target / (duration / 16);
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        counter.textContent = current.toFixed(decimals);
+    }, 16);
+}
+
+// Intersection Observer mejorado
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+            entry.target.classList.add('visible');
+            
+            if (entry.target.hasAttribute('data-counter')) {
+                const isFloat = entry.target.id === 'float_Count'; // ✅ check
+                const targetValue = parseFloat(entry.target.getAttribute('data-counter'));
+                
+                setTimeout(() => {
+                    if (isFloat) {
+                        animateCounterFloat(entry.target, targetValue, 3000); // ✅ float
+                    } else {
+                        animateCounter(entry.target, targetValue, 3000);      // ✅ entero
                     }
-                    
-                    if (entry.target.classList.contains('Eco_card_textSec')) {
-                        entry.target.classList.add('animate-in');
-                    }
-                    
-                    entry.target.classList.add('animated');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.3,
-            rootMargin: '0px 0px -50px 0px'
-        });
+                }, 500);
+            }
+            
+            if (entry.target.classList.contains('Eco_card_textSec')) {
+                entry.target.classList.add('animate-in');
+            }
+            
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+});
 
-        // Observar todos los elementos cuando el DOM esté listo
-        document.addEventListener('DOMContentLoaded', function() {
-            const counterElements = document.querySelectorAll('.Eco_card_textPrin');
-            const textElements = document.querySelectorAll('.Eco_card_textSec');
+document.addEventListener('DOMContentLoaded', function() {
+    const counterElements = document.querySelectorAll('.Eco_card_textPrin');
+    const textElements = document.querySelectorAll('.Eco_card_textSec');
 
-            counterElements.forEach(counter => observer.observe(counter));
-            textElements.forEach(text => observer.observe(text));
-        });
+    counterElements.forEach(counter => observer.observe(counter));
+    textElements.forEach(text => observer.observe(text));
+});
 
 btn.forEach(button => {
   button.addEventListener('click', function(){

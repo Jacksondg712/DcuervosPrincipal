@@ -735,20 +735,9 @@ footer{
 	margin-top: 50px;
 }
 
-.Foo_Cont_Info1{
-	align-items: start;
-	height: 100%;
-}
-
 .Foo_Cont_Call{
 	width: 100%;
 
-}
-
-.Foo_Text_Line{
-	color: white;
-	font-size: 20px;
-	margin-top: 30px;
 }
 
 .Foo_Text_Call{
@@ -756,17 +745,23 @@ footer{
 	font-family: "Roboto", sans-serif;
   	font-weight: 400;
   	font-style: normal;
+    transition: transform 0.5s ease;
+}
+
+.Foo_Text_Call:hover{
+    transform: scale(1.1);
 }
 
 .Foo_Cont_Info2{
-	align-items: start;
+	align-items: center;
 	height: 100%;
 }
 
 .Foo_Info2_Tittle{
 	color: white;
-	font-size: 20px;
+	font-size: 25px;
 	margin-top: 30px;
+
 }
 
 .Foo_Info2_Item{
@@ -774,6 +769,7 @@ footer{
 	font-family: "Roboto", sans-serif;
   	font-weight: 400;
   	font-style: normal;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .Foo_Cont_contac{
@@ -781,8 +777,11 @@ footer{
 	width: 100px;
 }
 
+
+
 .container_footer{
-	width: 100%;
+	/* width: 100%;
+	height: 100%; */
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: space-around;
@@ -792,11 +791,32 @@ footer{
 .Text_Pqr{
 	margin-top: 20px;
 	line-height: 1.2;
+    /* border: 1px solid black; */
+    width: 100%;
 }
 
 .Defi_list{
 	margin-left: 20px;
 	margin-top: 10px;
+    /* border: 1px solid black; */
+    width: 100%;
+    align-items: start;
+}
+
+.Pol_Text_corre{
+    width: 100%;
+}
+
+.cualquiera{
+    width: 100%;
+    align-items: start;
+    margin-left: 60px;
+}
+
+
+
+.Pol_esteti{
+    width: 90%;
 }
 
 .pqr_Form{
@@ -869,6 +889,7 @@ footer{
 .Foo_Info2_Item:hover{
 	color: #57bfd9;
 	fill: #57bfd9;
+	transform: scale(1.1);
 }
 
 .Tra_text,.Ter_Cont{
