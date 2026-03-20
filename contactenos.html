@@ -262,36 +262,91 @@
                 <div class="Cont_Close">
                   <span class="close">&times;</span>
                 </div>
-                <p class="Text_tittle Text_Medium">Suscríbete a nuestro boletín, con toda la actualidad del mercado logistico</p>
-                <form class="form_Form flex-colum">
+                <!-- Formulario de Boletín - CON IDs CORRECTOS -->
+                <p class="Text_tittle Text_Medium">Suscríbete a nuestro boletín, con toda la actualidad del mercado logístico</p>
+                              
+                <form id="formulario-boletin" class="form_Form flex-colum">
                   <div class="flex-row Cont_form">
+                    <!-- Nombre -->
                     <div class="cont_Input_boletin flex-colum">
                       <p class="Text_Form_Input Text_Medium">Nombre</p>
-                      <input class="Input_Form" type="text" placeholder="Escriba su nombre" required>
+                      <input 
+                        id="boletin-nombre" 
+                        name="nombre"
+                        class="Input_Form" 
+                        type="text" 
+                        placeholder="Escriba su nombre" 
+                        required
+                      >
                     </div>
+                    
+                    <!-- Apellido -->
                     <div class="cont_Input_boletin1 cont_Input_boletin flex-colum">
                       <p class="Text_Form_Input Text_Medium">Apellido</p>
-                      <input class="Input_Form" type="text" placeholder="Escriba su apellido" required>
+                      <input 
+                        id="boletin-apellido" 
+                        name="apellido"
+                        class="Input_Form" 
+                        type="text" 
+                        placeholder="Escriba su apellido" 
+                        required
+                      >
                     </div>
+                    
+                    <!-- Teléfono -->
                     <div class="cont_Input_boletin1 cont_Input_boletin flex-colum">
                       <p class="Text_Form_Input Text_Medium">Teléfono</p>
-                      <input class="Input_Form" type="text" placeholder="Escriba su numero de telefono" required>
+                      <input 
+                        id="boletin-telefono" 
+                        name="telefono"
+                        class="Input_Form" 
+                        type="tel" 
+                        placeholder="Escriba su número de teléfono" 
+                        required
+                      >
                     </div>
+                    
+                    <!-- Correo -->
                     <div class="cont_Input_boletin1 cont_Input_boletin flex-colum">
                       <p class="Text_Form_Input Text_Medium">Correo electrónico</p>
-                      <input class="Input_Form" type="text" placeholder="Escriba su correo electrónico" required>
+                      <input 
+                        id="boletin-email" 
+                        name="email"
+                        class="Input_Form" 
+                        type="email" 
+                        placeholder="Escriba su correo electrónico" 
+                        required
+                      >
                     </div>
                   </div>
+                  
+                  <!-- Términos y botón -->
                   <div class="Cont_Termi flex-row">
                     <div class="Cont_check flex-row">
-                      <input type="checkbox"> 
-                      <p class="Text_Termi Text_Medium">Al registrar su nombre y correo electrónico, autoriza el tratamiento de datos personales y a recibir información a través de los medios que Dcuervo tiene habilitados para comuinicarse con usted</p>
+                      <input 
+                        id="boletin-terminos" 
+                        name="terminos"
+                        type="checkbox" 
+                        required
+                      > 
+                      <label for="boletin-terminos" class="Text_Termi Text_Medium">
+                        Al registrar su nombre y correo electrónico, autoriza el tratamiento de datos personales 
+                        y a recibir información a través de los medios que Dcuervo tiene habilitados para comunicarse con usted
+                      </label>
                     </div>
+                    
                     <div class="Cont_Button_Form">
-                      <input class="But_Form Text_Black" type="submit" value="SUSCRIBIRSE">
+                      <button type="submit" class="But_Form Text_Black">
+                        <span id="boletin-button-text">SUSCRIBIRSE</span>
+                        <span id="boletin-button-loading" style="display: none;">ENVIANDO...</span>
+                      </button>
                     </div>
                   </div>
                 </form>
+                
+                <!-- Mensaje de éxito/error -->
+                <div id="boletin-mensaje" style="display: none; margin-top: 15px; padding: 12px; border-radius: 6px; text-align: center; font-weight: 600;">
+                </div>
               </div>
             </div>
         </div>
