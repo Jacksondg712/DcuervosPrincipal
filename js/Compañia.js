@@ -300,7 +300,7 @@ if (downloadPdfBtn) {
             }
         });
 
-        const floatElement = document.getElementById('float_Count');
+const floatElement = document.getElementById('float_Count');
 
 function animateCounter(element, target, duration = 2500) {
     const counter = element.querySelector('.counter');
@@ -360,17 +360,24 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.3,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1,
+    rootMargin: '0px '
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+function initCounters() {
     const counterElements = document.querySelectorAll('.Eco_card_textPrin');
     const textElements = document.querySelectorAll('.Eco_card_textSec');
 
     counterElements.forEach(counter => observer.observe(counter));
     textElements.forEach(text => observer.observe(text));
-});
+}
+
+// ✅ Cubre todos los casos: cargó antes, durante o después
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCounters);
+} else {
+    initCounters(); // Ya cargó, ejecutar de una vez
+}
 
 btn.forEach(button => {
   button.addEventListener('click', function(){
