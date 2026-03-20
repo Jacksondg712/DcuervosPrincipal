@@ -125,85 +125,34 @@
                   />
                 </div>
                 <div class="Cont_Form_Item flex-row">
+                  <!-- Departamento -->
                   <div class="flex-colum">
-                    <label class="Cont_Label" for="">Departamento</label>
+                    <label class="Cont_Label" for="departments">Departamento</label>
                     <div class="content">
                       <select
                         id="departments"
                         name="departments"
                         class="select"
+                        required
                       >
-                        <option class="Text_Option" value="Amazonas">Amazonas</option>
-                        <option class="Text_Option" value="Antioquía">Antioquía</option>
-                        <option class="Text_Option" value="Arauca">Arauca</option>
-                        <option class="Text_Option" value="Atlántico">Atlántico</option>
-                        <option class="Text_Option" value="Bolívar">Bolívar</option>
-                        <option class="Text_Option" value="Boyacá">Boyacá</option>
-                        <option class="Text_Option" value="Caldas">Caldas</option>
-                        <option class="Text_Option" value="Caquetá">Caquetá</option>
-                        <option class="Text_Option" value="Casanare">Casanare</option>
-                        <option class="Text_Option" value="Cauca">Cauca</option>
-                        <option class="Text_Option" value="Cesar">Cesar</option>
-                        <option class="Text_Option" value="Chocó">Chocó</option>
-                        <option class="Text_Option" value="Córdoba">Córdoba</option>
-                        <option class="Text_Option" value="Cundinamarca">Cundinamarca</option>
-                        <option class="Text_Option" value="Guainía">Guainía</option>
-                        <option class="Text_Option" value="Guaviare">Guaviare</option>
-                        <option class="Text_Option" value="Huila">Huila</option>
-                        <option class="Text_Option" value="La Guajira">La Guajira</option>
-                        <option class="Text_Option" value="Magdalena">Magdalena</option>
-                        <option class="Text_Option" value="Meta">Meta</option>
-                        <option class="Text_Option" value="Nariño">Nariño</option>
-                        <option class="Text_Option" value="Norte de Santander">Norte de Santander</option>
-                        <option class="Text_Option" value="Putumayo">Putumayo</option>
-                        <option class="Text_Option" value="Quindío">Quindío</option>
-                        <option class="Text_Option" value="Risaralda">Risaralda</option>
-                        <option class="Text_Option" value="San Andrés y Providencia">San Andrés y Providencia</option>
-                        <option class="Text_Option" value="Santander">Santander</option>
-                        <option class="Text_Option" value="Sucre">Sucre</option>
-                        <option class="Text_Option" value="Tolima">Tolima</option>
-                        <option class="Text_Option" value="Valle del Cauca">Valle del Cauca</option>
-                        <option class="Text_Option" value="Vaupés">Vaupés</option>
-                        <option class="Text_Option" value="Vichada">Vichada</option>
+                        <option value="">Seleccione un departamento</option>
+                        <!-- Las opciones se llenarán con JavaScript -->
                       </select>
                     </div>
                   </div>
+
+                  <!-- Ciudad -->
                   <div class="flex-colum">
-                    <label class="Cont_Label Cont_Label1" for="">Ciudad</label>
+                    <label class="Cont_Label Cont_Label1" for="city">Ciudad</label>
                     <div class="content">
-                      <select id="city" name="city" class="select">
-                        <option class="Text_Option" value="Armenia">Armenia</option>
-                        <option class="Text_Option" value="Armenia">Armenia </option>
-                        <option class="Text_Option" value="Bogotá">Bogotá </option>
-                        <option class="Text_Option" value="Bucaramanga">Bucaramanga </option>
-                        <option class="Text_Option" value="Cali">Cali </option>
-                        <option class="Text_Option" value="Cartagena">Cartagena </option>
-                        <option class="Text_Option" value="Cúcuta">Cúcuta</option>
-                        <option class="Text_Option" value="Florencia">Florencia</option>
-                        <option class="Text_Option" value="Ibagué">Ibagué </option>
-                        <option class="Text_Option" value="Inírida">Inírida </option>
-                        <option class="Text_Option" value="Leticia">Leticia </option>
-                        <option class="Text_Option" value="Manizales">Manizales </option>
-                        <option class="Text_Option" value="Medellín">Medellín </option>
-                        <option class="Text_Option" value="Mitú">Mitú </option>
-                        <option class="Text_Option" value="Mocoa">Mocoa </option>
-                        <option class="Text_Option" value="Montería">Montería </option>
-                        <option class="Text_Option" value="Neiva">Neiva</option>
-                        <option class="Text_Option" value="Pasto">Pasto </option>
-                        <option class="Text_Option" value="Pereira">Pereira </option>
-                        <option class="Text_Option" value="Villavicencio">Villavicencio</option>
-                        <option class="Text_Option" value="Popayán">Popayán </option>
-                        <option class="Text_Option" value="Puerto Carreño">Puerto Carreño</option>
-                        <option class="Text_Option" value="Quibdó">Quibdó </option>
-                        <option class="Text_Option" value="Riohacha">Riohacha </option>
-                        <option class="Text_Option" value="San Andrés">San Andrés </option>
-                        <option class="Text_Option" value="San José del Guaviare">San José del Guaviare </option>
-                        <option class="Text_Option" value="Santa Marta">Santa Marta</option>
-                        <option class="Text_Option" value="Sincelejo">Sincelejo </option>
-                        <option class="Text_Option" value="Tunja">Tunja </option>
-                        <option class="Text_Option" value="Valledupar">Valledupar </option>
-                        <option class="Text_Option" value="Villavicencio">Villavicencio </option>
-                        <option class="Text_Option" value="Yopal ">Yopal  </option>
+                      <select 
+                        id="city" 
+                        name="city" 
+                        class="select"
+                        required
+                      >
+                        <option value="">Primero seleccione un departamento</option>
+                        <!-- Las opciones se llenarán con JavaScript según el departamento -->
                       </select>
                     </div>
                   </div>
@@ -572,6 +521,7 @@
       emailjs.init('5GaJmFmA8rNHuyX1O');
     </script> -->
     <script src="./js/Contactenos.js"></script>
+    <script src="./js/departamentos-ciudades.js"></script>
   </body>
 </html>
 
