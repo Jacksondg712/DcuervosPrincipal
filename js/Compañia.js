@@ -250,7 +250,7 @@ function changeImage() {
     setTimeout(() => {
         // Crear enlace de descarga
         const link = document.createElement('a');
-        link.href = './PDF/Logística_Sostenible.pdf'; // CAMBIA ESTA RUTA POR LA DE TU PDF
+        link.href = './PDF/Logistica_Sostenible.pdf'; // CAMBIA ESTA RUTA POR LA DE TU PDF
         link.download = 'Plan-Logistica-Sostenible-2026.pdf'; // Nombre del archivo descargado
         document.body.appendChild(link);
         link.click();
